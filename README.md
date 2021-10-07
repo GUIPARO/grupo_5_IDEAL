@@ -24,7 +24,7 @@ Referentes del mercado
 |[T-SHIRTXPRESS.co](https://www.tshirtxpress.co/)   | Productos que ofrecen, el público al que se dirigen, estética y funcionalidad de barrido tipo máscara en imagen full-width |   
 |[Rockgota](https://www.rockgota.com/)   | Seleccionada por similitud en productos, por la facilidad de manejo, funcionalidades y diseño de la pagina |   
 |[Speedlogic](https://speedlogic.com.co/)   | Colores, animaciones tanto en imágenes como en los textos y su organización de los elementos en la página. |   
-|[Arambel] (https://arambel.com.co/) | Una marca local que inspira por su simplicidad y estetica.|
+|[Arambel](https://www.arambel.com.co/ )        | Una marca local que inspira por su simplicidad y estetica.|
 
 
 Integrantes 
