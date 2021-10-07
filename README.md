@@ -1,7 +1,7 @@
 Grupo 5 
 =============
 
-IDEAL :tw-1f455::tw-1f456::tw-1f45a:
+IDEAL 
 -------------
 *El presente repositorio corresponde al desarrollo del proyecto integrador del curso de Desarrollo Web Full Stack de Digital House*
 
@@ -21,10 +21,11 @@ Referentes del mercado
 |  Sitio | Elegido por |
 | :---------------:|:---------------: |
 |[artextil](https://www.artextil.com.co/ ) | Colores, estética, transiciones y presentación del carrito de compras   |  
-|[T-SHIRTXPRESS.co](https://www.tshirtxpress.co/)   | Productos que ofrecen, el público al que se dirigen, estética y funcionalidad de barrido tipo máscara en imagen full-width |   
-|[Rockgota](https://www.rockgota.com/)   | Seleccionada por similitud en productos, por la facilidad de manejo, funcionalidades y diseño de la pagina |   
-|[Speedlogic](https://speedlogic.com.co/)   | Colores, animaciones tanto en imágenes como en los textos y su organización de los elementos en la página. |   
-|[Arambel](https://www.arambel.com.co/ )        | Una marca local que inspira por su simplicidad y estetica.|
+|[T-SHIRTXPRESS.co](https://www.tshirtxpress.co/) | Productos que ofrecen, el público al que se dirigen, estética y funcionalidad de barrido tipo máscara en imagen full-width |   
+|[Rockgota](https://www.rockgota.com/) | Seleccionada por similitud en productos, por la facilidad de manejo, funcionalidades y diseño de la pagina |   
+|[Speedlogic](https://speedlogic.com.co/)| Colores, animaciones tanto en imágenes como en los textos y su organización de los elementos en la página. |   
+|[Arambel](https://www.arambel.com.co/ )| Una marca local que inspira por su simplicidad y estetica.|
+|[Jerseytex](https://jerseytex.com.co/) | Detalle del producto tanto en PC como en Mobile, colores y efectos de movimiento en la página de inicio. |
 
 
 Integrantes 
