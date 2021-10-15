@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 :root {
@@ -111,8 +111,10 @@ main .services_title {
 }
 
 main .services_section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .services_section {
@@ -122,19 +124,31 @@ main .services_section {
 }
 
 .services_section ul {
-    width: 90%;
+    width: 40%;
+    height: 35px;
     margin: 15px auto;
-    text-align: center;
-    background-color: var(--azul_header);
-    padding: 5px;
-    border-radius: 20px;
+    padding: 0 10px 0 15px;
+    background: linear-gradient(90deg, rgba(255,193,7,1) 0%, rgba(221,153,44,1) 44%, rgba(255,130,4,1) 86%);
+    border-bottom: 4px outset #ffc1076c;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: start;
+    color: white;
+    font-weight: ;
+}
+
+.services_section ul i {
+    font-size: 12px;
+    margin-right: 5px;
 }
 
 .services_section .list-service_item {
     width: 300px;
     text-decoration: none;
-    color: #1e1e1e;
-    font-size: 16px;
+    color: white;
+    margin-top: 2px;
 }
 
 .services_section .last-item_service {
@@ -147,7 +161,7 @@ main .services_section {
 
 .products_title {
     width: fit-content;
-    margin: 0 auto;
+    margin: 25px auto 0;
 }
 
 .products_section .product_card {
@@ -250,13 +264,17 @@ footer {
 
 footer figure {
     width: 40%;
-    margin: 10px;
-    background-color: black;
+    margin: 20px 0;
+    /* background-color: black; */
+}
+
+footer figure img {
+    width: 100%
 }
 
 footer ul {
     list-style: none;
-    width: 40%;
+    width: 4%;
     margin: 10px;
     color: #1e2d44e0;
 }
