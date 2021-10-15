@@ -136,7 +136,7 @@ main .services_section {
     justify-content: space-around;
     text-align: start;
     color: white;
-    font-weight: ;
+    font-weight: bold;
 }
 
 .services_section ul i {
