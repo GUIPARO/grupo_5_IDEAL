@@ -9,10 +9,12 @@
     --azul_header: #ffc107;
 }
 
+
 header {
     /* border: 1px solid red; */
-    width: 90vw;
+    width: 100%;
     margin: 20px auto;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,6 +35,12 @@ header nav {
 
 header .header_list {
     display: none;
+    list-style: none;
+}
+
+header .header_list a {
+    text-decoration: none;
+    color: #1e2d44e0;
 }
 
 header .icon_section {
@@ -59,12 +67,13 @@ header .bar_search {
 /* INICIO CARROUSEL  */
 
 main {
-    width: 90vw;
+    width: 100%;
     margin: 0 auto;
 }
 
 main .carrousel_container {
-    margin: 30px 0;
+    width: 90%;
+    margin: 30px auto;
     overflow: hidden;
 }
 
@@ -92,7 +101,7 @@ main .carrousel_image {
 }
 
 .description_section .description_image {
-    width: 100%;
+    width: 80%;
     border-radius: 50%;
 }
 
@@ -124,7 +133,7 @@ main .services_section {
 }
 
 .services_section ul {
-    width: 40%;
+    width: 48%;
     height: 35px;
     margin: 15px auto;
     padding: 0 10px 0 15px;
@@ -161,7 +170,9 @@ main .services_section {
 
 .products_title {
     width: fit-content;
-    margin: 25px auto 0;
+    margin: 30px auto;
+    font-weight: 500;
+    font-size: 25px;
 }
 
 .products_section .product_card {
@@ -253,13 +264,13 @@ main .fashion_image img {
 /* INICIO FOOTER  */
 
 footer {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     border-top: 1px solid #1e1e1e;
-    padding: 20px 0;
+    padding: 0 30px 20px
 }
 
 footer figure {
@@ -274,7 +285,7 @@ footer figure img {
 
 footer ul {
     list-style: none;
-    width: 4%;
+    width: 40%;
     margin: 10px;
     color: #1e2d44e0;
 }
@@ -316,3 +327,143 @@ footer .list_icons li a {
 
 
 /* FIN FOOTER  */
+
+/* MEDIA QUERIS HOME  */
+
+@media (min-width: 481px) {
+
+    .description_section {
+        font-size: 18px;
+    }
+
+    .description_section .description-image_container {
+        width: 50%;
+    }
+
+    .products_section .product_card {
+        width: 60%;
+    }
+
+    .services_section ul {
+        width: 180px;
+    }
+}
+
+@media (min-width: 769px) {
+
+    /* HEADER  */
+
+    header {
+        max-width: 940px;
+    }
+
+    header .logo_container {
+        padding-left: 20px;
+    }
+    
+    header nav {
+        display: flex;
+        width: 60%;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 30px;
+    }
+
+    header nav li,
+    header nav i
+    {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    header .header_list {
+        display: flex;
+    }
+
+    header .logo_container {
+        width: 40%;
+    }
+    
+    header .main_logo {
+        width: 100%;
+        max-width: 275px;
+    }
+
+    /* HEADER  */
+
+    /* MAIN  */
+
+    .carrousel_section {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .description_section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .description_section p {
+        width: 280px;
+        margin: 0 20px;
+    }
+
+    .description_section .description-image_container {
+        width: 280px;
+        margin: 0 20px;
+    }
+
+    main .services_section {
+        width: 700px;
+    }
+
+    .services_section ul {
+        width: 190px;
+    }
+
+    .products_section {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    .products_section .product_card {
+        width: 300px;
+    }
+
+    /* MAIN  */
+
+    /* FOOTER  */
+
+    footer {
+        justify-content: space-around;
+        padding: 40px 0;
+        max-width: 770px;
+    }
+
+    footer figure {
+        width: 40%;
+        margin: 0 20px
+    }
+
+    footer ul {
+        width: auto;
+    }
+
+    /* FOOTER  */
+
+
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIS HOME  */
