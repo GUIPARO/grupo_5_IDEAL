@@ -342,8 +342,67 @@ footer .list_icons li a {
     color: black;
 }
 
-
 /* FIN FOOTER  */
+
+/* LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN  */
+
+.main_login {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 400px;
+    max-width: 750px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.login_title {
+    font-size: 30px;
+    color: #1e2d44e0;
+}
+
+
+
+.main_login form {
+    width: 100%;
+}
+
+.login_form input {
+    display: block;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 300px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #1e2d44e0;
+    font-size: 18px;
+}
+
+.login_form input:last-child {
+    background-color: #1e2d44e0;
+    color: white;
+}
+
+.new_section {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #1e2d44e0;
+}
+
+.new_section a {
+    text-decoration: none;
+    color: #ff4826;
+    font-weight: bold;
+}
+
+
+/* LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN  */
 
 /* MEDIA QUERIS HOME  */
 
@@ -459,7 +518,7 @@ footer .list_icons li a {
     footer {
         justify-content: space-around;
         padding: 40px 0;
-        max-width: 770px;
+        max-width: 750px;
     }
 
     footer figure {
@@ -477,6 +536,11 @@ footer .list_icons li a {
 
     footer ul li {
         font-size: 18px;
+    }
+
+    .main_login {
+        height: 60vh;
+        justify-content: space-evenly;
     }
 }
 
