@@ -5,16 +5,9 @@
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-:root {
-    --azul_header: #ffc107;
-}
-
-
 header {
-    /* border: 1px solid red; */
-    width: 100%;
+    width: 80%;
     margin: 20px auto;
-    padding-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,6 +20,7 @@ header .logo_container {
 
 header .main_logo {
     width: 70%;
+    max-width: 300px;
 }
 
 header nav {
@@ -51,7 +45,7 @@ header .icon_section {
 }
 
 header .icon_section i {
-    color: var(--azul_header);
+    color: #1e2d44e0;
 }
 
 header .icon_section .lupa_icon {
@@ -87,21 +81,22 @@ main .carrousel_image {
 /* INICIO SECCION DESCRIPCION  */
 
 .description_section {
+    width: 80%;
+    max-width: 700px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.473);
     padding-bottom: 40px;
+    margin: 0 auto;
     margin-bottom: 30px;
 }
 
 .description_section .description-image_container {
-    /* border: 1px red solid; */
     width: 70%;
     margin: 0 auto 25px;
     text-align: center;
-    ;
 }
 
 .description_section .description_image {
-    width: 80%;
+    width: 100%;
     border-radius: 50%;
 }
 
@@ -110,11 +105,12 @@ main .carrousel_image {
     width: 80%;
     font-weight: 300;
     text-align: justify;
+    font-size: 20px;
 }
 
 main .services_title {
     width: fit-content;
-    margin: 10px auto;
+    margin: 40px auto 0;
     font-weight: 500;
     font-size: 25px;
 }
@@ -122,14 +118,10 @@ main .services_title {
 main .services_section {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.services_section {
+    width: 80%;
+    margin: 0 auto 60px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.473);
-    padding-bottom: 20px;
-    margin-bottom: 30px;
+    padding: 40px 0 40px;
 }
 
 .services_section ul {
@@ -137,20 +129,20 @@ main .services_section {
     height: 35px;
     margin: 15px auto;
     padding: 0 10px 0 15px;
-    background: linear-gradient(90deg, rgba(255,193,7,1) 0%, rgba(221,153,44,1) 44%, rgba(255,130,4,1) 86%);
-    border-bottom: 4px outset #ffc1076c;
+    background: rgb(37,58,80);
+    background: linear-gradient(90deg, rgba(37,58,80,1) 59%, rgba(30,30,30,1) 96%);
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     text-align: start;
-    color: white;
-    font-weight: bold;
+    font-weight: 300;
 }
 
 .services_section ul i {
-    font-size: 12px;
+    font-size: 15px;
     margin-right: 5px;
+    color: #ffc107;
 }
 
 .services_section .list-service_item {
@@ -158,6 +150,7 @@ main .services_section {
     text-decoration: none;
     color: white;
     margin-top: 2px;
+    font-size: 18px;
 }
 
 .services_section .last-item_service {
@@ -175,6 +168,10 @@ main .services_section {
     font-size: 25px;
 }
 
+.products_section {
+    margin: 50px auto 50px;
+}
+
 .products_section .product_card {
     position: relative;
     display: flex;
@@ -182,13 +179,41 @@ main .services_section {
     justify-content: space-between;
     margin: 50px auto;
     border-radius: 10px;
-    width: 80%;
+    width: 300px;
     height: 200px;
-    background: #1e2d44e0;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    background-repeat: none;
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(125deg, rgba(255,255,255,1) 23%, rgba(220,220,220,1) 65%);
+}
+
+.fashion_product {
+    box-shadow: rgba(255,72,38, 0.4) 5px 5px, rgba(255,72,38, 0.3) 10px 10px, rgba(255,72,38, 0.2) 15px 15px, rgba(255,72,38, 0.1) 20px 20px, rgba(255,72,38, 0.05) 25px 25px;
+}
+
+.fashion_product .product-list_card {
+    background: #ff4826;
+}
+
+.sport_product {
+    box-shadow: rgba(118,7,132, 0.4) 5px 5px, rgba(118,7,132, 0.3) 10px 10px, rgba(118,7,132, 0.2) 15px 15px, rgba(118,7,132, 0.1) 20px 20px, rgba(118,7,132, 0.05) 25px 25px;
+}
+
+.sport_product .product-list_card {
+    background: #760784;
+}
+
+.industrial_product {
+    box-shadow: rgba(164,169,0, 0.4) 5px 5px, rgba(164,169,0, 0.3) 10px 10px, rgba(164,169,0, 0.2) 15px 15px, rgba(164,169,0, 0.1) 20px 20px, rgba(164,169,0, 0.05) 25px 25px;
+}
+
+.industrial_product .product-list_card {
+    background: #a4a900;
+}
+
+.medical_product {
+    box-shadow: rgba(129,159,219, 0.4) 5px 5px, rgba(129,159,219, 0.3) 10px 10px, rgba(129,159,219, 0.2) 15px 15px, rgba(129,159,219, 0.1) 20px 20px, rgba(129,159,219, 0.05) 25px 25px;
+}
+
+.medical_product .product-list_card {
+    background: #819fdb;
 }
 
 main .fashion_image {
@@ -203,9 +228,9 @@ main .fashion_image img {
 }
 
 .product_card .card-title {
-    margin: 10px;
+    margin: 30px;
     font-size: 25px;
-    color: white;
+    color: black;
     font-weight: 300;
 }
 
@@ -215,18 +240,11 @@ main .fashion_image img {
     position: absolute;
     opacity: 1;
     position: relative;
-    background-color: #ffc107;
     display: flex;
     align-items: center;
     border-radius: 10px;
-    border: 2px solid white;
 }
 
-/* .product_card .product-list_card:hover {
-    transform: translateY(-50%);
-    transition: 0.5s;
-    opacity: 1;
-} */
 
 .product-list_card .rigth-text {
     position: absolute;
@@ -252,7 +270,7 @@ main .fashion_image img {
 {
     text-decoration: none;
     color: white;
-    font-weight: 300;                                                                                                                                                                                   
+    font-weight:300;                                                                   
 }
 
 .product-list_card .product-card_item {
@@ -264,7 +282,7 @@ main .fashion_image img {
 /* INICIO FOOTER  */
 
 footer {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -276,7 +294,6 @@ footer {
 footer figure {
     width: 40%;
     margin: 20px 0;
-    /* background-color: black; */
 }
 
 footer figure img {
@@ -291,15 +308,15 @@ footer ul {
 }
 
 footer ul li {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     color: rgba(114, 109, 109, 0.774);
-
+    margin-top: 5px;
 }
 
 footer ul li:first-child {
-    font-size: 18px;
-    margin-bottom: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
     color: #1e2d44e0;
 }
 
@@ -334,14 +351,11 @@ footer .list_icons li a {
 
     .description_section {
         font-size: 18px;
+        width: 90%;
     }
 
     .description_section .description-image_container {
         width: 50%;
-    }
-
-    .products_section .product_card {
-        width: 60%;
     }
 
     .services_section ul {
@@ -354,7 +368,7 @@ footer .list_icons li a {
     /* HEADER  */
 
     header {
-        max-width: 940px;
+        max-width: 750px;
     }
 
     header .logo_container {
@@ -407,6 +421,7 @@ footer .list_icons li a {
     .description_section p {
         width: 280px;
         margin: 0 20px;
+        font-size: 20px;
     }
 
     .description_section .description-image_container {
@@ -427,11 +442,14 @@ footer .list_icons li a {
         flex-wrap: wrap;
         width: 90%;
         max-width: 750px;
-        margin: 0 auto;
     }
 
     .products_section .product_card {
         width: 300px;
+    }
+
+    .list-service_item {
+        font-size: 18px;
     }
 
     /* MAIN  */
@@ -453,9 +471,13 @@ footer .list_icons li a {
         width: auto;
     }
 
-    /* FOOTER  */
+    footer ul li:first-child {
+        font-size: 21px;
+    }
 
-
+    footer ul li {
+        font-size: 18px;
+    }
 }
 
 
