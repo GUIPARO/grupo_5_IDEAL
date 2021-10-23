@@ -5,6 +5,10 @@
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
+body {
+    background: #fafafa;
+}
+
 header {
     width: 80%;
     margin: 20px auto;
@@ -82,7 +86,7 @@ main .carrousel_image {
 
 .description_section {
     width: 80%;
-    max-width: 700px;
+    max-width: 1000px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.473);
     padding-bottom: 40px;
     margin: 0 auto;
@@ -354,7 +358,7 @@ footer .list_icons li a {
     flex-wrap: wrap;
     width: 80%;
     height: 400px;
-    max-width: 750px;
+    max-width: 1000px;
     margin: 0 auto;
     align-items: center;
     justify-content: space-around;
@@ -429,7 +433,7 @@ footer .list_icons li a {
     /* HEADER  */
 
     header {
-        max-width: 750px;
+        max-width: 1000px;
     }
 
     header .logo_container {
@@ -451,6 +455,10 @@ footer .list_icons li a {
         margin-right: 10px;
     }
 
+    header .fa-bars {
+        display: none;
+    }
+
     header .header_list {
         display: flex;
     }
@@ -469,7 +477,7 @@ footer .list_icons li a {
     /* MAIN  */
 
     .carrousel_section {
-        max-width: 720px;
+        max-width: 1000px;
         margin: 0 auto;
     }
 
@@ -491,7 +499,7 @@ footer .list_icons li a {
     }
 
     main .services_section {
-        width: 700px;
+        width: 750px;
     }
 
     .services_section ul {
@@ -502,7 +510,7 @@ footer .list_icons li a {
         display: flex;
         flex-wrap: wrap;
         width: 90%;
-        max-width: 750px;
+        max-width: 1000px;
     }
 
     .products_section .product_card {
@@ -520,12 +528,11 @@ footer .list_icons li a {
     footer {
         justify-content: space-around;
         padding: 40px 0;
-        max-width: 750px;
+        max-width: 1000px;
     }
 
     footer figure {
-        width: 40%;
-        margin: 0 20px
+        width: 45%;
     }
 
     footer ul {
@@ -544,6 +551,43 @@ footer .list_icons li a {
         height: 60vh;
         justify-content: space-evenly;
     }
+}
+
+@media (min-width: 1000px) {
+
+    main .services_section {
+        width: 1000px;
+    }
+
+    .services_section ul {
+        width: 260px;
+        height: 45px;
+    }
+
+    .services_section .list-service_item {
+        font-size: 20px;
+    }
+
+    .products_section .product_card {
+        width: 400px;
+    }
+
+    .products_section .product-card_item,
+    .products_section .rigth-text {
+        font-size: 19px;
+    }
+
+    .products_section .rigth-text {
+        font-size: 19px;
+        left: calc(100% - 100px);
+    }
+
+    footer figure {
+        max-width: 450px;
+        margin: 0 20px;
+    }
+
+
 }
 
 
