@@ -1,0 +1,24 @@
+{
+  "name": "grupo_5_ideal",
+  "version": "0.1.0",
+  "description": "Grupo 5 \r =============",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GUIPARO/grupo_5_IDEAL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GUIPARO/grupo_5_IDEAL/issues"
+  },
+  "homepage": "https://github.com/GUIPARO/grupo_5_IDEAL#readme"
+}
