@@ -109,7 +109,8 @@ main .carrousel_image {
 }
 
 main .services_title {
-    width: fit-content;
+    width: 80%;
+    text-align: center;
     margin: 40px auto 0;
     font-weight: 500;
     font-size: 25px;
@@ -162,7 +163,8 @@ main .services_section {
 /* INICIO SECCION PRODUCTOS  */
 
 .products_title {
-    width: fit-content;
+    width: 80%;
+    text-align: center;
     margin: 30px auto;
     font-weight: 500;
     font-size: 25px;
