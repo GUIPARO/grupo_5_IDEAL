@@ -55,7 +55,7 @@
                             <span class="divisor"></span>
                             <div class="cost_info">
                                 <span class="cost_text">El VALOR APLICA PARA </span>
-                                <span>12 UND DEL MISMO MOTIVO</span>
+                                <span class="cost_text">12 UND DEL MISMO MOTIVO</span>
                             </div>
                         </div>
                     </div>
@@ -129,9 +129,84 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="container_fileUpload">
+                            <label for="title_fileUpload">Subir archivo/diseño</label>
+                            <input type="file" id="fileUpload">
+                        </div>
+                        <div class="container_comments">
+                            <div class="comments">
+                                <label for="write_comments">Observaciones Adicionales</label>
+                                <textarea id="write_comments"
+                                    name="area_comments">"¡Escribe aca! Observaciones o detalles adicionales a tener en cuenta"</textarea>
+                            </div>
+                        </div>
+                        <div class="container_quantity">
+                            <div class="quantity">
+                                <select class="list_quantity" name="cantidad" id="select_quantity">
+                                    <option selected="" value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <button class="btn " type="submit">Agregar al carrito</button>
+                        </div>
                     </form>
                 </div>
             </section>
+        </section>
+        <h3 class="similar_title">Tambien te puede interesar</h3>
+        <section class="container_similar">
+            <article class="product_similar">
+                <a href="#">
+                    <figure class="similar_img">
+                        <img src="/img/fashion.png" alt="fashion">
+                    </figure>
+                    <section class="similar_info">
+                        <span>Camisetas Personalizadas</span>
+                        <span>$18.000</span>
+                    </section>
+                </a>
+            </article>
+            <article class="product_similar">
+                <a href="#">
+                    <figure class="similar_img">
+                        <img src="/img/industrial.png" alt="industrial">
+                    </figure>
+                    <section class="similar_info">
+                        <span>Camisetas Personalizadas</span>
+                        <span>$18.000</span>
+                    </section>
+                </a>
+            </article>
+            <article class="product_similar">
+                <a href="#">
+                    <figure class="similar_img">
+                        <img src="img/medical.png" alt="medical">
+                    </figure>
+                    <section class="similar_info">
+                        <span>Camisetas Personalizadas</span>
+                        <span>$18.000</span>
+                    </section>
+                </a>
+            </article>
+            <article class="product_similar">
+                <a href="#">
+                    <figure class="similar_img">
+                        <img src="/img/sport.png" alt="sport">
+                    </figure>
+                    <section class="similar_info">
+                        <span>Camisetas Personalizadas</span>
+                        <span>$18.000</span>
+                    </section>
+                </a>
+            </article>
         </section>
     </main>
     <footer>
