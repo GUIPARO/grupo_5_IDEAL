@@ -416,6 +416,127 @@ footer .list_icons li a {
 
 /* LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN  */
 
+
+/* PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT */
+
+/*--- INICIO MAIN DETALLE PRODUCTO---*/
+
+main .container_init{
+    max-width: 90%;
+    overflow: hidden;
+    margin: 15px auto;
+}
+
+main .container_details_product {
+    max-width: 90%;
+    overflow: hidden;
+    margin: auto;
+}
+
+main .container_details_product .container_product{
+    width: 90%;
+    margin: 0 auto 10px;
+    text-align: center;
+}
+
+.container_product img{
+    width: 100%;
+}
+
+main .container_info_product{
+    width: 90%;
+    margin: 0 auto 10px;
+}
+
+.product_name{
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: -1.2px;
+    text-align: center;
+}
+
+.detail_product{
+    font-size: 13px;
+    margin: 15px 0;
+    border-top: 1px solid #e1dcd6;
+    text-align: left;
+}
+
+.product_cost{
+    font-size: 22px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* MENSAJE DE COSTO POR DOCENA*/
+
+.container_cost_dozen{
+    margin: 0 auto 10px;
+}
+
+.divisor{
+	padding-left: 0;
+	padding-right: 10px;
+	border-right: 3px solid #000;
+	margin-right: 5px;
+}
+
+.cost_dozen{
+    background:rgb(37,58,80);
+    color: white;
+    display: flex;
+    padding: 5px;
+    font-size: 11px;
+}
+
+.cost_dozen i{
+        font-size: 20px;
+        text-align: center;
+        align-items: center; 
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+        color:#ffc107;
+}
+.cost_text{
+    font-weight: 700;
+    display: block;
+    font-size: 14px;
+}
+
+/* FIN MENSAJE DE COSTO POR DOCENA*/
+
+.container_technic,
+.detail_product .list{
+    margin: 0 auto 10px;
+}
+
+.container_technic .title_technic,
+.container_line .title_line {
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.buying-guide a{
+    font-size: 13px;
+    color: black;
+    margin-left: 3px;
+}
+
+.type_technic,
+.list ul li{
+    color: gray;
+    list-style: none;
+}
+
+.list ul{
+    display:flex;
+    flex-direction:column
+}
+
+/* PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT */
+
 /* MEDIA QUERIS HOME  */
 
 @media (min-width: 481px) {
