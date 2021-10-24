@@ -535,6 +535,95 @@ main .container_info_product{
     flex-direction:column
 }
 
+/*--------INICIO FORMULARIO-------*/
+
+/*----LISTA DE TELAS Y TALLAS----*/
+
+.container_form{
+    border-top: 1px solid #e1dcd6;
+    padding-top:10px;
+}
+
+.container_material, .container_sizes{
+    margin: 0 auto 10px;
+    list-style: none;
+}
+
+.title_material,
+.title_sizes,
+.title_color{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+
+.container_material li, 
+.container_sizes li{
+    list-style: none;
+}
+
+.material input,
+.sizes input{
+    display: none;
+}
+
+.material label{
+    cursor: pointer;
+    width: 70px;
+    height: 30px;
+    border: 1px solid #666;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.container_sizes .sizes{
+    display: block;
+    margin: auto;
+}
+
+.size_guide a {
+    font-size: 13px;
+    color: black;
+}
+
+main .container_sizes .fa, .fas{
+    font-size: 12px;
+}
+
+.sizes label{
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    border: 1px solid #666;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    margin: 5px 0;
+    padding: 5px;
+} 
+
+/* ---LISTA COLOR-----*/
+
+.container_color{
+    margin: 0 auto 10px;
+    list-style: none;
+}
+
+.topic_color select{
+    background: transparent;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.8s;
+    margin-top: 5px;
+    width: 90px;
+    height: 30px;
+    font-size: 12px;
+} 
+
 /* PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT */
 
 /* MEDIA QUERIS HOME  */
