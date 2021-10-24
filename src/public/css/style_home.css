@@ -559,7 +559,6 @@ footer .list_icons li a {
     }
 }
 
-<<<<<<< HEAD
 @media (min-width: 1000px) {
 
     main .services_section {
@@ -597,70 +596,6 @@ footer .list_icons li a {
 
 }
 
-=======
-/* INICIO REGISTER MAIN */
-.register-main {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: #ffffff;
-    margin: 2px 0;
-  
-  }
-
-  .register-form input {
-      border-radius: 5px;
-      display: block;
-      margin: 20px auto;
-      width: 70%;
-      border: 2px solid #1e2d44e0;
-      font-size: 18px ;
-      padding:10px;
-  }
-  
-  .register-form input:last-child {
-    background-color: #1e2d44e0;
-    color: white;
-}
-  .register-main .register-form {
-    display: flex;
-    width: 90%;
-    max-width: 550px;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: #FFF;
-    padding: 35px 25px;
-    gap: 8px;
-    margin-bottom: 25px;
-  }
-  .register-form .politicas {
-      display:block;
-      text-align: center;
-  }
-.buttons button{
-    
-    background-color: #1e2d44e0;
-    color: white;
-    border-radius: 5px;
-    margin: 20px auto;
-    font-size: 18px;
-    max-width: 300px;
-    height: 40px;
-    padding: 10px;
-    border: 2px solid #1e2d44e0
-}
-
-  .title-register {
-    font-size: 30px;
-    color: #1e2d44e0;
-}
-
-
-
-/* FINAK REGISTER MAIN */
->>>>>>> 82230c1f0831fc348b8b0761445fe241bc75d6b1
 
 
 
