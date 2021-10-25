@@ -818,8 +818,8 @@ main .container_buy {
 }
 
 .product_buy{
-    width: 50%;
-    margin: 15px auto;
+    display: flex;
+    justify-content: center;
 }
 
 .product_buy img{
@@ -869,29 +869,41 @@ main .container_buy {
     font-size: 18px;
 }
 
+.container_shop{
+    width: 90%;
+    margin: auto;
+}
+
 .container_cupon{
-    width: 80%;
-    margin: 20px;
+    width: 90%;
+    margin: 20px auto;
     text-align: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding:16px;
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 4px 2px, rgba(0, 0, 0, 0.03) 0px 2px 1px 0px;
 }
 
-.digitar_cupon input::placeholder{
+.title_cupon label{
+    color: #7f818d;
+    font-size: 14px;
+    margin-bottom: 8px;
+
+}
+
+.digitar_cupon input#cupon{
     padding: 0px 16px;
     font-weight: 500;
     color: rgb(67, 72, 77);
-    height: 45px;
+    border-radius: 4px;
+    height: 30px;
+    width: 80%;
 }
 
  .container_resume{
-    width: 80%;
-    margin: 20px;
+    width: 90%;
+    margin: 20px auto;
     text-align: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px;
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 4px 2px, rgba(0, 0, 0, 0.03) 0px 2px 1px 0px;
 }
@@ -900,6 +912,7 @@ main .container_buy {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    border-bottom: 1px solid grey;
 }
 
 .container_subtotal_resume, .container_value_subtotal,
@@ -911,8 +924,7 @@ main .container_buy {
     margin: 1px auto;
 }
 
-
-button, [type="reset"]{
+ button.container_value_description {
     background: white;
     border:none;
     color: #666;
@@ -921,15 +933,43 @@ button, [type="reset"]{
     padding: 5px;
 }
 
-button .finish_shop, [type="submit"]{
-    background: #1e2d44e0;
-    border: 1px solid #1e2d44e0;;
-    padding: 8px 16px;
-    color: rgb(255, 255, 255);
+
+button.apply_cupon{
+    background-color: #1e2d44e0;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #1e2d44e0;
+    font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 10px;
+    margin: 15px auto;
     cursor: pointer;
+    width: 70px;
+}
+
+button.apply_cupon:hover{
+    background-color: #ffc107;
+    border-color: #e4b016;
+    color:black;
+}
+
+button.finish_shop{
+    background-color: #1e2d44e0;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #1e2d44e0;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 10px auto;
+    cursor: pointer;
+    width: 150px;
+}
+
+button.finish_shop:hover{
+    background-color: #ffc107;
+    border-color: #e4b016;
+    color:black;
 }
 /*---- PRODUCT-CAR PRODUCT-CAR PRODUCT-CAR PRODUCT-CAR PRODUCT-CAR ----*/
 
@@ -1218,6 +1258,14 @@ button .finish_shop, [type="submit"]{
     .container_shop{
         max-width: 1000px;
     }
+
+    /* .container_cupon{
+        max-width: 395px;
+    }
+
+    .container_resume{
+        max-width: 395px;
+    } */
 /*FIN MEDIA QUERIS CARRITO DE COMPRA*/
 }
 
