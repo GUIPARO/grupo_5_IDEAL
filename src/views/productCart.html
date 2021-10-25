@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Diseño Textil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style_home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <figure class="logo_container">
+            <a href='/'>
+            <img class="main_logo" src="/img/logo_ideal.png" alt="Logo de Ideal">
+            </a>
+        </figure>
+        <nav>
+            <ul class="header_list">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Mi cuenta</a></li>
+            </ul>
+            <section class="icon_section">
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <input class="bar_search" type="search">
+                <a class="lupa_icon" href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-bars"></i></a>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <h3 class="title_car">Carrito de compra</h3>
+        <form action="/" method="post">
+            <section class="container_buy">
+                <figure class="product_buy">
+                    <img class="imagen-producto" src="/img/fashion.png" alt="botas">
+                </figure>
+                <section class="container_description_buy">
+                    <article class="description_buy">
+                        <div class="container_description_product">
+                            <p class="title_description">PRODUCTO</p>
+                        </div>
+                        <div class="container_title_description">
+                            <p class="container_value_description">Descripción del producto seleccionado</p>
+                        </div>
+                        <div class="container_description_product">
+                            <p class="title_description">PRECIO</p>
+                        </div>
+                        <div class="container_title_description">
+                            <p class="container_value_description">$123456</p>
+                        </div>
+                        <div class="container_description_product">
+                            <p class="title_description">CANTIDAD</p>
+                        </div>
+                        <div class="container_title_description">
+                            <input type="number" id="contador-producto" class="container_value_description" step="1"
+                                min="0" max="19" size="4">
+                        </div>
+                        <div class="container_description_product">
+                            <p class="title_description">SUBTOTAL</p>
+                        </div>
+                        <div class="container_title_description">
+                            <p class="container_value_description">$123456</p>
+                        </div>
+
+                        <div class="container_description_product">
+                            <p class="title_description">ELIMINAR</p>
+                        </div>
+                        <div class="container_title_description">
+                            <button type="reset" value="Borrar" class="container_value_description"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </article>
+                </section>
+            </section>
+            <section class="container_shop">
+                <section class="container_cupon">
+                    <div class="titulo_cupon">
+                        <label for="cupon">
+                            <h3 class="code_prom">Ingrese su código de promoción</h3>
+                        </label>
+                    </div>
+                    <div class="digitar_cupon">
+                        <input type="text" id="cupon" name="cupon">
+                    </div>
+                    <button class="apply_cupon" value="apply_cupon" type="button">Aplicar</button>
+                </section>
+                <section class="container_resume">
+                    <h3 class="title_totalcar">Total carrito</h3>
+                    <article class="data_resume">
+                        <div class="container_subtotal_resume">
+                            <p class="title_subtotal">Subtotal</p>
+                        </div>
+                        <div class="container_title_subtotal">
+                            <p class="container_value_subtotal">$123456</p>
+                        </div>
+                        <div class="container_send">
+                            <p class="title_send">Envío</p>
+                        </div>
+                        <div class="container_title_send">
+                            <p class="container_value_send">$123456</p>
+                        </div>
+                        <div class="container_totalBuy">
+                            <p class="title_totalBuy">Total</p>
+                        </div>
+                        <div class="container_title_totalBuy">
+                            <p class="container_value_totalBuy">$123456</p>
+                        </div>
+                    </article>
+                    <button class="finish_shop" type="submit" value="finish_shop" >Finalizar compra</button>
+                </section>
+            </section>
+        </form>
+    </main>
+    <footer >
+        <figure>
+            <img src=""" alt="">
+        </figure>
+        <figure>
+            <a href="">
+                <img src="" alt="">
+            </a>
+        </figure>
+        <ul>
+            <li>Mi cuenta</li>
+            <li><a href="/login">Ingresar</a></li>
+            <li><a href="#">Registrarse</a></li>
+        </ul>
+        <ul>
+            <li>Contáctanos</li>
+            <li>+57 310000000</li>
+            <li>ideal@ideal.com</li>
+        </ul>
+        <ul>
+            <li>Información legal</li>
+            <li><a href="#">Terminos de uso</a></li>
+            <li><a href="#">Politicas de privacidad</a></li>
+        </ul>
+        <ul class="list_icons">
+            <li class="list_icons-title">Redes</li>
+            <li><a href="https://www.facebook.com/ideal.dise/" target="blank"><i class="fab fa-facebook-square" ></i></a></li>
+            <li><a href="https://www.instagram.com/ideal_dise/" target="blank"><i class="fab fa-instagram-square"></i></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
