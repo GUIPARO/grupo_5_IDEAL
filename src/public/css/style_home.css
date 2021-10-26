@@ -421,6 +421,177 @@ footer .list_icons li a {
 
 /* LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN  */
 
+/* INICIO REGISTER MAIN */
+.register-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    margin: 2px 0;
+  
+  }
+
+  .register-form input {
+      border-radius: 5px;
+      display: block;
+      margin: 20px auto;
+      width: 70%;
+      border: 2px solid #1e2d44e0;
+      font-size: 18px ;
+      padding:10px;
+      margin-bottom: 1px;
+      
+  }
+  
+  
+  .register-form input:last-child {
+    background-color: #1e2d44e0;
+    color: white;
+}
+  .register-main .register-form {
+    display: flex;
+    width: 90%;
+    max-width: 550px;
+    flex-direction: column;
+    background-color: #FFF;
+    padding: 35px 25px;
+    gap: 8px;
+    
+  }
+ 
+  
+  .buttons {
+    width: 50%;
+    background-color: #1e2d44e0;
+    color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 18px;
+    display: inline-block;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #1e2d44e0;
+    max-width: 550px;
+}
+.register-form .low_section  {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #1e2d44e0;
+}
+.acepto {
+    width: 100%;
+}
+.acepto h3{ 
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+
+}
+.low_section a {
+    text-decoration: none;
+    color: #ff4826;
+    font-weight: bold;
+}
+
+/* FINAl REGISTER REGISTER REGISTER REGISTER MAIN */
+
+/* INICIO COTIZACION COTIZACION COTIZACION COTIZACION MAIN */ 
+.title-cotizacion{
+    text-align: center;
+   padding: 5px 20px;
+
+}
+.cotizacion-main h4 {
+    text-align: center;
+    color:grey;
+}
+.cotizacion-main .service-form{
+display: flex;
+width: 90%;
+max-width: 550px;
+flex-direction: column;
+background-color: #FFF;
+padding: 35px 25px;
+gap: 8px;
+margin: 0 auto;
+}
+.container-serviceform .select_service:hover{
+    border: solid 1px black;
+} 
+.container-serviceform{
+       padding: 20px;
+       width: 100%;
+       margin: 0 auto;
+       display:flex;
+       flex-direction: column;
+       
+}
+.container-serviceform h3 {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    
+}
+.container-serviceform select{
+    background: transparent;
+    border: solid 1px #a9a9a9;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 60%;
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+.serviceform-two {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.serviceform-two input {
+    border-radius: 5px;
+      margin: 20px auto;
+      width: 100%;
+      border: 2px solid #1e2d44e0;
+      font-size: 18px ;
+      padding:10px;
+      margin-bottom: 0.5px  ;
+      justify-content: center;
+}
+
+.service-description{
+    width: 100%;
+}
+.serviceform-two label {
+    padding: 15px 5px 5px;
+    display: block; 
+    font-size: 18px;
+    
+}
+.service-description label {
+    padding: 15px 5px 5px;
+    display: block;
+    font-size: 18px;
+}
+.service-description textarea {
+    width: 100%;
+    line-height: 25px;
+    padding: 5px 15px;
+    background: #fff;
+    color: #7f818d;
+    border: 1px solid #7f818d;
+    font-size: 12px;
+}
+/*FINAL COTIZACION COTIZACION COTIZACION COTIZACION MAIN */
 
 /* PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT */
 
@@ -1219,62 +1390,7 @@ button.finish_shop:hover{
 
 }
 
-/* INICIO REGISTER MAIN */
-.register-main {
-    width: 80%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: #ffffff;
-    margin: 2px 0;
-  
-  }
 
-  .register-form input {
-      border-radius: 5px;
-      display: block;
-      margin: 20px auto;
-      width: 70%;
-      border: 2px solid #1e2d44e0;
-      font-size: 18px ;
-      padding:10px;
-      margin-bottom: 1px;
-      
-  }
-  
-  
-  .register-form input:last-child {
-    background-color: #1e2d44e0;
-    color: white;
-}
-  .register-main .register-form {
-    display: flex;
-    width: 90%;
-    max-width: 550px;
-    flex-direction: column;
-    background-color: #FFF;
-    padding: 35px 25px;
-    gap: 8px;
-    
-  }
-  .register-form .politicas {
-      display:block;
-      text-align: center;
-  }
-  
-.buttons button{
-    width: 100%;
-    background-color: #1e2d44e0;
-    color: white;
-    border-radius: 5px;
-    margin: 0 auto;
-    font-size: 18px;
-    
-    height: 40px;
-    padding: 10px;
-    border: 2px solid #1e2d44e0
-}
 
     .container_similar {
         display: flex;
@@ -1288,62 +1404,12 @@ button.finish_shop:hover{
 
 /*----FIN MEDIA QUERY PRODUCTO----*/
 
-.register-form .low_section  {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #1e2d44e0;
-}
-.register-form .politicas {
-    width: 60%;
-}
-.low_section a {
-    text-decoration: none;
-    color: #ff4826;
-    font-weight: bold;
-}
 
 
-/* FINAl REGISTER MAIN */
 
-/* INICIO COTIZACION MAIN */ 
-.cotizacion-main .title-cotizacion {
-    font-size: 30px;
-    color: #1e2d44e0;
-    text-align: center;
 
-}
 
-.service-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-   
-}
 
-.cotizacion-main .cotizacion-form  {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 20px;
-    width: 50%;
-    }
-
-    .cotizacion-form input {
-      border-radius: 5px;
-      margin: 20px auto;
-      width: 70%;
-      border: 2px solid #1e2d44e0;
-      font-size: 18px ;
-      padding:10px;
-      margin-bottom: 1px;
-      justify-content: center;
-
-    }
-/*FINAL COTIZACION MAIN */
 
     .services_section .list-service_item {
         font-size: 20px;
@@ -1359,7 +1425,7 @@ button.finish_shop:hover{
         left: calc(100% - 100px);
     }
 
-/* FINAK REGISTER MAIN */
+
 
 /*----INICIO MEDIA QUERY PRODUCTO----*/
 
