@@ -164,6 +164,7 @@ main .services_section {
 
 /* FIN SECCION DESCRIPCION  */
 
+
 /* INICIO SECCION PRODUCTOS  */
 
 .products_title {
@@ -418,9 +419,124 @@ footer .list_icons li a {
     font-weight: bold;
 }
 
-
 /* LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN  */
 
+
+/* INICIO REGISTER MAIN */
+
+.register-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    margin: 2px 0;
+  
+  }
+
+  .register-form input {
+      border-radius: 5px;
+      display: block;
+      margin: 20px auto;
+      width: 70%;
+      border: 2px solid #1e2d44e0;
+      font-size: 18px ;
+      padding:10px;
+      margin-bottom: 1px;
+      
+  }
+  
+  
+  .register-form input:last-child {
+    background-color: #1e2d44e0;
+    color: white;
+}
+  .register-main .register-form {
+    display: flex;
+    width: 90%;
+    max-width: 550px;
+    flex-direction: column;
+    background-color: #FFF;
+    padding: 35px 25px;
+    gap: 8px;
+    
+  }
+
+  .register-form .politicas {
+      display:block;
+      text-align: center;
+  }
+  
+.buttons button{
+    width: 100%;
+    background-color: #1e2d44e0;
+    color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 18px;
+    
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #1e2d44e0
+}
+
+
+.register-form .low_section  {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #1e2d44e0;
+}
+.register-form .politicas {
+    width: 60%;
+}
+.low_section a {
+    text-decoration: none;
+    color: #ff4826;
+    font-weight: bold;
+}
+
+/* FINAl REGISTER MAIN */
+
+/* INICIO COTIZACION MAIN */ 
+.cotizacion-main .title-cotizacion {
+    font-size: 30px;
+    color: #1e2d44e0;
+    text-align: center;
+}
+
+.service-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+   
+}
+
+.cotizacion-main .cotizacion-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    width: 50%;
+
+}
+
+.cotizacion-form input {
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 70%;
+    border: 2px solid #1e2d44e0;
+    font-size: 18px ;
+    padding:10px;
+    margin-bottom: 1px;
+    justify-content: center;
+}
+
+/*FINAL COTIZACION MAIN */
 
 /* PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT */
 
@@ -462,9 +578,9 @@ main .container_info_product{
 
 .detail_product{
     font-size: 13px;
-    margin: 15px 0;
     border-top: 1px solid #e1dcd6;
     text-align: left;
+    padding: 10px 0;
 }
 
 .product_cost{
@@ -523,10 +639,24 @@ main .container_info_product{
     font-size: 18px;
 }
 
-.buying-guide a{
+.buying_guide{
+    margin:10px 0;
+}
+
+.buying_guide i{
+    font-size: 13px;
+    color: black;
+}
+
+.buying_guide a{
     font-size: 14px;
     color: black;
     margin-left: 3px;
+    text-decoration: none;
+}
+
+.buying_guide a:hover{
+    text-decoration:underline;
 }
 
 .type_technic,
@@ -562,7 +692,6 @@ main .container_info_product{
     text-transform: uppercase;
 }
 
-
 .container_material li, 
 .container_sizes li{
     list-style: none;
@@ -573,7 +702,7 @@ main .container_info_product{
     display: none;
 }
 
-.material label{
+.material label, .sizes label, .topic_color select{
     cursor: pointer;
     width: 70px;
     height: 30px;
@@ -585,6 +714,7 @@ main .container_info_product{
     margin-right: 3px;
     padding: 5px;
     font-size: 16px;
+    background: #F2F2F2;
 }
 
 .material label:hover{
@@ -596,29 +726,25 @@ main .container_info_product{
     margin: auto;
 }
 
+.size_guide i {
+    font-size: 13px;
+    color: black;
+}
+
 .size_guide a {
     font-size: 14px;
     color: black;
     margin-left: 3px;
+    text-decoration: none;
+}
+
+.size_guide a:hover{
+    text-decoration:underline;
 }
 
 main .container_sizes .fa, .fas{
     font-size: 20px;
 }
-
-.sizes label{
-    cursor: pointer;
-    width: 40px;
-    height: 30px;
-    border: solid 1px #a9a9a9;
-    display: inline-block;
-    overflow: hidden;
-    text-align: center;
-    margin-top: 5px;
-    margin-right: 3px;
-    padding: 5px;
-    font-size: 16px;
-} 
 
 .sizes label:hover{
     border: solid 1px black;
@@ -631,17 +757,6 @@ main .container_sizes .fa, .fas{
     list-style: none;
 }
 
-.topic_color select{
-    background: transparent;
-    border:solid 1px #a9a9a9;
-    padding: 5px;
-    cursor: pointer;
-    margin-top: 5px;
-    width: 90px;
-    height: 30px;
-    font-size: 16px;
-    text-align: center;
-} 
 
 .topic_color select:hover{
     border: solid 1px black;
@@ -667,13 +782,18 @@ main .container_sizes .fa, .fas{
 /*  pseudo-elemento ---> ::file-selector-button  */
 
 input[type=file]::file-selector-button {
+    cursor: pointer;
+    width: 70px;
+    height: 30px;
     border: solid 1px #a9a9a9;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 3px;
     padding: 5px;
-    cursor:pointer;
-    margin-top:5px;
-    width: 90px;
     font-size: 16px;
-    background: transparent;
+    background: #F2F2F2;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 } 
    
@@ -734,7 +854,7 @@ input[type=file]::file-selector-button:hover {
     width: 100%;
     cursor: pointer;
     border: 1px solid #7f818d;
-    background: white;
+    background: #F2F2F2;
     font-size: 16px;
 } 
 
@@ -750,11 +870,12 @@ input[type=file]::file-selector-button:hover {
     height: 44px;
     padding: 0 45px;
     border-width: 1px;
-    border-style: solid;
+    border-radius: 5px;
     cursor: pointer;
     color: white;
     flex-grow: 1;
     font-size: 16px;
+    text-transform: uppercase;
 } 
 
 .btn:hover{
@@ -802,7 +923,7 @@ input[type=file]::file-selector-button:hover {
     text-decoration: none;
 } 
 
-/* PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT */
+/* FINAL PRODUCT FINAL PRODUCT FINAL PRODUCT PRODUCT */
 
 /*---- PRODUCT-CAR PRODUCT-CAR PRODUCT-CAR PRODUCT-CAR PRODUCT-CAR ----*/
 
@@ -814,7 +935,7 @@ input[type=file]::file-selector-button:hover {
     width: 90%;
     margin:auto;
     text-align: center;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 main .container_buy {
@@ -853,7 +974,7 @@ main .container_buy {
 }
 
 .container_description_product p{
-    font-size: 14px;
+    font-size: 16px;
     margin: 5px 0;
     font-weight: 600;
 }
@@ -863,9 +984,16 @@ main .container_buy {
 }
 
 .container_title_description p{
-    font-size: 14px;
+    font-size: 16px;
     margin: 5px 0;
     font-weight: 500;
+}
+
+.container_title_description input{
+    font-size: 17px;
+    color: #666;
+    padding: 5px;
+    padding:5px;
 }
 
 .code_prom,.title_totalcar{
@@ -873,7 +1001,8 @@ main .container_buy {
     margin:auto;
     text-align: center;
     margin-bottom:20px;
-    font-size: 18px;
+    font-size: 20px;
+    color: #1e2d44e0;
 }
 
 .container_shop{
@@ -894,7 +1023,6 @@ main .container_buy {
     color: #7f818d;
     font-size: 14px;
     margin-bottom: 8px;
-
 }
 
 .digitar_cupon input#cupon{
@@ -927,7 +1055,7 @@ main .container_buy {
 .container_title_send,.container_totalBuy,
 .container_title_totalBuy {
     flex-basis: 50%;
-    font-size: 15px;
+    font-size: 16px;
     margin: 1px auto;
 }
 
@@ -940,6 +1068,10 @@ main .container_buy {
     padding: 5px;
 }
 
+button.container_value_description:hover {
+    color:rgb(226, 61, 61)
+}
+
 
 button.apply_cupon{
     background-color: #1e2d44e0;
@@ -947,7 +1079,7 @@ button.apply_cupon{
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #1e2d44e0;
-    font-size: 13px;
+    font-size: 15px;
     text-transform: uppercase;
     margin: 15px auto;
     cursor: pointer;
@@ -955,9 +1087,8 @@ button.apply_cupon{
 }
 
 button.apply_cupon:hover{
-    background-color: #ffc107;
-    border-color: #e4b016;
-    color:black;
+    background-color: rgb(51, 84, 119);
+    border-color: rgb(51, 84, 119);
 }
 
 button.finish_shop{
@@ -966,7 +1097,7 @@ button.finish_shop{
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #1e2d44e0;
-    font-size: 13px;
+    font-size: 15px;
     text-transform: uppercase;
     margin: 10px auto;
     cursor: pointer;
@@ -974,11 +1105,10 @@ button.finish_shop{
 }
 
 button.finish_shop:hover{
-    background-color: #ffc107;
-    border-color: #e4b016;
-    color:black;
+    background-color: rgb(51, 84, 119);
+    border-color: rgb(51, 84, 119);
 }
-/*---- PRODUCT-CAR PRODUCT-CAR PRODUCT-CAR PRODUCT-CAR PRODUCT-CAR ----*/
+/*---- FINAL PRODUCT-CAR FINAL PRODUCT-CAR FINAL PRODUCT-CAR PRODUCT-CAR PRODUCT-CAR ----*/
 
 
 /* MEDIA QUERIS HOME  */
@@ -998,8 +1128,6 @@ button.finish_shop:hover{
         width: 180px;
     }
 
-/*INICIO MEDIA QUERIS CARRITO DE COMPRA*/
-
     .description_section {
         font-size: 18px;
         width: 90%;
@@ -1012,6 +1140,8 @@ button.finish_shop:hover{
     .services_section ul {
         width: 180px;
     }
+    
+/*INICIO MEDIA QUERIS CARRITO DE COMPRA*/
 
     .container_buy{
         display: flex;
@@ -1023,13 +1153,13 @@ button.finish_shop:hover{
     }
 
     .container_title_description p{
-        font-size: 15px;
+        font-size: 18px;
         margin: 5px 0;
         font-weight: 500;
     }
 
     .container_description_product p{
-        font-size: 15px;
+        font-size: 18px;
         margin: 5px 0;
         font-weight: 600;
     }
@@ -1051,6 +1181,13 @@ button.finish_shop:hover{
     .container_resume {
         margin-left: 10px;
     }
+
+    .container_subtotal_resume, .container_value_subtotal,
+    .container_title_subtotal,.container_send,
+    .container_title_send,.container_totalBuy,
+    .container_title_totalBuy {
+    font-size: 18px;
+}
 
 /*FIN MEDIA QUERIS CARRITO DE COMPRA*/
 
@@ -1179,6 +1316,26 @@ button.finish_shop:hover{
         height: 60vh;
         justify-content: space-evenly;
     }
+
+/*----INICIO MEDIA QUERY PRODUCTO----*/  
+
+    .container_details_product{
+        display: flex;
+    }
+
+    main .container_info_product{
+        margin:0 10px;
+    }
+
+    .container_similar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .product_similar{
+        width: 35%;
+    }
+
 }
 
 @media (min-width: 1000px) {
@@ -1216,152 +1373,7 @@ button.finish_shop:hover{
         margin-left: 20px;
     }
 
-
-}
-
-/* INICIO REGISTER MAIN */
-.register-main {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: #ffffff;
-    margin: 2px 0;
-  
-  }
-
-  .register-form input {
-      border-radius: 5px;
-      display: block;
-      margin: 20px auto;
-      width: 70%;
-      border: 2px solid #1e2d44e0;
-      font-size: 18px ;
-      padding:10px;
-      margin-bottom: 1px;
-      
-  }
-  
-  
-  .register-form input:last-child {
-    background-color: #1e2d44e0;
-    color: white;
-}
-  .register-main .register-form {
-    display: flex;
-    width: 90%;
-    max-width: 550px;
-    flex-direction: column;
-    background-color: #FFF;
-    padding: 35px 25px;
-    gap: 8px;
-    
-  }
-  .register-form .politicas {
-      display:block;
-      text-align: center;
-  }
-  
-.buttons button{
-    width: 100%;
-    background-color: #1e2d44e0;
-    color: white;
-    border-radius: 5px;
-    margin: 0 auto;
-    font-size: 18px;
-    
-    height: 40px;
-    padding: 10px;
-    border: 2px solid #1e2d44e0
-}
-
-    .container_similar {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .product_similar{
-        width: 35%;
-    }
-    
-
-/*----FIN MEDIA QUERY PRODUCTO----*/
-
-.register-form .low_section  {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #1e2d44e0;
-}
-.register-form .politicas {
-    width: 60%;
-}
-.low_section a {
-    text-decoration: none;
-    color: #ff4826;
-    font-weight: bold;
-}
-
-
-/* FINAl REGISTER MAIN */
-
-/* INICIO COTIZACION MAIN */ 
-.cotizacion-main .title-cotizacion {
-    font-size: 30px;
-    color: #1e2d44e0;
-    text-align: center;
-
-}
-
-.service-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-   
-}
-
-.cotizacion-main .cotizacion-form  {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 20px;
-    width: 50%;
-    }
-
-    .cotizacion-form input {
-      border-radius: 5px;
-      margin: 20px auto;
-      width: 70%;
-      border: 2px solid #1e2d44e0;
-      font-size: 18px ;
-      padding:10px;
-      margin-bottom: 1px;
-      justify-content: center;
-
-    }
-/*FINAL COTIZACION MAIN */
-
-    .services_section .list-service_item {
-        font-size: 20px;
-    }
-
-    .products_section .product-card_item,
-    .products_section .rigth-text {
-        font-size: 19px;
-    }
-
-    .products_section .rigth-text {
-        font-size: 19px;
-        left: calc(100% - 100px);
-    }
-
-/* FINAK REGISTER MAIN */
-
-/*----INICIO MEDIA QUERY PRODUCTO----*/
+    /*----INICIO MEDIA QUERY PRODUCTO----*/
 
     .container_init{
         max-width: 1000px;
@@ -1378,6 +1390,7 @@ button.finish_shop:hover{
     .product_similar{
         width: 25%;
     }
+
 /*FIN MEDIA QUERIS PRODUCTO*/
 
 /*----INICIO MEDIA QUERY CARRITO----*/
@@ -1398,7 +1411,10 @@ button.finish_shop:hover{
         max-width: 395px;
     } */
 /*FIN MEDIA QUERIS CARRITO DE COMPRA*/
+}
 
 
+   
+/* FINAK REGISTER MAIN */
 
 /* MEDIA QUERIS HOME  */
