@@ -1174,7 +1174,7 @@ button.finish_shop:hover{
 
 /* INICIO REGISTER MAIN */
 .register-main {
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     flex-direction: column;
