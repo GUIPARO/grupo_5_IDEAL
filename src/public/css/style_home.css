@@ -392,7 +392,6 @@ footer .list_icons li a {
     background-color: #1e2d44e0;
     color: white;
 }
-/* */
 .sign-in input:last-child{
     background-color: #1e2d44e0;
     color: white;
@@ -1174,15 +1173,62 @@ button.finish_shop:hover{
         justify-content: space-evenly;
     }
 
- /*----INICIO MEDIA QUERY PRODUCTO----*/
+/* INICIO REGISTER MAIN */
+.register-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    margin: 2px 0;
+  
+  }
 
-    main .container_details_product{
-        display:flex;
-    }
+  .register-form input {
+      border-radius: 5px;
+      display: block;
+      margin: 20px auto;
+      width: 70%;
+      border: 2px solid #1e2d44e0;
+      font-size: 18px ;
+      padding:10px;
+      margin-bottom: 1px;
+      
+  }
+  
+  
+  .register-form input:last-child {
+    background-color: #1e2d44e0;
+    color: white;
+}
+  .register-main .register-form {
+    display: flex;
+    width: 90%;
+    max-width: 550px;
+    flex-direction: column;
+    background-color: #FFF;
+    padding: 35px 25px;
+    gap: 8px;
     
-    main .container_info_product{
-        margin-left: 20px;
-    }
+  }
+  .register-form .politicas {
+      display:block;
+      text-align: center;
+  }
+  
+.buttons button{
+    width: 100%;
+    background-color: #1e2d44e0;
+    color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 18px;
+    
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #1e2d44e0
+}
 
     .container_similar {
         display: flex;
@@ -1197,16 +1243,62 @@ button.finish_shop:hover{
 /*----FIN MEDIA QUERY PRODUCTO----*/
 }
 
-@media (min-width: 1000px) {
+.register-form .low_section  {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #1e2d44e0;
+}
+.register-form .politicas {
+    width: 60%;
+}
+.low_section a {
+    text-decoration: none;
+    color: #ff4826;
+    font-weight: bold;
+}
 
-    main .services_section {
-        width: 1000px;
+
+/* FINAl REGISTER MAIN */
+
+/* INICIO COTIZACION MAIN */ 
+.cotizacion-main .title-cotizacion {
+    font-size: 30px;
+    color: #1e2d44e0;
+    text-align: center;
+
+}
+
+.service-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+   
+}
+
+.cotizacion-main .cotizacion-form  {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    width: 50%;
     }
 
-    .services_section ul {
-        width: 260px;
-        height: 45px;
+    .cotizacion-form input {
+      border-radius: 5px;
+      margin: 20px auto;
+      width: 70%;
+      border: 2px solid #1e2d44e0;
+      font-size: 18px ;
+      padding:10px;
+      margin-bottom: 1px;
+      justify-content: center;
+
     }
+/*FINAL COTIZACION MAIN */
 
     .services_section .list-service_item {
         font-size: 20px;
@@ -1268,7 +1360,7 @@ button.finish_shop:hover{
         max-width: 395px;
     } */
 /*FIN MEDIA QUERIS CARRITO DE COMPRA*/
-}
+
 
 
 /* MEDIA QUERIS HOME  */
