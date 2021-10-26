@@ -1,12 +1,12 @@
 # Retrospectiva #
 
 ## Keep doing ##
--Seguir realizando reuniones
+- Seguir realizando reuniones
 - Tablero en Jira
 
 ## More of ##
 - Concretar ideas
--Comunicación
+- Comunicación
 
 ## Start doing ##
 - Despejar dudas con los profesores
