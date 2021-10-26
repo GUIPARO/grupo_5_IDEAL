@@ -293,16 +293,24 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     border-top: 1px solid #1e1e1e;
-    padding: 0 30px 20px
+    padding: 0 30px 20px;
 }
 
 footer figure {
-    width: 40%;
-    margin: 20px 0;
+    width: 50%;
+    margin: 20px 0 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer figure a {
+    width: 95%;
+    max-width: 300px;
 }
 
 footer figure img {
-    width: 100%
+    width: 100%;
 }
 
 footer ul {
@@ -337,7 +345,6 @@ footer .list_icons {
 
 footer .list_icons-title {
     width: 100%;
-    margin: 0;
 }
 
 footer .list_icons li a {
@@ -596,7 +603,7 @@ main .container_info_product{
 }
 
 main .container_sizes .fa, .fas{
-    font-size: 12px;
+    font-size: 20px;
 }
 
 .sizes label{
@@ -802,11 +809,12 @@ input[type=file]::file-selector-button:hover {
 /*---INICIO MAIN CARRITO DE COMPRA---*/
 
 .title_car{
+    font-size: 30px;
+    color: #1e2d44e0;
     width: 90%;
     margin:auto;
     text-align: center;
     margin-bottom:20px;
-    font-size: 22px;
 }
 
 main .container_buy {
@@ -1171,6 +1179,45 @@ button.finish_shop:hover{
         height: 60vh;
         justify-content: space-evenly;
     }
+}
+
+@media (min-width: 1000px) {
+
+    main .services_section {
+        width: 1000px;
+    }
+
+    .services_section ul {
+        width: 260px;
+        height: 45px;
+    }
+
+    .services_section .list-service_item {
+        font-size: 20px;
+    }
+
+    .products_section .product_card {
+        width: 400px;
+    }
+
+    .products_section .product-card_item,
+    .products_section .rigth-text {
+        font-size: 19px;
+    }
+
+    .products_section .rigth-text {
+        font-size: 19px;
+        left: calc(100% - 100px);
+    }
+
+    footer figure {
+        max-width: 450px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+
+}
 
 /* INICIO REGISTER MAIN */
 .register-main {
@@ -1240,7 +1287,6 @@ button.finish_shop:hover{
     
 
 /*----FIN MEDIA QUERY PRODUCTO----*/
-}
 
 .register-form .low_section  {
     display: flex;
@@ -1303,10 +1349,6 @@ button.finish_shop:hover{
         font-size: 20px;
     }
 
-    .products_section .product_card {
-        width: 400px;
-    }
-
     .products_section .product-card_item,
     .products_section .rigth-text {
         font-size: 19px;
@@ -1317,10 +1359,7 @@ button.finish_shop:hover{
         left: calc(100% - 100px);
     }
 
-    footer figure {
-        max-width: 450px;
-        margin: 0 20px;
-    }
+/* FINAK REGISTER MAIN */
 
 /*----INICIO MEDIA QUERY PRODUCTO----*/
 
