@@ -34,3 +34,9 @@ Integrantes
 - Guisella Patron: Tengo 24 años. Soy ingeniera ambiental y sanitaría y estudiante de Programación Web Full Stack. Me encanta la musica, hacer deporte y todo lo relacionado con la tecnología. 
 - Julián Castillo: Vivo en la ciudad de Bogotá, tengo 24 años, con estudios en Electronica Industrial. Actualmente como estudiantes en la cohorte 4 Full Stack Developer con un gran interes en la técnologia y la programación.
 - Ana María Díaz Obando: Ingeniera mecatronica y estudiante de programación web full stack.
+
+
+Tablero de trabajo 
+-------------
+
+- Tablero [Jira](https://idealproject.atlassian.net/jira/software/projects/G5I/boards/1) 

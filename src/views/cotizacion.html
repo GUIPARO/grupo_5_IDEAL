@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Cotiza tu servicio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;700&display=swap" rel="stylesheet">
@@ -28,46 +28,50 @@
                 <li><a href="#">Mi cuenta</a></li>
             </ul>
             <section class="icon_section">
-                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
                 <input class="bar_search" type="search">
                 <a class="lupa_icon" href="#"><i class="fas fa-search"></i></a>
                 <a href="#"><i class="fas fa-bars"></i></a>
             </section>
         </nav>
     </header>
+    <!--INICIO COTIZACION DE SERVICIOS-->
+    <main>
+        <main class="cotizacion-main">
+            <h2 class="title-cotizacion">Cotiza tu servicio</h2>
+            <form action="#" class="service-form">
+                <h3>Escoge el servicio a cotizar</h3>
+                       <h5> <input type="radio" name="service" value="1">Diseño textil </h5>
+                       <h5><input type="radio" name="service" value="1">Calandra textil</h5>
+                        <h5><input type="radio" name="service" value="1">Sublimación textil</h5>
+                        <h5><input type="radio" name="service" value="1">Serigrafía textil</h5>
+                        <h5><input type="radio" name="service" value="1">Pottler de corte</h5>
+                        <h5><input type="radio" name="service" value="1">Estampación DTF</h5>
+                        <h5><input type="radio" name="service" value="1">Diseño textil</h5>
+                        <h5><input type="radio" name="service" value="1">Bordado industrial</h5>
+                        <h5><input type="radio" name="service" value="1">Corte industrial</h5>
+                        <h5><input type="radio" name="service" value="1">Confección indistrial</h5>
+             </form>
+        <form action="#" class="cotizacion-form">
 
-    <!--INICIO DEL MAIN REGISTER-->
-
-        <main class="register-main">
-            <h2 class="title-register">Registrate</h2>
-            <form action="#" class="register-form">
-                
-                      
+                <h3> Deja tus datos </h3>
                 <input type="text" name="fullname" id="fullname" minlength="2" placeholder="Ingresa tus nombres" required>
-                
-                <input type="text" name="username" id="username" minlength="2" placeholder="Ingresa tus apellidos" required>
-                
+                <input type="text" name="telephone" id="telephone" minlength="2" placeholder="Ingresa número de contacto" required>
                 <input type="text" name="username" id="username" minlength="2" placeholder="Ingresa tu correo" required>
-                
-                <input type="password" name="pass" id="pass" required minlength="8" required placeholder="Ingresa una contraseña">
-                
-                <input type="password" name="pass-confirm" id="pass-confirm" minlength="8" required placeholder="Confirma tu contraseña">
-                <div class="politicas>
-                    <label for="accept><input type="radio" name="" id="" value="none" checked>Acepto las politicas de privacidad</label>
-                    
-                </div>
-                <div class="buttons">
-                <button type="submit" class="submit"><span>Registrarse</span></button>
-                </div>
-                <section class="low_section">
-                    <h4>¿Ya tienes una cuenta?</h4>
-                    <a href="#"><p>Ingresa</p></a>
-                </section>
+                <input type="text" name="city" id="city" required minlength="2" required placeholder="Ingresa tu ciudad"required>
+                <input type="date" name="date" id="date" minlength="2" placeholder="Fecha estimada de entrega" required>
+                <input type="text" name="description" id="description" minlength="2" placeholder="Ingresa una descripción del servicio solicitado" required>
+                <label>Selecciona un archivo</label>
+                <input type="file" name="file" accept=".jpg"multiple>
             </form>
-        </main>
-    </main>
+            <div class="buttons">
+                <button type="submit" class="submit"><span>Cotiza tu servicio</span></button>
+                </div>
 
-    <!--FINAL MAIN REGISTER-->
+    </main>
+    <!--FINAL COTIZACION DE SERVICIOS-->
+
+
     <footer >
         <figure>
             <img src=""" alt="">

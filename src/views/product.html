@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Diseño Textil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/style_home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <figure class="logo_container">
+            <a href='/'>
+                <img class="main_logo" src="/img/logo_ideal.png" alt="Logo de Ideal">
+            </a>
+        </figure>
+        <nav>
+            <ul class="header_list">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Mi cuenta</a></li>
+            </ul>
+            <section class="icon_section">
+                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                <input class="bar_search" type="search">
+                <a class="lupa_icon" href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-bars"></i></a>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <div class="container_init">Inicio/producto</div>
+        <section class="container_details_product">
+            <figure class="container_product">
+                <img class="product_image" src="/img/fashion.png" alt="camiseta_fashion">
+            </figure>
+            <section class="container_info_product">
+                <h3 class="product_name">Camisetas Personalizadas </h3>
+                <div class="detail_product">
+                    <div class="contanier_cost">
+                        <div class="product_cost">$18.000</div>
+                    </div>
+                    <div class="container_cost_dozen">
+                        <div class="cost_dozen">
+                            <i class="fas fa-bell"></i>
+                            <span class="divisor"></span>
+                            <div class="cost_info">
+                                <span class="cost_text">El VALOR APLICA PARA </span>
+                                <span class="cost_text">12 UND DEL MISMO MOTIVO</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_technic">
+                        <span class="title_technic">Técnica</span>
+                        <span class="type_technic">Full Color Sublimación</span>
+                    </div>
+                    <div class="container_line">
+                        <span class="title_line">Linea Fashion</span>
+                        <div class="list">
+                            <ul>
+                                <li> Campañas Publicitarias</li>
+                                <li> Campañas Políticas</li>
+                                <li> Eventos Corporativos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buying-guide">
+                        <i class="fas fa-book-open"></i><a href="#">Guía de compra</a>
+                    </div>
+                </div>
+                <div class="container_form">
+                    <form action="/" method="post">
+                        <div class="container_material">
+                            <div class="list_material">
+                                <span class="title_material">Tela</span>
+                                <ul class="topic_material">
+                                    <li class="select_material">
+                                        <span class="material">
+                                            <input type="radio" name="tela" id="tela_01" value="algodon">
+                                            <label for="tela_01" name="tela">Algodon</label>
+                                            <input type="radio" name="tela" id="tela_02" value="Poliester">
+                                            <label for="tela_02" name="tela">Poliester</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="container_sizes">
+                            <div class="list_sizes">
+                                <span class="title_size">Talla</span>
+                                <div class="size_guide">
+                                    <i class="fas fa-tshirt"></i><a href="#">Guía de tallas</a>
+                                </div>
+                                <ul class="topic_size">
+                                    <li class="select-size">
+                                        <span class="sizes">
+                                            <input type="radio" name="talla" id="talla_01" value="XS">
+                                            <label for="talla_01" name="talla">XS</label>
+                                            <input type="radio" name="talla" id="talla_02" value="S">
+                                            <label for="talla_02" name="talla">S</label>
+                                            <input type="radio" name="talla" id="talla_03" value="M">
+                                            <label for="talla_03" name="talla">M</label>
+                                            <input type="radio" name="talla" id="talla_04" value="L">
+                                            <label for="talla_04" name="talla">L</label>
+                                            <input type="radio" name="talla" id="talla_05" value="XL">
+                                            <label for="talla_05" name="talla">XL</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="container_color">
+                            <span class="title_color">Color</span>
+                            <div class="topic_color">
+                                <select class="select_color" name="color" id="select-color" type="select">
+                                    <option selected="" value="Blanco">Blanco</option>
+                                    <option value="Negro">Negro</option>
+                                    <option value="Morado">Morado</option>
+                                    <option value="Naranja">Naranja</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="container_fileUpload">
+                            <label for="title_fileUpload">Subir archivo/diseño</label>
+                            <input type="file" id="fileUpload">
+                        </div>
+                        <div class="container_comments">
+                            <div class="comments">
+                                <label for="write_comments">Observaciones Adicionales</label>
+                                <textarea id="write_comments"
+                                    name="area_comments">"¡Escribe aca! Observaciones o detalles adicionales a tener en cuenta"</textarea>
+                            </div>
+                        </div>
+                        <div class="container_quantity">
+                            <div class="quantity">
+                                <select class="list_quantity" name="cantidad" id="select_quantity">
+                                    <option selected="" value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <button class="btn " type="submit">Agregar al carrito</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </section>
+        <h3 class="similar_title">Tambien te puede interesar</h3>
+        <section class="container_similar">
+            <article class="product_similar">
+                <a href="#">
+                    <figure class="similar_img">
+                        <img src="/img/fashion.png" alt="fashion">
+                    </figure>
+                    <section class="similar_info">
+                        <span>Camisetas Personalizadas</span>
+                        <span>$18.000</span>
+                    </section>
+                </a>
+            </article>
+            <article class="product_similar">
+                <a href="#">
+                    <figure class="similar_img">
+                        <img src="/img/industrial.png" alt="industrial">
+                    </figure>
+                    <section class="similar_info">
+                        <span>Camisetas Personalizadas</span>
+                        <span>$18.000</span>
+                    </section>
+                </a>
+            </article>
+            <article class="product_similar">
+                <a href="#">
+                    <figure class="similar_img">
+                        <img src="img/medical.png" alt="medical">
+                    </figure>
+                    <section class="similar_info">
+                        <span>Camisetas Personalizadas</span>
+                        <span>$18.000</span>
+                    </section>
+                </a>
+            </article>
+            <article class="product_similar">
+                <a href="#">
+                    <figure class="similar_img">
+                        <img src="/img/sport.png" alt="sport">
+                    </figure>
+                    <section class="similar_info">
+                        <span>Camisetas Personalizadas</span>
+                        <span>$18.000</span>
+                    </section>
+                </a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <figure>
+            <img src=""" alt="">
+        </figure>
+        <figure>
+            <a href="">
+                <img src="" alt="">
+            </a>
+        </figure>
+        <ul>
+            <li>Mi cuenta</li>
+            <li><a href=" /login">Ingresar</a></li>
+            <li><a href="#">Registrarse</a></li>
+            </ul>
+            <ul>
+                <li>Contáctanos</li>
+                <li>+57 310000000</li>
+                <li>ideal@ideal.com</li>
+            </ul>
+            <ul>
+                <li>Información legal</li>
+                <li><a href="#">Terminos de uso</a></li>
+                <li><a href="#">Politicas de privacidad</a></li>
+            </ul>
+            <ul class="list_icons">
+                <li class="list_icons-title">Redes</li>
+                <li><a href="https://www.facebook.com/ideal.dise/" target="blank"><i
+                            class="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://www.instagram.com/ideal_dise/" target="blank"><i
+                            class="fab fa-instagram-square"></i></a></li>
+            </ul>
+    </footer>
+</body>
+
+</html>
