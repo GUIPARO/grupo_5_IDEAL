@@ -1,7 +1,7 @@
 # Retrospectiva #
 
 ## Keep doing ##
--Seguir realizando reuniones
+- Seguir realizando reuniones
 - Tablero en Jira
 
 ## More of ##
