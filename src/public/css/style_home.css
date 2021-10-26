@@ -433,7 +433,7 @@ footer .list_icons li a {
   
   }
 
-  .register-form input {
+  .register-form .form {
       border-radius: 5px;
       display: block;
       margin: 20px auto;
@@ -460,6 +460,12 @@ footer .list_icons li a {
     gap: 8px;
     
   }
+  .acepto {
+      width: 100%;
+      display:flex;
+      justify-content: center;
+  }
+ 
  
   
   .buttons {
@@ -483,15 +489,7 @@ footer .list_icons li a {
     margin-bottom: 30px;
     color: #1e2d44e0;
 }
-.acepto {
-    width: 100%;
-}
-.acepto h3{ 
-    width: 40%;
-    display: block;
-    margin: 0 auto;
 
-}
 .low_section a {
     text-decoration: none;
     color: #ff4826;
@@ -606,7 +604,7 @@ margin: 0 auto;
   
   }
 
-  .register-form input {
+  .register-form .form {
       border-radius: 5px;
       display: block;
       margin: 20px auto;
@@ -617,6 +615,7 @@ margin: 0 auto;
       margin-bottom: 1px;
       
   }
+ 
   
   
   .register-form input:last-child {
