@@ -19,3 +19,7 @@
 
 ## Less of ##
 - Desviarnos del tema prioritario
+
+Restrospectiva - Jamboard 
+-------------
+https://jamboard.google.com/d/1b6IjFUd8Jd8HriUKQCTT8Y83GQVzCzqLNx5TrxRBVVA/edit?usp=sharing
