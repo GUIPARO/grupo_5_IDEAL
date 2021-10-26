@@ -603,7 +603,7 @@ main .container_info_product{
 }
 
 main .container_sizes .fa, .fas{
-    font-size: 12px;
+    font-size: 20px;
 }
 
 .sizes label{
@@ -1346,10 +1346,6 @@ button.finish_shop:hover{
 
     .services_section .list-service_item {
         font-size: 20px;
-    }
-
-    .products_section .product_card {
-        width: 400px;
     }
 
     .products_section .product-card_item,
