@@ -6,7 +6,7 @@
 
 ## More of ##
 - Concretar ideas
--Comunicación
+- Comunicación
 
 ## Start doing ##
 - Despejar dudas con los profesores
