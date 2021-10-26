@@ -294,16 +294,24 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     border-top: 1px solid #1e1e1e;
-    padding: 0 30px 20px
+    padding: 0 30px 20px;
 }
 
 footer figure {
-    width: 40%;
-    margin: 20px 0;
+    width: 50%;
+    margin: 20px 0 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer figure a {
+    width: 95%;
+    max-width: 300px;
 }
 
 footer figure img {
-    width: 100%
+    width: 100%;
 }
 
 footer ul {
@@ -338,7 +346,6 @@ footer .list_icons {
 
 footer .list_icons-title {
     width: 100%;
-    margin: 0;
 }
 
 footer .list_icons li a {
@@ -559,7 +566,6 @@ footer .list_icons li a {
     }
 }
 
-<<<<<<< HEAD
 @media (min-width: 1000px) {
 
     main .services_section {
@@ -591,13 +597,13 @@ footer .list_icons li a {
 
     footer figure {
         max-width: 450px;
-        margin: 0 20px;
+        margin-right: 20px;
+        margin-left: 20px;
     }
 
 
 }
 
-=======
 /* INICIO REGISTER MAIN */
 .register-main {
     width: 100%;
@@ -660,7 +666,6 @@ footer .list_icons li a {
 
 
 /* FINAK REGISTER MAIN */
->>>>>>> 82230c1f0831fc348b8b0761445fe241bc75d6b1
 
 
 
