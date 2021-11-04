@@ -7,15 +7,22 @@
 
 body {
     background: #fafafa;
+    position: relative;
+}
+
+body .color_arriba,
+body .color_abajo {
+    background-color: #ffc107;
 }
 
 header {
     width: 80%;
-    margin: 20px auto;
+    margin: 0 auto 50px;
+    padding: 30px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
 }
 
 header .logo_container {
@@ -87,7 +94,7 @@ main .carrousel_image {
 .description_section {
     width: 80%;
     max-width: 1000px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.473);
+    border-bottom: 2px solid #1e2d44e0;
     padding-bottom: 40px;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -117,7 +124,8 @@ main .services_title {
     text-align: center;
     margin: 40px auto 0;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 33px;
+    color: #1e2d44e0;
 }
 
 main .services_section {
@@ -125,7 +133,7 @@ main .services_section {
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto 60px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.473);
+    border-bottom: 2px solid#1e2d44e0;
     padding: 40px 0 40px;
 }
 
@@ -172,7 +180,8 @@ main .services_section {
     text-align: center;
     margin: 30px auto;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 33px;
+    color: #1e2d44e0;
 }
 
 .products_section {
@@ -293,7 +302,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-top: 1px solid #1e1e1e;
+    /* border-top: 1px solid #1e1e1e; */
     padding: 0 30px 20px;
 }
 
@@ -318,13 +327,12 @@ footer ul {
     list-style: none;
     width: 40%;
     margin: 10px;
-    color: #1e2d44e0;
 }
 
 footer ul li {
     font-size: 16px;
-    font-weight: 300;
-    color: rgba(114, 109, 109, 0.774);
+    font-weight: 500;
+    color: #1e2d44a1;
     margin-top: 5px;
 }
 
@@ -336,7 +344,8 @@ footer ul li:first-child {
 
 footer ul li a {
     text-decoration: none;
-    color: rgba(114, 109, 109, 0.774);
+    color: #1e2d44a1;
+    font-weight: 500;
 }
 
 footer .list_icons {
@@ -353,6 +362,10 @@ footer .list_icons li a {
     font-size: 30px;
     margin-right: 5px;
     color: black;
+}
+
+footer .mapa_ubicacion {
+    border-radius: 15px;
 }
 
 /* FIN FOOTER  */
@@ -1301,7 +1314,7 @@ button.finish_shop:hover{
 
     .description_section {
         font-size: 18px;
-        width: 90%;
+        width: 80%;
     }
 
     .description_section .description-image_container {
@@ -1421,6 +1434,7 @@ button.finish_shop:hover{
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 750px;
     }
 
     .description_section p {
@@ -1536,6 +1550,10 @@ button.finish_shop:hover{
     .products_section .rigth-text {
         font-size: 19px;
         left: calc(100% - 100px);
+    }
+
+    .description_section {
+        width: 1000px;
     }
 
     footer figure {
