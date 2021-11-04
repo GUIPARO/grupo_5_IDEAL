@@ -3,27 +3,27 @@ const path = require('path')
 
 const controller ={
     index:(req,res) =>{
-        res.sendFile(path.resolve(__dirname,"../views/index.html"))
+        res.render('index')
     },
 
     login:(req,res) =>{
-    res.sendFile(path.resolve(__dirname,"../views/login.html"))
+    res.render('login')
+    },
+    
+    register:(req,res) =>{
+        res.render('register')
     },
 
-    register: (req,res) =>{
-        res.sendFile(path.resolve(__dirname,"../views/register.html"))
-    },
-
-    cotizacion: (req,res) =>{
-        res.sendFile(path.resolve(__dirname,"../views/cotizacion.html"))
+    cotizacion:(req,res) =>{
+        res.render('cotizacion')
     },
     
     product:(req,res) =>{
-        res.sendFile(path.resolve(__dirname,"../views/product.html"))
+        res.render('product')
     },
 
     produtCart:(req,res) =>{
-        res.sendFile(path.resolve(__dirname,"../views/productCart.html"))
+        res.render('productCart')
     }
 }
 
