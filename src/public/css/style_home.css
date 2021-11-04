@@ -478,8 +478,7 @@ footer .mapa_ubicacion {
       display:flex;
       justify-content: center;
   }
- 
- 
+  
   
   .buttons {
     width: 50%;
@@ -754,8 +753,7 @@ main .container_info_product{
 
 .product_name{
     font-weight: 500;
-    font-size: 30px;
-    color:#1e2d44e0;
+    font-size: 25px;
     letter-spacing: -1.2px;
     text-align: center;
 }
@@ -1562,67 +1560,46 @@ button.finish_shop:hover{
         margin-left: 20px;
     }
 
-        /*----INICIO MEDIA QUERY PRODUCTO----*/
+    /*----INICIO MEDIA QUERY PRODUCTO----*/
 
-        .container_init{
-            max-width: 1000px;
-        }
-    
-        .container_details_product {
-            max-width: 1000px;
-        }
-    
-        .container_similar {
-            max-width: 1000px;
-        }
-    
-        .product_similar{
-            width: 25%;
-        }
-    
-    /*FIN MEDIA QUERIS PRODUCTO*/
-    
-    /*----INICIO MEDIA QUERY CARRITO----*/
-    
-        main .container_buy{
-            max-width: 1000px;
-        }
-    
-        .container_shop{
-            max-width: 1000px;
-        }
-    
-        /* .container_cupon{
-            max-width: 395px;
-        }
-    
-        .container_resume{
-            max-width: 395px;
-        } */
-    /*FIN MEDIA QUERIS CARRITO DE COMPRA*/
+    .container_init{
+        max-width: 1000px;
+    }
+
+    .container_details_product {
+        max-width: 1000px;
+    }
+
+    .container_similar {
+        max-width: 1000px;
+    }
+
+    .product_similar{
+        width: 25%;
+    }
+
+/*FIN MEDIA QUERIS PRODUCTO*/
+
+/*----INICIO MEDIA QUERY CARRITO----*/
+
+    main .container_buy{
+        max-width: 1000px;
+    }
+
+    .container_shop{
+        max-width: 1000px;
+    }
+
+    /* .container_cupon{
+        max-width: 395px;
+    }
+
+    .container_resume{
+        max-width: 395px;
+    } */
+/*FIN MEDIA QUERIS CARRITO DE COMPRA*/
+
 
 }
 
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-/* FINAK REGISTER MAIN */
-
-/* MEDIA QUERIS HOME  */
