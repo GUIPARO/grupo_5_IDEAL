@@ -707,7 +707,7 @@ margin: 0 auto;
 
 /*FINAL COTIZACION MAIN */
 
-/* PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT */
+/* PRODUCT-------------------------------------------------------------------*/
 
 /*--- INICIO MAIN DETALLE PRODUCTO---*/
 
@@ -740,9 +740,10 @@ main .container_info_product{
 
 .product_name{
     font-weight: 500;
-    font-size: 25px;
     letter-spacing: -1.2px;
     text-align: center;
+    font-size: 30px;
+    color: #1e2d44e0;
 }
 
 .detail_product{
