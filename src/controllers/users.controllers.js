@@ -8,7 +8,7 @@ const controller ={
     },
     
     register:(req,res) =>{
-        res.render('/users/register')
+        res.render('./users/register')
     },
    
 }
