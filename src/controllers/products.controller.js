@@ -4,18 +4,18 @@ const path = require('path')
 const controller ={
         
     cotizacion:(req,res) =>{
-        res.render('/products/cotizacion')
+        res.render('./products/cotizacion')
     },
     
     product:(req,res) =>{
-        res.render('/products/product')
+        res.render('./products/product')
     },
 
     produtCart:(req,res) =>{
-        res.render('/products/productCart')
+        res.render('./products/productCart')
     },
     admin:(req,res) =>{
-        res.render('/products/admin')
+        res.render('./products/admin')
     }
 }
 
