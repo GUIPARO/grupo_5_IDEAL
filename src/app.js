@@ -19,4 +19,4 @@ app.use('/', routes)
 
 // Servidor funcionando
 app.listen(port,()=>{ console.log('El server esta corriendo en el puerto 3000')
-})
+});
