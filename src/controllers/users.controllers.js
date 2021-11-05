@@ -4,11 +4,11 @@ const path = require('path')
 const controller ={
     
     login:(req,res) =>{
-    res.render('login')
+    res.render(path.resolver (__dirname, '../views/users/login'))
     },
     
     register:(req,res) =>{
-        res.render('register')
+        res.render('/users/register')
     },
    
 }

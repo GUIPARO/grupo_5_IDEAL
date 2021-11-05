@@ -9,6 +9,7 @@ const port = process.env.PORT || 3000
 // Indica a express donde está la carpeta views
 app.set('views',path.resolve(__dirname,'views'))
 
+
 // Indica a express donde se encuentran los recursos estáticos
 app.use(express.static(path.resolve(__dirname,'../public')))
 
