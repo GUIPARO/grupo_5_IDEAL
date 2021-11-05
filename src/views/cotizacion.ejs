@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %>
+<body>
+    <%- include("./partials/header") %>
+    <main class="cotizacion-main">
+            <h2 class="title-cotizacion">Cotiza tu servicio</h2>
+            <form action="#" class="service-form">
+             <h4>Pronto estaremos en contacto con usted <i class="far fa-comment-dots"></i> </h4>
+           
+            
+
+                <div class="container-serviceform">
+                    <h3>Seleciona el tipo de servicio</h3>
+                    <select class="select_service" name="service" id="select-service" type="select">
+                        <option selected="" value="Tipo de servicio">Tipo de servicio</option>
+                        <option value="Calandra textil">Calandra textil</option>
+                        <option value="Sublimación textil">Sublimación textil</option>
+                        <option value="Serigrafía textil">Serigrafía textil</option>
+                        <option value="Pottler de corte">Pottler de corte</option>
+                        <option value="Estampación DTF">Estampación DTF</option>
+                        <option value="Diseño textil">Diseño textil</option>
+                        <option value="Bordado industrial">Bordado industrial</option>
+                        <option value="Corte industrial">Corte industrial</option>
+                        <option value="Confección indistrial">Confección indistrial</option>
+                        
+                    </select>
+                </div>
+                
+</section> 
+             
+                <section class = "serviceform-two" >
+                <label>ingresa tus datos</label>
+                <input type="text" name="fullname" id="fullname" minlength="2" placeholder="Ingresa tus nombres" required>
+                <input type="text" name="telephone" id="telephone" minlength="2" placeholder="Ingresa número de contacto" required>
+                <input type="text" name="username" id="username" minlength="2" placeholder="Ingresa tu correo" required>
+                <input type="text" name="city" id="city" required minlength="2" required placeholder="Ingresa tu ciudad"required>
+                <input type="date" name="date" id="date" minlength="2" placeholder="Fecha estimada de entrega" required>
+                <label>Selecciona un archivo</label>
+                <input type="file" name="file" accept=".jpg"multiple>
+                <div class="container_description">
+                    <div class="service-description">
+                        <label for="write_comments">Descripción </label>
+                        <textarea id="write_comments"
+                            name="area_comments">"¡Escribe aca! a detalle la solicitud del servicio"</textarea>
+                    </div>
+                </div>
+                <button class = "buttons" type="submit" class="submit"><span>Cotiza tu servicio</span></button>
+
+            </section>
+        </form>
+           
+    </main>
+    <%- include("./partials/footer") %>
+</body>
+</html>
+

@@ -36,15 +36,26 @@
 /* FINAL ADMIN FINAL ADMIN FINAL ADMIN */
 body {
     background: #fafafa;
+    position: relative;
+}
+
+body .color_arriba {
+    background-color: #fafafa;
+    border-bottom: 15px solid #e3e038;
+}
+
+body .color_abajo {
+    background-color: #e3e038;
 }
 
 header {
-    width: 80%;
-    margin: 20px auto;
+    width: 90%;
+    margin: 0 auto 5px;
+    padding: 25px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
 }
 
 header .logo_container {
@@ -100,7 +111,7 @@ main {
 
 main .carrousel_container {
     width: 90%;
-    margin: 30px auto;
+    margin: 50px auto;
     overflow: hidden;
 }
 
@@ -116,10 +127,10 @@ main .carrousel_image {
 .description_section {
     width: 80%;
     max-width: 1000px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.473);
-    padding-bottom: 40px;
+    border-bottom: 2px solid #1e2d44e0;
+    padding-bottom: 80px;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 
 .description_section .description-image_container {
@@ -146,7 +157,8 @@ main .services_title {
     text-align: center;
     margin: 40px auto 0;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 33px;
+    color: #1e2d44e0;
 }
 
 main .services_section {
@@ -154,8 +166,8 @@ main .services_section {
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto 60px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.473);
-    padding: 40px 0 40px;
+    border-bottom: 2px solid#1e2d44e0;
+    padding: 40px 0 80px;
 }
 
 .services_section ul {
@@ -201,7 +213,8 @@ main .services_section {
     text-align: center;
     margin: 30px auto;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 33px;
+    color: #1e2d44e0;
 }
 
 .products_section {
@@ -322,7 +335,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-top: 1px solid #1e1e1e;
+    /* border-top: 1px solid #1e1e1e; */
     padding: 0 30px 20px;
 }
 
@@ -347,13 +360,12 @@ footer ul {
     list-style: none;
     width: 40%;
     margin: 10px;
-    color: #1e2d44e0;
 }
 
 footer ul li {
     font-size: 16px;
-    font-weight: 300;
-    color: rgba(114, 109, 109, 0.774);
+    font-weight: 500;
+    color: #1e2d44a1;
     margin-top: 5px;
 }
 
@@ -365,7 +377,8 @@ footer ul li:first-child {
 
 footer ul li a {
     text-decoration: none;
-    color: rgba(114, 109, 109, 0.774);
+    color: #1e2d44a1;
+    font-weight: 500;
 }
 
 footer .list_icons {
@@ -382,6 +395,10 @@ footer .list_icons li a {
     font-size: 30px;
     margin-right: 5px;
     color: black;
+}
+
+footer .mapa_ubicacion {
+    border-radius: 15px;
 }
 
 /* FIN FOOTER  */
@@ -736,7 +753,7 @@ margin: 0 auto;
 
 /*FINAL COTIZACION MAIN */
 
-/* PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT PRODUCT */
+/* PRODUCT-------------------------------------------------------------------*/
 
 /*--- INICIO MAIN DETALLE PRODUCTO---*/
 
@@ -750,6 +767,7 @@ main .container_details_product {
     width: 80%;
     overflow: hidden;
     margin: auto;
+    padding: 80px 0;
 }
 
 main .container_details_product .container_product{
@@ -769,9 +787,10 @@ main .container_info_product{
 
 .product_name{
     font-weight: 500;
-    font-size: 25px;
     letter-spacing: -1.2px;
     text-align: center;
+    font-size: 30px;
+    color: #1e2d44e0;
 }
 
 .detail_product{
@@ -1328,7 +1347,7 @@ button.finish_shop:hover{
 
     .description_section {
         font-size: 18px;
-        width: 90%;
+        width: 80%;
     }
 
     .description_section .description-image_container {
@@ -1396,7 +1415,7 @@ button.finish_shop:hover{
     /* HEADER  */
 
     header {
-        max-width: 1000px;
+        max-width: 1200px;
     }
 
     header .logo_container {
@@ -1415,7 +1434,7 @@ button.finish_shop:hover{
     header nav i
     {
         font-size: 20px;
-        margin-right: 10px;
+        margin-right: 23px;
     }
 
     header .fa-bars {
@@ -1448,6 +1467,7 @@ button.finish_shop:hover{
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 750px;
     }
 
     .description_section p {
@@ -1542,6 +1562,11 @@ button.finish_shop:hover{
         width: 1000px;
     }
 
+    header nav li, 
+    header nav i {
+        font-size: 25px;
+    }
+
     .services_section ul {
         width: 260px;
         height: 45px;
@@ -1565,53 +1590,16 @@ button.finish_shop:hover{
         left: calc(100% - 100px);
     }
 
+    .description_section {
+        width: 1000px;
+    }
+
     footer figure {
         max-width: 450px;
         margin-right: 20px;
         margin-left: 20px;
     }
 
-
-}
-
-
-
-    .container_similar {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .product_similar{
-        width: 35%;
-    }
-    
-
-/*----FIN MEDIA QUERY PRODUCTO----*/
-
-
-
-
-
-
-
-
-    .services_section .list-service_item {
-        font-size: 20px;
-    }
-
-    .products_section .product-card_item,
-    .products_section .rigth-text {
-        font-size: 19px;
-    }
-
-    .products_section .rigth-text {
-        font-size: 19px;
-        left: calc(100% - 100px);
-    }
-
-
-
-/*----INICIO MEDIA QUERY PRODUCTO----*/
     /*----INICIO MEDIA QUERY PRODUCTO----*/
 
     .container_init{
@@ -1652,8 +1640,6 @@ button.finish_shop:hover{
 /*FIN MEDIA QUERIS CARRITO DE COMPRA*/
 
 
+}
 
-   
-/* FINAK REGISTER MAIN */
 
-/* MEDIA QUERIS HOME  */

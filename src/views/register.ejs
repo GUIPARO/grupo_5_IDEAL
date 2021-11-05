@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %>
+<body>
+    <%- include("./partials/header") %>
+    <main class="register-main">
+            <h2 class="title-register">Registrate</h2>
+            <form action="#" class="register-form">
+                
+                <input class= "form" type="text" name="fullname" id="fullname" minlength="2" placeholder="Ingresa tus nombres" required>
+                <input class= "form" type="text" name="username" id="username" minlength="2" placeholder="Ingresa tus apellidos" required>
+                <input class= "form"type="text" name="username" id="username" minlength="2" placeholder="Ingresa tu correo" required>
+                <input class= "form"type="password" name="pass" id="pass" required minlength="8" required placeholder="Ingresa una contraseña">
+                <input class= "form"type="password" name="pass-confirm" id="pass-confirm" minlength="8" required placeholder="Confirma tu contraseña">
+                <section class="acepto">
+                <label><input type="radio" name="politics" value="1">Acepto la política de privacidad</label>
+            </section>
+                <button class = "buttons" type="submit" class="submit"><span>Registrarse</span></button>
+           
+                <section class="low_section">
+                    <h4>¿Ya tienes una cuenta?</h4>
+                    <a href="/login"><p>Ingresa</p></a>
+                </section>
+            </form>
+    </main>
+    <%- include("./partials/footer") %>
+</body>
+</html>
+
