@@ -1,81 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style_home.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    rel="stylesheet" />
-</head>
+    <%- include("../partials/head") %>
 <body>
-    <header>
-        <figure class="logo_container">
-            <a href='/'>
-            <img class="main_logo" src="/img/logo_ideal.png" alt="Logo de Ideal">
-            </a>
-        </figure>
-        <nav>
-            <ul class="header_list">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/cotizacion">Servicios</a></li>
-                <li><a href="/product">Productos</a></li>
-                <li><a href="/login">Mi cuenta</a></li>
-            </ul>
-            <section class="icon_section">
-                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-                <input class="bar_search" type="search">
-                <a class="lupa_icon" href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-bars"></i></a>
-            </section>
-        </nav>
-    </header>
-<!--INICIO MFORMULARIO USUARIO ADMINISTRADOR-->
-<main class = "admin-main">
-    <h2 class="title-admin">Creación y edicion de productos</h2>
-    <a href= "#"><i class="fas fa-plus"></i><h3>Agregar</h3></a>
+    <%- include("../partials/header") %>
+    <main class = "admin-main">
+        <h2 class="title-admin">Creación y edicion de productos</h2>
+        <a href= "#"><i class="fas fa-plus"></i><h3>Agregar</h3></a>
 
-    <table class= "product-admin-table"> 
-        <tr>
-            <td>ID:</td>
-            <td>7006</td>
-        </tr>
-        <tr>
-            <td>Descripción:</td>
-            <td>Estampado</td>
-        </tr>
-                    
-        <tr>
-            <td>Precio:</td>
-            <td>35.000</td>
-        </tr>
-        
-        <tr>
-            <td>Existecia:</td>
-            <td>50</td>
-        </tr>
-        <tr>
-            <td>Ver</td>
-            <td><a href="#"><i class="far fa-eye"></i></a></td>
+        <table class= "product-admin-table"> 
+            <tr>
+                <td>ID:</td>
+                <td>7006</td>
+            </tr>
+            <tr>
+                <td>Descripción:</td>
+                <td>Estampado</td>
+            </tr>
+                        
+            <tr>
+                <td>Precio:</td>
+                <td>35.000</td>
+            </tr>
             
-        </tr>
-        <tr>
-            <td>Editar</td>
-            <td><a href="#"><i class="far fa-edit"></i></a></td>
-            
-        </tr>
-        <tr>
-            <td>Editar</td>
-            <td><a href="#"><i class="far fa-trash-alt"></i></a></td>
-        </tr>
-       
-        </table>
-            
+            <tr>
+                <td>Existecia:</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Ver</td>
+                <td><a href="#"><i class="far fa-eye"></i></a></td>
                 
-</main>
+            </tr>
+            <tr>
+                <td>Editar</td>
+                <td><a href="#"><i class="far fa-edit"></i></a></td>
+                
+            </tr>
+            <tr>
+                <td>Editar</td>
+                <td><a href="#"><i class="far fa-trash-alt"></i></a></td>
+            </tr>
+        
+            </table>
+                
+                    
+    </main>
+    <%- include("../partials/footer") %>
 </body>
