@@ -28,7 +28,9 @@ app.get('/product',(req,res) =>{
 app.get('/productCart',(req,res) =>{
     res.sendFile(path.resolve(__dirname,"./src/views/productCart.html"))
 })
-
+app.get('/admin',(req,res) =>{
+    res.sendFile(path.resolve(__dirname,"./src/views/admin.html"))
+})
 
 
 
