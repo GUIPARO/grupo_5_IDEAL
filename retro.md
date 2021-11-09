@@ -1,25 +1,55 @@
-# Retrospectiva #
+# Retrospectivas #
+*En el presente documento se encuentran las conclusiones obtenidas de realizar la retrospectiva al finalizar cada sprint. Las retrospectivas se realizaron por medio de la dinámica estrella de mar.*
 
-## Keep doing ##
+## Restrospectiva - Jamboard  ##
+
+- Enlace a [tablero estrella](https://jamboard.google.com/d/1b6IjFUd8Jd8HriUKQCTT8Y83GQVzCzqLNx5TrxRBVVA/edit?usp=sharing) 
+
+## Sprint 2 ##
+
+### Keep doing ###
 - Seguir realizando reuniones
 - Tablero en Jira
 
-## More of ##
+### More of ### 
 - Concretar ideas
 - Comunicación
 
-## Start doing ##
+###  Start doing ### 
 - Despejar dudas con los profesores
 - Notificar cambios en el repositorio 
 - Delegar tareas
 
-## Stop doing ##
+### Stop doing ### 
 - Pereza
 - Procastinar
 
-## Less of ##
+### Less of ### 
 - Desviarnos del tema prioritario
 
-Restrospectiva - Jamboard 
--------------
-https://jamboard.google.com/d/1b6IjFUd8Jd8HriUKQCTT8Y83GQVzCzqLNx5TrxRBVVA/edit?usp=sharing
+## Sprint 3 ##
+
+### Keep doing ###
+- Seguir realizando reuniones
+- Entregar trabajos a tiempo
+- Tablero en Jira
+- Mantener ambiente del grupo
+- Delegar tareas
+
+### More of ### 
+- Concretar ideas
+- Comunicación
+- Despejar dudas con los profesores
+
+###  Start doing ### 
+
+- Notificar cambios en el repositorio 
+- Implementar reunion weekly
+
+### Stop doing ### 
+- Pereza
+- Procastinar
+
+### Less of ### 
+- Desviarnos del tema prioritario
+
