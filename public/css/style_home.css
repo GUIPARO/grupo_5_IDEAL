@@ -6,34 +6,129 @@
 }
 
 /* FORMULARIO DE ADMINISTRADOR ADMIN ADMIN ADMIN ADMIN */ 
+.add{
+     
+   
+    display: flex;
+    flex-direction: row;
+    margin: 12px;
+    text-align: left;
+    max-width: 90px;
+    padding: 10px;
+    border-radius: 10px;
+}
 
 .title-admin{
     text-align: center;
    padding: 5px 20px;
     color: #1e2d44e0;
 }
+.admin-table {
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    border-radius: 12px ;
+    
+}
 .product-admin-table {
-
-        table-layout: fixed;
-        width: 100%;
-        border-collapse: separate;
-        border: 3px solid #1e2d44e0;
-        text-align: center;
-      }
-      th, td {
-        padding: 20px;
-      }
-
-
-       
-
-
-
-
-
-
+    padding: 20px;
+    margin:0 auto;
+    width: 80%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 5px 12px grey;
+    
+}
+th{
+    font-weight:800;
+    background-color: whitesmoke;
+    font-size: 20px;
+    padding: 10px;
+}
+thead, td {
+    padding: 10px 15px;
+}
+tr {
+    background-color: white;
+    border-bottom:1px solid grey;
+}
 
 /* FINAL ADMIN FINAL ADMIN FINAL ADMIN */
+
+/*CREATE CREATE CREATE CREATE CREATE */
+.create-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: 10px auto;
+    box-shadow: 0 5px 12px grey;
+    border-radius: 5px;
+}
+.create-form input{
+    border-radius: 5px;
+    display: block;
+    margin: 5px auto;
+    width: 70%;
+    border: 2px solid #1e2d44e0;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 1px;
+   
+}
+.container-lineform{
+    padding: 5px 20px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.create-description {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.create-description textarea{
+    width: 100%;
+    line-height: 25px;
+    padding: 5px 15px;
+    background: #fff;
+    color: #7f818d;
+    border: 1px solid #7f818d;
+    font-size: 12px;
+    
+}
+    
+.create-description label {
+    
+    padding: 15px 5px 5px;
+    display: block;
+    font-size: 18px;
+  
+}
+.create-form  h3 {
+    padding: 15px 5px 5px;
+    display: block;
+    font-size: 18px;
+}
+.container-lineform input[type="file"]{
+    width: 100%;
+}
+
+ .save  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    }
+   
+/*FINAL CREATE FINAL CREATE FINAL */
 body {
     background: #fafafa;
     position: relative;
@@ -474,7 +569,7 @@ footer .mapa_ubicacion {
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #ffffff;
+    
     margin: 2px 0;
   
   }

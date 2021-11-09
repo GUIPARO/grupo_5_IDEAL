@@ -16,7 +16,16 @@ const controller ={
     },
     admin:(req,res) =>{
         res.render('./products/admin')
-    }
+    
+},
+adminCreate:(req,res) =>{
+    res.render('./products/adminCreate')
+},
+
+adminEdit:(req,res) =>{
+    res.render('./products/adminEdit')
+},
+
 }
 
 module.exports = controller;

@@ -12,5 +12,9 @@ router.get('/productCart',controller.produtCart);
 
 router.get('/admin',controller.admin);
 
+router.get('/adminEdit',controller.adminEdit);
+
+router.get('/adminCreate',controller.adminCreate);
+
 
 module.exports = router
