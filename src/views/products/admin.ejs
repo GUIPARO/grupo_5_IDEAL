@@ -5,43 +5,49 @@
     <%- include("../partials/header") %>
     <main class = "admin-main">
         <h2 class="title-admin">Creación y edicion de productos</h2>
-        <a href= "#"><i class="fas fa-plus"></i><h3>Agregar</h3></a>
-
-        <table class= "product-admin-table"> 
-            <tr>
-                <td>ID:</td>
-                <td>7006</td>
-            </tr>
-            <tr>
-                <td>Descripción:</td>
-                <td>Estampado</td>
-            </tr>
-                        
-            <tr>
-                <td>Precio:</td>
-                <td>35.000</td>
-            </tr>
+        <section class= "add">
+        <a href= "/products/adminCreate"><i class="fas fa-plus-circle"></i></a>
+        <a href= "/products/adminCreate"><h3>Agregar</h3></a>
+    </section>
+        <article class = "admin-table">
+        <table class= "product-admin-table">
+            <!--ENCABEZADO DE LA TABLA-->
             
+            <thead >
+                
             <tr>
-                <td>Existecia:</td>
-                <td>50</td>
+                <th>ID</th>
+                <th>Descripción</th>
+                <th>Ver</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+            
             </tr>
+                </thead> 
+            
+
+        <!--CONTENIDO DE LA TABLA-->
+        <tbody>
             <tr>
-                <td>Ver</td>
+                <td>7006</td>
+                <td>Camiseta full color</td>
                 <td><a href="#"><i class="far fa-eye"></i></a></td>
-                
-            </tr>
-            <tr>
-                <td>Editar</td>
                 <td><a href="#"><i class="far fa-edit"></i></a></td>
-                
+                <td><a href="#"><i class="far fa-trash-alt"></i></a></td>
+
             </tr>
             <tr>
-                <td>Editar</td>
+                <td>7006</td>
+                <td>Chompa sublimada</td>
+                <td><a href="#"><i class="far fa-eye"></i></a></td>
+                <td><a href="#"><i class="far fa-edit"></i></a></td>
                 <td><a href="#"><i class="far fa-trash-alt"></i></a></td>
+
             </tr>
+        </tbody>
         
             </table>
+        </article>
                 
                     
     </main>
