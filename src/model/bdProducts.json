@@ -1,0 +1,20 @@
+[
+    {
+        "id" : 1,
+        "fullName" : "Camisetas Personalizadas",
+        "price" : 18000,
+        "productLine" : "Linea fashion",
+        "activity" : "eventos",
+        "subActivity": [
+            "Campañas Publicitarias",
+            "Campañas Políticas",
+            "Eventos Corporativos"
+        ],
+        "technique" : "Full color sublimación",
+        "material" : [
+            "Algodón",
+            "Poliester"
+        ],
+        "image" : "image.png"
+    }
+]
