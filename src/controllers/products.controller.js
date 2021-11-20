@@ -10,6 +10,9 @@ const controller ={
     product:(req,res) =>{
         res.render('./products/product')
     },
+    products:(req,res) =>{
+        res.render('./products/productsList')
+    },
 
     produtCart:(req,res) =>{
         res.render('./products/productCart')
@@ -17,14 +20,14 @@ const controller ={
     admin:(req,res) =>{
         res.render('./products/admin')
     
-},
-adminCreate:(req,res) =>{
-    res.render('./products/adminCreate')
-},
+    },
+    adminCreate:(req,res) =>{
+        res.render('./products/adminCreate')
+    },
 
-adminEdit:(req,res) =>{
-    res.render('./products/adminEdit')
-},
+    adminEdit:(req,res) =>{
+        res.render('./products/adminEdit')
+    }
 
 }
 

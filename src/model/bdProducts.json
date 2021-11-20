@@ -10,7 +10,10 @@
             "Campañas Políticas",
             "Eventos Corporativos"
         ],
-        "technique" : "Full color sublimación",
+        "technique" : [
+            "Full color sublimación",
+            "Full color sublimación"
+        ],
         "material" : [
             "Algodón",
             "Poliester"
