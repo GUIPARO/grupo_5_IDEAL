@@ -1245,68 +1245,51 @@ input[type=file]::file-selector-button:hover {
     font-size: 30px;
     color: #1e2d44e0;
     width: 90%;
-    margin:auto;
     text-align: center;
-    margin-bottom:25px;
+    margin:50px auto;
 }
 
-main .container_buy {
+thead{
+    display: none;
+}
+
+main .description_buy{
     width: 80%;
-    margin: 10px auto;
-    padding-bottom: 10px;
-    border-bottom: 1px solid grey
-}
-
-.product_buy{
-    display: flex;
-    justify-content: center;
-}
-
-.product_buy img{
-    max-width: 100%
-}
-
-.container_description_buy{
-    width: 90%;
-    margin: 0 auto 10px;
-    text-align: center;
-    border-top: 1px solid grey
+    margin: auto;
 }
 
 .description_buy{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 10px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-.container_description_product{
-    flex-basis: 50%;
-    text-align: left;
+.description_buy .table_car{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
 }
 
-.container_description_product p{
-    font-size: 16px;
-    margin: 5px 0;
-    font-weight: 600;
-}
-
-.container_title_description{
-    flex-basis: 50%;
-}
-
-.container_title_description p{
-    font-size: 16px;
-    margin: 5px 0;
-    font-weight: 500;
-}
-
-.container_title_description input{
-    font-size: 17px;
-    color: #666;
+.table_car th, .table_car td{
+    font-size: 18px;
     padding: 5px;
-    padding:5px;
+    text-align: center;
 }
+
+
+
+.table_car thead{
+    text-transform: uppercase;
+    background: #ddd;
+}
+
+.product_buy img{
+    width: 100%;
+}
+
 
 .code_prom,.title_totalcar{
     width: 90%;
@@ -1320,6 +1303,7 @@ main .container_buy {
 .container_shop{
     width: 90%;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 .container_cupon{
@@ -1459,11 +1443,6 @@ button.finish_shop:hover{
         display: flex;
     }
 
-    .product_buy{
-        width: 115px;
-        margin: auto;
-    }
-
     .container_title_description p{
         font-size: 18px;
         margin: 5px 0;
@@ -1488,11 +1467,13 @@ button.finish_shop:hover{
         display: flex;
         width: 80%;
         margin:auto;
+        margin-bottom: 50px;
     }
 
     .container_resume {
         margin-left: 10px;
     }
+    
 
     .container_subtotal_resume, .container_value_subtotal,
     .container_title_subtotal,.container_send,
@@ -1503,6 +1484,12 @@ button.finish_shop:hover{
 
 /*FIN MEDIA QUERIS CARRITO DE COMPRA*/
 
+}
+
+@media (max-width:480px){
+    .table_car td{
+        display: block;
+    }
 }
 
 @media (min-width: 769px) {

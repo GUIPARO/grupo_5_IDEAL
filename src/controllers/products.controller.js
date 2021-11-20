@@ -14,15 +14,17 @@ const controller ={
     produtCart:(req,res) =>{
         res.render('./products/productCart')
     },
+
     admin:(req,res) =>{
         res.render('./products/admin')
     
-},
-adminCreate:(req,res) =>{
+    },
+    
+    adminCreate:(req,res) =>{
     res.render('./products/adminCreate')
-},
+    },
 
-adminEdit:(req,res) =>{
+    adminEdit:(req,res) =>{
     res.render('./products/adminEdit')
 },
 

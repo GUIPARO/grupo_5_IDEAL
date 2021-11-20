@@ -1,90 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head") %>
-<body>
-    <%- include("../partials/header") %>
-    <main>
-        <h3 class="title_car">Carrito de compra</h3>
-        <form action="/" method="post">
-            <section class="container_buy">
-                <figure class="product_buy">
-                    <img class="imagen-producto" src="/img/fashion.png" alt="botas">
-                </figure>
-                <section class="container_description_buy">
-                    <article class="description_buy">
-                        <div class="container_description_product">
-                            <p class="title_description">PRODUCTO</p>
-                        </div>
-                        <div class="container_title_description">
-                            <p class="container_value_description">Descripción del producto seleccionado</p>
-                        </div>
-                        <div class="container_description_product">
-                            <p class="title_description">PRECIO</p>
-                        </div>
-                        <div class="container_title_description">
-                            <p class="container_value_description">$123456</p>
-                        </div>
-                        <div class="container_description_product">
-                            <p class="title_description">CANTIDAD</p>
-                        </div>
-                        <div class="container_title_description">
-                            <input type="number" id="contador-producto" class="container_value_description" step="1"
-                                min="0" max="19" size="4">
-                        </div>
-                        <div class="container_description_product">
-                            <p class="title_description">SUBTOTAL</p>
-                        </div>
-                        <div class="container_title_description">
-                            <p class="container_value_description">$123456</p>
-                        </div>
+<%- include("../partials/head") %>
 
-                        <div class="container_description_product">
-                            <p class="title_description">ELIMINAR</p>
-                        </div>
-                        <div class="container_title_description">
-                            <button type="reset" value="Borrar" class="container_value_description"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </article>
-                </section>
-            </section>
-            <section class="container_shop">
-                <section class="container_cupon">
-                    <div class="title_cupon">
-                        <h3 class="code_prom">Cupon de promoción</h3>
-                        <label for="cupon">Ingrese su cupon de promoción</label>
-                    </div>
-                    <div class="digitar_cupon">
-                        <input type="text" id="cupon" name="cupon">
-                    </div>
-                    <button class="apply_cupon" value="apply_cupon" type="button">Aplicar</button>
-                </section>
-                <section class="container_resume">
-                    <h3 class="title_totalcar">Total carrito</h3>
-                    <article class="data_resume">
-                        <div class="container_subtotal_resume">
-                            <p class="title_subtotal">Subtotal</p>
-                        </div>
-                        <div class="container_title_subtotal">
-                            <p class="container_value_subtotal">$123456</p>
-                        </div>
-                        <div class="container_send">
-                            <p class="title_send">Envío</p>
-                        </div>
-                        <div class="container_title_send">
-                            <p class="container_value_send">$123456</p>
-                        </div>
-                        <div class="container_totalBuy">
-                            <p class="title_totalBuy">Total</p>
-                        </div>
-                        <div class="container_title_totalBuy">
-                            <p class="container_value_totalBuy">$123456</p>
-                        </div>
-                    </article>
-                    <button class="finish_shop" type="submit" value="finish_shop" >Finalizar compra</button>
-                </section>
-            </section>
-        </form>
-    </main>
-    <%- include("../partials/footer") %>
-</body>
+    <body>
+        <%- include("../partials/header") %>
+            <main>
+                <h3 class="title_car">Carrito de compra</h3>
+                <form action="/" method="POST">
+                    <section class="container_description_buy">
+                        <article class="description_buy">
+                            <table class="table_car">
+                                <thead>
+                                    <tr>
+                                        <th class="product_image">&nbsp;</th>
+                                        <th class="product_name">Producto</th>
+                                        <th class="product_price">Precio</th>
+                                        <th class="product_quantity">Cantidad</th>
+                                        <th class="product_subtotal">Subtotal</th>
+                                        <th class="product_remove">&nbsp;</th>
+                                    </tr>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td class="product_image">
+                                            <figure class="product_buy">
+                                                <img class="imagen-producto" src="/img/fashion.png" alt="botas">
+                                            </figure>
+                                        </td>
+                                        <td class="product_name" data-title="producto"><a href="#">Nombre
+                                                Producto</a>
+                                        </td>
+                                        <td class="product_price" data-title="precio">
+                                            <span class=amount_price>
+                                                <span class=symbol_price>$</span>
+                                                123456
+                                            </span>
+                                        </td>
+                                        <td class="product_quantity" data-title="cantidad">
+                                            <div class="car_quantity">
+                                                <label class=title_quantity for="contador-producto"></label>
+                                                <input type="number" id="counter-product"
+                                                    class="container_value_description" step="1" min="0" max="19"
+                                                    size="4" placeholder inputmode="numeric">
+                                            </div>
+                                        </td>
+                                        <td class="product_subtotal" data-title="subtotal">$123456</td>
+                                        <td class="product_remove">
+                                            <button type="reset" value="Borrar" class="container_value_description"><i
+                                                    class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </section>
+
+                    <!-- <div class="container_description_product">
+        <p class="title_description">PRODUCTO</p>
+    </div>
+    <div class="container_title_description">
+        <p class="container_value_description">Descripción del producto seleccionado</p>
+    </div>
+    <div class="container_description_product">
+        <p class="title_description">PRECIO</p>
+    </div>
+    <div class="container_title_description">
+        <p class="container_value_description">$123456</p>
+    </div>
+    <div class="container_description_product">
+        <p class="title_description">CANTIDAD</p>
+    </div>
+    <div class="container_title_description">
+        <input type="number" id="contador-producto" class="container_value_description" step="1" min="0" max="19"
+            size="4">
+    </div>
+    <div class="container_description_product">
+        <p class="title_description">SUBTOTAL</p>
+    </div>
+    <div class="container_title_description">
+        <p class="container_value_description">$123456</p>
+    </div>
+
+    <div class="container_description_product">
+        <p class="title_description">ELIMINAR</p>
+    </div>
+    <div class="container_title_description">
+        <button type="reset" value="Borrar" class="container_value_description"><i class="fas fa-trash"></i></button>
+    </div>
+    </article>
+    </section>
+    </section> -->
+                    <section class="container_shop">
+                        <section class="container_cupon">
+                            <div class="title_cupon">
+                                <h3 class="code_prom">Cupon de promoción</h3>
+                                <label for="cupon">Ingrese su cupon de promoción</label>
+                            </div>
+                            <div class="digitar_cupon">
+                                <input type="text" id="cupon" name="cupon">
+                            </div>
+                            <button class="apply_cupon" value="apply_cupon" type="button">Aplicar</button>
+                        </section>
+                        <section class="container_resume">
+                            <h3 class="title_totalcar">Total carrito</h3>
+                            <article class="data_resume">
+                                <div class="container_subtotal_resume">
+                                    <p class="title_subtotal">Subtotal</p>
+                                </div>
+                                <div class="container_title_subtotal">
+                                    <p class="container_value_subtotal">$123456</p>
+                                </div>
+                                <div class="container_send">
+                                    <p class="title_send">Envío</p>
+                                </div>
+                                <div class="container_title_send">
+                                    <p class="container_value_send">$123456</p>
+                                </div>
+                                <div class="container_totalBuy">
+                                    <p class="title_totalBuy">Total</p>
+                                </div>
+                                <div class="container_title_totalBuy">
+                                    <p class="container_value_totalBuy">$123456</p>
+                                </div>
+                            </article>
+                            <button class="finish_shop" type="submit" value="finish_shop">Finalizar compra</button>
+                        </section>
+                    </section>
+                </form>
+            </main>
+            <%- include("../partials/footer") %>
+    </body>
+
 </html>
