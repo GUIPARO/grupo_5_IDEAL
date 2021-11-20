@@ -1413,6 +1413,60 @@ button.finish_shop:hover{
 }
 /*---- FINAL PRODUCT-CAR FINAL PRODUCT-CAR FINAL PRODUCT-CAR PRODUCT-CAR PRODUCT-CAR ----*/
 
+/* ESTILOS VISTA LISTADO DE PRODUCTOS  */
+
+.products-view-main {
+    display: flex;
+    justify-content: center;
+}
+
+.products-view a {
+    text-decoration: none;
+}
+
+.products-view {
+    width: 90%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    gap: 20px;
+    place-content: center;
+    margin: 50px auto;
+}
+
+.products-view .products-container {
+    border: 2px #1e2d44e0 solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.products-view div,
+.products-view img {
+    width: 100%;
+}
+
+.products-view ul {
+    list-style: none;
+}
+
+.products-view p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #1e2d44e0;
+}
+
+.products-view li {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1e2d44e0;
+}
+
+
+
+/* ESTILOS VISTA LISTADO DE PRODUCTOS  */
 
 /* MEDIA QUERIS HOME  */
 
@@ -1708,6 +1762,19 @@ button.finish_shop:hover{
     }
 
 /*FIN MEDIA QUERIS PRODUCTO*/
+
+    .products-view {
+        grid-template-columns: repeat(auto-fill, 200px);
+
+    }
+
+    .products-view p {
+        font-size: 22px;
+    }
+    
+    .products-view li {
+        font-size: 20px;
+    }
 
 /*----INICIO MEDIA QUERY CARRITO----*/
 
