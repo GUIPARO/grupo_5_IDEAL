@@ -8,10 +8,9 @@
         
         <section class= "create-form">
             <h2 class="title-admin">Crea un nuevo producto</h2>
-            <form class= "create">
+            <form class= "create" method="post" action="/products/adminCreate" enctype="multipart/form-data">
                 <input type="text" name="fullname" id="fullname" minlength="2" placeholder="Nombre del producto" required>
                 <input type="text" name="fullname" id="fullname" minlength="2" placeholder="Precio del producto" required>
-            </form>
             <section class="container-lineform">
                 <h3>Seleciona la linea del producto</h3>
                 <select class="select_service" name="service" id="select-service" type="select">
@@ -61,11 +60,11 @@
             
               <div class= "container-lineform">
             <h3>Selecciona un archivo</h3>
-                <input type="file" name="file" accept=".jpg"multiple>
+                <input type="file" name="file" accept=".jpg, .png"multiple>
             </div>
                 <div class="container_description">
                     <div class = "save">
-                        <button class = "buttons" type="submit" class="submit"><span>Guardar</span></button>
+                        <button class = "buttons" type="submit" class="submit" value="Guardar"></button>
                         </div>
                         </form>
                 </section>

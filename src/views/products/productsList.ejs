@@ -6,198 +6,24 @@
     
     <main class="products-view-main">
         <section class="products-view">
-            <a href="#">
+            <%bdProducts.forEach( product => { %> 
+            <a href="/products/product/<%=product.id%>">
                 <article class="products-container">
                     <div>
                         <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
+                            <img src="/img/<%=product.image%>" alt="imagen de producto">
                         </figure>
-                        <p>Camisetas personalizadas</p>
+                        <p><%= product.fullname %></p>
                     </div>
                     <div>
                         <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
+                            <li><%= product.activity%></li>
+                            <li><%=`$ ${product.price}`%></li>
                         </ul>
                     </div>
                 </article>
             </a>
-            <a href="#">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
-                        </figure>
-                        <p>Camisetas personalizadas</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
-                        </figure>
-                        <p>Camisetas personalizadas</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
-                        </figure>
-                        <p>Camisetas personalizadas</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
-                        </figure>
-                        <p>Camisetas personalizadas</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
-                        </figure>
-                        <p>Camisetas personalizadas</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
-                        </figure>
-                        <p>Camisetas personalizadas</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
-                        </figure>
-                        <p>Camisetas personalizadas</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
-                        </figure>
-                        <p>Camisetas personalizadas</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
-                        </figure>
-                        <p>Camisetas personalizadas</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
-                        </figure>
-                        <p>Camisetas personalizadas</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/fashion.png" alt="imagen de producto">
-                        </figure>
-                        <p>Camisetas personalizadas</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Eventos</li>
-                            <li>$ 18000</li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
+            <% }); %> 
         </section>
     </main>
 

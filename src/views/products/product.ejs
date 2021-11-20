@@ -6,26 +6,28 @@
     <main>
         <section class="container_details_product">
             <figure class="container_product">
-                <img class="product_image" src="/img/fashion.png" alt="camiseta_fashion">
+                <img class="product_image" src="/img/<%=product[0].image%>" alt="camiseta_fashion">
             </figure>
             <section class="container_info_product">
-                <h3 class="product_name">Camisetas Personalizadas </h3>
+                <h3 class="product_name"><%= product.name %> </h3>
                 <div class="detail_product">
                     <div class="contanier_cost">
-                        <div class="product_cost">$18.000</div>
+                        <div class="product_cost"><%=`$ ${product[0].price}`%></div>
                     </div>
                     </div>
                     <div class="container_technic">
                         <span class="title_technic">Técnica</span>
-                        <span class="type_technic">Full Color Sublimación</span>
+                        <% for(let i = 0; i < product[0].technique.length; i++) { %> 
+                        <span class="type_technic"><%= product[0].technique[i] %></span>
+                        <% } %> 
                     </div>
                     <div class="container_line">
-                        <span class="title_line">Linea Fashion</span>
+                        <span class="title_line"><%= product[0].productLine %></span>
                         <div class="list">
                             <ul>
-                                <li> Campañas Publicitarias</li>
-                                <li> Campañas Políticas</li>
-                                <li> Eventos Corporativos</li>
+                                <% for(let i = 0; i < product[0].subActivity.length; i++) { %>
+                                <li> <%= product[0].subActivity[i] %></li>
+                                <% } %> 
                             </ul>
                         </div>
                     </div>

@@ -16,6 +16,9 @@ app.use(express.static(path.resolve(__dirname,'../public')))
 // Indica a express el template engine que se va a utilizar
 app.set('view engine','ejs');
 
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
 // Rutas
 app.use("/", indexRoutes)
 app.use("/products", productsRoutes)

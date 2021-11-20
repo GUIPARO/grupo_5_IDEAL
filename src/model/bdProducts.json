@@ -1,23 +1,58 @@
 [
     {
-        "id" : 1,
-        "fullName" : "Camisetas Personalizadas",
-        "price" : 18000,
-        "productLine" : "Linea fashion",
-        "activity" : "eventos",
+        "id": 1,
+        "fullName": "Camisetas Personalizadas",
+        "price": 18000,
+        "productLine": "Linea fashion",
+        "activity": "Eventos",
         "subActivity": [
             "Campañas Publicitarias",
             "Campañas Políticas",
             "Eventos Corporativos"
         ],
-        "technique" : [
+        "technique": [
             "Full color sublimación",
             "Full color sublimación"
         ],
-        "material" : [
+        "material": [
             "Algodón",
             "Poliester"
         ],
-        "image" : "image.png"
+        "image": "fashion.png"
+    },
+    {
+        "id": 2,
+        "fullName": "Camisetas Personalizadas",
+        "price": 18000,
+        "productLine": "Linea fashion",
+        "activity": "Eventos",
+        "subActivity": [
+            "Campañas Publicitarias",
+            "Campañas Políticas",
+            "Eventos Corporativos"
+        ],
+        "technique": [
+            "Full color sublimación",
+            "Full color sublimación"
+        ],
+        "material": [
+            "Algodón",
+            "Poliester"
+        ],
+        "image": "sport.png"
+    },
+    {
+        "id": 3,
+        "fullname": [
+            "asdsaas",
+            "asd"
+        ],
+        "service": [
+            "Linea industrial",
+            "Celebraciones",
+            "Vinilo textil 1 color"
+        ],
+        "tela": "Algodón peinado",
+        "image": "file.png"
     }
 ]
