@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
     <%- include("../partials/head") %>
 <body>
     <%- include("../partials/header") %>
@@ -66,12 +67,63 @@
                 <div class="container_description">
                     <div class = "save">
                         <button class = "buttons" type="submit" class="submit"><span>Guardar</span></button>
+=======
+<%- include("../partials/head") %>
+
+    <body>
+        <%- include("../partials/header") %>
+            <main class="admin-main">
+
+                <section class="create-form">
+                    <h2 class="title-admin">Crea un nuevo producto</h2>
+                    <form class="create">
+                        <input type="text" name="fullname" id="fullname" minlength="2" placeholder="Nombre del producto"
+                            required>
+                        <input type="text" name="price" id="price" minlength="2" placeholder="Precio del producto"
+                            required>
+
+                        <section class="container-lineform">
+                            <h3>Seleciona la linea del producto</h3>
+                            <select class="select_service" name="productLine" id="select-service" type="select">
+                                <option value="Linea fashion">Linea fashion </option>
+                                <option value="Linea deportiva">Linea deportiva</option>
+                                <option value="Linea industrial">Linea industrial</option>
+                                <option value="Linea medica">Linea medica</option>
+                            </select>
+                            <h3>Seleciona la Técnica</h3>
+                            <select class="select_service" name="
+                            technique" id="select-service" type="select">
+                                <option value="Full color sublimación">Full color sublimación</option>
+                                <option value="Serigrafia 1 o 2 tintas">Serigrafia 1 o 2 tintas</option>
+                                <option value="Vinilo textil 1 o 2 colores">Vinilo textil 1 o 2 colores</option>
+                            </select>
+                            <h3>Seleciona el tipo de tela</h3>
+                            <select class="select_tela" name="material" id="select-tela" type="select">
+                                <option value="Algodón o poliester">Algodón o poliester</option>
+                                <option value="Algodón peinado">Algodón peinado</option>
+                                <option value="Piel de durazno">Piel de durazno</option>
+                            </select>
+                        </section>
+
+
+                        <div class="create-description">
+                            <h3 for="write_comments">Descripción </h3>
+                            <textarea id="write_comments"
+                                name="area_comments">"Describe el producto a agregar"</textarea>
+>>>>>>> 460eb259a5c6ebd3c30efbb8c12ca7ddf944ac43
                         </div>
+                        <div class="container-lineform">
+                            <h3>Selecciona un archivo</h3>
+                            <input type="file" name="file" accept=".jpg" multiple>
+                        </div>
+                        <div class="container_description">
+                            <div class="save">
+                                <button class="buttons" type="submit" class="submit"><span>Guardar</span></button>
+                            </div>
+                        </div>
+                    </form>
                 </section>
-        
-           
-                
-                    
-    </main>
-    <%- include("../partials/footer") %>
-</body>
+
+            </main>
+            <%- include("../partials/footer") %>
+    </body>
