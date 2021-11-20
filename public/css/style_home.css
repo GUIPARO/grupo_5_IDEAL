@@ -658,9 +658,11 @@ padding: 35px 25px;
 gap: 8px;
 margin: 0 auto;
 }
+
 .container-serviceform .select_service:hover{
     border: solid 1px black;
 } 
+
 .container-serviceform{
        padding: 20px;
        width: 100%;
@@ -669,12 +671,14 @@ margin: 0 auto;
        flex-direction: column;
        
 }
+
 .container-serviceform h3 {
     font-size: 18px;
     text-align: center;
     padding: 10px;
     
 }
+
 .container-serviceform select{
     background: transparent;
     border: solid 1px #a9a9a9;
@@ -686,6 +690,7 @@ margin: 0 auto;
     font-size: 16px;
     text-align: center;
 }
+
 .serviceform-two {
 
     display: flex;
@@ -696,7 +701,7 @@ margin: 0 auto;
     margin: 0 auto;
 }
 
-.serviceform-two input {
+.serviceform-two input{
     border-radius: 5px;
       margin: 20px auto;
       width: 100%;
