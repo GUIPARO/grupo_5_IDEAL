@@ -38,9 +38,11 @@ const controller = {
         res.render('./products/admin')
     
     },
+
     adminCreate:(req,res) =>{
         res.render('./products/adminCreate')
     },
+
     adminStore:(req,res) =>{
         let product = {
 			id: newId(),
@@ -57,7 +59,51 @@ const controller = {
     },
 
     adminEdit:(req,res) =>{
-        res.render('./products/adminEdit')
+
+        const id = req.params.id;
+
+        const productEdit = bdProducts.filter(product =>{
+            return product.id == id;
+        })
+
+        const indice = bdProducts.findIndex(product => {
+            return product == productEdit[0];
+        })
+
+        console.log(productEdit)
+
+        if(indice >= 0){
+            res.render('./products/adminEdit',{productEdit})
+        }else{
+            res.send('No insista')
+        }
+        
+       
+    },
+
+    adminModified:(req,res) =>{
+
+        const id = req.params.id;
+        const edit = req.body;
+
+        const productEdit = bdProducts.filter(product =>{
+            return product.id == id;
+        })
+
+        const indice = bdProducts.findIndex(product => {
+            return product == productEdit[0];
+        })
+
+        bdProducts[indice] = edit;
+
+        console.log(id)
+
+        let jsonProducts = JSON.stringify(bdProducts, null, 4);
+    
+        fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
+
+        res.redirect('/');
+
     }
 }
 

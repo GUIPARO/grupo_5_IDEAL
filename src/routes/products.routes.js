@@ -24,10 +24,13 @@ router.get('/productCart',controller.produtCart);
 
 router.get('/admin',controller.admin);
 
-router.get('/adminEdit',controller.adminEdit);
+//Editar producto
+router.get('/adminEdit/:id',controller.adminEdit);
+router.put('/adminEdit/:id', controller.adminModified);
 
+
+//Crear producto
 router.get('/adminCreate',controller.adminCreate);
-
 router.post('/adminCreate', upload.single("file"), controller.adminStore);
 
 router.get('/productsList', controller.products);
