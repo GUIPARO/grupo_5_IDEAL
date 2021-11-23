@@ -21,31 +21,39 @@
         "image": "fashion.png"
     },
     {
-        "id": "2 ",
-        "fullname": [
-            "Camisa Carnavalera",
-            "20000"
+        "id": 2,
+        "fullname": "Camisa Carnavalera",
+        "price": 50000,
+        "product_line": "Linea fashion ",
+        "activity": "Basketball",
+        "subactivity": [
+            "campañas-publicitarias",
+            "campañas-politicas",
+            "eventos-coporporativos"
         ],
-        "service": [
-            "Linea fashion ",
-            "Celebraciones",
-            "Técnica de producto"
-        ],
-        "tela": " poliester",
-        "file": ""
+        "service": "Serigrafia 1 tintas",
+        "tela": "piel-de-durazno",
+        "image": "defoult.png"
     },
     {
-        "id": "3 ",
-        "fullname": [
-            "Camisa Guayabera",
-            "20000"
+        "id": 3,
+        "fullName": "Camisetas Personalizadas",
+        "price": 18000,
+        "productLine": "Linea fashion",
+        "activity": "Eventos",
+        "subActivity": [
+            "Campañas Publicitarias",
+            "Campañas Políticas",
+            "Eventos Corporativos"
         ],
-        "service": [
-            "Linea deportiva",
-            "Empresariales",
-            "Serigrafia 1 tintas"
+        "technique": [
+            "Full color sublimación",
+            "Full color sublimación"
         ],
-        "tela": " poliester",
-        "file": ""
+        "material": [
+            "Algodón",
+            "Poliester"
+        ],
+        "image": "fashion.png"
     }
 ]
