@@ -21,30 +21,31 @@
         "image": "fashion.png"
     },
     {
+        "id": "2 ",
         "fullname": [
-            "sdasdasd",
-            "asdasdasd"
+            "Camisa Carnavalera",
+            "20000"
         ],
         "service": [
-            "Linea industrial",
-            "Emprendimientos",
-            "Serigrafia 1 tintas"
+            "Linea fashion ",
+            "Celebraciones",
+            "Técnica de producto"
         ],
-        "tela": "Piel de durazno",
+        "tela": " poliester",
         "file": ""
     },
     {
-        "id": 3,
+        "id": "3 ",
         "fullname": [
-            "asdsaas",
-            "asd"
+            "Camisa Guayabera",
+            "20000"
         ],
         "service": [
-            "Linea industrial",
-            "Celebraciones",
-            "Vinilo textil 1 color"
+            "Linea deportiva",
+            "Empresariales",
+            "Serigrafia 1 tintas"
         ],
-        "tela": "Algodón peinado",
-        "image": "file.png"
+        "tela": " poliester",
+        "file": ""
     }
 ]

@@ -53,3 +53,22 @@
 ### Less of ### 
 - Desviarnos del tema prioritario
 
+## Sprint 4 ##
+
+### Keep doing ###
+- 
+
+### More of ### 
+- 
+
+###  Start doing ### 
+
+- 
+
+### Stop doing ### 
+- 
+
+### Less of ### 
+- 
+
+

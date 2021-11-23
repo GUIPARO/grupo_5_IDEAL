@@ -22,8 +22,8 @@ const controller = {
         const product = bdProducts.filter( producto => {
             return producto.id == id;
         });
-        console.log(id)
-        console.log(req.params)
+        // console.log(id)
+        // console.log(req.params)
         res.render("./products/product", { product })
     },
     products:(req,res) =>{
@@ -70,7 +70,6 @@ const controller = {
             return product == productEdit[0];
         })
 
-        console.log(productEdit)
 
         if(indice >= 0){
             res.render('./products/adminEdit',{productEdit})
@@ -87,6 +86,8 @@ const controller = {
         const id = req.params.id;
         const edit = req.body;
 
+        console.log(id)
+
         const productEdit = bdProducts.filter(product =>{
             return product.id == id;
         })
@@ -95,9 +96,12 @@ const controller = {
             return product == productEdit[0];
         })
 
-        bdProducts[indice] = edit;
-
-        console.log(id)
+        bdProducts[indice] = {
+            id: req.params.id,
+            ...edit
+        }
+        
+        console.log(bdProducts[indice])
 
         let jsonProducts = JSON.stringify(bdProducts, null, 4);
     

@@ -22,3 +22,24 @@
 |¿Se encontró con algún impedimento| No se presento nigun impedimento |No se presento nigun impedimento |No se presento nigun impedimento |
 |Solución| - |- |-|
 | ¿Qué haré la próxima semana?| -|Terminar diseño de página listado de servicios|-|
+
+### Sprint 4 
+------------
+
+####  11/11/2021 - 17/11/2021
+
+|  Weekly | Ana Díaz| Guisella Patron| Julian Castillo|
+| :---------------:|:---------------: |:---------------: |:---------------:|
+|¿Qué he hecho esta semana?| Modificar formulario de edición y creación de producto| Modificar vista detalle del producto | Realizar vista listado de productos, generar archivo JSON productos y usuarios|
+|¿Se encontró con algún impedimento|No se presento nigun impedimento  |No se presento nigun impedimento |No se presento nigun impedimento |
+|Solución| - |- |-|
+| ¿Qué haré la próxima semana?| Implementar metodo para eliminar productos |Implementar metodo para edición de productos | Implementar metodos para listado, detalle y creación de productos|
+
+####  18/11/2021 - 25/11/2021
+
+|  Weekly | Ana Díaz| Guisella Patron| Julian Castillo|
+| :---------------:|:---------------: |:---------------: |:---------------:|
+|¿Qué he hecho esta semana?|  | | 
+|¿Se encontró con algún impedimento|  | ||
+|Solución| - |- |-|
+| ¿Qué haré la próxima semana?| -| |-|
