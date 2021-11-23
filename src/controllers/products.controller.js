@@ -74,6 +74,7 @@ const controller = {
 
         if(indice >= 0){
             res.render('./products/adminEdit',{productEdit})
+
         }else{
             res.send('No insista')
         }

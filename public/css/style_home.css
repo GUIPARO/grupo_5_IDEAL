@@ -42,16 +42,15 @@
     box-shadow: 0 5px 12px grey;
     
 }
-th{
+
+.product-admin-table th{
     font-weight:800;
     background-color: whitesmoke;
     font-size: 20px;
     padding: 10px;
 }
-thead, td {
-    padding: 10px 15px;
-}
-tr {
+
+.product-admin-table tr {
     background-color: white;
     border-bottom:1px solid grey;
 }
@@ -885,7 +884,7 @@ main .container_info_product{
     margin: 0 auto 10px;
 }
 
-.product_name{
+.container_info_product .product_name{
     font-weight: 500;
     letter-spacing: -1.2px;
     text-align: center;
@@ -954,6 +953,15 @@ main .container_info_product{
     display: block;
     text-transform: uppercase;
     font-size: 18px;
+}
+
+.detail_activity{
+    background: #65ba96bd;
+    color:white;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 20px;
 }
 
 .buying_guide{
@@ -1248,6 +1256,10 @@ input[type=file]::file-selector-button:hover {
 
 /*---INICIO MAIN CARRITO DE COMPRA---*/
 
+.container_car_shop{
+    min-height: calc(100vh - 149.333px - 363.35px);
+}
+
 .title_car{
     font-size: 30px;
     color: #1e2d44e0;
@@ -1256,22 +1268,13 @@ input[type=file]::file-selector-button:hover {
     margin:50px auto;
 }
 
-thead{
-    display: none;
-}
-
 main .description_buy{
     width: 80%;
     margin: auto;
-}
-
-.description_buy{
-    width: 100%;
     max-width: 1000px;
-    margin: auto;
 }
 
-.description_buy .table_car{
+.description_buy .table_car, .table_resume{
     width: 100%;
     border: 1px solid #ccc;
     border-collapse: collapse;
@@ -1283,20 +1286,36 @@ main .description_buy{
 .table_car th, .table_car td{
     font-size: 18px;
     padding: 5px;
-    text-align: center;
+    text-align: right;
 }
 
-
+.table_car th{
+    border-bottom: 1px solid #ccc;
+    font-weight: 400;
+}
 
 .table_car thead{
     text-transform: uppercase;
-    background: #ddd;
+}
+
+.product_buy{
+    text-align: center;
 }
 
 .product_buy img{
-    width: 100%;
+    width: 60%;
 }
 
+.table_car td::before{
+    content: attr(data-title);
+    float: left;
+    text-transform: uppercase;
+} 
+
+.table_car tbody .product_name a {
+    text-decoration: none;
+    color: black;
+}
 
 .code_prom,.title_totalcar{
     width: 90%;
@@ -1353,13 +1372,23 @@ main .description_buy{
     border-bottom: 1px solid grey;
 }
 
-.container_subtotal_resume, .container_value_subtotal,
-.container_title_subtotal,.container_send,
-.container_title_send,.container_totalBuy,
-.container_title_totalBuy {
-    flex-basis: 50%;
-    font-size: 16px;
-    margin: 1px auto;
+.table_resume{
+    border:none;
+}
+
+.table_resume td{
+    display: block;
+}
+
+.table_resume td::before {
+    content: attr(data-title);
+    float: left;
+    text-transform: uppercase;
+}
+
+.table_resume th, .table_resume td {
+    font-size: 18px;
+    text-align: right;
 }
 
  button.container_value_description {
@@ -1375,8 +1404,7 @@ button.container_value_description:hover {
     color:rgb(226, 61, 61)
 }
 
-
-button.apply_cupon{
+button.apply_cupon, button.finish_shop{
     background-color: #1e2d44e0;
     color: white;
     padding: 5px;
@@ -1395,15 +1423,6 @@ button.apply_cupon:hover{
 }
 
 button.finish_shop{
-    background-color: #1e2d44e0;
-    color: white;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #1e2d44e0;
-    font-size: 15px;
-    text-transform: uppercase;
-    margin: 10px auto;
-    cursor: pointer;
     width: 150px;
 }
 
@@ -1500,28 +1519,28 @@ button.finish_shop:hover{
     
 /*INICIO MEDIA QUERIS CARRITO DE COMPRA*/
 
-    .container_buy{
-        display: flex;
+    .table_car td::before{
+        content: attr(data-title);
+        display: none;
+        text-transform: uppercase;
+    } 
+
+    .table_car th, .table_car td{
+        text-align: center;
     }
 
-    .container_title_description p{
-        font-size: 18px;
-        margin: 5px 0;
-        font-weight: 500;
+    .product_buy img{
+        width: 100%;
     }
 
-    .container_description_product p{
+    tr .car_quantity input[type="number"] {
         font-size: 18px;
-        margin: 5px 0;
-        font-weight: 600;
+        padding: .3em;
+    
     }
 
     .container_description_buy{
         border-top: none
-    }
-
-    .product_buy img{
-        max-width: 115px;
     }
 
     .container_shop{
@@ -1534,22 +1553,20 @@ button.finish_shop:hover{
     .container_resume {
         margin-left: 10px;
     }
-    
-
-    .container_subtotal_resume, .container_value_subtotal,
-    .container_title_subtotal,.container_send,
-    .container_title_send,.container_totalBuy,
-    .container_title_totalBuy {
-    font-size: 18px;
-}
 
 /*FIN MEDIA QUERIS CARRITO DE COMPRA*/
 
 }
 
 @media (max-width:480px){
+
+    .table_car thead{
+        display: none;
+    }
+
     .table_car td{
         display: block;
+        border-bottom: 1px solid #ddd;
     }
 }
 

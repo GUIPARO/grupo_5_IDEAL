@@ -9,7 +9,7 @@
                 <img class="product_image" src="/img/<%=product[0].image%>" alt="camiseta_fashion">
             </figure>
             <section class="container_info_product">
-                <h3 class="product_name"><%= product.name %> </h3>
+                <h3 class="product_name"><%=product[0].fullName%></h3>
                 <div class="detail_product">
                     <div class="contanier_cost">
                         <div class="product_cost"><%=`$ ${product[0].price}`%></div>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="detail_activity">
                         <div class="contanier_activity">
-                            <div class="activity">Tendencias</div>
+                            <div class="activity"><%=product[0].activity%></div>
                         </div>
                     </div>
                     <div class="buying_guide">

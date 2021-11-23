@@ -9,7 +9,7 @@
 
                 <section class="create-form">
                     <h2 class="title-admin">Edita este producto</h2>
-                    <form class="create" action='/products/adminEdit/:id?_method=PUT' method="POST">
+                    <form class="create" action='/products/adminEdit/<%=productEdit[0].id%> ?_method=PUT' method="POST">
                         <input type="text" name="fullname" id="fullname" minlength="2" placeholder="Nombre del producto"
                             required>
                         <input type="text" name="fullname" id="fullname" minlength="2" placeholder="Precio del producto"

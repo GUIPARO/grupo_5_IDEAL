@@ -21,25 +21,17 @@
         "image": "fashion.png"
     },
     {
-        "id": 2,
-        "fullName": "Camisetas Personalizadas",
-        "price": 18000,
-        "productLine": "Linea fashion",
-        "activity": "Eventos",
-        "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
+        "fullname": [
+            "sdasdasd",
+            "asdasdasd"
         ],
-        "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
+        "service": [
+            "Linea industrial",
+            "Emprendimientos",
+            "Serigrafia 1 tintas"
         ],
-        "material": [
-            "Algodón",
-            "Poliester"
-        ],
-        "image": "sport.png"
+        "tela": "Piel de durazno",
+        "file": ""
     },
     {
         "id": 3,
