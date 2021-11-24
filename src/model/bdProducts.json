@@ -22,23 +22,39 @@
     },
     {
         "id": 2,
-        "fullname": "fallaaaaa",
-        "price": 3000,
-        "productLine": "Linea deportiva",
-        "service": "Celebraciones",
+        "fullname": "asdasd",
+        "price": 1,
+        "product_line": "Linea industrial",
+        "activity": "Fashion",
+        "subactivity": [
+            "campañas-politicas",
+            "eventos-coporporativos"
+        ],
+        "service": "Vinilo textil 1 color",
+        "tela": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "chompa_even.png"
+    },
+    {
+        "id": 3,
+        "fullname": "asdas",
+        "price": 21,
+        "productLine": "Linea medica",
+        "service": "Empresariales",
         "subactivity": [
             "campañas-publicitarias",
-            "campañas-politicas",
-            "comidas-rapidas"
+            "eventos-coporporativos"
         ],
         "technique": [
-            "serigrafia-2-tintas",
+            "full-color-sublimacion",
             "vinilo-textil-1-color"
         ],
         "material": [
             "algodon",
             "poliester"
         ],
-        "image": "chompa_person_tenden.png"
+        "image": "chompa_even.png"
     }
 ]

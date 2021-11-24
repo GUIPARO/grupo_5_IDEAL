@@ -60,7 +60,6 @@ const controller = {
     },
 
     adminEdit: (req, res) => {
-
         const id = req.params.id;
 
         const productEdit = bdProducts.filter(product => {
@@ -78,30 +77,27 @@ const controller = {
         } else {
             res.send('No insista')
         }
-
-
     },
 
     adminModified: function(req, res){
         const id = parseInt(req.params.id)
         const price = parseInt(req.body.price);
         const edit = req.body;
-        const imageFile = req.file.filename;
+        
        
         const productEdit = bdProducts.filter(product => {
             return product.id == id;
-        })
-
+        });
         const indice = bdProducts.findIndex(product => {
             return product == productEdit[0];
-        })
-
-        // const processForm = this.processForm(imageFile, productEdit) == "validar" ? imageFile : productEdit.image;
-
+        });
+        const imageFile = req.file === undefined ? productEdit[0].image : req.file.filename;
+        
         bdProducts[indice] = {
             id: id,
             ...edit,
-            price: price
+            price: price,
+            image: imageFile
         }
 
         let jsonProducts = JSON.stringify(bdProducts, null, 4);
