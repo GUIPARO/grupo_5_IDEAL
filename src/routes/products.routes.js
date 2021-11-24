@@ -34,5 +34,6 @@ router.post('/adminCreate', upload.single("image"), controller.adminStore);
 
 router.get('/productsList', controller.products);
 
-
+//Eliminar producto
+router.delete ('/delete/:id', controller.adminDelete)
 module.exports = router
