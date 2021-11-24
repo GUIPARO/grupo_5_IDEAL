@@ -32,7 +32,7 @@ router.put('/adminEdit/:id', upload.single("image"), controller.adminModified);
 router.get('/adminCreate',controller.adminCreate);
 router.post('/adminCreate', upload.single("image"), controller.adminStore);
 
-router.get('/productsList', controller.products);
+router.get('/productsList', controller.productsList);
 
 //Eliminar producto
 router.delete ('/delete/:id', controller.adminDelete)

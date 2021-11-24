@@ -20,19 +20,21 @@
     },
     {
         "id": 2,
-        "fullName": "prueba",
-        "price": 12131,
-        "productLine": "Linea industrial",
-        "activity": "Celebraciones",
+        "fullName": "asdsa",
+        "price": 213123,
+        "product_line": "Linea deportiva",
+        "activity": "Eventos",
         "subActivity": [
-            "campañas-publicitarias",
-            "campañas-politicas"
+            "campañas-politicas",
+            "eventos-coporporativos",
+            "comidas-rapidas"
         ],
-        "technique": [
-            "full-color-sublimacion",
-            "serigrafia-1-tinta",
-            "serigrafia-2-tintas"
+        "technique": "Serigrafia 2 tintas",
+        "tela": [
+            "algodon",
+            "poliester",
+            "algodon"
         ],
-        "image": "chompa_person_tenden.png"
+        "image": "conjunMedi_desecha.png"
     }
 ]
