@@ -1,7 +1,6 @@
 const path = require('path');
 const fs = require("fs");
-const bdProducts = require(path.resolve(__dirname, "../model/bdProducts.json"));
-
+let bdProducts = require(path.resolve(__dirname, "../model/bdProducts.json"));
 
 const newId = () => {
     let ultimo = 0;
@@ -14,6 +13,7 @@ const newId = () => {
 }
 
 const controller = {
+
     cotizacion: (req, res) => {
         res.render('./products/cotizacion',)
     },
@@ -35,8 +35,8 @@ const controller = {
     },
 
     admin: (req, res) => {
-        res.render('./products/admin' , {products:bdProducts})
-
+        let hola = bdProducts;
+        res.render('./products/admin' , {products:hola});
     },
 
     adminCreate: (req, res) => {
@@ -79,7 +79,7 @@ const controller = {
         }
     },
 
-    adminModified: function(req, res){
+    adminModified: (req, res) => {
         const id = parseInt(req.params.id)
         const price = parseInt(req.body.price);
         const edit = req.body;
@@ -108,19 +108,19 @@ const controller = {
 
     },
 
-    adminDelete: function (req,res){
-        const id = req.params.id 
-        const data = bdProducts.filter(products =>{
-            return products.id != id 
-              }) 
-              let jsonProducts = JSON.stringify(data, null, 4);
-
-              fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
-      
-              res.redirect('/products/admin');
-
+    adminDelete:(req,res) => {
+        const id = req.params.id;   
+        let datos = bdProducts;   
+        const data = datos.filter(products =>{
+            return products.id != id     
+        });
+         
+        let jsonProducts = JSON.stringify(data, null, 4);
+              
+        fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
+        
+        res.redirect('/products/admin');
     }
-
 }
 
 module.exports = controller;

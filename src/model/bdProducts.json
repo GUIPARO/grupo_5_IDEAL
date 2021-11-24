@@ -1,149 +1,38 @@
 [
     {
         "id": 1,
-        "fullName": "Camisetas Personalizadas",
-        "price": 18000,
-        "productLine": "Linea fashion",
+        "fullName": "asdsa",
+        "price": 213123,
+        "product_line": "Linea deportiva",
         "activity": "Eventos",
         "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
+            "campañas-politicas",
+            "eventos-coporporativos",
+            "comidas-rapidas"
         ],
-        "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
+        "technique": "Serigrafia 2 tintas",
+        "tela": [
+            "algodon",
+            "poliester",
+            "algodon"
         ],
-        "material": [
-            "Algodón",
-            "Poliester"
-        ],
-        "image": "fashion.png"
+        "image": "conjunMedi_desecha.png"
     },
     {
         "id": 2,
-        "fullName": "Camisetas Personalizadas",
-        "price": 18000,
-        "productLine": "Linea fashion",
-        "activity": "Eventos",
+        "fullName": "prueba",
+        "price": 12131,
+        "productLine": "Linea industrial",
+        "activity": "Celebraciones",
         "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
+            "campañas-publicitarias",
+            "campañas-politicas"
         ],
         "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
+            "full-color-sublimacion",
+            "serigrafia-1-tinta",
+            "serigrafia-2-tintas"
         ],
-        "material": [
-            "Algodón",
-            "Poliester"
-        ],
-        "image": "fashion.png"
-    },
-    {
-        "id": 2,
-        "fullName": "Camisetas Personalizadas",
-        "price": 18000,
-        "productLine": "Linea fashion",
-        "activity": "Eventos",
-        "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
-        ],
-        "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
-        ],
-        "material": [
-            "Algodón",
-            "Poliester"
-        ],
-        "image": "fashion.png"
-    },
-    {
-        "id": 2,
-        "fullName": "Camisetas Personalizadas",
-        "price": 18000,
-        "productLine": "Linea fashion",
-        "activity": "Eventos",
-        "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
-        ],
-        "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
-        ],
-        "material": [
-            "Algodón",
-            "Poliester"
-        ],
-        "image": "fashion.png"
-    },
-    {
-        "id": 2,
-        "fullName": "Camisetas Personalizadas",
-        "price": 18000,
-        "productLine": "Linea fashion",
-        "activity": "Eventos",
-        "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
-        ],
-        "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
-        ],
-        "material": [
-            "Algodón",
-            "Poliester"
-        ],
-        "image": "fashion.png"
-    },
-    {
-        "id": 2,
-        "fullName": "Camisetas Personalizadas",
-        "price": 18000,
-        "productLine": "Linea fashion",
-        "activity": "Eventos",
-        "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
-        ],
-        "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
-        ],
-        "material": [
-            "Algodón",
-            "Poliester"
-        ],
-        "image": "fashion.png"
-    },
-    {
-        "id": 2,
-        "fullName": "Camisetas Personalizadas",
-        "price": 18000,
-        "productLine": "Linea fashion",
-        "activity": "Eventos",
-        "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
-        ],
-        "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
-        ],
-        "material": [
-            "Algodón",
-            "Poliester"
-        ],
-        "image": "fashion.png"
+        "image": "chompa_person_tenden.png"
     }
 ]

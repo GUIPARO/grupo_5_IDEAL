@@ -9,7 +9,7 @@
                 <section class="create-form">
                     <h2 class="title-admin">Edita este producto</h2>
                     <form class="create" action='/products/adminEdit/<%=productEdit[0].id%>?_method=PUT' method="POST" enctype="multipart/form-data"> 
-                        <input type="text" name="fullname" id="fullname" minlength="2" placeholder="Nombre del producto"
+                        <input type="text" name="fullName" id="fullname" minlength="2" placeholder="Nombre del producto"
                             required>
                         <input type="number" name="price" id="price" minlength="2" placeholder="Precio del producto"
                             required>
@@ -41,7 +41,7 @@
                             </select>
 
                             <h3>Selecciona la subactividad</h3>
-                            <select class="subactivity" name="subactivity" type="select" multiple>
+                            <select class="subactivity" name="subActivity" type="select" multiple>
                                 <option value="campañas-publicitarias">Campañas publicitarias</option>
                                 <option value="campañas-politicas">Camapañas politicas </option>
                                 <option value="eventos-coporporativos">Eventos corpotativos</option>
@@ -74,7 +74,7 @@
                             </select>
 
                             <h3>Seleciona la Técnica</h3>
-                            <select class="select_service" name="service" id="select-service" type="select">
+                            <select class="select_service" name="technique" id="select-service" type="select">
                                 <option selected="" value="Técnica de producto">Técnica de producto</option>
                                 <option value="Full color sublimación">Full color sublimación</option>
                                 <option value="Serigrafia 1 tintas">Serigrafia 1 tinta</option>
