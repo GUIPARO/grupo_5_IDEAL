@@ -21,39 +21,103 @@
         "image": "fashion.png"
     },
     {
-        "id": 2,
-        "fullname": "Camisa Carnavalera",
-        "price": 50000,
-        "product_line": "Linea fashion ",
-        "activity": "Basketball",
+        "id": 6,
+        "fullname": "Camisa Carnavalera 3",
+        "price": 200000,
+        "service": [
+            "Linea fashion ",
+            "Celebraciones"
+        ],
         "subactivity": [
             "campañas-publicitarias",
-            "campañas-politicas",
-            "eventos-coporporativos"
+            "eventos-coporporativos",
+            "comidas-rapidas"
         ],
-        "service": "Serigrafia 1 tintas",
-        "tela": "piel-de-durazno",
-        "image": "defoult.png"
+        "tecnica": [
+            "full-color-sublimacion",
+            "serigrafia-1-tinta"
+        ],
+        "tela": "algodon",
+        "image": "image.png"
     },
     {
-        "id": 3,
-        "fullName": "Camisetas Personalizadas",
-        "price": 18000,
-        "productLine": "Linea fashion",
-        "activity": "Eventos",
-        "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
+        "id": 7,
+        "fullname": "Camisa Carnavalera 4",
+        "price": "200000",
+        "service": [
+            "Linea fashion ",
+            "Celebraciones"
         ],
-        "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
+        "subactivity": [
+            "campañas-publicitarias",
+            "eventos-coporporativos",
+            "comidas-rapidas"
         ],
-        "material": [
-            "Algodón",
-            "Poliester"
+        "tecnica": [
+            "full-color-sublimacion",
+            "serigrafia-1-tinta"
         ],
-        "image": "fashion.png"
+        "tela": "algodon",
+        "image": "image.png"
+    },
+    {
+        "id": 8,
+        "fullname": "Camisa Carnavalera 8",
+        "price": "200000",
+        "service": [
+            "Linea fashion ",
+            "Celebraciones"
+        ],
+        "subactivity": [
+            "campañas-publicitarias",
+            "eventos-coporporativos",
+            "comidas-rapidas"
+        ],
+        "tecnica": [
+            "full-color-sublimacion",
+            "serigrafia-1-tinta"
+        ],
+        "tela": "algodon",
+        "image": "image.png"
+    },
+    {
+        "id": 9,
+        "fullname": "Camisa Carnavalera 9",
+        "price": 200000,
+        "service": [
+            "Linea fashion ",
+            "Celebraciones"
+        ],
+        "subactivity": [
+            "campañas-publicitarias",
+            "eventos-coporporativos",
+            "comidas-rapidas"
+        ],
+        "tecnica": [
+            "full-color-sublimacion",
+            "serigrafia-1-tinta"
+        ],
+        "tela": "algodon",
+        "image": "image.png"
+    },
+    {
+        "id": 10,
+        "fullname": "Camisa Carnavalera 5",
+        "price": 800000,
+        "service": [
+            "Linea fashion ",
+            "Futbol"
+        ],
+        "subactivity": [
+            "campañas-publicitarias",
+            "eventos-coporporativos",
+            "comidas-rapidas"
+        ],
+        "tecnica": [
+            "full-color-sublimacion",
+            "serigrafia-1-tinta"
+        ],
+        "tela": "piel-de-durazno",
+        "image": "image.png"
     }
 ]

@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require("fs");
-const bdProducts = require(path.resolve(__dirname, "../model/bdProducts.json"));
+const bdProducts = fs.readFileSync(path.resolve(__dirname, "../model/bdProducts.json"));
+
 
 
 const newId = () => {
@@ -27,6 +28,7 @@ const controller = {
         // console.log(req.params)
         res.render("./products/product", { product })
     },
+
     products: (req, res) => {
         res.render('./products/productsList', { bdProducts })
     },
@@ -45,11 +47,16 @@ const controller = {
     },
 
     adminStore: (req, res) => {
+
+        const price = parseInt(req.body.price)
+
         let product = {
             id: newId(),
             ...req.body,
+            price: price,
             image: req.file.filename
         }
+
         //Guardar el producto en el array de productos (push)
         bdProducts.push(product);
 
@@ -71,24 +78,21 @@ const controller = {
             return product == productEdit[0];
         })
 
-
         if (indice >= 0) {
             res.render('./products/adminEdit', { productEdit })
 
         } else {
             res.send('No insista')
         }
-
-
     },
 
-    adminModified: function(req, res){
+    adminModified: function (req, res) {
 
         const id = parseInt(req.params.id)
         const price = parseInt(req.body.price);
         const edit = req.body;
         const imageFile = req.file.filename;
-       
+
         const productEdit = bdProducts.filter(product => {
             return product.id == id;
         })
@@ -97,7 +101,7 @@ const controller = {
             return product == productEdit[0];
         })
 
-        const processForm = this.processForm(imageFile, productEdit) == "validar"? imageFile : productEdit.image;
+        const processForm = this.processForm(imageFile, productEdit) == "validar" ? imageFile : productEdit.image;
 
         bdProducts[indice] = {
             id: id,
@@ -113,7 +117,7 @@ const controller = {
         res.redirect('/');
 
     },
-    processForm: function(image,bdProducts){
+    processForm: function (image, bdProducts) {
 
         if (image == "") {
             return bdProducts.image
