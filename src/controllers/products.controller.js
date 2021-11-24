@@ -35,7 +35,7 @@ const controller = {
     },
 
     admin: (req, res) => {
-        res.render('./products/admin')
+        res.render('./products/admin' , {products:bdProducts})
 
     },
 
@@ -106,7 +106,21 @@ const controller = {
 
         res.redirect('/');
 
+    },
+
+    adminDelete: function (req,res){
+        const id = req.params.id 
+        const data = bdProducts.filter(products =>{
+            return products.id != id 
+              }) 
+              let jsonProducts = JSON.stringify(data, null, 4);
+
+              fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
+      
+              res.redirect('/products/admin');
+
     }
+
 }
 
 module.exports = controller;
