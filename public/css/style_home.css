@@ -135,7 +135,7 @@ body {
 
 body .color_arriba {
     background-color: #fafafa;
-    border-bottom: 15px solid #e3e038;
+    border-bottom: 4px solid #e3e038;
 }
 
 body .color_abajo {
@@ -1448,9 +1448,11 @@ button.finish_shop:hover{
     max-width: 1000px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-rows: auto;
     gap: 20px;
     place-content: center;
-    margin: 50px auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .products-view .products-container {
