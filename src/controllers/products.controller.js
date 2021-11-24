@@ -44,6 +44,7 @@ const controller = {
     },
 
     adminStore: (req, res) => {
+        
         const price = parseInt(req.body.price);
         let product = {
             id: newId(),
@@ -60,6 +61,7 @@ const controller = {
     },
 
     adminEdit: (req, res) => {
+        
         const id = req.params.id;
 
         const productEdit = bdProducts.filter(product => {

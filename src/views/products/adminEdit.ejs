@@ -9,16 +9,20 @@
                 <section class="create-form">
                     <h2 class="title-admin">Edita este producto</h2>
                     <form class="create" action='/products/adminEdit/<%=productEdit[0].id%>?_method=PUT' method="POST" enctype="multipart/form-data"> 
+<<<<<<< HEAD
                         <input type="text" name="fullName" id="fullname" minlength="2" placeholder="Nombre del producto"
+=======
+                        <input type="text" name="fullName" id="fullName" minlength="2" placeholder="Nombre del producto" value ="<%= productEdit[0].fullName%> "
+>>>>>>> e2a7014a95e3f025ec1c892fc4e7d6f767f76c79
                             required>
-                        <input type="number" name="price" id="price" minlength="2" placeholder="Precio del producto"
+                        <input type="number" name="price" id="price" minlength="2" placeholder="Precio del producto" value ="<%= productEdit[0].price%> "
                             required>
 
                         <section class="container-lineform">
                             <h3>Seleciona la linea del producto</h3>
                             <select class="select_service" name="product_line" id="product_line" type="select">
-                                <option selected="" value="Linea de producto">Linea de producto</option>
-                                <option value="Linea fashion ">Linea fashion </option>
+                                
+                                <option value="Linea fashion ">Linea fashion</option>
                                 <option value="Linea deportiva">Linea deportiva</option>
                                 <option value="Linea industrial">Linea industrial</option>
                                 <option value="Linea medica">Linea medica</option>
@@ -41,7 +45,7 @@
                             </select>
 
                             <h3>Selecciona la subactividad</h3>
-                            <select class="subactivity" name="subActivity" type="select" multiple>
+                            <select class="subActivity" name="subActivity" type="select" multiple>
                                 <option value="campañas-publicitarias">Campañas publicitarias</option>
                                 <option value="campañas-politicas">Camapañas politicas </option>
                                 <option value="eventos-coporporativos">Eventos corpotativos</option>

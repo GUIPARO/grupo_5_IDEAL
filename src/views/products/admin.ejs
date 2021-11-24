@@ -30,7 +30,7 @@
         <tbody>
                 
                   
-                <% products.forEach (product => { %>
+                <% products.forEach(product => { %>
                     <% if(product){%>
                 <tr>
                 <form method="POST" action= "/products/delete/<%=product.id%>?_method=DELETE">
