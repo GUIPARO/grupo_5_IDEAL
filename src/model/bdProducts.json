@@ -42,17 +42,108 @@
         "image": "fashion.png"
     },
     {
-        "id": 3,
-        "fullName": "camisa trol",
-        "price": 54000,
-        "productLine": "Linea deportiva",
-        "activity": "Voleyball",
-        "subactivity": "comidas-rapidas",
-        "technique": [
-            "serigrafia-2-tintas",
-            "vinilo-textil-1-color"
+        "id": 2,
+        "fullName": "Camisetas Personalizadas",
+        "price": 18000,
+        "productLine": "Linea fashion",
+        "activity": "Eventos",
+        "subActivity": [
+            "Campañas Publicitarias",
+            "Campañas Políticas",
+            "Eventos Corporativos"
         ],
-        "material": "poliester",
-        "image": "GOPR0198.JPG"
+        "technique": [
+            "Full color sublimación",
+            "Full color sublimación"
+        ],
+        "material": [
+            "Algodón",
+            "Poliester"
+        ],
+        "image": "fashion.png"
+    },
+    {
+        "id": 2,
+        "fullName": "Camisetas Personalizadas",
+        "price": 18000,
+        "productLine": "Linea fashion",
+        "activity": "Eventos",
+        "subActivity": [
+            "Campañas Publicitarias",
+            "Campañas Políticas",
+            "Eventos Corporativos"
+        ],
+        "technique": [
+            "Full color sublimación",
+            "Full color sublimación"
+        ],
+        "material": [
+            "Algodón",
+            "Poliester"
+        ],
+        "image": "fashion.png"
+    },
+    {
+        "id": 2,
+        "fullName": "Camisetas Personalizadas",
+        "price": 18000,
+        "productLine": "Linea fashion",
+        "activity": "Eventos",
+        "subActivity": [
+            "Campañas Publicitarias",
+            "Campañas Políticas",
+            "Eventos Corporativos"
+        ],
+        "technique": [
+            "Full color sublimación",
+            "Full color sublimación"
+        ],
+        "material": [
+            "Algodón",
+            "Poliester"
+        ],
+        "image": "fashion.png"
+    },
+    {
+        "id": 2,
+        "fullName": "Camisetas Personalizadas",
+        "price": 18000,
+        "productLine": "Linea fashion",
+        "activity": "Eventos",
+        "subActivity": [
+            "Campañas Publicitarias",
+            "Campañas Políticas",
+            "Eventos Corporativos"
+        ],
+        "technique": [
+            "Full color sublimación",
+            "Full color sublimación"
+        ],
+        "material": [
+            "Algodón",
+            "Poliester"
+        ],
+        "image": "fashion.png"
+    },
+    {
+        "id": 2,
+        "fullName": "Camisetas Personalizadas",
+        "price": 18000,
+        "productLine": "Linea fashion",
+        "activity": "Eventos",
+        "subActivity": [
+            "Campañas Publicitarias",
+            "Campañas Políticas",
+            "Eventos Corporativos"
+        ],
+        "technique": [
+            "Full color sublimación",
+            "Full color sublimación"
+        ],
+        "material": [
+            "Algodón",
+            "Poliester"
+        ],
+        "image": "fashion.png"
     }
 ]
