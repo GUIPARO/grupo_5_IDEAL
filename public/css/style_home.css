@@ -1459,6 +1459,10 @@ button.finish_shop:hover{
     padding: 5px;
 }
 
+.products-view .image-container img {
+    border-radius: 8px;
+}
+
 .products-view div,
 .products-view img {
     width: 100%;

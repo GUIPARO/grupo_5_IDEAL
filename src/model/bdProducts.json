@@ -19,42 +19,5 @@
             "Poliester"
         ],
         "image": "fashion.png"
-    },
-    {
-        "id": 2,
-        "fullname": "asdasd",
-        "price": 1,
-        "product_line": "Linea industrial",
-        "activity": "Fashion",
-        "subactivity": [
-            "campañas-politicas",
-            "eventos-coporporativos"
-        ],
-        "service": "Vinilo textil 1 color",
-        "tela": [
-            "algodon",
-            "poliester"
-        ],
-        "image": "chompa_even.png"
-    },
-    {
-        "id": 3,
-        "fullname": "asdas",
-        "price": 21,
-        "productLine": "Linea medica",
-        "service": "Empresariales",
-        "subactivity": [
-            "campañas-publicitarias",
-            "eventos-coporporativos"
-        ],
-        "technique": [
-            "full-color-sublimacion",
-            "vinilo-textil-1-color"
-        ],
-        "material": [
-            "algodon",
-            "poliester"
-        ],
-        "image": "chompa_even.png"
     }
 ]
