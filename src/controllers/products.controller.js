@@ -1,7 +1,6 @@
 const path = require('path');
 const fs = require("fs");
-const bdProducts = fs.readFileSync(path.resolve(__dirname, "../model/bdProducts.json"));
-
+const bdProducts = require(path.resolve(__dirname, "../model/bdProducts.json"));
 
 
 const newId = () => {
@@ -24,11 +23,9 @@ const controller = {
         const product = bdProducts.filter(producto => {
             return producto.id == id;
         });
-        // console.log(id)
-        // console.log(req.params)
         res.render("./products/product", { product })
     },
-
+    
     products: (req, res) => {
         res.render('./products/productsList', { bdProducts })
     },
@@ -47,67 +44,40 @@ const controller = {
     },
 
     adminStore: (req, res) => {
-
-        const price = parseInt(req.body.price)
-
+        const price = parseInt(req.body.price);
         let product = {
             id: newId(),
             ...req.body,
-            price: price,
-            image: req.file.filename
+            image: req.file.filename,
+            price: price
         }
 
-        //Guardar el producto en el array de productos (push)
         bdProducts.push(product);
-
         let jsonProducts = JSON.stringify(bdProducts, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
-
+        
         res.redirect('/');
     },
 
     adminEdit: (req, res) => {
 
-        const id = req.params.id;
-
-        const productEdit = bdProducts.filter(product => {
-            return product.id == id;
-        })
-
-        const indice = bdProducts.findIndex(product => {
-            return product == productEdit[0];
-        })
-
-        if (indice >= 0) {
-            res.render('./products/adminEdit', { productEdit })
-
-        } else {
-            res.send('No insista')
-        }
-    },
-
-    adminModified: function (req, res) {
-
         const id = parseInt(req.params.id)
         const price = parseInt(req.body.price);
         const edit = req.body;
-        const imageFile = req.file.filename;
-
+        
         const productEdit = bdProducts.filter(product => {
             return product.id == id;
-        })
-
+        });
         const indice = bdProducts.findIndex(product => {
             return product == productEdit[0];
-        })
-
-        const processForm = this.processForm(imageFile, productEdit) == "validar" ? imageFile : productEdit.image;
-
+        });
+        const imageFile = req.file === undefined ? productEdit[0].image : req.file.filename;
+        
         bdProducts[indice] = {
             id: id,
             ...edit,
             price: price,
-            image: processForm
+            image: imageFile
         }
 
         let jsonProducts = JSON.stringify(bdProducts, null, 4);
@@ -117,12 +87,43 @@ const controller = {
         res.redirect('/');
 
     },
-    processForm: function (image, bdProducts) {
+
+    adminModified: function(req, res){
+        const id = parseInt(req.params.id)
+        const price = parseInt(req.body.price);
+        const edit = req.body;
+        const imageFile = req.file.filename;
+       
+        const productEdit = bdProducts.filter(product => {
+            return product.id == id;
+        })
+
+        const indice = bdProducts.findIndex(product => {
+            return product == productEdit[0];
+        })
+
+        // const processForm = this.processForm(imageFile, productEdit) == "validar" ? imageFile : productEdit.image;
+
+        bdProducts[indice] = {
+            id: id,
+            ...edit,
+            price: price
+        }
+
+        let jsonProducts = JSON.stringify(bdProducts, null, 4);
+
+        fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
+
+        res.redirect('/');
+
+    },
+
+    processForm: function(image,bdProducts){
 
         if (image == "") {
             return bdProducts.image
         } else {
-            return "Validar"
+            return "validar"
         }
     },
 }
