@@ -28,27 +28,29 @@
 
         <!--CONTENIDO DE LA TABLA-->
         <tbody>
-            <tr>
-                <td>7006</td>
-                <td>Camiseta full color</td>
-                <td><a href="/products/product"><i class="far fa-eye"></i></a></td>
-                <td><a href="/products/adminEdit"><i class="far fa-edit"></i></a></td>
-                <td><a href="#"><i class="far fa-trash-alt"></i></a></td>
-
+                
+                  
+                <% products.forEach(product => { %>
+                    <% if(product){%>
+                <tr>
+                <form method="POST" action= "/products/delete/<%=product.id%>?_method=DELETE">
+                <td><%=product.id%></td>
+                <td><%=product.fullName%></td>
+                <td><a href="/products/product/<%=product.id%>"><i class="far fa-eye"></i></a></td>
+                <td><a href="/products/adminEdit/<%=product.id%>"><i class="far fa-edit"></i></a></td>
+                <td> <button type= "submit"><i class="far fa-trash-alt"></i></button></td>
+            </form>
             </tr>
-            <tr>
-                <td>7006</td>
-                <td>Chompa sublimada</td>
-                <td><a href="#"><i class="far fa-eye"></i></a></td>
-                <td><a href="#"><i class="far fa-edit"></i></a></td>
-                <td><a href="#"><i class="far fa-trash-alt"></i></a></td>
-
-            </tr>
+            <% } %> 
+            <% }) %> 
+           
+            
         </tbody>
         
             </table>
         </article>
-                
+            
+        
                     
     </main>
     <%- include("../partials/footer") %>

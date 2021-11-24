@@ -25,7 +25,7 @@ const controller = {
         });
         res.render("./products/product", { product })
     },
-
+    
     products: (req, res) => {
         res.render('./products/productsList', { bdProducts })
     },
@@ -35,7 +35,7 @@ const controller = {
     },
 
     admin: (req, res) => {
-        res.render('./products/admin')
+        res.render('./products/admin' , {products:bdProducts})
 
     },
 
@@ -44,6 +44,7 @@ const controller = {
     },
 
     adminStore: (req, res) => {
+        
         const price = parseInt(req.body.price);
         let product = {
             id: newId(),
@@ -55,11 +56,12 @@ const controller = {
         bdProducts.push(product);
         let jsonProducts = JSON.stringify(bdProducts, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
-
+        
         res.redirect('/');
     },
 
     adminEdit: (req, res) => {
+        
         const id = req.params.id;
 
         const productEdit = bdProducts.filter(product => {
@@ -79,12 +81,12 @@ const controller = {
         }
     },
 
-    adminModified: function (req, res) {
+    adminModified: function(req, res){
         const id = parseInt(req.params.id)
         const price = parseInt(req.body.price);
         const edit = req.body;
-
-
+        
+       
         const productEdit = bdProducts.filter(product => {
             return product.id == id;
         });
@@ -108,14 +110,19 @@ const controller = {
 
     },
 
-    processForm: function (image, bdProducts) {
+    adminDelete: function (req,res){
+        const id = req.params.id 
+        const data = bdProducts.filter(products =>{
+            return products.id != id 
+              }) 
+              let jsonProducts = JSON.stringify(data, null, 4);
 
-        if (image == "") {
-            return bdProducts.image
-        } else {
-            return "validar"
-        }
-    },
+              fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
+      
+              res.redirect('/products/admin');
+
+    }
+
 }
 
 module.exports = controller;

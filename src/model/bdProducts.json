@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 2,
         "fullName": "Camisetas Personalizadas",
         "price": 18000,
         "productLine": "Linea fashion",
@@ -21,21 +21,34 @@
         "image": "fashion.png"
     },
     {
-        "id": 2,
-        "fullname": "Camisa Carnavalera 8",
-        "price": 2000,
-        "product_line": "Linea fashion ",
-        "activity": "Futbol",
-        "subactivity": [
+        "id": 3,
+        "fullName": "Camisa Guayabera",
+        "price": 80000,
+        "productLine": "Linea fashion ",
+        "activity": "Presentación",
+        "subActivity": [
             "campañas-publicitarias",
+            "campañas-politicas"
+        ],
+        "technique": [
+            "full-color-sublimacion",
+            "serigrafia-1-tinta"
+        ],
+        "material": "algodon",
+        "image": "1637792253643defoult.png"
+    },
+    {
+        "id": 4,
+        "fullName": "Camisa Rallas ",
+        "price": 2000,
+        "productLine": "Linea fashion ",
+        "activity": "Emprendimientos",
+        "subActivity": [
             "campañas-politicas",
             "eventos-coporporativos"
         ],
-        "service": "Full color sublimación",
-        "tela": [
-            "algodon",
-            "poliester"
-        ],
-        "image": "defoult.png"
+        "technique": "serigrafia-2-tintas",
+        "material": "algodon",
+        "image": "1637792340699_defoult.png"
     }
 ]

@@ -8,9 +8,9 @@ const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.resolve(__dirname, "../../public/img"));
     },
-    filename: function(req, file, cb) {
-        cb(null, file.originalname);
-    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + "_"+ file.originalname);
+      },
 });
 
 const upload = multer({ storage: storage});
@@ -34,5 +34,6 @@ router.post('/adminCreate', upload.single("image"), controller.adminStore);
 
 router.get('/productsList', controller.products);
 
-
+//Eliminar producto
+router.delete ('/delete/:id', controller.adminDelete)
 module.exports = router
