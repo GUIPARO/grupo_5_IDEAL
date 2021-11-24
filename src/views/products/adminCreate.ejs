@@ -5,15 +5,14 @@
     <%- include("../partials/header") %>
     <main class = "admin-main">
         
-        
         <section class= "create-form">
             <h2 class="title-admin">Crea un nuevo producto</h2>
             <form class= "create" method="post" action="/products/adminCreate" enctype="multipart/form-data">
                 <input type="text" name="fullname" id="fullname" minlength="2" placeholder="Nombre del producto" required>
-                <input type="text" name="fullname" id="fullname" minlength="2" placeholder="Precio del producto" required>
+                <input type="number" name="price" id="price" minlength="2" placeholder="Precio del producto" required>
             <section class="container-lineform">
                 <h3>Seleciona la linea del producto</h3>
-                <select class="select_service" name="service" id="select-service" type="select" >
+                <select class="select_service" name="productLine" id="select-service" type="select" >
                     <option selected="" value="Linea de producto">Linea de producto</option>
                     <option value="Linea fashion ">Linea fashion </option>
                     <option value="Linea deportiva">Linea deportiva</option>
@@ -70,22 +69,23 @@
                 </select>
 
 
-                <h3>Seleciona la Técnica</h3>
-                <div class= "tipo-tecnica">
-                <label for="full-color-sublimacion"></label><input type="checkbox" name="tecnica" value="full-color-sublimacion">Full color sublimación</label>
-                <label for="serigrafia-1-tinta"><input type="checkbox" name="tecnica"  value="serigrafia-1-tinta">Serigrafía 1 tinta</label>
-                <label for="serigrafia-2-tintas"><input type="checkbox" name="tecnica"  value="serigrafia-2-tintas">Serigrafia 2 tintas</label>
-                <label for="vinilo-textil-1-color"><input type="checkbox" name="tecnica"  value="vinilo-textil-1-color">Vinilo textil 1 color</label>
-                <label for="vinilo-textil-2-colores"><input type="checkbox" name="tecnica" value="vinilo-textil-2-colores">Vinilo textil 2 colores</label>
+            <h3>Seleciona la Técnica</h3>
+
+            <div class= "tipo-tecnica">
+                <label for="full-color-sublimacion"></label><input type="checkbox" name="technique" value="full-color-sublimacion">Full color sublimación</label>
+                <label for="serigrafia-1-tinta"><input type="checkbox" name="technique"  value="serigrafia-1-tinta">Serigrafía 1 tinta</label>
+                <label for="serigrafia-2-tintas"><input type="checkbox" name="technique"  value="serigrafia-2-tintas">Serigrafia 2 tintas</label>
+                <label for="vinilo-textil-1-color"><input type="checkbox" name="technique"  value="vinilo-textil-1-color">Vinilo textil 1 color</label>
+                <label for="vinilo-textil-2-colores"><input type="checkbox" name="technique" value="vinilo-textil-2-colores">Vinilo textil 2 colores</label>
             </div>
 
                 <h3>Seleciona el tipo de tela</h3>
 
                 <div class="tipo-tela">
-                    <label for="algodon"><input type="checkbox" name="tela" id="algodon" value="algodon">Algodón</label>
-                    <label for="poliester"><input type="checkbox" name="tela" id="poliester" value="poliester">Poliester</label>
-                    <label for="algodon-peinado"><input type="checkbox" name="tela" id="algodon peinado" value="algodon">Algodón peinado</label>
-                    <label for="piel-de-durazno"><input type="checkbox" name="tela" id="piel-de-durazno" value="piel-de-durazno" >Piel de durazno</label>
+                    <label for="algodon"><input type="checkbox" name="material" id="algodon" value="algodon">Algodón</label>
+                    <label for="poliester"><input type="checkbox" name="material" id="poliester" value="poliester">Poliester</label>
+                    <label for="algodon-peinado"><input type="checkbox" name="material" id="algodon peinado" value="algodon">Algodón peinado</label>
+                    <label for="piel-de-durazno"><input type="checkbox" name="material" id="piel-de-durazno" value="piel-de-durazno" >Piel de durazno</label>
                 </div>
                 
             </section>
@@ -93,7 +93,7 @@
             
               <div class= "container-lineform">
             <h3>Selecciona un archivo</h3>
-                <input type="file" name="file" accept=".jpg, .png"multiple>
+                <input type="file" name="image" accept=".jpg, .png">
             </div>
                 <div class="container_description">
                     <div class = "save">

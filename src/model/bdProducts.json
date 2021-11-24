@@ -22,38 +22,23 @@
     },
     {
         "id": 2,
-        "fullname": "Camisa Carnavalera",
-        "price": 50000,
-        "product_line": "Linea fashion ",
-        "activity": "Basketball",
+        "fullname": "fallaaaaa",
+        "price": 3000,
+        "productLine": "Linea deportiva",
+        "service": "Celebraciones",
         "subactivity": [
             "campañas-publicitarias",
             "campañas-politicas",
-            "eventos-coporporativos"
-        ],
-        "service": "Serigrafia 1 tintas",
-        "tela": "piel-de-durazno",
-        "image": "defoult.png"
-    },
-    {
-        "id": 3,
-        "fullName": "Camisetas Personalizadas",
-        "price": 18000,
-        "productLine": "Linea fashion",
-        "activity": "Eventos",
-        "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
+            "comidas-rapidas"
         ],
         "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
+            "serigrafia-2-tintas",
+            "vinilo-textil-1-color"
         ],
         "material": [
-            "Algodón",
-            "Poliester"
+            "algodon",
+            "poliester"
         ],
-        "image": "fashion.png"
+        "image": "chompa_person_tenden.png"
     }
 ]

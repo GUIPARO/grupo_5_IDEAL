@@ -23,10 +23,9 @@ const controller = {
         const product = bdProducts.filter(producto => {
             return producto.id == id;
         });
-        // console.log(id)
-        // console.log(req.params)
         res.render("./products/product", { product })
     },
+    
     products: (req, res) => {
         res.render('./products/productsList', { bdProducts })
     },
@@ -45,17 +44,18 @@ const controller = {
     },
 
     adminStore: (req, res) => {
+        const price = parseInt(req.body.price);
         let product = {
             id: newId(),
             ...req.body,
-            image: req.file.filename
+            image: req.file.filename,
+            price: price
         }
-        //Guardar el producto en el array de productos (push)
-        bdProducts.push(product);
 
+        bdProducts.push(product);
         let jsonProducts = JSON.stringify(bdProducts, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
-
+        
         res.redirect('/');
     },
 
@@ -83,7 +83,6 @@ const controller = {
     },
 
     adminModified: function(req, res){
-
         const id = parseInt(req.params.id)
         const price = parseInt(req.body.price);
         const edit = req.body;
@@ -97,13 +96,12 @@ const controller = {
             return product == productEdit[0];
         })
 
-        const processForm = this.processForm(imageFile, productEdit) == "validar"? imageFile : productEdit.image;
+        // const processForm = this.processForm(imageFile, productEdit) == "validar" ? imageFile : productEdit.image;
 
         bdProducts[indice] = {
             id: id,
             ...edit,
-            price: price,
-            image: processForm
+            price: price
         }
 
         let jsonProducts = JSON.stringify(bdProducts, null, 4);
@@ -113,12 +111,13 @@ const controller = {
         res.redirect('/');
 
     },
+
     processForm: function(image,bdProducts){
 
         if (image == "") {
             return bdProducts.image
         } else {
-            return "Validar"
+            return "validar"
         }
     },
 }

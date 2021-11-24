@@ -9,8 +9,7 @@ const storage = multer.diskStorage({
         cb(null, path.resolve(__dirname, "../../public/img"));
     },
     filename: function(req, file, cb) {
-        console.log(file)
-        cb(null, file.fieldname + path.extname(file.originalname));
+        cb(null, file.originalname);
     },
 });
 
@@ -26,7 +25,7 @@ router.get('/admin',controller.admin);
 
 //Editar producto
 router.get('/adminEdit/:id',controller.adminEdit);
-router.put('/adminEdit/:id',upload.single("image"), controller.adminModified);
+router.put('/adminEdit/:id', upload.single("image"), controller.adminModified);
 
 
 //Crear producto
