@@ -92,7 +92,7 @@ const controller = {
             return product == productEdit[0];
         });
         const imageFile = req.file === undefined ? productEdit[0].image : req.file.filename;
-        
+
         bdProducts[indice] = {
             id: id,
             ...edit,
@@ -106,16 +106,7 @@ const controller = {
 
         res.redirect('/');
 
-    },
-
-    processForm: function(image,bdProducts){
-
-        if (image == "") {
-            return bdProducts.image
-        } else {
-            return "validar"
-        }
-    },
+    }
 }
 
 module.exports = controller;

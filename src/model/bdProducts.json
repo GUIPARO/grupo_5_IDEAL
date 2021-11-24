@@ -19,53 +19,5 @@
             "Poliester"
         ],
         "image": "fashion.png"
-    },
-    {
-        "id": 2,
-        "fullname": "camisa trol",
-        "price": 25000,
-        "product_line": "Linea deportiva",
-        "activity": "Basketball",
-        "subactivity": [
-            "eventos-coporporativos",
-            "comidas-rapidas"
-        ],
-        "service": "Full color sublimación",
-        "tela": "piel-de-durazno",
-        "image": "chompa_even.png"
-    },
-    {
-        "id": 3,
-        "fullname": "asdas",
-        "price": 21,
-        "productLine": "Linea medica",
-        "service": "Empresariales",
-        "subactivity": [
-            "campañas-publicitarias",
-            "eventos-coporporativos"
-        ],
-        "technique": [
-            "full-color-sublimacion",
-            "vinilo-textil-1-color"
-        ],
-        "material": [
-            "algodon",
-            "poliester"
-        ],
-        "image": "chompa_even.png"
-    },
-    {
-        "id": 4,
-        "fullname": "camisa no trol",
-        "price": 50000,
-        "productLine": "Linea fashion ",
-        "activity": "Celebraciones",
-        "subactivity": "eventos-coporporativos",
-        "technique": [
-            "serigrafia-1-tinta",
-            "serigrafia-2-tintas"
-        ],
-        "material": "poliester",
-        "image": "GOPR0198.JPG"
     }
 ]
