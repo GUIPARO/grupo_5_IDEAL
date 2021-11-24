@@ -25,7 +25,7 @@ const controller = {
         });
         res.render("./products/product", { product })
     },
-    
+
     products: (req, res) => {
         res.render('./products/productsList', { bdProducts })
     },
@@ -55,16 +55,36 @@ const controller = {
         bdProducts.push(product);
         let jsonProducts = JSON.stringify(bdProducts, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
-        
+
         res.redirect('/');
     },
 
     adminEdit: (req, res) => {
+        const id = req.params.id;
 
+        const productEdit = bdProducts.filter(product => {
+            return product.id == id;
+        })
+
+        const indice = bdProducts.findIndex(product => {
+            return product == productEdit[0];
+        })
+
+
+        if (indice >= 0) {
+            res.render('./products/adminEdit', { productEdit })
+
+        } else {
+            res.send('No insista')
+        }
+    },
+
+    adminModified: function (req, res) {
         const id = parseInt(req.params.id)
         const price = parseInt(req.body.price);
         const edit = req.body;
-        
+
+
         const productEdit = bdProducts.filter(product => {
             return product.id == id;
         });
@@ -72,7 +92,7 @@ const controller = {
             return product == productEdit[0];
         });
         const imageFile = req.file === undefined ? productEdit[0].image : req.file.filename;
-        
+
         bdProducts[indice] = {
             id: id,
             ...edit,
@@ -88,37 +108,7 @@ const controller = {
 
     },
 
-    adminModified: function(req, res){
-        const id = parseInt(req.params.id)
-        const price = parseInt(req.body.price);
-        const edit = req.body;
-        const imageFile = req.file.filename;
-       
-        const productEdit = bdProducts.filter(product => {
-            return product.id == id;
-        })
-
-        const indice = bdProducts.findIndex(product => {
-            return product == productEdit[0];
-        })
-
-        // const processForm = this.processForm(imageFile, productEdit) == "validar" ? imageFile : productEdit.image;
-
-        bdProducts[indice] = {
-            id: id,
-            ...edit,
-            price: price
-        }
-
-        let jsonProducts = JSON.stringify(bdProducts, null, 4);
-
-        fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
-
-        res.redirect('/');
-
-    },
-
-    processForm: function(image,bdProducts){
+    processForm: function (image, bdProducts) {
 
         if (image == "") {
             return bdProducts.image

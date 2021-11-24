@@ -22,7 +22,20 @@
     },
     {
         "id": 2,
-        "price": null,
-        "image": "fashion.png"
+        "fullname": "Camisa Carnavalera 8",
+        "price": 2000,
+        "product_line": "Linea fashion ",
+        "activity": "Futbol",
+        "subactivity": [
+            "campañas-publicitarias",
+            "campañas-politicas",
+            "eventos-coporporativos"
+        ],
+        "service": "Full color sublimación",
+        "tela": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "defoult.png"
     }
 ]
