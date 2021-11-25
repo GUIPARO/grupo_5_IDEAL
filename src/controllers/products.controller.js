@@ -62,7 +62,7 @@ const controller = {
         let jsonProducts = JSON.stringify(datos, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
         
-        res.redirect('/');
+        res.redirect('/products/admin');
     },
 
     adminEdit: (req, res) => {
@@ -112,7 +112,7 @@ const controller = {
 
         fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
 
-        res.redirect('/');
+        res.redirect('/products/admin');
 
     },
 
