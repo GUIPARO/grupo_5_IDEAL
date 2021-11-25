@@ -39,7 +39,7 @@
 
 |  Weekly | Ana Díaz| Guisella Patron| Julian Castillo|
 | :---------------:|:---------------: |:---------------: |:---------------:|
-|¿Qué he hecho esta semana?|  | | 
-|¿Se encontró con algún impedimento|  | ||
-|Solución| - |- |-|
-| ¿Qué haré la próxima semana?| -| |-|
+|¿Qué he hecho esta semana?|Implementar metodo para eliminar productos | Implementar metodo para edición de productos |Implementar metodos para listado, detalle y creación de productos |
+|¿Se encontró con algún impedimento|  Dificultades generales al implementar rutas y lógica en controladores|Dificultades generales al implementar rutas y lógica en controladores | Dificultades generales al implementar rutas y lógica en controladores|
+|Solución| Socialización con el equipo y profesores |Socialización con el equipo y profesores |Socialización con el equipo y profesores|
+| ¿Qué haré la próxima semana?|-| Ingresar la carpeta public en SRC|Actualizar rutas de las imagenes|

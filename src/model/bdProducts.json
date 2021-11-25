@@ -36,19 +36,5 @@
         ],
         "material": "algodon",
         "image": "1637792253643defoult.png"
-    },
-    {
-        "id": 4,
-        "fullName": "Camisa Rallas ",
-        "price": 2000,
-        "productLine": "Linea fashion ",
-        "activity": "Emprendimientos",
-        "subActivity": [
-            "campañas-politicas",
-            "eventos-coporporativos"
-        ],
-        "technique": "serigrafia-2-tintas",
-        "material": "algodon",
-        "image": "1637792340699_defoult.png"
     }
 ]

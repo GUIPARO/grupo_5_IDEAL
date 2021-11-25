@@ -56,19 +56,27 @@
 ## Sprint 4 ##
 
 ### Keep doing ###
-- 
+-- Seguir realizando reuniones
+- Entregar trabajos a tiempo
+- Tablero en Jira
+- Mantener ambiente del grupo
+- Delegar tareas
+- Buenas comunicación
+- Notificar problemas al realizar tareas asignadas
 
 ### More of ### 
-- 
+- Concretar ideas
+- Mejorar diseño de vistas
+- Despejar dudas con los profesores
 
 ###  Start doing ### 
-
-- 
+- Notificar cambios en el repositorio 
+- Implementar reunion weekly
 
 ### Stop doing ### 
-- 
+- Pereza
+- Procastinar
 
 ### Less of ### 
-- 
-
+- Desviarnos del tema prioritario
 
