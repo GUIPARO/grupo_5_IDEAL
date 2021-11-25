@@ -1,58 +1,501 @@
 [
     {
         "id": 1,
-        "fullName": "Camisetas Personalizadas",
+        "fullName": "Camisetas personalizadas",
         "price": 18000,
-        "productLine": "Linea fashion",
+        "product_line": "Linea fashion ",
         "activity": "Eventos",
-        "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
+        "subactivity": [
+            "campañas-publicitarias",
+            "campañas-politicas",
+            "eventos-coporporativos"
         ],
-        "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
+        "technique": "full-color-sublimacion",
+        "tela": [
+            "algodon",
+            "poliester"
         ],
-        "material": [
-            "Algodón",
-            "Poliester"
-        ],
-        "image": "fashion.png"
+        "image": "cam_per_even.png"
     },
     {
         "id": 2,
-        "fullName": "Camisetas Personalizadas",
+        "fullName": "Camisetas personalizadas",
         "price": 18000,
-        "productLine": "Linea fashion",
+        "productLine": "Linea fashion ",
         "activity": "Eventos",
-        "subActivity": [
-            "Campañas Publicitarias",
-            "Campañas Políticas",
-            "Eventos Corporativos"
+        "subactivity": [
+            "campañas-publicitarias",
+            "campañas-politicas",
+            "eventos-coporporativos"
         ],
         "technique": [
-            "Full color sublimación",
-            "Full color sublimación"
+            "serigrafia-1-tinta",
+            "serigrafia-2-tintas"
         ],
         "material": [
-            "Algodón",
-            "Poliester"
+            "algodon",
+            "poliester"
         ],
-        "image": "fashion.png"
+        "image": "cam_per_even2.png"
     },
     {
         "id": 3,
-        "fullName": "camisa trol",
-        "price": 54000,
+        "fullName": "Camisetas personalizadas",
+        "price": 18000,
+        "productLine": "Linea fashion ",
+        "activity": "Eventos",
+        "subactivity": [
+            "Comidas rápidas",
+            "Restaurantes",
+            "Almacenes",
+            "Negocios"
+        ],
+        "technique": [
+            "serigrafia-1-tinta",
+            "serigrafia-2-tintas",
+            "vinilo-textil-1-color",
+            "vinilo-textil-2-colores"
+        ],
+        "material": "algodon",
+        "image": "cam_per_empren.png"
+    },
+    {
+        "id": 4,
+        "fullName": "Camisetas perzonalizadas",
+        "price": 20000,
+        "productLine": "Linea fashion ",
+        "activity": "Celebraciones",
+        "subactivity": [
+            "Cumpleaños",
+            "Baby showers",
+            "Días especiales"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": "piel-de-durazno",
+        "image": "cam_per_celeb.png"
+    },
+    {
+        "id": 5,
+        "fullName": "Camisetas personalizadas",
+        "price": 20000,
+        "productLine": "Linea fashion ",
+        "activity": "Celebraciones",
+        "subactivity": [
+            "Cumpleaños",
+            "Baby showers",
+            "Días especiales"
+        ],
+        "technique": [
+            "vinilo-textil-1-color",
+            "vinilo-textil-2-colores"
+        ],
+        "material": "algodon",
+        "image": "cam_per_celeb2.png"
+    },
+    {
+        "id": 6,
+        "fullName": "Camisetas personalizadas",
+        "price": 38000,
+        "productLine": "Linea fashion ",
+        "activity": "Emprendimientos",
+        "subactivity": [
+            "Comidas rápidas",
+            "Restaurantes",
+            "Almacenes",
+            "Negocios"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": "piel-de-durazno",
+        "image": "cam_per_empren2.png"
+    },
+    {
+        "id": 7,
+        "fullName": "Camisetas personalizadas",
+        "price": 38000,
+        "productLine": "Linea fashion ",
+        "activity": "Tendencias",
+        "subactivity": [
+            "Diseños de temporada",
+            "Diseños exclusivos"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": "piel-de-durazno",
+        "image": "cam_per_tenden.png"
+    },
+    {
+        "id": 8,
+        "fullName": "Camisetas tipo polo",
+        "price": 28000,
+        "productLine": "Linea fashion ",
+        "activity": "Eventos",
+        "subactivity": [
+            "Empresas",
+            "Negocios",
+            "Emprendimientos"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "polo_empre.png"
+    },
+    {
+        "id": 9,
+        "fullName": "Camiseta tipo polo",
+        "price": 38000,
+        "productLine": "Linea fashion ",
+        "activity": "Fashion",
+        "subactivity": [
+            "Última moda",
+            "Re ventas",
+            "Almacenes de ropa"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "polo_fashi.png"
+    },
+    {
+        "id": 10,
+        "fullName": "Camiseta tipo polo",
+        "price": 45000,
+        "productLine": "Linea fashion ",
+        "activity": "Tendencias",
+        "subactivity": [
+            "Última moda",
+            "Re ventas",
+            "Almacenes de ropa"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "polo_tenden.png"
+    },
+    {
+        "id": 11,
+        "fullName": "Chompas personalizadas",
+        "price": 40000,
+        "productLine": "Linea fashion ",
+        "activity": "Eventos",
+        "subactivity": [
+            "Campañas publicitarias",
+            "Campañas políticas",
+            "Eventos coporporativos"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "chompa_even.png"
+    },
+    {
+        "id": 12,
+        "fullName": "Chompas personalizadas",
+        "price": 40000,
+        "productLine": "Linea fashion ",
+        "activity": "Celebraciones",
+        "subactivity": [
+            "Cumpleaños",
+            "Baby showers",
+            "Días especiales"
+        ],
+        "technique": [
+            "serigrafia-1-tinta",
+            "serigrafia-2-tintas"
+        ],
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "chompa_person_cele.png"
+    },
+    {
+        "id": 13,
+        "fullName": "Chompas personalizadas",
+        "price": 58000,
+        "productLine": "Linea fashion ",
+        "activity": "Tendencias",
+        "subactivity": [
+            "Diseños de temporada",
+            "Diseños exclusivos"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": "piel-de-durazno",
+        "image": "chompa_person_tenden.png"
+    },
+    {
+        "id": 14,
+        "fullName": "Chaqueta",
+        "price": 85000,
+        "productLine": "Linea fashion ",
+        "activity": "Tendencias",
+        "subactivity": [
+            "Última moda",
+            "Re ventas",
+            "Almacenes de ropa"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": "Antifluido",
+        "image": "chaque_tenden.png"
+    },
+    {
+        "id": 15,
+        "fullName": "Chaquetas",
+        "price": 75000,
+        "productLine": "Linea fashion ",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Consorcios",
+            "Empresas sector industrial, educativo, administrativo"
+        ],
+        "technique": [
+            "Estampado",
+            "Bordado"
+        ],
+        "material": "Antifluido",
+        "image": "chaque_empres.png"
+    },
+    {
+        "id": 16,
+        "fullName": "Uniformes deportivos",
+        "price": 90000,
+        "productLine": "Linea deportiva",
+        "activity": "Presentación",
+        "subactivity": [
+            "Escuelas de futbol",
+            "Torneos de colegio",
+            "Torneos de barrio",
+            "Torneos de empresas"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": [
+            "Antifluido",
+            "Perchado"
+        ],
+        "image": "unifordepor_present.png"
+    },
+    {
+        "id": 17,
+        "fullName": "Uniformes deportivos",
+        "price": 40000,
+        "productLine": "Linea deportiva",
+        "activity": "Basketball",
+        "subactivity": [
+            "Escuelas de futbol",
+            "Torneos de colegio",
+            "Torneos de barrio",
+            "Torneos de empresas"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": "Dry fit",
+        "image": "unifordepor_basket.png"
+    },
+    {
+        "id": 18,
+        "fullName": "Uniformes deportivos",
+        "price": 38000,
         "productLine": "Linea deportiva",
         "activity": "Voleyball",
-        "subactivity": "comidas-rapidas",
-        "technique": [
-            "serigrafia-2-tintas",
-            "vinilo-textil-1-color"
+        "subactivity": [
+            "Escuelas de futbol",
+            "Torneos de colegio",
+            "Torneos de barrio",
+            "Torneos de empresas"
         ],
-        "material": "poliester",
-        "image": "GOPR0198.JPG"
+        "technique": "full-color-sublimacion",
+        "material": [
+            "Dry fit",
+            "Poli licra"
+        ],
+        "image": "unifordepor_voleyball.png"
+    },
+    {
+        "id": 19,
+        "fullName": "Uniformes deportivos",
+        "price": 45000,
+        "productLine": "Linea deportiva",
+        "activity": "Futbol",
+        "subactivity": [
+            "Escuelas de futbol",
+            "Torneos de colegio",
+            "Torneos de barrio",
+            "Torneos de empresas"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": "Dry fit",
+        "image": "unifordepor_futball.png"
+    },
+    {
+        "id": 20,
+        "fullName": "Conjunto térmico",
+        "price": 50000,
+        "productLine": "Linea industrial",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Consorcios",
+            "Empresas sector industrial, educativo, administrativo"
+        ],
+        "technique": [
+            "serigrafia-1-tinta",
+            "Bordado"
+        ],
+        "material": "Fornax térmico",
+        "image": "termico_empresa.png"
+    },
+    {
+        "id": 21,
+        "fullName": "Conjunto antifluido",
+        "price": 45000,
+        "productLine": "Linea industrial",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Consorcios",
+            "Empresas sector industrial, educativo, administrativo"
+        ],
+        "technique": [
+            "serigrafia-1-tinta",
+            "Bordado"
+        ],
+        "material": "Antifluido",
+        "image": "antifluido_empresa.png"
+    },
+    {
+        "id": 22,
+        "fullName": "Chaleco industrial",
+        "price": 45000,
+        "productLine": "Linea industrial",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Consorcios",
+            "Empresas sector industrial, educativo, administrativo"
+        ],
+        "technique": [
+            "serigrafia-1-tinta",
+            "Bordado"
+        ],
+        "material": "Drill nacional",
+        "image": "industrial_empre.png"
+    },
+    {
+        "id": 23,
+        "fullName": "Overol industrial",
+        "price": 75000,
+        "productLine": "Linea industrial",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Consorcios",
+            "Empresas sector industrial, educativo, administrativo"
+        ],
+        "technique": [
+            "serigrafia-1-tinta",
+            "Bordado"
+        ],
+        "material": "Drill nacional",
+        "image": "overol_empresa.png"
+    },
+    {
+        "id": 24,
+        "fullName": "Bata quirúrgica desechable",
+        "price": 3500,
+        "productLine": "Linea medica",
+        "activity": "Salud",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": "serigrafia-1-tinta",
+        "material": "Politex",
+        "image": "bata_desecha.png"
+    },
+    {
+        "id": 25,
+        "fullName": "Bata quirúrgica reutilizable",
+        "price": 25000,
+        "productLine": "Linea medica",
+        "activity": "Salud",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": "serigrafia-1-tinta",
+        "material": "Antifluido",
+        "image": "bata_reutiliza.png"
+    },
+    {
+        "id": 26,
+        "fullName": "Monotraje desechable",
+        "price": 8000,
+        "productLine": "Linea medica",
+        "activity": "Salud",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": "serigrafia-1-tinta",
+        "material": "Politex",
+        "image": "monotraje_desecha.png"
+    },
+    {
+        "id": 27,
+        "fullName": "Monotraje reutilizable",
+        "price": 38000,
+        "productLine": "Linea medica",
+        "activity": "Salud",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": [
+            "full-color-sublimacion",
+            "serigrafia-1-tinta"
+        ],
+        "material": "Antifluido",
+        "image": "monotraje_reutili.png"
+    },
+    {
+        "id": 28,
+        "fullName": "Conjunto médico desechable",
+        "price": 6000,
+        "productLine": "Linea medica",
+        "activity": "Salud",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": "serigrafia-1-tinta",
+        "material": "Politex",
+        "image": "conjunMedi_desecha.png"
+    },
+    {
+        "id": 29,
+        "fullName": "Conjunto medico reutilizable",
+        "price": 60000,
+        "productLine": "Linea medica",
+        "activity": "Salud",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": "full-color-sublimacion",
+        "material": "Politex",
+        "image": "conjunMedi_reutili.png"
     }
 ]
