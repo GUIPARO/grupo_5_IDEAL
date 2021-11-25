@@ -17,9 +17,11 @@
                     </div>
                     <div class="container_technic">
                         <span class="title_technic">Técnica</span>
-                        <% for(let i = 0; i < product[0].technique.length; i++) { %> 
-                        <span class="type_technic"><%= product[0].technique[i] %></span>
-                        <% } %> 
+                        <ul>
+                            <% for(let i = 0; i < product[0].technique.length; i++) { %> 
+                            <li class="type_technic"><%= product[0].technique[i] %></li>
+                            <% } %> 
+                        </ul>
                     </div>
                     <div class="container_line">
                         <span class="title_line"><%= product[0].productLine %></span>

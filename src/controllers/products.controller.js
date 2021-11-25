@@ -1,11 +1,14 @@
 const path = require('path');
 const fs = require("fs");
-const bdProducts = require(path.resolve(__dirname, "../model/bdProducts.json"));
 
+let bdProducts = () => {
+    let datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../model/bdProducts.json"), "utf-8"));
+    return datos;
+}
 
 const newId = () => {
     let ultimo = 0;
-    bdProducts.forEach(product => {
+    bdProducts().forEach(product => {
         if (product.id > ultimo) {
             ultimo = product.id;
         }
@@ -14,20 +17,22 @@ const newId = () => {
 }
 
 const controller = {
+
     cotizacion: (req, res) => {
         res.render('./products/cotizacion',)
     },
 
     product: (req, res) => {
         const id = req.params.id;
-        const product = bdProducts.filter(producto => {
+        const product = bdProducts().filter(producto => {
             return producto.id == id;
         });
-        res.render("./products/product", { product })
+        res.render("./products/product", { product });
     },
     
-    products: (req, res) => {
-        res.render('./products/productsList', { bdProducts })
+    productsList: (req, res) => {
+        const datos = bdProducts();
+        res.render('./products/productsList', { bdProducts : datos });
     },
 
     produtCart: (req, res) => {
@@ -35,8 +40,8 @@ const controller = {
     },
 
     admin: (req, res) => {
-        res.render('./products/admin' , {products:bdProducts})
-
+        let datos = bdProducts();
+        res.render('./products/admin' , {products:datos});
     },
 
     adminCreate: (req, res) => {
@@ -45,28 +50,30 @@ const controller = {
 
     adminStore: (req, res) => {
         const price = parseInt(req.body.price);
+        const datos = bdProducts();
         let product = {
             id: newId(),
             ...req.body,
             image: req.file.filename,
             price: price
-        }
+        };
 
-        bdProducts.push(product);
-        let jsonProducts = JSON.stringify(bdProducts, null, 4);
+        datos.push(product);
+        let jsonProducts = JSON.stringify(datos, null, 4);
         fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
         
         res.redirect('/');
     },
 
     adminEdit: (req, res) => {
+        const datos = bdProducts();
         const id = req.params.id;
 
-        const productEdit = bdProducts.filter(product => {
+        const productEdit = datos.filter(product => {
             return product.id == id;
         })
 
-        const indice = bdProducts.findIndex(product => {
+        const indice = datos.findIndex(product => {
             return product == productEdit[0];
         })
 
@@ -79,28 +86,29 @@ const controller = {
         }
     },
 
-    adminModified: function(req, res){
+    adminModified: (req, res) => {
         const id = parseInt(req.params.id)
         const price = parseInt(req.body.price);
         const edit = req.body;
+        const datos = bdProducts();
         
        
-        const productEdit = bdProducts.filter(product => {
+        const productEdit = datos.filter(product => {
             return product.id == id;
         });
-        const indice = bdProducts.findIndex(product => {
+        const indice = datos.findIndex(product => {
             return product == productEdit[0];
         });
         const imageFile = req.file === undefined ? productEdit[0].image : req.file.filename;
 
-        bdProducts[indice] = {
+        datos[indice] = {
             id: id,
             ...edit,
             price: price,
             image: imageFile
         }
 
-        let jsonProducts = JSON.stringify(bdProducts, null, 4);
+        let jsonProducts = JSON.stringify(datos, null, 4);
 
         fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
 
@@ -108,19 +116,18 @@ const controller = {
 
     },
 
-    adminDelete: function (req,res){
-        const id = req.params.id 
-        const data = bdProducts.filter(products =>{
-            return products.id != id 
-              }) 
-              let jsonProducts = JSON.stringify(data, null, 4);
+    adminDelete:(req,res) => {
+        const id = req.params.id;  
+        const data = bdProducts().filter(products =>{
+            return products.id != id     
+        });
+         
+        let jsonProducts = JSON.stringify(data, null, 4);
+              
+        fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
 
-              fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
-      
-              res.redirect('/products/admin');
-
+        res.redirect('/products/admin');
     }
-
 }
 
 module.exports = controller;

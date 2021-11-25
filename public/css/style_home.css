@@ -135,7 +135,7 @@ body {
 
 body .color_arriba {
     background-color: #fafafa;
-    border-bottom: 15px solid #e3e038;
+    border-bottom: 4px solid #e3e038;
 }
 
 body .color_abajo {
@@ -149,7 +149,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border-bottom: 1px solid black; */
 }
 
 header .logo_container {
@@ -1451,7 +1450,7 @@ button.finish_shop:hover{
     width: 90%;
     max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-columns: repeat(auto-fit, 150px);
     gap: 20px;
     place-content: center;
     margin: 50px auto;
@@ -1794,7 +1793,7 @@ button.finish_shop:hover{
 /*FIN MEDIA QUERIS PRODUCTO*/
 
     .products-view {
-        grid-template-columns: repeat(auto-fill, 200px);
+        grid-template-columns: repeat(auto-fit, 200px);
 
     }
 
