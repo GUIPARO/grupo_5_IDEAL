@@ -568,8 +568,18 @@ footer .mapa_ubicacion {
     flex-direction: column;
     justify-content: space-evenly;
     
+    
     margin: 2px 0;
   
+  }
+  .register-form{
+    box-shadow: 0 5px 12px grey;
+    border-radius: 5px;
+   
+  }
+  .register-form h2{
+      text-align: center;
+      color:#1e2d44e0;
   }
 
   .register-form .form {
@@ -581,6 +591,7 @@ footer .mapa_ubicacion {
       font-size: 18px ;
       padding:10px;
       margin-bottom: 1px;
+    
       
   }
   
@@ -589,16 +600,7 @@ footer .mapa_ubicacion {
     background-color: #1e2d44e0;
     color: white;
 }
-  .register-main .register-form {
-    display: flex;
-    width: 90%;
-    max-width: 550px;
-    flex-direction: column;
-    background-color: #FFF;
-    padding: 35px 25px;
-    gap: 8px;
-    
-  }
+
   .acepto {
       width: 100%;
       display:flex;
@@ -758,7 +760,7 @@ margin: 0 auto;
       border: 2px solid #1e2d44e0;
       font-size: 18px ;
       padding:10px;
-      margin-bottom: 1px;
+  
       
   }
    
@@ -775,6 +777,8 @@ margin: 0 auto;
     background-color: #FFF;
     padding: 35px 25px;
     gap: 8px;
+    margin: 10px auto;
+   
   }
 
   .register-form .politicas {
@@ -1696,7 +1700,12 @@ button.finish_shop:hover{
     .main_login {
         height: 60vh;
         justify-content: space-evenly;
-    }
+        box-shadow: 0 5px 12px grey;
+        border-radius: 5px;
+        margin: 15px auto;
+        max-width: 500px;
+
+ }
 
 /*----INICIO MEDIA QUERY PRODUCTO----*/  
 

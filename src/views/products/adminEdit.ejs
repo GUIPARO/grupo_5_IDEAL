@@ -9,7 +9,11 @@
                 <section class="create-form">
                     <h2 class="title-admin">Edita este producto</h2>
                     <form class="create" action='/products/adminEdit/<%=productEdit[0].id%>?_method=PUT' method="POST" enctype="multipart/form-data"> 
+<<<<<<< HEAD
+                        <input type="text" name="fullName" id="fullName" minlength="2" placeholder="Nombre del producto"
+=======
                         <input type="text" name="fullName" id="fullName" minlength="2" placeholder="Nombre del producto" value ="<%= productEdit[0].fullName%> "
+>>>>>>> 4fac1ff51716dc928b8d844c0c8d86acb1f8f8ee
                             required>
                         <input type="number" name="price" id="price" minlength="2" placeholder="Precio del producto" value ="<%= productEdit[0].price%> "
                             required>
@@ -41,39 +45,51 @@
                             </select>
 
                             <h3>Selecciona la subactividad</h3>
-                            <select class="subActivity" name="subActivity" type="select" multiple>
-                                <option value="campañas-publicitarias">Campañas publicitarias</option>
-                                <option value="campañas-politicas">Camapañas politicas </option>
-                                <option value="eventos-coporporativos">Eventos corpotativos</option>
-                                <option value="comidas-rapidas">Comidas rádipas</option>
-                                <option value="restaurantes">Restaurantes</option>
-                                <option value="almacenes">Almacenes</option>
-                                <option value="negocios">Negocios</option>
-                                <option value="cumpleaños">Cumpleaños</option>
-                                <option value="baby-showers">Baby showers</option>
-                                <option value="dias-especiales">Días especiales</option>
-                                <option value="diseños-de-temporada">Diseños de temporada</option>
-                                <option value="diseños-exclusivos">Diseños exclusivos</option>
-                                <option value="empresas">Empresas</option>
-                                <option value="negocios">negocios</option>
-                                <option value="emprendimientos">Emprendimientos</option>
-                                <option value="ultima-moda">Última moda</option>
-                                <option value="re-ventas">Re ventas</option>
-                                <option value="almacenes-de-ropa">Almacenes de ropa</option>
-                                <option value="consorcios">Consorcios</option>
-                                <option value="empresas-sector-industrial-educativo-administrativo">Empresas sector:
+                            <select class="subactivity" name="subactivity" type="select" multiple>
+                                <option value="Campañas publicitarias">Campañas publicitarias</option>
+                                <option value="Campañas políticas">Camapañas politicas </option>
+                                <option value="Eventos coporporativos">Eventos corpotativos</option>
+                                <option value="Comidas rápidas">Comidas rádipas</option>
+                                <option value="Restaurantes">Restaurantes</option>
+                                <option value="Almacenes">Almacenes</option>
+                                <option value="Negocios">Negocios</option>
+                                <option value="Cumpleaños">Cumpleaños</option>
+                                <option value="Baby showers">Baby showers</option>
+                                <option value="Días especiales">Días especiales</option>
+                                <option value="Diseños de temporada">Diseños de temporada</option>
+                                <option value="Diseños exclusivos">Diseños exclusivos</option>
+                                <option value="Empresas">Empresas</option>
+                                <option value="Negocios">negocios</option>
+                                <option value="Emprendimientos">Emprendimientos</option>
+                                <option value="Última moda">Última moda</option>
+                                <option value="Re ventas">Re ventas</option>
+                                <option value="Almacenes de ropa">Almacenes de ropa</option>
+                                <option value="Consorcios">Consorcios</option>
+                                <option value="Empresas sector industrial, educativo, administrativo">Empresas sector:
                                     industrial,educativo, administrativo</option>
-                                <option value="escuelas-de-futbol">Escuelas de futbol</option>
-                                <option value="torneos-de-colegio">Torneos de colegio</option>
-                                <option value="torneos-de-barrio">Torneos de barrio</option>
-                                <option value="torneos-de-empresas">Torneos de empresas</option>
-                                <option value="hospitales">Hospitales</option>
-                                <option value="bomberos">Bomberos</option>
-                                <option value="consultorios">Consultorios</option>
-                                <option value="esteticas"> Estéticas</option>
+                                <option value="Escuelas de futbol">Escuelas de futbol</option>
+                                <option value="Torneos de colegio">Torneos de colegio</option>
+                                <option value="Torneos de barrio">Torneos de barrio</option>
+                                <option value="Torneos de empresas">Torneos de empresas</option>
+                                <option value="Hospitales">Hospitales</option>
+                                <option value="Bomberos">Bomberos</option>
+                                <option value="Consultorios">Consultorios</option>
+                                <option value="Estéticas"> Estéticas</option>
                             </select>
 
                             <h3>Seleciona la Técnica</h3>
+<<<<<<< HEAD
+                            <div class= "tipo-tecnica">
+                                <label for="Full color sublimacion"></label><input type="checkbox" name="technique" value="Full color sublimacion">Full color sublimación</label>
+                                <label for="Serigrafia 1 tinta"><input type="checkbox" name="technique"  value="Serigrafia 1 tinta">Serigrafía 1 tinta</label>
+                                <label for="Serigrafia 2 tintas"><input type="checkbox" name="technique"  value="Serigrafia 2 tintas">Serigrafia 2 tintas</label>
+                                <label for="Vinilo textil 1 color"><input type="checkbox" name="technique"  value="Vinilo textil 1 color">Vinilo textil 1 color</label>
+                                <label for="Vinilo textil 2 colores"><input type="checkbox" name="technique" value="Vinilo textil 2 colores">Vinilo textil 2 colores</label>
+                                <label for="Estampado"></label><input type="checkbox" name="technique" value="Estampado">Estampado</label>
+                                <label for="Bordado"></label><input type="checkbox" name="technique" value="Bordado">Bordado</label>
+                            
+                            </div>
+=======
                             <select class="select_service" name="technique" id="select-service" type="select">
                                 <option selected="" value="Técnica de producto">Técnica de producto</option>
                                 <option value="Full color sublimación">Full color sublimación</option>
@@ -82,21 +98,26 @@
                                 <option value="Vinilo textil 1 color">Vinilo textil 1 color</option>
                                 <option value="Vinilo textil 2 colores">Vinilo textil 2 colores</option>
                             </select>
+>>>>>>> 4fac1ff51716dc928b8d844c0c8d86acb1f8f8ee
 
                             <h3>Seleciona el tipo de tela</h3>
                             <div class="tipo-tela">
-                                <label for="algodon"><input type="checkbox" name="tela" id="algodon"
-                                        value="algodon">Algodón</label>
-                                <label for="poliester"><input type="checkbox" name="tela" id="poliester"
-                                        value="poliester">Poliester</label>
-                                <label for="algodon-peinado"><input type="checkbox" name="tela" id="algodon peinado"
-                                        value="algodon">Algodón peinado</label>
-                                <label for="piel-de-durazno"><input type="checkbox" name="tela" id="piel-de-durazno"
-                                        value="piel-de-durazno">Piel de durazno</label>
+                                <label for="Algodon"><input type="checkbox" name="material" id="algodon" value="Algodon">Algodón</label>
+                                <label for="Poliester"><input type="checkbox" name="material" id="poliester" value="Poliester">Poliester</label>
+                                <label for="Algodon-peinado"><input type="checkbox" name="material" id="algodon peinado" value="Algodon">Algodón peinado</label>
+                                <label for="Piel de durazno"><input type="checkbox" name="material" id="piel-de-durazno" value="Piel de durazno" >Piel de durazno</label>
+                                <label for="Antifluido"><input type="checkbox" name="material" id="Antifluido" value="Antifluido">Antifluido</label>
+                                <label for="Perchado"><input type="checkbox" name="material" id="Perchado" value="Perchado">Perchado</label>
+                                <label for="Dry fit"><input type="checkbox" name="material" id="Dry fit" value="Dry fit">Dry fit</label>
+                                <label for="Poli licra"><input type="checkbox" name="material" id="Poli licra" value="Poli licra">Poli licra</label>
+                                <label for="Fornax térmico"><input type="checkbox" name="material" id="Fornax térmico" value="Fornax térmico">Fornax térmico</label>
+                                <label for="Drill nacional"><input type="checkbox" name="material" id="Drill nacional" value="Drill nacional">Drill nacional</label>
+                                <label for="Politex"><input type="checkbox" name="material" id="Politex" value="Politex">Politex</label>
+                            
                             </div>
 
                             <figure class="container_product">
-                                <img class="product_edit" src="/img/fashion.png" alt="camiseta_fashion">
+                                <img class="product_edit" src="/img/<%=productEdit[0].image%>" alt="camiseta_fashion">
                             </figure>
                             <h3 class="create-select">Selecciona un archivo</h3>
                             <input type="file" name="image" accept=".jpg , .png">
