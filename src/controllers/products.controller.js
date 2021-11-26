@@ -95,17 +95,17 @@ const controller = {
         const productEdit = datos.filter(product => {
             return product.id == id;
         });
+
         const indice = datos.findIndex(product => {
             return product == productEdit[0];
         });
-        const imageFile = req.file === undefined ? productEdit[0].image : req.file.filename;
 
-        if (imageFile != undefined) {
+        const imageFile = req.file == undefined ? productEdit[0].image : req.file.filename;
+
+        if (req.file != undefined) {
             let rutaImage = path.resolve(__dirname, "../../public/img/products_image/" + productEdit[0].image);
             fs.unlinkSync(rutaImage);
         }
-
-       
 
         datos[indice] = {
             id: id,
@@ -127,6 +127,7 @@ const controller = {
         const productEdit = bdProducts().filter(product => {
             return product.id == id;
         });
+        
         let rutaImage = path.resolve(__dirname, "../../public/img/products_image/" + productEdit[0].image);
         fs.unlinkSync(rutaImage);
 
