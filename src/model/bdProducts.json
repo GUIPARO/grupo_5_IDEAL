@@ -370,4 +370,127 @@
         "material": "Dry fit",
         "image": "1637898329687_unifordepor_futball.png"
     }
+    ,{
+        "id": 23,
+        "fullName": "Camisetas Personalizadas ",
+        "price": 18000,
+        "productLine": "Linea fashion ",
+        "activity": "Eventos",
+        "subactivity": [
+            "Campañas publicitarias",
+            "Campañas políticas",
+            "Eventos coporporativos"
+        ],
+        "technique": "Full color sublimacion",
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "1637898170534_cam_per_even.png"
+    },
+    {
+        "id": 24,
+        "fullName": "Camisetas Personalizadas",
+        "price": 18000,
+        "productLine": "Linea fashion ",
+        "activity": "Eventos",
+        "subactivity": [
+            "Campañas publicitarias",
+            "Campañas políticas",
+            "Eventos coporporativos"
+        ],
+        "technique": [
+            "Serigrafia 1 tinta",
+            "Serigrafia 2 tintas"
+        ],
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "1637898274651_cam_per_even2.png"
+    },
+    {
+        "id": 25,
+        "fullName": "Camisetas Personalizadas",
+        "price": 18000,
+        "productLine": "Linea fashion ",
+        "activity": "Emprendimientos",
+        "subactivity": [
+            "Comidas rápidas",
+            "Restaurantes",
+            "Almacenes",
+            "Negocios"
+        ],
+        "technique": [
+            "Serigrafia 1 tinta",
+            "Serigrafia 2 tintas",
+            "Vinilo textil 1 color",
+            "Vinilo textil 2 colores"
+        ],
+        "material": "algodon",
+        "image": "1637898538406_cam_per_empren.png"
+    },
+    {
+        "id": 26,
+        "fullName": "Camisetas Personalizadas",
+        "price": 20000,
+        "productLine": "Linea fashion ",
+        "activity": "Celebraciones",
+        "subactivity": [
+            "Cumpleaños",
+            "Baby showers",
+            "Días especiales"
+        ],
+        "technique": "Full color sublimacion",
+        "material": "piel-de-durazno",
+        "image": "1637898672051_cam_per_celeb.png"
+    },
+    {
+        "id": 27,
+        "fullName": "Camisetas Personalizadas",
+        "price": 20000,
+        "productLine": "Linea fashion ",
+        "activity": "Celebraciones",
+        "subactivity": [
+            "Cumpleaños",
+            "Baby showers",
+            "Días especiales"
+        ],
+        "technique": [
+            "Vinilo textil 1 color",
+            "Vinilo textil 2 colores"
+        ],
+        "material": "algodon",
+        "image": "1637898731172_cam_per_celeb2.png"
+    },
+    {
+        "id": 28,
+        "fullName": "Camisetas Personalizadas",
+        "price": 38000,
+        "productLine": "Linea fashion ",
+        "activity": "Emprendimientos",
+        "subactivity": [
+            "Comidas rápidas",
+            "Restaurantes",
+            "Almacenes",
+            "Negocios"
+        ],
+        "technique": "Full color sublimacion",
+        "material": "piel-de-durazno",
+        "image": "1637898796810_cam_per_empren2.png"
+    },
+    {
+        "id": 29,
+        "fullName": "Camisetas Personalizadas",
+        "price": 38000,
+        "productLine": "Linea fashion ",
+        "activity": "Tendencias",
+        "subactivity": [
+            "Diseños de temporada",
+            "Diseños exclusivos"
+        ],
+        "technique": "Full color sublimacion",
+        "material": "piel-de-durazno",
+        "image": "1637898835206_cam_per_tenden.png"
+    }
 ]
