@@ -1,24 +1,6 @@
 [
     {
         "id": 1,
-        "fullName": "Camisetas Polo",
-        "price": 28000,
-        "productLine": "Linea fashion ",
-        "activity": "Empresariales",
-        "subactivity": [
-            "Empresas",
-            "Negocios",
-            "Emprendimientos"
-        ],
-        "technique": "Full color sublimacion",
-        "material": [
-            "algodon",
-            "poliester"
-        ],
-        "image": "1637897453705_polo_empre.png"
-    },
-    {
-        "id": 2,
         "fullName": "Conjunto Térmico",
         "price": 50000,
         "productLine": "Linea industrial",
@@ -35,7 +17,7 @@
         "image": "1637897696613_termico_empresa.png"
     },
     {
-        "id": 3,
+        "id": 2,
         "fullName": "Conjunto Antifluido",
         "price": 45000,
         "productLine": "Linea industrial",
@@ -52,7 +34,7 @@
         "image": "1637897777747_antifluido_empresa.png"
     },
     {
-        "id": 4,
+        "id": 3,
         "fullName": "Chaleco Industrial",
         "price": 45000,
         "productLine": "Linea industrial",
@@ -69,7 +51,7 @@
         "image": "1637897868749_industrial_empre.png"
     },
     {
-        "id": 5,
+        "id": 4,
         "fullName": "Overol Industrial",
         "price": 75000,
         "productLine": "Linea industrial",
@@ -83,7 +65,7 @@
         "image": "1637898210057_overol_empresa.png"
     },
     {
-        "id": 6,
+        "id": 5,
         "fullName": "Bata Quirugica Desechable",
         "price": 3500,
         "productLine": "Linea medica",
@@ -99,7 +81,7 @@
         "image": "1637898274029_bata_desecha.png"
     },
     {
-        "id": 7,
+        "id": 6,
         "fullName": "Bata Quirúrgica Reutilizable",
         "price": 25000,
         "productLine": "Linea medica",
@@ -115,7 +97,7 @@
         "image": "1637898344941_bata_reutiliza.png"
     },
     {
-        "id": 8,
+        "id": 7,
         "fullName": "Monotraje Desechable ",
         "price": 8000,
         "productLine": "Linea medica",
@@ -131,7 +113,7 @@
         "image": "1637898389604_monotraje_desecha.png"
     },
     {
-        "id": 9,
+        "id": 8,
         "fullName": "Monotraje Reutilizable",
         "price": 38000,
         "productLine": "Linea medica",
@@ -147,7 +129,7 @@
         "image": "1637898439319_monotraje_reutili.png"
     },
     {
-        "id": 10,
+        "id": 9,
         "fullName": "Conjunto Médico Desechable",
         "price": 6000,
         "productLine": "Linea medica",
@@ -163,7 +145,7 @@
         "image": "1637898528759_conjunMedi_desecha.png"
     },
     {
-        "id": 11,
+        "id": 10,
         "fullName": "Conjunto Médico Reutilizable",
         "price": 60000,
         "productLine": "Linea medica",
@@ -179,7 +161,7 @@
         "image": "1637898589617_conjunMedi_reutili.png"
     },
     {
-        "id": 12,
+        "id": 11,
         "fullName": "Camisetas Polo",
         "price": 28000,
         "productLine": "Linea fashion ",
@@ -197,7 +179,7 @@
         "image": "1637897453705_polo_empre.png"
     },
     {
-        "id": 13,
+        "id": 12,
         "fullName": "Camisetas Polo",
         "price": 38000,
         "productLine": "Linea fashion ",
@@ -215,7 +197,7 @@
         "image": "1637897617747_polo_fashi.png"
     },
     {
-        "id": 14,
+        "id": 13,
         "fullName": "Camisetas Polo",
         "price": 45000,
         "productLine": "Linea fashion ",
@@ -233,7 +215,7 @@
         "image": "1637897727004_polo_tenden.png"
     },
     {
-        "id": 15,
+        "id": 14,
         "fullName": "Chompas Personalizadas",
         "price": 40000,
         "productLine": "Linea fashion ",
@@ -251,7 +233,7 @@
         "image": "1637897791293_chompa_even.png"
     },
     {
-        "id": 16,
+        "id": 15,
         "fullName": "Chompas Personalizadas",
         "price": 40000,
         "productLine": "Linea fashion ",
@@ -272,7 +254,7 @@
         "image": "1637897844802_chompa_person_cele.png"
     },
     {
-        "id": 17,
+        "id": 16,
         "fullName": "Chompas Personalizadas",
         "price": 58000,
         "productLine": "Linea fashion ",
@@ -286,7 +268,7 @@
         "image": "1637897917656_chompa_person_tenden.png"
     },
     {
-        "id": 18,
+        "id": 17,
         "fullName": "Chaquetas",
         "price": 85000,
         "productLine": "Linea fashion ",
@@ -301,7 +283,7 @@
         "image": "1637898023189_chaque_tenden.png"
     },
     {
-        "id": 19,
+        "id": 18,
         "fullName": "Chaquetas",
         "price": 75000,
         "productLine": "Linea fashion ",
@@ -319,7 +301,7 @@
         "image": "1637898101220_chaque_empres.png"
     },
     {
-        "id": 20,
+        "id": 19,
         "fullName": "Uniformes Deportivos",
         "price": 90000,
         "productLine": "Linea deportiva",
@@ -338,7 +320,7 @@
         "image": "1637898156637_unifordepor_present.png"
     },
     {
-        "id": 21,
+        "id": 20,
         "fullName": "Uniformes Deportivos",
         "price": 40000,
         "productLine": "Linea deportiva",
@@ -354,7 +336,7 @@
         "image": "1637898230746_unifordepor_basket.png"
     },
     {
-        "id": 22,
+        "id": 21,
         "fullName": "Uniformes Deportivos",
         "price": 38000,
         "productLine": "Linea deportiva",
@@ -373,7 +355,7 @@
         "image": "1637898279075_unifordepor_voleyball.png"
     },
     {
-        "id": 23,
+        "id": 22,
         "fullName": "Uniformes Deportivos",
         "price": 45000,
         "productLine": "Linea deportiva",
