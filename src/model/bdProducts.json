@@ -1,15 +1,20 @@
 [
     {
         "id": 1,
-        "fullName": "131 ",
-        "price": 1312,
-        "product_line": "Linea fashion ",
-        "activity": "Sublinea de producto",
-        "technique": "Técnica de producto",
-        "material": [
-            "Antifluido",
-            "Perchado"
+        "fullName": "Camisetas Polo",
+        "price": 28000,
+        "productLine": "Linea fashion ",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Empresas",
+            "Negocios",
+            "Emprendimientos"
         ],
-        "image": "1637896704481_industrial.png"
+        "technique": "Full color sublimacion",
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "1637897453705_polo_empre.png"
     }
 ]
