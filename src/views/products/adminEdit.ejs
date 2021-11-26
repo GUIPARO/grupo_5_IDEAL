@@ -9,11 +9,7 @@
                 <section class="create-form">
                     <h2 class="title-admin">Edita este producto</h2>
                     <form class="create" action='/products/adminEdit/<%=productEdit[0].id%>?_method=PUT' method="POST" enctype="multipart/form-data"> 
-<<<<<<< HEAD
-                        <input type="text" name="fullName" id="fullName" minlength="2" placeholder="Nombre del producto"
-=======
                         <input type="text" name="fullName" id="fullName" minlength="2" placeholder="Nombre del producto" value ="<%= productEdit[0].fullName%> "
->>>>>>> 4fac1ff51716dc928b8d844c0c8d86acb1f8f8ee
                             required>
                         <input type="number" name="price" id="price" minlength="2" placeholder="Precio del producto" value ="<%= productEdit[0].price%> "
                             required>
@@ -78,18 +74,6 @@
                             </select>
 
                             <h3>Seleciona la Técnica</h3>
-<<<<<<< HEAD
-                            <div class= "tipo-tecnica">
-                                <label for="Full color sublimacion"></label><input type="checkbox" name="technique" value="Full color sublimacion">Full color sublimación</label>
-                                <label for="Serigrafia 1 tinta"><input type="checkbox" name="technique"  value="Serigrafia 1 tinta">Serigrafía 1 tinta</label>
-                                <label for="Serigrafia 2 tintas"><input type="checkbox" name="technique"  value="Serigrafia 2 tintas">Serigrafia 2 tintas</label>
-                                <label for="Vinilo textil 1 color"><input type="checkbox" name="technique"  value="Vinilo textil 1 color">Vinilo textil 1 color</label>
-                                <label for="Vinilo textil 2 colores"><input type="checkbox" name="technique" value="Vinilo textil 2 colores">Vinilo textil 2 colores</label>
-                                <label for="Estampado"></label><input type="checkbox" name="technique" value="Estampado">Estampado</label>
-                                <label for="Bordado"></label><input type="checkbox" name="technique" value="Bordado">Bordado</label>
-                            
-                            </div>
-=======
                             <select class="select_service" name="technique" id="select-service" type="select">
                                 <option selected="" value="Técnica de producto">Técnica de producto</option>
                                 <option value="Full color sublimación">Full color sublimación</option>
@@ -98,7 +82,6 @@
                                 <option value="Vinilo textil 1 color">Vinilo textil 1 color</option>
                                 <option value="Vinilo textil 2 colores">Vinilo textil 2 colores</option>
                             </select>
->>>>>>> 4fac1ff51716dc928b8d844c0c8d86acb1f8f8ee
 
                             <h3>Seleciona el tipo de tela</h3>
                             <div class="tipo-tela">

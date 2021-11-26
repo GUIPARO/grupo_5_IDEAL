@@ -497,5 +497,20 @@
         "technique": "full-color-sublimacion",
         "material": "Politex",
         "image": "conjunMedi_reutili.png"
+    },
+    {
+        "id": 30,
+        "fullName": "prueboo",
+        "price": 12312,
+        "product_line": "Linea industrial",
+        "activity": "Presentación",
+        "subactivity": [
+            "Campañas publicitarias",
+            "Campañas políticas",
+            "Eventos coporporativos"
+        ],
+        "technique": "Vinilo textil 1 color",
+        "material": "Poliester",
+        "image": "1637882256074_cam_per_celeb.png"
     }
 ]
