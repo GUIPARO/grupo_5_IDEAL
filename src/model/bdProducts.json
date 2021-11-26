@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 12,
         "fullName": "Camisetas Polo",
         "price": 28000,
         "productLine": "Linea fashion ",
@@ -16,5 +16,197 @@
             "poliester"
         ],
         "image": "1637897453705_polo_empre.png"
+    },
+    {
+        "id": 13,
+        "fullName": "Camisetas Polo",
+        "price": 38000,
+        "productLine": "Linea fashion ",
+        "activity": "Fashion",
+        "subactivity": [
+            "Última moda",
+            "Re ventas",
+            "Almacenes de ropa"
+        ],
+        "technique": "Full color sublimacion",
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "1637897617747_polo_fashi.png"
+    },
+    {
+        "id": 14,
+        "fullName": "Camisetas Polo",
+        "price": 45000,
+        "productLine": "Linea fashion ",
+        "activity": "Tendencias",
+        "subactivity": [
+            "Última moda",
+            "Re ventas",
+            "Almacenes de ropa"
+        ],
+        "technique": "Full color sublimacion",
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "1637897727004_polo_tenden.png"
+    },
+    {
+        "id": 15,
+        "fullName": "Chompas Personalizadas",
+        "price": 40000,
+        "productLine": "Linea fashion ",
+        "activity": "Eventos",
+        "subactivity": [
+            "Campañas publicitarias",
+            "Campañas políticas",
+            "Eventos coporporativos"
+        ],
+        "technique": "Full color sublimacion",
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "1637897791293_chompa_even.png"
+    },
+    {
+        "id": 16,
+        "fullName": "Chompas Personalizadas",
+        "price": 40000,
+        "productLine": "Linea fashion ",
+        "activity": "Celebraciones",
+        "subactivity": [
+            "Campañas publicitarias",
+            "Campañas políticas",
+            "Eventos coporporativos"
+        ],
+        "technique": [
+            "Serigrafia 1 tinta",
+            "Serigrafia 2 tintas"
+        ],
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "1637897844802_chompa_person_cele.png"
+    },
+    {
+        "id": 17,
+        "fullName": "Chompas Personalizadas",
+        "price": 58000,
+        "productLine": "Linea fashion ",
+        "activity": "Tendencias",
+        "subactivity": [
+            "Diseños de temporada",
+            "Diseños exclusivos"
+        ],
+        "technique": "Full color sublimacion",
+        "material": "piel-de-durazno",
+        "image": "1637897917656_chompa_person_tenden.png"
+    },
+    {
+        "id": 18,
+        "fullName": "Chaquetas",
+        "price": 85000,
+        "productLine": "Linea fashion ",
+        "activity": "Tendencias",
+        "subactivity": [
+            "Última moda",
+            "Re ventas",
+            "Almacenes de ropa"
+        ],
+        "technique": "Full color sublimacion",
+        "material": "Antifluido",
+        "image": "1637898023189_chaque_tenden.png"
+    },
+    {
+        "id": 19,
+        "fullName": "Chaquetas",
+        "price": 75000,
+        "productLine": "Linea fashion ",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Consorcios",
+            "Empresas sector industrial, educativo, administrativo"
+        ],
+        "technique": [
+            "Serigrafia 1 tinta",
+            "Serigrafia 2 tintas",
+            "Bordado"
+        ],
+        "material": "Antifluido",
+        "image": "1637898101220_chaque_empres.png"
+    },
+    {
+        "id": 20,
+        "fullName": "Uniformes Deportivos",
+        "price": 90000,
+        "productLine": "Linea deportiva",
+        "activity": "Presentación",
+        "subactivity": [
+            "Escuelas de futbol",
+            "Torneos de colegio",
+            "Torneos de barrio",
+            "Torneos de empresas"
+        ],
+        "technique": "Full color sublimacion",
+        "material": [
+            "Antifluido",
+            "Perchado"
+        ],
+        "image": "1637898156637_unifordepor_present.png"
+    },
+    {
+        "id": 21,
+        "fullName": "Uniformes Deportivos",
+        "price": 40000,
+        "productLine": "Linea deportiva",
+        "activity": "Basketball",
+        "subactivity": [
+            "Escuelas de futbol",
+            "Torneos de colegio",
+            "Torneos de barrio",
+            "Torneos de empresas"
+        ],
+        "technique": "Full color sublimacion",
+        "material": "Dry fit",
+        "image": "1637898230746_unifordepor_basket.png"
+    },
+    {
+        "id": 22,
+        "fullName": "Uniformes Deportivos",
+        "price": 38000,
+        "productLine": "Linea deportiva",
+        "activity": "Voleyball",
+        "subactivity": [
+            "Escuelas de futbol",
+            "Torneos de colegio",
+            "Torneos de barrio",
+            "Torneos de empresas"
+        ],
+        "technique": "Full color sublimacion",
+        "material": [
+            "Dry fit",
+            "Poli licra"
+        ],
+        "image": "1637898279075_unifordepor_voleyball.png"
+    },
+    {
+        "id": 23,
+        "fullName": "Uniformes Deportivos",
+        "price": 45000,
+        "productLine": "Linea deportiva",
+        "activity": "Futbol",
+        "subactivity": [
+            "Escuelas de futbol",
+            "Torneos de colegio",
+            "Torneos de barrio",
+            "Torneos de empresas"
+        ],
+        "technique": "Full color sublimacion",
+        "material": "Dry fit",
+        "image": "1637898329687_unifordepor_futball.png"
     }
 ]
