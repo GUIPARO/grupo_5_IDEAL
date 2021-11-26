@@ -1,5 +1,184 @@
 [
     {
+        "id": 1,
+        "fullName": "Camisetas Polo",
+        "price": 28000,
+        "productLine": "Linea fashion ",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Empresas",
+            "Negocios",
+            "Emprendimientos"
+        ],
+        "technique": "Full color sublimacion",
+        "material": [
+            "algodon",
+            "poliester"
+        ],
+        "image": "1637897453705_polo_empre.png"
+    },
+    {
+        "id": 2,
+        "fullName": "Conjunto Térmico",
+        "price": 50000,
+        "productLine": "Linea industrial",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Consorcios",
+            "Empresas sector industrial, educativo, administrativo"
+        ],
+        "technique": [
+            "Serigrafia 1 tinta",
+            "Bordado"
+        ],
+        "material": "Fornax térmico",
+        "image": "1637897696613_termico_empresa.png"
+    },
+    {
+        "id": 3,
+        "fullName": "Conjunto Antifluido",
+        "price": 45000,
+        "productLine": "Linea industrial",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Consorcios",
+            "Empresas sector industrial, educativo, administrativo"
+        ],
+        "technique": [
+            "Serigrafia 1 tinta",
+            "Bordado"
+        ],
+        "material": "Antifluido",
+        "image": "1637897777747_antifluido_empresa.png"
+    },
+    {
+        "id": 4,
+        "fullName": "Chaleco Industrial",
+        "price": 45000,
+        "productLine": "Linea industrial",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Consorcios",
+            "Empresas sector industrial, educativo, administrativo"
+        ],
+        "technique": [
+            "Serigrafia 1 tinta",
+            "Bordado"
+        ],
+        "material": "Drill nacional",
+        "image": "1637897868749_industrial_empre.png"
+    },
+    {
+        "id": 5,
+        "fullName": "Overol Industrial",
+        "price": 75000,
+        "productLine": "Linea industrial",
+        "activity": "Empresariales",
+        "subactivity": [
+            "Consorcios",
+            "Empresas sector industrial, educativo, administrativo"
+        ],
+        "technique": "Serigrafia 1 tinta",
+        "material": "Drill nacional",
+        "image": "1637898210057_overol_empresa.png"
+    },
+    {
+        "id": 6,
+        "fullName": "Bata Quirugica Desechable",
+        "price": 3500,
+        "productLine": "Linea medica",
+        "activity": "Salud",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": "Serigrafia 1 tinta",
+        "material": "Politex",
+        "image": "1637898274029_bata_desecha.png"
+    },
+    {
+        "id": 7,
+        "fullName": "Bata Quirúrgica Reutilizable",
+        "price": 25000,
+        "productLine": "Linea medica",
+        "activity": "Salud",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": "Serigrafia 1 tinta",
+        "material": "Antifluido",
+        "image": "1637898344941_bata_reutiliza.png"
+    },
+    {
+        "id": 8,
+        "fullName": "Monotraje Desechable ",
+        "price": 8000,
+        "productLine": "Linea medica",
+        "activity": "Salud",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": "Serigrafia 1 tinta",
+        "material": "Politex",
+        "image": "1637898389604_monotraje_desecha.png"
+    },
+    {
+        "id": 9,
+        "fullName": "Monotraje Reutilizable",
+        "price": 38000,
+        "productLine": "Linea medica",
+        "activity": "Salud",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": "Serigrafia 1 tinta",
+        "material": "Antifluido",
+        "image": "1637898439319_monotraje_reutili.png"
+    },
+    {
+        "id": 10,
+        "fullName": "Conjunto Médico Desechable",
+        "price": 6000,
+        "productLine": "Linea medica",
+        "activity": "Eventos",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": "Serigrafia 1 tinta",
+        "material": "Politex",
+        "image": "1637898528759_conjunMedi_desecha.png"
+    },
+    {
+        "id": 11,
+        "fullName": "Conjunto Médico Reutilizable",
+        "price": 60000,
+        "productLine": "Linea medica",
+        "activity": "Salud",
+        "subactivity": [
+            "Hospitales",
+            "Bomberos",
+            "Consultorios",
+            "Estéticas"
+        ],
+        "technique": "Full color sublimacion",
+        "material": "Politex",
+        "image": "1637898589617_conjunMedi_reutili.png"
+    },
+    {
         "id": 12,
         "fullName": "Camisetas Polo",
         "price": 28000,
