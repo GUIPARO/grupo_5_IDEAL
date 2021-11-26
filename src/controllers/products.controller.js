@@ -92,7 +92,6 @@ const controller = {
         const edit = req.body;
         const datos = bdProducts();
         
-       
         const productEdit = datos.filter(product => {
             return product.id == id;
         });
@@ -100,6 +99,13 @@ const controller = {
             return product == productEdit[0];
         });
         const imageFile = req.file === undefined ? productEdit[0].image : req.file.filename;
+
+        if (imageFile != undefined) {
+            let rutaImage = path.resolve(__dirname, "../../public/img/products_image/" + productEdit[0].image);
+            fs.unlinkSync(rutaImage);
+        }
+
+       
 
         datos[indice] = {
             id: id,
@@ -118,10 +124,16 @@ const controller = {
 
     adminDelete:(req,res) => {
         const id = req.params.id;  
-        const data = bdProducts().filter(products =>{
-            return products.id != id     
+        const productEdit = bdProducts().filter(product => {
+            return product.id == id;
         });
-         
+        let rutaImage = path.resolve(__dirname, "../../public/img/products_image/" + productEdit[0].image);
+        fs.unlinkSync(rutaImage);
+
+        const data = bdProducts().filter(products =>{
+            return products.id != id
+        });
+
         let jsonProducts = JSON.stringify(data, null, 4);
               
         fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);

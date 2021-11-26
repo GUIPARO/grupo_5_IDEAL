@@ -6,7 +6,7 @@ const controller = require('../controllers/products.controller.js')
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.resolve(__dirname, "../../public/img"));
+        cb(null, path.resolve(__dirname, "../../public/img/products_image"));
     },
     filename: function (req, file, cb) {
         cb(null, Date.now() + "_"+ file.originalname);
