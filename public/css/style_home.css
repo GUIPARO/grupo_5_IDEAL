@@ -20,8 +20,9 @@
 
 .title-admin{
     text-align: center;
-   padding: 5px 20px;
+    padding: 5px 20px;
     color: #1e2d44e0;
+    margin-top: 30px;
 }
 .admin-table {
     margin: 0 auto;
@@ -613,7 +614,7 @@ footer .mapa_ubicacion {
     background-color: #1e2d44e0;
     color: white;
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 20px auto;
     font-size: 18px;
     display: inline-block;
     height: 40px;
@@ -641,7 +642,8 @@ footer .mapa_ubicacion {
 /* INICIO COTIZACION COTIZACION COTIZACION COTIZACION MAIN */ 
 .title-cotizacion{
     text-align: center;
-   padding: 5px 20px;
+    padding: 5px 20px;
+    margin-top: 30px;
 
 }
 .cotizacion-main h4 {
@@ -884,26 +886,27 @@ main .container_details_product .container_product{
 
 main .container_info_product{
     width: 90%;
-    margin: 0 auto 10px;
+    margin: 25px auto;
 }
 
 .container_info_product .product_name{
-    font-weight: 500;
-    letter-spacing: -1.2px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     text-align: center;
     font-size: 30px;
     color: #1e2d44e0;
+    text-transform: uppercase;
 }
 
 .detail_product{
     font-size: 13px;
-    border-top: 1px solid #e1dcd6;
+    border-bottom: 1px solid #e1dcd6;
     text-align: left;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .product_cost{
-    font-size: 22px;
+    font-size: 28px;
     margin-bottom: 5px;
     text-align: center;
 }
@@ -930,13 +933,13 @@ main .container_info_product{
 }
 
 .cost_dozen i{
-        font-size: 20px;
-        text-align: center;
-        align-items: center; 
-        display: flex;
-        align-items: center;
-        padding-left: 5px;
-        color:#ffc107;
+    font-size: 20px;
+    text-align: center;
+    align-items: center; 
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    color:#ffc107;
 }
 .cost_text{
     font-weight: 500;
@@ -956,15 +959,18 @@ main .container_info_product{
     display: block;
     text-transform: uppercase;
     font-size: 18px;
+    margin-top: 15px;
 }
 
 .detail_activity{
-    background: #65ba96bd;
+    background: #e3e03b;;
     color:white;
     text-align: center;
     padding: 10px;
     margin: 10px auto;
-    font-size: 20px;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .buying_guide{
@@ -1279,7 +1285,7 @@ main .description_buy{
 
 .description_buy .table_car, .table_resume{
     width: 100%;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     border-collapse: collapse;
     margin: 0;
     padding: 0;
@@ -1337,7 +1343,7 @@ main .description_buy{
 
 .container_cupon{
     width: 90%;
-    margin: 20px auto;
+    margin: 40px auto;
     text-align: center;
     padding:16px;
     border-radius: 6px;
@@ -1361,7 +1367,7 @@ main .description_buy{
 
  .container_resume{
     width: 90%;
-    margin: 20px auto;
+    margin: 40px auto;
     text-align: center;
     padding: 16px;
     border-radius: 6px;
@@ -1392,6 +1398,7 @@ main .description_buy{
 .table_resume th, .table_resume td {
     font-size: 18px;
     text-align: right;
+    margin-bottom: 5px;
 }
 
  button.container_value_description {
@@ -1404,7 +1411,7 @@ main .description_buy{
 }
 
 button.container_value_description:hover {
-    color:rgb(226, 61, 61)
+    color:rgb(55, 51, 51);
 }
 
 button.apply_cupon, button.finish_shop{
@@ -1714,7 +1721,7 @@ button.finish_shop:hover{
     }
 
     main .container_info_product{
-        margin:0 10px;
+        margin: 0 20px;
     }
 
     .container_similar {
