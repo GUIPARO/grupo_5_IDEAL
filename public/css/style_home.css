@@ -57,15 +57,14 @@
 }
 
 .product-admin-table img {
-    width: 100px;
+    width: 40px;
 }
 
-.product-admin-table tr:hover img {
-    width: 200px;
+.product-admin-table .actividad {
+    display: none;
 }
-.product-admin-table tr:hover {
-    font-size: 25px;
-}
+
+
 
 /* FINAL ADMIN FINAL ADMIN FINAL ADMIN */
 
@@ -1831,6 +1830,22 @@ button.finish_shop:hover{
 
     .container_shop{
         max-width: 1000px;
+    }
+
+    .product-admin-table img {
+        width: 100px;
+    }
+
+    .product-admin-table tr:hover img {
+        width: 200px;
+    }
+
+    .product-admin-table tr:hover {
+        font-size: 23px;
+    }
+
+    .product-admin-table .actividad {
+        display: table-cell;
     }
 
     /* .container_cupon{

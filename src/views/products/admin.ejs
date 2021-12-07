@@ -17,7 +17,7 @@
                 
             <tr>
                 <th>ID</th>
-                <th>Actividad</th>
+                <th class="actividad">Actividad</th>
                 <th>Descripción</th>
                 <th>Fotografia</th>
                 <th>Ver</th>
@@ -36,7 +36,7 @@
                 <tr>
                 <form method="POST" action= "/products/delete/<%=product.id%>?_method=DELETE">
                 <td><%=product.id%></td>
-                <td><%=product.activity%></td>
+                <td class="actividad"><%=product.activity%></td>
                 <td><%=product.fullName%></td>
                 <td><img src="/img/products_image/<%=product.image%>" alt="fotografia del producto"></td>
                 <td><a href="/products/product/<%=product.id%>"><i class="far fa-eye"></i></a></td>

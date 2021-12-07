@@ -87,12 +87,12 @@ const controller = {
     },
 
     adminModified: (req, res) => {
-        const id = parseInt(req.params.id)
-        const price = parseInt(req.body.price);
-        const edit = req.body;
+        const id = parseInt(req.params.id);
+        const body = req.body
+        const edit = Object.entries(body);
         const datos = bdProducts();
-        
-        const productEdit = datos.filter(product => {
+
+        let productEdit = datos.filter(product => {
             return product.id == id;
         });
 
@@ -100,18 +100,34 @@ const controller = {
             return product == productEdit[0];
         });
 
+        let viejo;
+
+        for ( let i = 0 ; i < edit.length; i++) {
+            let nuevo;
+            if(edit[i][1] != "") {
+                let dato1 = edit[i][0];
+                let dato2 = isNaN(parseInt(edit[i][1])) ? edit[i][1] : parseInt(edit[i][1]);
+                let dato3 = {[dato1] : dato2};
+                nuevo = {
+                    ...viejo,
+                    ...dato3
+                };
+                
+                viejo = nuevo;
+            }
+        }
+
         const imageFile = req.file == undefined ? productEdit[0].image : req.file.filename;
 
         if (req.file != undefined) {
             let rutaImage = path.resolve(__dirname, "../../public/img/products_image/" + productEdit[0].image);
             fs.unlinkSync(rutaImage);
         }
-
+        
         datos[indice] = {
-            id: id,
-            ...edit,
-            price: price,
-            image: imageFile
+            ...productEdit[0],
+            ...viejo,
+            image : imageFile,
         }
 
         let jsonProducts = JSON.stringify(datos, null, 4);
@@ -119,7 +135,6 @@ const controller = {
         fs.writeFileSync(path.resolve(__dirname, '../database/bdProducts.json'), jsonProducts);
 
         res.redirect('/products/admin');
-
     },
 
     adminDelete:(req,res) => {
