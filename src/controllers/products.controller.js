@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require("fs");
 
 let bdProducts = () => {
-    let datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../model/bdProducts.json"), "utf-8"));
+    let datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/bdProducts.json"), "utf-8")); 
     return datos;
 }
 
@@ -60,7 +60,7 @@ const controller = {
 
         datos.push(product);
         let jsonProducts = JSON.stringify(datos, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
+        fs.writeFileSync(path.resolve(__dirname, '../database/bdProducts.json'), jsonProducts);
         
         res.redirect('/products/admin');
     },
@@ -116,7 +116,7 @@ const controller = {
 
         let jsonProducts = JSON.stringify(datos, null, 4);
 
-        fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
+        fs.writeFileSync(path.resolve(__dirname, '../database/bdProducts.json'), jsonProducts);
 
         res.redirect('/products/admin');
 
@@ -137,7 +137,7 @@ const controller = {
 
         let jsonProducts = JSON.stringify(data, null, 4);
               
-        fs.writeFileSync(path.resolve(__dirname, '../model/bdProducts.json'), jsonProducts);
+        fs.writeFileSync(path.resolve(__dirname, '../database/bdProducts.json'), jsonProducts);
 
         res.redirect('/products/admin');
     }
