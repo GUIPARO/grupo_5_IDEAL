@@ -56,6 +56,17 @@
     border-bottom:1px solid grey;
 }
 
+.product-admin-table img {
+    width: 100px;
+}
+
+.product-admin-table tr:hover img {
+    width: 200px;
+}
+.product-admin-table tr:hover {
+    font-size: 25px;
+}
+
 /* FINAL ADMIN FINAL ADMIN FINAL ADMIN */
 
 /*CREATE CREATE CREATE CREATE CREATE */
