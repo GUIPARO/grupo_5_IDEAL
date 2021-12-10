@@ -18,7 +18,7 @@ app.set('views', path.resolve(__dirname,"views"));
 
 
 // Indica a express donde se encuentran los recursos estáticos
-app.use(express.static(path.resolve(__dirname,'../public')))
+app.use(express.static(path.resolve(__dirname,'./public')))
 
 // Indica a express el template engine que se va a utilizar
 app.set('view engine','ejs');

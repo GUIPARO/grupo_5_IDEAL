@@ -120,7 +120,7 @@ const controller = {
         const imageFile = req.file == undefined ? productEdit[0].image : req.file.filename;
 
         if (req.file != undefined) {
-            let rutaImage = path.resolve(__dirname, "../../public/img/products_image/" + productEdit[0].image);
+            let rutaImage = path.resolve(__dirname, "../public/img/products_image/" + productEdit[0].image);
             fs.unlinkSync(rutaImage);
         }
         
@@ -143,7 +143,7 @@ const controller = {
             return product.id == id;
         });
         
-        let rutaImage = path.resolve(__dirname, "../../public/img/products_image/" + productEdit[0].image);
+        let rutaImage = path.resolve(__dirname, "../public/img/products_image/" + productEdit[0].image);
         fs.unlinkSync(rutaImage);
 
         const data = bdProducts().filter(products =>{
