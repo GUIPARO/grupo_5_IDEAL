@@ -19,7 +19,7 @@ router.get('/cotizacion', controller.cotizacion);
 
 router.get('/product/:id', controller.product);
 
-router.get('/productCart',controller.produtCart);
+router.get('/productCart',controller.productCart);
 
 router.get('/admin',controller.admin);
 
@@ -27,13 +27,14 @@ router.get('/admin',controller.admin);
 router.get('/adminEdit/:id',controller.adminEdit);
 router.put('/adminEdit/:id', upload.single("image"), controller.adminModified);
 
-
 //Crear producto
 router.get('/adminCreate',controller.adminCreate);
 router.post('/adminCreate', upload.single("image"), controller.adminStore);
 
+// Lista de productos
 router.get('/productsList', controller.productsList);
 
 //Eliminar producto
 router.delete ('/delete/:id', controller.adminDelete)
+
 module.exports = router

@@ -1834,14 +1834,18 @@ button.finish_shop:hover{
 
     .product-admin-table img {
         width: 100px;
+        border-radius: 15px;
+        transition: width 500ms;
     }
 
     .product-admin-table tr:hover img {
-        width: 200px;
+        width: 180px;
+        transition: width 1s;
+        transition-timing-function: ease-in-out;
     }
 
     .product-admin-table tr:hover {
-        font-size: 23px;
+        font-size: 20px;
     }
 
     .product-admin-table .actividad {
