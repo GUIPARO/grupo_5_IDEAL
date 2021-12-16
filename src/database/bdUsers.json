@@ -1,9 +1,10 @@
 [
-    {
-        "name" : "Ana Maria",
-        "lastName" : "Diaz Obando",
-        "email": "anamaria@gmail.com",
-        "password" : "anita123",
-        "avatar" : "defaulf.png"
-    }
+  {
+    "id": 1,
+    "name": "Ana Maria",
+    "lastName": "Diaz Obando",
+    "email": "anamaria@gmail.com",
+    "password": "anita123",
+    "avatar": "defaulf.png"
+  }
 ]

@@ -2,38 +2,54 @@ const fs= require ('fs');
 const path = require ('path');
 
 const User= {
-    filename: './database/bdUsers.json',
-    
-    
+
     getData: function(){
-        let data= JSON.parse(fs.readFileSync(path.resolve (__dirname, this.filename),'utf-8'))
-        return data;
-       
+        let datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/bdUsers.json"), "utf-8"));
+		return datos;
     },
 
-   
-    
     findAll: function(){
-        return this.getData;
+        return this.getData();
     },
 
-    //aqui falta el ID
+    newId: function () {
+		let allUsers = this.findAll();
+		let ultimo = 0
+		allUsers.forEach(user =>{
+			if(user.id >ultimo){
+				ultimo = user.id
+			}
+		})
+		return ultimo + 1
+    },
 
+    findbyid: function(id){
+		let allUsers = this.findAll()
+		let userFind = allUsers.filter(user => { 
+			return user.id === id
+		})
+	},
+
+    findbyField : function(field, text){
+		let allUsers = this.findAll()
+		let userFind = allUsers.find(user => user[field] === text)
+		return userFind
+	},
     create:function (userData) {
         let allUsers = this.findAll();
         let newUser = {
-            //id: this.newId(),
+            id: this.newId(),
             ...userData
         }
+
         allUsers.push(newUser);
         let userJSON= JSON.stringify (allUsers, null, 2);
-        fs.writeFileSync(path.resolver(__dirname, './database/bdUsers.json'),
+        fs.writeFileSync(path.resolve(__dirname, '../database/bdUsers.json'),
         userJSON )
         return newUser;
     }
-
-
 }
+
 
 
 module.exports = User;

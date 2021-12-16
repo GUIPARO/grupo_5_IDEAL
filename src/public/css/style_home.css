@@ -7,8 +7,6 @@
 
 /* FORMULARIO DE ADMINISTRADOR ADMIN ADMIN ADMIN ADMIN */ 
 .add{
-     
-   
     display: flex;
     flex-direction: row;
     margin: 12px;
@@ -583,8 +581,6 @@ footer .mapa_ubicacion {
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    
-    
     margin: 2px 0;
   
   }
@@ -601,16 +597,20 @@ footer .mapa_ubicacion {
   .register-form .form {
       border-radius: 5px;
       display: block;
-      margin: 20px auto;
+      margin: 5px auto;
       width: 70%;
       border: 2px solid #1e2d44e0;
       font-size: 18px ;
       padding:10px;
       margin-bottom: 1px;
-    
-      
   }
-  
+
+  .danger_text{
+      color:red;
+      width: 70%;
+      margin: 10px auto;
+
+  }
   
   .register-form input:last-child {
     background-color: #1e2d44e0;
@@ -772,7 +772,7 @@ margin: 0 auto;
   .register-form .form {
       border-radius: 5px;
       display: block;
-      margin: 20px auto;
+      margin: 5px auto;
       width: 70%;
       border: 2px solid #1e2d44e0;
       font-size: 18px ;
