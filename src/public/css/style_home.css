@@ -572,6 +572,11 @@ footer .mapa_ubicacion {
 /* LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN  */
 
 /* INICIO REGISTER MAIN */
+.uploadUserAvatar {
+    display:flex;
+    justify-content: left;
+    padding: 0 75px;
+}
 .register-main {
     width: 100%;
     display: flex;

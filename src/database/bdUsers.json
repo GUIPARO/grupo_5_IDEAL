@@ -3,6 +3,7 @@
         "name" : "Ana Maria",
         "lastName" : "Diaz Obando",
         "email": "anamaria@gmail.com",
-        "password" : "anita123" 
+        "password" : "anita123",
+        "avatar" : "defaulf.png"
     }
 ]
