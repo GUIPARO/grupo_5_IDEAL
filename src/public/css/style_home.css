@@ -1511,10 +1511,75 @@ button.finish_shop:hover{
     font-size: 16px;
     color: #1e2d44e0;
 }
-
-
-
 /* ESTILOS VISTA LISTADO DE PRODUCTOS  */
+
+/*PROFILE*/
+
+.container_card{
+    margin: 30px auto 20px;
+    width: 290px;
+    border-radius: 10px;
+    position: relative;
+    background: #1e2d44;
+    padding: 10px;
+}
+.img_user_profile{
+    margin: 15px auto;
+    text-align: center;
+    background: #1e2d44;
+}
+
+.img_user_profile img{
+    width: 180px;
+    height: 150px;
+    border: 3px solid #e3e038;
+    border-radius: 10px;
+    overflow: hidden;   
+}
+
+.personal_data{
+    margin-top: 15px;
+}
+
+.container_edit{
+    text-align: center;
+    color: white;
+}
+
+.container_edit a {
+    color: #e3e038;
+}
+
+.container_name, .container_lastName,
+.container_email
+{
+    margin: 10px;
+}
+
+.title_lastName, 
+.title_name, .title_email{
+    color: #e3e038;
+    margin-bottom: 3px;
+}
+
+.name, .lastName, .email{
+    color: white
+}
+
+.login_form a button{
+    width: 200px;
+    background-color: #1e2d44e0;
+    color: white;
+    border-radius: 5px;
+    margin: 20px auto;
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #1e2d44e0;
+    cursor: pointer;
+}
+
+/*FINAL PROFILE*/
+
 
 /* MEDIA QUERIS HOME  */
 

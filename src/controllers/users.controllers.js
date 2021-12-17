@@ -48,7 +48,11 @@ const controller ={
         }else {
           return res.render('./users/register', {errors: errors.mapped(),old: req.body});
         }
-    }
+    },
+    profile:(req,res) => {
+      res.render('./users/profile')
+      
+    },
 }
 
 module.exports= controller;

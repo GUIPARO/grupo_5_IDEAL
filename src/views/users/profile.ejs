@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+
+    <body>
+        <%- include("../partials/header") %>
+            <main>
+                
+                <section class="info_profile">
+                    <form class="login_form" action="/">
+                    <div class="container_card" >
+                    <figure class="img_user_profile">
+                        <img src="/img/users_image/<%= user.avatar%> " alt="image_profile">
+                    </figure>
+                   
+                    <div class="personal_data">
+                        <div class="container_edit">
+                            <div class="edit_profile"><a href="#"><i class="far fa-edit"></i></a></div>
+                            <div class="title_edit">Modificar tu perfil</div>
+                        </div>
+                        <div class="container_name">
+                            <div class="title_name">Nombre</div>
+                            <div class="name"><%= user.name%>  </div>
+                        </div>
+                        <div class="container_lastName">
+                            <div class="title_lastName">Apellidos</div>
+                            <div class="lastName"><%= user.lastName%> </div>
+                        </div>
+
+                        <div class="container_email">
+                            <div class="title_email">
+                                Correo electrónico</div>
+                            <div class="email"><%= user.email%></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                </form>
+                </section>
+                
+            </main>
+            <%- include("../partials/footer") %>
+    </body>
+
+</html>
