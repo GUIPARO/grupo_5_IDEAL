@@ -6,5 +6,24 @@
     "email": "anamaria@gmail.com",
     "password": "anita123",
     "avatar": "defaulf.png"
+  },
+  {
+    "id": 2,
+    "name": "loca",
+    "lastName": "gata",
+    "email": "gata@gmail.com",
+    "password": "gargaerheth",
+    "confirm_password": "sgsfgehstrh",
+    "politics": "1",
+    "avatar": "foto-1639711662997_img-cafetera-moulinex.jpg"
+  },
+  {
+    "id": 3,
+    "name": "gata",
+    "lastName": "loca",
+    "email": "reloca@queloca.com",
+    "password": "$2a$10$3TohHZ7DZaLzfJTSVb72qetG3ar1PvRX1POamlIgY4zTi9PtFaYpO",
+    "confirm_password": "$2a$10$iGDdcxLXmhP3S/ofmfCYFOcw2m08DsT1vDH5SWtIUjg3sFLv1Spue",
+    "avatar": "foto-1639713523972_img-samsung-galaxy-s10.jpg"
   }
 ]
