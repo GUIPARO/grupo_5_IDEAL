@@ -2,6 +2,7 @@ const express= require('express');
 const path = require('path');
 const app = express();
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const cookieParser = require('cookie-parser');
 const session = require('express-session')
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')// requerir middleware de aplicación
 
@@ -10,6 +11,7 @@ const port = process.env.PORT || 3000;
 
 
 // ************ Middlewares ********************//
+app.use(cookieParser());
 app.use(session({secret : 'secreto',
 resave: false,
 saveUninitialized:false}))

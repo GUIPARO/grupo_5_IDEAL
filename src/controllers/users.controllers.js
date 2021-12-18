@@ -63,6 +63,11 @@ const controller ={
         //Guardar del lado del servidor (Guardar al usuario en sesion)
         req.session.userLogged = userLog;  
         console.log(req.session.userLogged)
+
+        //Aquí voy a guardar las cookies del usuario que se loguea
+        if(req.body.remember){
+          res.cookie('userEmail',req.body.email,{ maxAge: (1000 * 60) * 60 })
+        }
         
         return res.redirect('/users/profile');  
 
@@ -71,8 +76,6 @@ const controller ={
         res.render(path.resolve(__dirname, '../views/users/login'),{errors:errors.mapped(),old:req.body});        
       }
     },
-
-
     profile:(req,res) => {
       res.render('./users/profile',{
         user: req.session.userLogged
@@ -80,7 +83,7 @@ const controller ={
       
     },
     logout:(req,res)=>{
-      res.clearCookie('userEmail');
+      res.clearCookie('userEmail');//Eliminar la cookie
 		  req.session.destroy();
 		  return res.redirect('/');
     }
