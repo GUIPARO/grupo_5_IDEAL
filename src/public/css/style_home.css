@@ -202,6 +202,64 @@ header .bar_search {
     display: none;
 }
 
+header nav ul{
+    list-style: none;
+
+}
+
+header nav ul li a:hover {
+    color:#172335;
+    transition: all .3s;
+}
+
+header nav .header_list > li{
+    position: relative;
+}
+
+.dropdown-menu{
+    position: absolute;
+    background: #7f818d;
+    opacity: 0.7;
+    width: 100%;
+    display: none
+}
+
+.header_list menu:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-link_img{
+    display: inline-block;
+}
+
+.nav-link_img .link_img{
+    vertical-align: middle;
+    display: inherit;
+}
+
+.nav-link_img .link_img img{ 
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+}
+
+.dropdown-menu li a{
+    display: block;
+    padding: 8px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu li{
+    margin-right: 0;
+    text-align: center;
+}
+
+.header_list li:hover .dropdown-menu{
+    display: block;
+}
+
 /* HASTA ACA VA EL HEADER  */
 
 /* INICIO CARROUSEL  */
@@ -512,9 +570,9 @@ footer .mapa_ubicacion {
     flex-direction: column;
     flex-wrap: wrap;
     width: 80%;
-    height: 400px;
+    height: 430px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 30px auto;
     align-items: center;
     justify-content: space-around;
 }
@@ -524,14 +582,11 @@ footer .mapa_ubicacion {
     color: #1e2d44e0;
 }
 
-
-
-
 .main_login form {
     width: 100%;
 }
 
-.login_form input {
+.login_form .input_login{
     display: block;
     margin: 20px auto;
     width: 70%;
@@ -542,7 +597,6 @@ footer .mapa_ubicacion {
     border: 2px solid #1e2d44e0;
     font-size: 18px;
 }
-
 
 .login_form input:last-child {
     background-color: #1e2d44e0;
@@ -565,6 +619,25 @@ footer .mapa_ubicacion {
     text-decoration: none;
     color: #ff4826;
     font-weight: bold;
+}
+
+.login_form .container_remember{
+    display: flex;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 300px;
+}
+
+.container_remember label{
+    margin-left: 5px;;
+}
+
+.main_login .danger_text{
+    
+    color:red;
+    width: 70%;
+    margin: 10px auto;
+    max-width: 300px;
 }
 
 /* LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN  */
@@ -603,13 +676,6 @@ footer .mapa_ubicacion {
       font-size: 18px ;
       padding:10px;
       margin-bottom: 1px;
-  }
-
-  .danger_text{
-      color:red;
-      width: 70%;
-      margin: 10px auto;
-
   }
   
   .register-form input:last-child {
@@ -1511,6 +1577,7 @@ button.finish_shop:hover{
     font-size: 16px;
     color: #1e2d44e0;
 }
+
 /* ESTILOS VISTA LISTADO DE PRODUCTOS  */
 
 /*PROFILE*/
@@ -1578,8 +1645,7 @@ button.finish_shop:hover{
     cursor: pointer;
 }
 
-/*FINAL PROFILE*/
-
+/* MEDIA QUERIS HOME  */
 
 /* MEDIA QUERIS HOME  */
 
@@ -1785,7 +1851,6 @@ button.finish_shop:hover{
     }
 
     .main_login {
-        height: 60vh;
         justify-content: space-evenly;
         box-shadow: 0 5px 12px grey;
         border-radius: 5px;
