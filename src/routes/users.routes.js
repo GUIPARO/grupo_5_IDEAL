@@ -12,7 +12,7 @@ const validationsLogin = require('../middlewares/validateLoginMiddleware'); //Re
 
 const guestMiddleware = require('../middlewares/guestMiddleware')
 const authMiddleware = require('../middlewares/authMiddleware')
-
+const adminMiddleware = require('../middlewares/adminMiddleware')
 
 //*---------CONFIGURACION ALMACENAMIENTO USERS AVATARS--------------*//
 const storage = multer.diskStorage({
@@ -38,14 +38,21 @@ router.get('/register',guestMiddleware, usersController.register);
 router.post('/register', uploadUserFile.single('avatar'),validationsRegister,usersController.processRegister);
 
 // PERFIL DE USUARIOS
+router.get('/profile/:id', usersController.showUser);
 router.get('/profile',authMiddleware,usersController.profile)
 
 
 //Cerrar sesion 
 router.get('/logout/', usersController.logout)
 
+//Administrador de usuarios
+router.get('/admin',adminMiddleware,usersController.admin);
 
+//Editar usuario
+router.get('/userEdit/:id',usersController.userEdit);
+router.put('/userEdit/:id', uploadUserFile.single("avatar"), usersController.userModified);
 
-
+//Eliminar usuario
+router.delete ('/delete/:id', usersController.userDelete)
 
 module.exports = router;

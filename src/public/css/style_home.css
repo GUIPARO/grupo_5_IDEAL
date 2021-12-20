@@ -643,11 +643,7 @@ footer .mapa_ubicacion {
 /* LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN  */
 
 /* INICIO REGISTER MAIN */
-.uploadUserAvatar {
-    display:flex;
-    justify-content: left;
-    padding: 0 75px;
-}
+
 .register-main {
     width: 100%;
     display: flex;
@@ -677,6 +673,14 @@ footer .mapa_ubicacion {
       padding:10px;
       margin-bottom: 1px;
   }
+
+  .register-form label{
+    display: block;
+    font-size: 18px ;
+    color: #1e2d44e0;
+    margin: 5px auto;
+    width: 70%;
+}
   
   .register-form input:last-child {
     background-color: #1e2d44e0;
@@ -716,6 +720,22 @@ footer .mapa_ubicacion {
     text-decoration: none;
     color: #ff4826;
     font-weight: bold;
+}
+
+.container_editAvatar{
+    width: 60%;
+    margin: 0 auto 10px;
+    text-align: center;
+}
+
+.container_editAvatar .ditAvatar{
+    width: 100%;
+}
+
+.register-form .danger_text{
+    color:red;
+    width: 70%;
+    margin: 10px auto;
 }
 
 /* FINAl REGISTER REGISTER REGISTER REGISTER MAIN */
@@ -831,7 +851,7 @@ margin: 0 auto;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #ffffff;
+    background-color: #fafafa;
     margin: 2px 0;
   }
 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head") %>
+<body>
+    <%- include("../partials/header") %>
+    
+    <main class = "admin-main">
+        <h2 class="title-admin">Creación y edicion de productos</h2>
+        <article class = "admin-table">
+        <table class= "product-admin-table">
+            <!--ENCABEZADO DE LA TABLA-->
+            
+            <thead >
+                
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Fotografia</th>
+                <th>Ver</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+            
+            </tr>
+                </thead> 
+            
+
+        <!--CONTENIDO DE LA TABLA-->
+        <tbody>
+                <% users.forEach(user => { %>
+                    <% if(user){%>
+                <tr>
+                <form method="POST" action= "/users/delete/<%=user.id%>?_method=DELETE">
+                <td><%=user.id%></td>
+                <td><%=user.name%></td>
+                <td><%=user.lastName%></td>
+                <td><img src="/img/users_avatars/<%=user.avatar%>" alt="fotografia del usuario"></td>
+                <td><a href="/users/profile/<%=user.id%>"><i class="far fa-eye"></i></a></td>
+                <td><a href="/users/userEdit/<%=user.id%>"><i class="far fa-edit"></i></a></td>
+                <td> <button type= "submit"><i class="far fa-trash-alt"></i></button></td>
+            </form>
+            </tr>
+            <% } %> 
+            <% }) %> 
+           
+            
+        </tbody>
+        
+            </table>
+        </article>
+            
+        
+                    
+    </main>
+    <%- include("../partials/footer") %>
+</body>

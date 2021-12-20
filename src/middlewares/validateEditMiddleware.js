@@ -9,6 +9,14 @@ module.exports = [
     body('lastName').isLength({min: 2}).withMessage('El campo apellido no puede estar vacío'),
     body('email').isEmail().withMessage('Agregar un email válido'),
     //Aquí valido el Password   
+   
+    body('old_password').custom( (value, {req}) =>{
+        if(req.body.password == value ){
+                return true;
+              }else{
+                return false;
+              }
+  }).withMessage('contraseña incorrecta'),
     body('password').isLength({min: 8 }).withMessage('La contraseña debe tener un mínimo de 8 caractéres'),
     //Aquí valido la confimación del password dispuesto por el usuario
     body('confirm_password').isLength({min: 8 }).withMessage('La confirmación de la contraseña debe tener un mínimo de 8 caractéres'),
@@ -27,7 +35,7 @@ module.exports = [
       let acceptedExtensions = [".jpg",".jpeg", ".png" ];
       
     if(!file){
-     throw new Error ('Tienes que subir una imagen')
+     throw new Error ('tienes que subir una imagen')
     }else {
       let fileExtensions = path.extname(file.originalname)
       if(!acceptedExtensions.includes(fileExtensions)){

@@ -68,10 +68,9 @@ const controller ={
         if(req.body.remember){
           res.cookie('userEmail',req.body.email,{ maxAge: (1000 * 60) * 60 })
         }
-        
-        return res.redirect('/users/profile');  
+        return res.redirect('/');  
 
-      }else{
+        }else{
         //Devolver a la vista los errores
         res.render(path.resolve(__dirname, '../views/users/login'),{errors:errors.mapped(),old:req.body});        
       }
@@ -86,7 +85,95 @@ const controller ={
       res.clearCookie('userEmail');//Eliminar la cookie
 		  req.session.destroy();
 		  return res.redirect('/');
-    }
+    }, 
+    showUser: (req,res) =>{
+      const id = req.params.id;
+      let usersDB = modelUser.findAll()
+      const user = usersDB.filter(user =>{
+      return user.id == id
+      })
+
+      res.render("./users/profile", { user });
+   },
+    admin: (req, res) => {
+      let usersDB = modelUser.findAll()
+      res.render('./users/admin' , {users: usersDB});
+    },
+    userEdit:(req,res)=>{
+      let usersDB = modelUser.findAll()
+      const id = req.params.id;
+
+      const userEdit = usersDB.filter(user => {
+        return user.id == id;
+      })
+
+      const indice = usersDB.findIndex(user => {
+        return user == userEdit[0];
+      })
+
+      if (indice >= 0) {
+        res.render('./users/userEdit', { userEdit })
+      }else{
+        res.send('No insista')
+      }
+
+    },
+    userModified: (req, res) => {
+      const id = parseInt(req.params.id)
+      const edit = req.body;
+      let usersDB = modelUser.findAll()
+      
+      const userEdit = usersDB.filter(user => {
+        return user.id == id;
+      })
+
+      const indice = usersDB.findIndex(user => {
+        return user == userEdit[0];
+      })
+
+      const avatarFile = req.file == undefined ? userEdit[0].avatar : req.file.filename;
+
+      if (req.file != undefined) {
+          let routeImage = path.resolve(__dirname, "../public/img/users_avatars/" + userEdit[0].avatar);
+          fs.unlinkSync(routeImage);
+      }
+      
+      usersDB[indice] = {
+          id: id,
+          ...edit,
+          password: bcrypt.hashSync(req.body.password, 10),
+          confirm_password: bcrypt.hashSync(req.body.confirm_password, 10),
+          avatar: avatarFile,
+          role : parseInt(req.body.role)
+      }
+
+    modelUser.writeInDatabase(usersDB)
+    res.redirect('/');
+
+    },
+    userDelete:(req,res) => {
+        const id = req.params.id;  
+        let usersDB = modelUser.findAll()
+        const user = usersDB.filter(user =>{
+          return user.id == id
+        })
+        const userEdit = usersDB.filter(user => {
+          return user.id == id;
+        });
+
+        console.log(userEdit)
+    
+        let image = path.join(__dirname, "../public/img/users_avatars/" + userEdit[0].avatar);
+        fs.unlinkSync(image);
+
+        const data = usersDB.filter(user =>{
+          return user.id != id
+        });
+
+        modelUser.writeInDatabase(data)
+
+      res.redirect('/users/admin');
+  }
 
 
 }

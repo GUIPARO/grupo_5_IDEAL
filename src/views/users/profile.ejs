@@ -8,34 +8,64 @@
                 
                 <section class="info_profile">
                     <form class="login_form" action="/">
+                    
+                        <% if(user[0]) {%> 
                     <div class="container_card" >
                     <figure class="img_user_profile">
-                        <img src="/img/users_avatars/<%= user.avatar%> " alt="image_profile">
+                        <img src="/img/users_avatars/<%= user[0].avatar%> " alt="image_profile">
                     </figure>
                    
                     <div class="personal_data">
                         <div class="container_edit">
-                            <div class="edit_profile"><a href="#"><i class="far fa-edit"></i></a></div>
+                            <div class="edit_profile"><a href="/users/userEdit/<%=user[0].id%>"><i class="far fa-edit"></i></a></div>
                             <div class="title_edit">Modificar tu perfil</div>
                         </div>
                         <div class="container_name">
                             <div class="title_name">Nombre</div>
-                            <div class="name"><%= user.name%>  </div>
+                            <div class="name"><%= user[0].name%>  </div>
                         </div>
                         <div class="container_lastName">
                             <div class="title_lastName">Apellidos</div>
-                            <div class="lastName"><%= user.lastName%> </div>
+                            <div class="lastName"><%= user[0].lastName%> </div>
                         </div>
 
                         <div class="container_email">
                             <div class="title_email">
                                 Correo electrónico</div>
-                            <div class="email"><%= user.email%></div>
+                            <div class="email"><%=user[0].email%></div>
                         </div>
                     </div>
                     
                 </div>
-                
+                <% }else{ %> 
+                    <div class="container_card" >
+                        <figure class="img_user_profile">
+                            <img src="/img/users_avatars/<%= user.avatar%> " alt="image_profile">
+                        </figure>
+                       
+                        <div class="personal_data">
+                            <div class="container_edit">
+                                <div class="edit_profile"><a href="/users/userEdit/<%=user.id%>"><i class="far fa-edit"></i></a></div>
+                                <div class="title_edit">Modificar tu perfil</div>
+                            </div>
+                            <div class="container_name">
+                                <div class="title_name">Nombre</div>
+                                <div class="name"><%= user.name%>  </div>
+                            </div>
+                            <div class="container_lastName">
+                                <div class="title_lastName">Apellidos</div>
+                                <div class="lastName"><%= user.lastName%> </div>
+                            </div>
+    
+                            <div class="container_email">
+                                <div class="title_email">
+                                    Correo electrónico</div>
+                                <div class="email"><%= user.email%></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <% }%>
                 </form>
                 </section>
                 

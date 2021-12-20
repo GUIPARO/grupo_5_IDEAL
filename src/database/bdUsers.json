@@ -1,11 +1,12 @@
 [
-  {
-    "id": 1,
-    "name": "Ana Maria",
-    "lastName": "Diaz Obando",
-    "email": "anamaria@gmail.com",
-    "password": "anita123",
-    "avatar": "defaulf.png",
-    "role": 5
-  }
+    {
+        "id": 1,
+        "name": "Ana",
+        "lastName": "Díaz",
+        "email": "ana@gmail.com",
+        "password": "$2a$10$3YcbjahRE8JDq77J3Dx6iu3BmEdCigoLuL6x/izcp4naKVnu1Gjn2",
+        "confirm_password": "$2a$10$b6LZvCkireW0Q52TFeCo4.omwGnckH3FucilS8c5eu1ZdJp7hU1J2",
+        "avatar": "foto-1639837494127_default-avatar.jpg",
+        "role": 5
+    }
 ]

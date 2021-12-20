@@ -7,13 +7,26 @@
         </figure>
         <nav>
             <ul class="header_list">
+                <% if (locals.islogged){ %>
+                    <% if (locals.userLogged.role == 5){ %>
+                <li class="menu"><a class="nav-link_img" href="#" > 
+                    <span> Administrar</span><span>                          
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li> <a class="dropdown-item" href="/products/admin">Productos</a></li>                    
+                        <li> <a class="dropdown-item" href="/users/admin/">Usuarios</a></li>
+                    </ul>
+                    </li>
+                    <% } %> 
+                    <% } %> 
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/products/cotizacion">Servicios</a></li>
                 <li><a href="/products/productsList">Productos</a></li>
+
                 <% if (locals.islogged){ %>
                     <li class="menu"><a class="nav-link_img" href="#" >
                         <span class="link_img">
-                            <img src="/img/users_avatars/<%= locals.userLogged.avatar %> " width="40" style="border-radius: 50%;"> 
+                            <img src="/img/users_avatars/<%= locals.userLogged.avatar %> "> 
                         </span>  
                         <span><%= locals.userLogged.name %> </span>                        
                         </a>

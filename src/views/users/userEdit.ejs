@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head") %>
+<body>
+    <%- include("../partials/header") %>
+    <main class="register-main">
+        
+            <form class = "register-form" action="/users/userEdit/<%=userEdit[0].id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <h2 class="title-register">Editar</h2>
+                
+                <input class= "form" type="text" name="name" placeholder="Ingresa tus nombres" value="<%= userEdit[0].name%>">
+                <%= locals.errors && errors.name ? errors.name.msg : ''%> 
+            
+                <input class= "form" type="text" name="lastName"  placeholder="Ingresa tus apellidos"  value="<%= userEdit[0].lastName%>" >
+                <% if(locals.errors && errors.lastName) { %>
+                    <div> <%= errors.lastName.msg %> </div>
+                    <% } %> 
+                <input class= "form" type="email" name="email" placeholder="Ingresa tu correo"  value="<%= userEdit[0].email%>">
+                <% if(locals.errors && errors.email) { %>
+                    <div> <%= errors.email.msg %> </div>
+                    <% } %> 
+
+                <input class= "form" type="password" name="password"  placeholder="Ingresa tu nueva contraseña" >
+                <% if(locals.errors && errors.password) { %>
+                    <div> <%= errors.password.msg %> </div>
+                    <% } %> 
+                <input class= "form" type="password" name="confirm_password" placeholder="Confirma tu contraseña">
+                <% if(locals.errors && errors.confirm_password) { %>
+                    <div> <%= errors.confirm_password.msg %> </div>
+                    <% } %> 
+
+                <label for ="avatar"  name="avatar">Modificar imagen de perfil</label>
+                <figure class="container_editAvatar">
+                    <img class="ditAvatar" src="/img/users_avatars/<%=userEdit[0].avatar%>" alt="foto_usuario">
+                </figure>    
+                <input class= "form" type="file" name="avatar"  placeholder="Debes eligir tu avatar...">
+                <% if (locals.errors && errors.avatar) { %>
+                    <div> <%= errors.avatar.msg %></div>
+                <% } %>
+                
+                <% if (locals.userLogged.role == 5){ %>
+                <label for ="role"  name = "role"> Editar rol del usuario</label>
+                <input class= "form" type="number" name="role" value="<%=userEdit[0].role%>" >
+                <% } %> 
+
+                <button class = "buttons" type="submit" class="submit"><span>Enviar</span></button>
+        
+            </form>
+    </main>
+    <%- include("../partials/footer") %>
+</body>
+</html>
