@@ -5,70 +5,59 @@
     <body>
         <%- include("../partials/header") %>
             <main>
-                
                 <section class="info_profile">
                     <form class="login_form" action="/">
-                    
                         <% if(user[0]) {%> 
-                    <div class="container_card" >
-                    <figure class="img_user_profile">
-                        <img src="/img/users_avatars/<%= user[0].avatar%> " alt="image_profile">
-                    </figure>
-                   
-                    <div class="personal_data">
-                        <div class="container_edit">
-                            <div class="edit_profile"><a href="/users/userEdit/<%=user[0].id%>"><i class="far fa-edit"></i></a></div>
-                            <div class="title_edit">Modificar tu perfil</div>
-                        </div>
-                        <div class="container_name">
-                            <div class="title_name">Nombre</div>
-                            <div class="name"><%= user[0].name%>  </div>
-                        </div>
-                        <div class="container_lastName">
-                            <div class="title_lastName">Apellidos</div>
-                            <div class="lastName"><%= user[0].lastName%> </div>
-                        </div>
-
-                        <div class="container_email">
-                            <div class="title_email">
-                                Correo electrónico</div>
-                            <div class="email"><%=user[0].email%></div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <% }else{ %> 
-                    <div class="container_card" >
-                        <figure class="img_user_profile">
-                            <img src="/img/users_avatars/<%= user.avatar%> " alt="image_profile">
-                        </figure>
-                       
-                        <div class="personal_data">
-                            <div class="container_edit">
-                                <div class="edit_profile"><a href="/users/userEdit/<%=user.id%>"><i class="far fa-edit"></i></a></div>
-                                <div class="title_edit">Modificar tu perfil</div>
-                            </div>
-                            <div class="container_name">
-                                <div class="title_name">Nombre</div>
-                                <div class="name"><%= user.name%>  </div>
-                            </div>
-                            <div class="container_lastName">
-                                <div class="title_lastName">Apellidos</div>
-                                <div class="lastName"><%= user.lastName%> </div>
-                            </div>
-    
-                            <div class="container_email">
-                                <div class="title_email">
-                                    Correo electrónico</div>
-                                <div class="email"><%= user.email%></div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <% }%>
-                </form>
+                            <article class="description_profile">
+                                <table class="table_profile">
+                                    <tbody>
+                                        <tr>
+                                            <td class="user_image">
+                                                <figure class="container_image">
+                                                    <img class="image_user" src="/img/users_avatars/<%= user[0].avatar%> " alt="Imagen del producto">
+                                                </figure>
+                                                <div class="welcome_user">
+                                                    <span>Tu pefil</span>
+                                                    <span><%= user[0].name%></span>
+                                                </div>
+                                            </td>
+                                            
+                                            <td class="user_name" data-title="Nombre"><span class="info"><a href="#"><%= user[0].name%> </a></span></td>
+                                            <td class="user_LastName" data-title="Apellidos"><span class="info"><%= user[0].lastName%></span></td>
+                                            <td class="user_email" data-title="Correo electrónico"><span class="info"><%=user[0].email%></span></td>
+                                            <td class="edit" data-title="Editar"><span class="info"><a href="/users/userEdit/<%=user[0].id%>"><i class="far fa-edit"></i></a></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                        <% }else{ %> 
+                            <section class="info_profile">
+                            <form class="login_form" action="/">
+                            <article class="description_profile">
+                                <table class="table_profile">
+                                    <tbody>
+                                        <tr>
+                                            <td class="user_image">
+                                                <figure class="container_image">
+                                                    <img class="image_user" src="/img/users_avatars/<%= user.avatar%> " alt="Imagen del producto">
+                                                </figure>
+                                                <div class="welcome_user">
+                                                    <span>Tu pefil</span>
+                                                    <span><%= user.name%></span>
+                                                </div>
+                                            </td>
+                                            
+                                            <td class="user_name" data-title="Nombre"><span class="info"><a href="#"><%= user.name%> </a></span></td>
+                                            <td class="user_LastName" data-title="Apellidos"><span class="info"><%= user.lastName%></span></td>
+                                            <td class="user_email" data-title="Correo electrónico"><span class="info"><%=user.email%></span></td>
+                                            <td class="edit" data-title="Editar"><span class="info"><a href="/users/userEdit/<%=user.id%>"><i class="far fa-edit"></i></a></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                        <% }%>
+                    </form>
                 </section>
-                
             </main>
             <%- include("../partials/footer") %>
     </body>

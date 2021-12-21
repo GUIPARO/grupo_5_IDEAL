@@ -6,7 +6,7 @@
     <main class="register-main">
         
             <form class = "register-form" action="/users/userEdit/<%=userEdit[0].id%>?_method=PUT" method="POST" enctype="multipart/form-data">
-                <h2 class="title-register">Editar</h2>
+                <h2 class="title-register">Editar datos</h2>
                 
                 <input class= "form" type="text" name="name" placeholder="Ingresa tus nombres" value="<%= userEdit[0].name%>">
                 <%= locals.errors && errors.name ? errors.name.msg : ''%> 

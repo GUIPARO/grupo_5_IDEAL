@@ -61,7 +61,7 @@
 - Tablero en Jira
 - Mantener ambiente del grupo
 - Delegar tareas
-- Buenas comunicación
+- Buena comunicación
 - Notificar problemas al realizar tareas asignadas
 
 ### More of ### 
@@ -79,4 +79,33 @@
 
 ### Less of ### 
 - Desviarnos del tema prioritario
+
+## Sprint 5 ##
+
+### Keep doing ###
+-- Seguir realizando reuniones
+- Entregar trabajos a tiempo
+- Tablero en Jira
+- Mantener ambiente del grupo
+- Delegar tareas
+- Buena comunicación
+- Notificar problemas al realizar tareas asignadas
+
+### More of ### 
+- Concretar ideas
+- Mejorar diseño de vistas
+- Despejar dudas con los profesores
+
+###  Start doing ### 
+- Notificar cambios en el repositorio 
+- Implementar reunion weekly
+
+### Stop doing ### 
+- Pereza
+- Procastinar
+- Postergar reuniones
+
+### Less of ### 
+- Desviarnos del tema prioritario
+
 

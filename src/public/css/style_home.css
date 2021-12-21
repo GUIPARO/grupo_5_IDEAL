@@ -570,7 +570,7 @@ footer .mapa_ubicacion {
     flex-direction: column;
     flex-wrap: wrap;
     width: 80%;
-    height: 430px;
+    height: 450px;
     max-width: 1000px;
     margin: 30px auto;
     align-items: center;
@@ -588,7 +588,7 @@ footer .mapa_ubicacion {
 
 .login_form .input_login{
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
     width: 70%;
     max-width: 300px;
     height: 40px;
@@ -601,6 +601,7 @@ footer .mapa_ubicacion {
 .login_form input:last-child {
     background-color: #1e2d44e0;
     color: white;
+    cursor: pointer;
 }
 .sign-in input:last-child{
     background-color: #1e2d44e0;
@@ -650,28 +651,12 @@ footer .mapa_ubicacion {
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: 2px 0;
-  
+    margin: 2px 0;  
   }
-  .register-form{
-    box-shadow: 0 5px 12px grey;
-    border-radius: 5px;
-   
-  }
+
   .register-form h2{
       text-align: center;
       color:#1e2d44e0;
-  }
-
-  .register-form .form {
-      border-radius: 5px;
-      display: block;
-      margin: 5px auto;
-      width: 70%;
-      border: 2px solid #1e2d44e0;
-      font-size: 18px ;
-      padding:10px;
-      margin-bottom: 1px;
   }
 
   .register-form label{
@@ -701,11 +686,11 @@ footer .mapa_ubicacion {
     border-radius: 5px;
     margin: 20px auto;
     font-size: 18px;
-    display: inline-block;
     height: 40px;
     padding: 10px;
     border: 2px solid #1e2d44e0;
     max-width: 550px;
+    cursor: pointer;
 }
 .register-form .low_section  {
     display: flex;
@@ -752,14 +737,12 @@ footer .mapa_ubicacion {
     color:grey;
 }
 .cotizacion-main .service-form{
-display: flex;
-width: 90%;
-max-width: 550px;
-flex-direction: column;
-background-color: #FFF;
-padding: 35px 25px;
-gap: 8px;
-margin: 0 auto;
+    width: 90%;
+    max-width: 550px;
+    margin: 20px auto;
+    box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
+    background-color: #fff;
+    border-radius: 15px;
 }
 
 .container-serviceform .select_service:hover{
@@ -870,6 +853,7 @@ margin: 0 auto;
   .register-form input:last-child {
     background-color: #1e2d44e0;
     color: white;
+ 
 }
 
   .register-main .register-form {
@@ -877,11 +861,12 @@ margin: 0 auto;
     width: 90%;
     max-width: 550px;
     flex-direction: column;
-    background-color: #FFF;
     padding: 35px 25px;
     gap: 8px;
     margin: 10px auto;
-   
+    box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
+    background-color: #fff;
+    border-radius: 15px;
   }
 
   .register-form .politicas {
@@ -1602,55 +1587,74 @@ button.finish_shop:hover{
 
 /*PROFILE*/
 
-.container_card{
-    margin: 30px auto 20px;
-    width: 290px;
-    border-radius: 10px;
-    position: relative;
-    background: #1e2d44;
-    padding: 10px;
+.description_profile{
+    margin: auto;
+    max-width: 1000px;
 }
-.img_user_profile{
-    margin: 15px auto;
+
+.table_profile{
+    margin: 20px auto;
+    box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
+    background-color: #fff;
+    border-radius: 15px;
+    width: 380px;
+    max-width: 500px;
+}
+
+.table_profile .user_image{
+    display: flex;
+    border-bottom: 3px solid #e3e038;
+}
+
+.container_image{
     text-align: center;
-    background: #1e2d44;
+    width: 50%;
 }
 
-.img_user_profile img{
-    width: 180px;
-    height: 150px;
-    border: 3px solid #e3e038;
-    border-radius: 10px;
-    overflow: hidden;   
+.container_image img{
+    width: 100%;
+    border-radius: 100%;
+    
 }
 
-.personal_data{
-    margin-top: 15px;
+.table_profile td::before{
+    content: attr(data-title);
+    float: left;
+    text-transform: uppercase;
+} 
+
+.table_profile tbody .user_name a{
+    text-decoration: none;
+    color: #999;
 }
 
-.container_edit{
-    text-align: center;
-    color: white;
+.table_profile td{
+    display: block;
+   
+    width: 85%;
+    margin: 20px auto;
+    font-size: 18px;
+    padding: 5px;
+    text-align: right;
+    color: #1e2d44;
 }
 
-.container_edit a {
-    color: #e3e038;
+.welcome_user{
+    margin: 50px 30px;
+    text-align: left;
+    font-size: 30px;
 }
 
-.container_name, .container_lastName,
-.container_email
-{
-    margin: 10px;
+.welcome_user span{
+    display: block;
 }
 
-.title_lastName, 
-.title_name, .title_email{
-    color: #e3e038;
-    margin-bottom: 3px;
+td .info, .edit a{
+    color: #999;
 }
 
-.name, .lastName, .email{
-    color: white
+.edit a:hover{
+    color:rgb(114, 114, 116);
 }
 
 .login_form a button{
@@ -1748,6 +1752,8 @@ button.finish_shop:hover{
         display: block;
         border-bottom: 1px solid #ddd;
     }
+
+    
 }
 
 @media (min-width: 769px) {
@@ -1872,10 +1878,10 @@ button.finish_shop:hover{
 
     .main_login {
         justify-content: space-evenly;
-        box-shadow: 0 5px 12px grey;
-        border-radius: 5px;
-        margin: 15px auto;
         max-width: 500px;
+        box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
+        background-color: #fff;
+        border-radius: 15px;
 
  }
 
@@ -1908,7 +1914,7 @@ button.finish_shop:hover{
 
     header nav li, 
     header nav i {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     .services_section ul {

@@ -43,3 +43,23 @@
 |¿Se encontró con algún impedimento|  Dificultades generales al implementar rutas y lógica en controladores|Dificultades generales al implementar rutas y lógica en controladores | Dificultades generales al implementar rutas y lógica en controladores|
 |Solución| Socialización con el equipo y profesores |Socialización con el equipo y profesores |Socialización con el equipo y profesores|
 | ¿Qué haré la próxima semana?|-| Ingresar la carpeta public en SRC|Actualizar rutas de las imagenes|
+
+### Sprint 5 
+------------
+
+
+|  Weekly | Ana Díaz| Guisella Patron| Julian Castillo|
+| :---------------:|:---------------: |:---------------: |:---------------:|
+|¿Qué he hecho esta semana?|Implementar el registro de usuarios(Multer)| Implementar rutas de huéspedes y de usuarios, Ingresar la carpeta plubic en SRC | Crear carpeta Data, Agregar nuevo campo para diferenciar los productos, Visualizar Información del producto al editarlo|
+|¿Se encontró con algún impedimento|No se presento nigun impedimento  |No se presento nigun impedimento |No se presento nigun impedimento |
+|Solución| - |- |-|
+| ¿Qué haré la próxima semana?| Encriptar la contraseña ingresada por el usuario (con bcrypt)|Implementar la entidad de usuarios | Implementar el modelo del controlador de los productos|
+
+---
+
+|  Weekly | Ana Díaz| Guisella Patron| Julian Castillo|
+| :---------------:|:---------------: |:---------------: |:---------------:|
+|¿Qué he hecho esta semana?| Encriptar la contraseña ingresada por el usuario (con bcrypt)|Implementar la entidad de usuarios | Implementar el modelo del controlador de los productos|
+|¿Se encontró con algún impedimento|No se presento nigun impedimento|No se presento nigun impedimento |No se presento nigun impedimento |
+|Solución| - |- |-|
+| ¿Qué haré la próxima semana?|- |- |-|

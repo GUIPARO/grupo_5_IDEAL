@@ -161,7 +161,7 @@ const controller ={
           return user.id == id;
         });
 
-        console.log(userEdit)
+       
     
         let image = path.join(__dirname, "../public/img/users_avatars/" + userEdit[0].avatar);
         fs.unlinkSync(image);
