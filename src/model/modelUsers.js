@@ -35,6 +35,10 @@ const User= {
 		let userFind = allUsers.find(user => user[field] === text)
 		return userFind
 	},
+    writeInDatabase : function (datos) {
+        let jsonUsers = JSON.stringify(datos, null, 4);
+        fs.writeFileSync(path.resolve(__dirname, '../database/bdUsers.json'), jsonUsers);
+    },
     create:function (userData) {
         let allUsers = this.findAll();
         let newUser = {
@@ -43,9 +47,7 @@ const User= {
         }
 
         allUsers.push(newUser);
-        let userJSON= JSON.stringify (allUsers, null, 2);
-        fs.writeFileSync(path.resolve(__dirname, '../database/bdUsers.json'),
-        userJSON )
+        this.writeInDatabase(allUsers)
         return newUser;
     }
 }

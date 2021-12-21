@@ -202,6 +202,64 @@ header .bar_search {
     display: none;
 }
 
+header nav ul{
+    list-style: none;
+
+}
+
+header nav ul li a:hover {
+    color:#172335;
+    transition: all .3s;
+}
+
+header nav .header_list > li{
+    position: relative;
+}
+
+.dropdown-menu{
+    position: absolute;
+    background: #7f818d;
+    opacity: 0.7;
+    width: 100%;
+    display: none
+}
+
+.header_list menu:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-link_img{
+    display: inline-block;
+}
+
+.nav-link_img .link_img{
+    vertical-align: middle;
+    display: inherit;
+}
+
+.nav-link_img .link_img img{ 
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+}
+
+.dropdown-menu li a{
+    display: block;
+    padding: 8px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu li{
+    margin-right: 0;
+    text-align: center;
+}
+
+.header_list li:hover .dropdown-menu{
+    display: block;
+}
+
 /* HASTA ACA VA EL HEADER  */
 
 /* INICIO CARROUSEL  */
@@ -512,9 +570,9 @@ footer .mapa_ubicacion {
     flex-direction: column;
     flex-wrap: wrap;
     width: 80%;
-    height: 400px;
+    height: 450px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 30px auto;
     align-items: center;
     justify-content: space-around;
 }
@@ -524,16 +582,13 @@ footer .mapa_ubicacion {
     color: #1e2d44e0;
 }
 
-
-
-
 .main_login form {
     width: 100%;
 }
 
-.login_form input {
+.login_form .input_login{
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
     width: 70%;
     max-width: 300px;
     height: 40px;
@@ -543,10 +598,10 @@ footer .mapa_ubicacion {
     font-size: 18px;
 }
 
-
 .login_form input:last-child {
     background-color: #1e2d44e0;
     color: white;
+    cursor: pointer;
 }
 .sign-in input:last-child{
     background-color: #1e2d44e0;
@@ -567,50 +622,50 @@ footer .mapa_ubicacion {
     font-weight: bold;
 }
 
+.login_form .container_remember{
+    display: flex;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 300px;
+}
+
+.container_remember label{
+    margin-left: 5px;;
+}
+
+.main_login .danger_text{
+    
+    color:red;
+    width: 70%;
+    margin: 10px auto;
+    max-width: 300px;
+}
+
 /* LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN LOGIN  */
 
 /* INICIO REGISTER MAIN */
-.uploadUserAvatar {
-    display:flex;
-    justify-content: left;
-    padding: 0 75px;
-}
+
 .register-main {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: 2px 0;
-  
+    margin: 2px 0;  
   }
-  .register-form{
-    box-shadow: 0 5px 12px grey;
-    border-radius: 5px;
-   
-  }
+
   .register-form h2{
       text-align: center;
       color:#1e2d44e0;
   }
 
-  .register-form .form {
-      border-radius: 5px;
-      display: block;
-      margin: 5px auto;
-      width: 70%;
-      border: 2px solid #1e2d44e0;
-      font-size: 18px ;
-      padding:10px;
-      margin-bottom: 1px;
-  }
-
-  .danger_text{
-      color:red;
-      width: 70%;
-      margin: 10px auto;
-
-  }
+  .register-form label{
+    display: block;
+    font-size: 18px ;
+    color: #1e2d44e0;
+    margin: 5px auto;
+    width: 70%;
+}
   
   .register-form input:last-child {
     background-color: #1e2d44e0;
@@ -631,11 +686,11 @@ footer .mapa_ubicacion {
     border-radius: 5px;
     margin: 20px auto;
     font-size: 18px;
-    display: inline-block;
     height: 40px;
     padding: 10px;
     border: 2px solid #1e2d44e0;
     max-width: 550px;
+    cursor: pointer;
 }
 .register-form .low_section  {
     display: flex;
@@ -652,6 +707,22 @@ footer .mapa_ubicacion {
     font-weight: bold;
 }
 
+.container_editAvatar{
+    width: 60%;
+    margin: 0 auto 10px;
+    text-align: center;
+}
+
+.container_editAvatar .ditAvatar{
+    width: 100%;
+}
+
+.register-form .danger_text{
+    color:red;
+    width: 70%;
+    margin: 10px auto;
+}
+
 /* FINAl REGISTER REGISTER REGISTER REGISTER MAIN */
 
 /* INICIO COTIZACION COTIZACION COTIZACION COTIZACION MAIN */ 
@@ -666,14 +737,12 @@ footer .mapa_ubicacion {
     color:grey;
 }
 .cotizacion-main .service-form{
-display: flex;
-width: 90%;
-max-width: 550px;
-flex-direction: column;
-background-color: #FFF;
-padding: 35px 25px;
-gap: 8px;
-margin: 0 auto;
+    width: 90%;
+    max-width: 550px;
+    margin: 20px auto;
+    box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
+    background-color: #fff;
+    border-radius: 15px;
 }
 
 .container-serviceform .select_service:hover{
@@ -765,7 +834,7 @@ margin: 0 auto;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #ffffff;
+    background-color: #fafafa;
     margin: 2px 0;
   }
 
@@ -784,6 +853,7 @@ margin: 0 auto;
   .register-form input:last-child {
     background-color: #1e2d44e0;
     color: white;
+ 
 }
 
   .register-main .register-form {
@@ -791,11 +861,12 @@ margin: 0 auto;
     width: 90%;
     max-width: 550px;
     flex-direction: column;
-    background-color: #FFF;
     padding: 35px 25px;
     gap: 8px;
     margin: 10px auto;
-   
+    box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
+    background-color: #fff;
+    border-radius: 15px;
   }
 
   .register-form .politicas {
@@ -1512,9 +1583,93 @@ button.finish_shop:hover{
     color: #1e2d44e0;
 }
 
-
-
 /* ESTILOS VISTA LISTADO DE PRODUCTOS  */
+
+/*PROFILE*/
+
+.description_profile{
+    margin: auto;
+    max-width: 1000px;
+}
+
+.table_profile{
+    margin: 20px auto;
+    box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
+    background-color: #fff;
+    border-radius: 15px;
+    width: 380px;
+    max-width: 500px;
+}
+
+.table_profile .user_image{
+    display: flex;
+    border-bottom: 3px solid #e3e038;
+}
+
+.container_image{
+    text-align: center;
+    width: 50%;
+}
+
+.container_image img{
+    width: 100%;
+    border-radius: 100%;
+    
+}
+
+.table_profile td::before{
+    content: attr(data-title);
+    float: left;
+    text-transform: uppercase;
+} 
+
+.table_profile tbody .user_name a{
+    text-decoration: none;
+    color: #999;
+}
+
+.table_profile td{
+    display: block;
+   
+    width: 85%;
+    margin: 20px auto;
+    font-size: 18px;
+    padding: 5px;
+    text-align: right;
+    color: #1e2d44;
+}
+
+.welcome_user{
+    margin: 50px 30px;
+    text-align: left;
+    font-size: 30px;
+}
+
+.welcome_user span{
+    display: block;
+}
+
+td .info, .edit a{
+    color: #999;
+}
+
+.edit a:hover{
+    color:rgb(114, 114, 116);
+}
+
+.login_form a button{
+    width: 200px;
+    background-color: #1e2d44e0;
+    color: white;
+    border-radius: 5px;
+    margin: 20px auto;
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #1e2d44e0;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIS HOME  */
 
 /* MEDIA QUERIS HOME  */
 
@@ -1597,6 +1752,8 @@ button.finish_shop:hover{
         display: block;
         border-bottom: 1px solid #ddd;
     }
+
+    
 }
 
 @media (min-width: 769px) {
@@ -1720,12 +1877,11 @@ button.finish_shop:hover{
     }
 
     .main_login {
-        height: 60vh;
         justify-content: space-evenly;
-        box-shadow: 0 5px 12px grey;
-        border-radius: 5px;
-        margin: 15px auto;
         max-width: 500px;
+        box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
+        background-color: #fff;
+        border-radius: 15px;
 
  }
 
@@ -1758,7 +1914,7 @@ button.finish_shop:hover{
 
     header nav li, 
     header nav i {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     .services_section ul {

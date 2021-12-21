@@ -4,6 +4,9 @@ const path = require('path')
 const multer = require("multer");
 const controller = require('../controllers/products.controller.js')
 
+const authMiddleware = require('../middlewares/authMiddleware')
+const adminMiddleware = require('../middlewares/adminMiddleware')
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.resolve(__dirname, "../public/img/products_image"));
@@ -19,9 +22,9 @@ router.get('/cotizacion', controller.cotizacion);
 
 router.get('/product/:id', controller.product);
 
-router.get('/productCart',controller.productCart);
+router.get('/productCart',authMiddleware,controller.productCart);
 
-router.get('/admin',controller.admin);
+router.get('/admin',adminMiddleware,controller.admin);
 
 //Editar producto
 router.get('/adminEdit/:id',controller.adminEdit);

@@ -1,29 +1,12 @@
 [
-  {
-    "id": 1,
-    "name": "Ana Maria",
-    "lastName": "Diaz Obando",
-    "email": "anamaria@gmail.com",
-    "password": "anita123",
-    "avatar": "defaulf.png"
-  },
-  {
-    "id": 2,
-    "name": "loca",
-    "lastName": "gata",
-    "email": "gata@gmail.com",
-    "password": "gargaerheth",
-    "confirm_password": "sgsfgehstrh",
-    "politics": "1",
-    "avatar": "foto-1639711662997_img-cafetera-moulinex.jpg"
-  },
-  {
-    "id": 3,
-    "name": "gata",
-    "lastName": "loca",
-    "email": "reloca@queloca.com",
-    "password": "$2a$10$3TohHZ7DZaLzfJTSVb72qetG3ar1PvRX1POamlIgY4zTi9PtFaYpO",
-    "confirm_password": "$2a$10$iGDdcxLXmhP3S/ofmfCYFOcw2m08DsT1vDH5SWtIUjg3sFLv1Spue",
-    "avatar": "foto-1639713523972_img-samsung-galaxy-s10.jpg"
-  }
+    {
+        "id": 1,
+        "name": "Ana",
+        "lastName": "Díaz",
+        "email": "ana@gmail.com",
+        "password": "$2a$10$z/OP85cBCQhuTC3bUZgsbOF7Tpy87wDa/hAtAW2/VEBHt7t.Kx4qK",
+        "confirm_password": "$2a$10$M4NdS1AftGFrjKPVxhhPI.sx/McoiFH5iBh/X13i/.GG877NXgtlK",
+        "role": 5,
+        "avatar": "foto-1640127703449_WhatsApp Image 2021-12-21 at 6.00.39 PM.jpeg"
+    }
 ]
