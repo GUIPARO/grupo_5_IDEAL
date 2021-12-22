@@ -1609,12 +1609,14 @@ button.finish_shop:hover{
 .container_image{
     text-align: center;
     width: 50%;
+    display: grid;
+    place-items: center;
 }
 
 .container_image img{
     width: 100%;
     border-radius: 100%;
-    
+    object-fit: cover;
 }
 
 .table_profile td::before{
