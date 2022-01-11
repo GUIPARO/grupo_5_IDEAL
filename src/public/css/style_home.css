@@ -145,6 +145,7 @@ body {
 body .color_arriba {
     background-color: #fafafa;
     border-bottom: 4px solid #e3e038;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 5%);
 }
 
 body .color_abajo {
@@ -208,8 +209,8 @@ header nav ul{
 }
 
 header nav ul li a:hover {
-    color:#172335;
-    transition: all .3s;
+    color: #172335;
+    transition: all .1s;
 }
 
 header nav .header_list > li{
@@ -1783,6 +1784,10 @@ td .info, .edit a{
     {
         font-size: 20px;
         margin-right: 23px;
+    }
+
+    header .icon_section i {
+        font-size: 19px;
     }
 
     header .fa-bars {

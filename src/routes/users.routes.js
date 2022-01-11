@@ -3,6 +3,7 @@ const router = express.Router();
 const multer = require('multer')
 const path = require('path')
 const { body } = require('express-validator');//Requiero el paquete expres-validator
+
 //*---------CONTROLADOR--------------*//
 const usersController = require('../controllers/users.controllers.js')//Requerir el modulo de los controladores
 
