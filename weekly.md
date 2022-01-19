@@ -72,9 +72,7 @@
 
 |  Weekly | Ana Díaz| Guisella Patron| Julian Castillo|
 | :---------------:|:---------------: |:---------------: |:---------------:|
-|¿Qué he hecho esta semana?|escribir las
-sentencias de SQL que crearán las tablas y sus relaciones | configuración para que Sequelize se conecte a la base de datos y  archivos de modelos para representar las tablas| armar el
-Diagrama de Entidades y Relaciones (DER)|
+|¿Qué he hecho esta semana?|escribir las sentencias de SQL que crearán las tablas y sus relaciones| configuración para que Sequelize se conecte a la base de datos y archivos de modelos para representar las tablas| armar el Diagrama de Entidades y Relaciones (DER)|
 |¿Se encontró con algún impedimento| Problemas con el uso de Workbench | | |
 |Solución| Dialogar en grupo y optar por usar DBeaver| No se presento nigun impedimento | No se presento nigun impedimento |
 | ¿Qué haré la próxima semana?| | | |
