@@ -44,9 +44,10 @@
 |Solución| Socialización con el equipo y profesores |Socialización con el equipo y profesores |Socialización con el equipo y profesores|
 | ¿Qué haré la próxima semana?|-| Ingresar la carpeta public en SRC|Actualizar rutas de las imagenes|
 
-### Sprint 5 
+### Sprint 5
 ------------
 
+### 30/11/2021 - 14/12/2021
 
 |  Weekly | Ana Díaz| Guisella Patron| Julian Castillo|
 | :---------------:|:---------------: |:---------------: |:---------------:|
@@ -55,7 +56,7 @@
 |Solución| - |- |-|
 | ¿Qué haré la próxima semana?| Encriptar la contraseña ingresada por el usuario (con bcrypt)|Implementar la entidad de usuarios | Implementar el modelo del controlador de los productos|
 
----
+### 15/12/2021 - 21/12/2021
 
 |  Weekly | Ana Díaz| Guisella Patron| Julian Castillo|
 | :---------------:|:---------------: |:---------------: |:---------------:|
@@ -63,3 +64,29 @@
 |¿Se encontró con algún impedimento|No se presento nigun impedimento|No se presento nigun impedimento |No se presento nigun impedimento |
 |Solución| - |- |-|
 | ¿Qué haré la próxima semana?|- |- |-|
+
+### Sprint 6
+------------
+
+### 21/12/2021 - 08/01/2022
+
+|  Weekly | Ana Díaz| Guisella Patron| Julian Castillo|
+| :---------------:|:---------------: |:---------------: |:---------------:|
+|¿Qué he hecho esta semana?|escribir las
+sentencias de SQL que crearán las tablas y sus relaciones | configuración para que Sequelize se conecte a la base de datos y  archivos de modelos para representar las tablas| armar el
+Diagrama de Entidades y Relaciones (DER)|
+|¿Se encontró con algún impedimento| Problemas con el uso de Workbench | | |
+|Solución| Dialogar en grupo y optar por usar DBeaver| No se presento nigun impedimento | No se presento nigun impedimento |
+| ¿Qué haré la próxima semana?| | | |
+
+### 08/01/2022 - 25/01/2021
+
+|  Weekly | Ana Díaz| Guisella Patron| Julian Castillo|
+| :---------------:|:---------------: |:---------------: |:---------------:|
+|¿Qué he hecho esta semana?| | | |
+|¿Se encontró con algún impedimento||||
+|Solución|  |  | |
+| ¿Qué haré la próxima semana?| | | |
+
+
+
