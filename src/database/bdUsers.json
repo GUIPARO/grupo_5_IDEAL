@@ -4,9 +4,9 @@
         "name": "Ana",
         "lastName": "Díaz",
         "email": "ana@gmail.com",
-        "password": "$2a$10$3YcbjahRE8JDq77J3Dx6iu3BmEdCigoLuL6x/izcp4naKVnu1Gjn2",
-        "confirm_password": "$2a$10$b6LZvCkireW0Q52TFeCo4.omwGnckH3FucilS8c5eu1ZdJp7hU1J2",
-        "avatar": "foto-1639837494127_default-avatar.jpg",
-        "role": 5
+        "password": "$2a$10$z/OP85cBCQhuTC3bUZgsbOF7Tpy87wDa/hAtAW2/VEBHt7t.Kx4qK",
+        "confirm_password": "$2a$10$M4NdS1AftGFrjKPVxhhPI.sx/McoiFH5iBh/X13i/.GG877NXgtlK",
+        "role": 5,
+        "avatar": "foto-1640127703449_WhatsApp Image 2021-12-21 at 6.00.39 PM.jpeg"
     }
 ]
