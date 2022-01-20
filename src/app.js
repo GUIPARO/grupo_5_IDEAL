@@ -6,7 +6,6 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session')
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')// requerir middleware de aplicación
 
-const port = process.env.PORT || 3000;
 
 
 
@@ -39,7 +38,4 @@ app.use("/", indexRoutes)
 app.use("/products", productsRoutes)
 app.use("/users", usersRoutes)
 
-
-// ************ Servidor funcionando ************
-app.listen(port,()=>{ console.log('El server esta corriendo en el puerto 3000')
-});
+module.exports = app;
