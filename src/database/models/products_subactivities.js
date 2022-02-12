@@ -1,7 +1,13 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('products_has_subactivities', {
-    products_product_id: {
+  return sequelize.define('products_subactivities', {
+    id: {
+      autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true
+    },
+    product_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -10,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
         key: 'product_id'
       }
     },
-    subactivities_subactivity_id: {
+    subactivity_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -21,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     sequelize,
-    tableName: 'products_has_subactivities',
+    tableName: 'products_subactivities',
     timestamps: false,
     indexes: [
       {
@@ -29,22 +35,23 @@ module.exports = function(sequelize, DataTypes) {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "products_product_id" },
-          { name: "subactivities_subactivity_id" },
+          { name: "id" },
+          { name: "product_id" },
+          { name: "subactivity_id" },
         ]
       },
       {
         name: "fk_products_has_subactivities_subactivities1_idx",
         using: "BTREE",
         fields: [
-          { name: "subactivities_subactivity_id" },
+          { name: "subactivity_id" },
         ]
       },
       {
         name: "fk_products_has_subactivities_products1_idx",
         using: "BTREE",
         fields: [
-          { name: "products_product_id" },
+          { name: "product_id" },
         ]
       },
     ]

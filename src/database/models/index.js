@@ -4,9 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || 'development';
+const env =  process.env.NODE_ENV.trim() || 'development';
 const config = require(__dirname + '/../config/config.js')[env];
-const initModel = require("./init-models")
+const initModel = require("./init-models.js")
+
 
 // const data = {
 //   production:{

@@ -1,27 +1,30 @@
 const modelProducts = require("../model/modelProducts")
 
+
 const controller = {
 
     cotizacion: (req, res) => {
-        res.render('./products/cotizacion',)
+        res.render('./products/cotizacion')
     },
 
-    product: (req, res) => {
-        const product = modelProducts.product(req.params);
+    product: async (req, res) => {
+        const Findproduct = await modelProducts.findProductById(req.params);
+        const product = await Findproduct
         res.render("./products/product", { product });
     },
     
-    productsList: (req, res) => {
-        const datos = modelProducts.bdProducts();
-        res.render('./products/productsList', { bdProducts : datos });
+    productsList: async (req, res) => {
+        let datos = await modelProducts.bdProducts();
+        let Allproducts = await datos
+        res.render('./products/productsList', { bdProducts : Allproducts });
     },
 
     productCart: (req, res) => {
         res.render('./products/productCart')
     },
 
-    admin: (req, res) => {
-        let datos = modelProducts.bdProducts();
+    admin: async(req, res) => {
+        let datos = await modelProducts.bdProducts();
         res.render('./products/admin' , {products:datos});
     },
 
@@ -30,12 +33,14 @@ const controller = {
     },
 
     adminStore: (req, res) => {
-        modelProducts.adminStore(req.body, req.file);
+        modelProducts.addProduct(req.body, req.file);
         res.redirect('/products/admin');
     },
 
-    adminEdit: (req, res) => {
-        const productEdit = modelProducts.adminEdit(req.params)
+    adminEdit: async (req, res) => {
+        const product = await modelProducts.adminEdit(req.params)
+        const productEdit = await product
+        
         res.render('./products/adminEdit', { productEdit })
 
     },

@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head") %>
-<body>
+  <%- include("../partials/head") %>
+  <body>
     <%- include("../partials/header") %>
-    
+
     <main class="products-view-main">
-        <section class="products-view">
-            <%bdProducts.forEach( product => { %> 
-            <a href="/products/product/<%=product.id%>">
-                <article class="products-container">
-                    <div>
-                        <figure class="image-container">
-                            <img src="/img/products_image/<%=product.image%>" alt="imagen de producto">
-                        </figure>
-                        <p><%=product.fullName%></p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li><%= product.activity%></li>
-                            <li><%=`$ ${product.price}`%></li>
-                        </ul>
-                    </div>
-                </article>
-            </a>
-            <% }); %> 
-        </section>
+      <section class="products-view">
+        <%bdProducts.forEach( product => { %>
+        <a href="/products/product/<%=product.product_id%>">
+          <article class="products-container">
+            <div>
+              <figure class="image-container">
+                <img
+                  src="/img/products_image/<%=product.image%>"
+                  alt="imagen de producto"
+                />
+              </figure>
+              <p><%=product.fullname %></p>
+            </div>
+            <div>
+              <ul>
+                <%product.activity_id_activities.forEach(activity=>{%>
+                <li><%=activity.activity %></li>
+                <%})%>
+                <li><%=`$ ${product.price}`%></li>
+              </ul>
+            </div>
+          </article>
+        </a>
+        <% }); %>
+      </section>
     </main>
 
     <%- include("../partials/footer") %>
-</body>
+  </body>
 </html>

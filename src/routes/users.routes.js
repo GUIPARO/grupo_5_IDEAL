@@ -50,10 +50,10 @@ router.get('/logout/', usersController.logout)
 router.get('/admin',adminMiddleware,usersController.admin);
 
 //Editar usuario
-router.get('/userEdit/:id',usersController.userEdit);
-router.put('/userEdit/:id', uploadUserFile.single("avatar"), usersController.userModified);
+router.get('/userEdit/:id',adminMiddleware,usersController.userEdit);
+router.put('/userEdit/:id', adminMiddleware, uploadUserFile.single("avatar"), usersController.userModified);
 
 //Eliminar usuario
-router.delete ('/delete/:id', usersController.userDelete)
+router.delete ('/delete/:id', adminMiddleware, usersController.userDelete)
 
 module.exports = router;

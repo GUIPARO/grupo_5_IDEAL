@@ -138,7 +138,7 @@ const controller ={
           fs.unlinkSync(routeImage);
       }
       
-      usersDB[indice] = {
+      usersDB[indice]={
           id: id,
           ...edit,
           password: bcrypt.hashSync(req.body.password, 10),

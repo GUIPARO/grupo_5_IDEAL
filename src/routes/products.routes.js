@@ -18,6 +18,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage});
 
+
 router.get('/cotizacion', controller.cotizacion);
 
 router.get('/product/:id', controller.product);
