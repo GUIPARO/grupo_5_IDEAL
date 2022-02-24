@@ -4,7 +4,7 @@ module.exports = {
   development: {
     username: "root",
     password: "1234",
-    database: "db_ideal",
+    database: "datos_ideal",
     host: "127.0.0.1",
     dialect: "mysql",
     port:"4550",

@@ -30,13 +30,13 @@
                 <% users.forEach(user => { %>
                     <% if(user){%>
                 <tr>
-                <form method="POST" action= "/users/delete/<%=user.id%>?_method=DELETE">
-                <td><%=user.id%></td>
+                <form method="POST" action= "/users/delete/<%=user.user_id%>?_method=DELETE">
+                <td><%=user.user_id%></td>
                 <td><%=user.name%></td>
-                <td><%=user.lastName%></td>
+                <td><%=user.lastname%></td>
                 <td><img src="/img/users_avatars/<%=user.avatar%>" alt="fotografia del usuario"></td>
-                <td><a href="/users/profile/<%=user.id%>"><i class="far fa-eye"></i></a></td>
-                <td><a href="/users/userEdit/<%=user.id%>"><i class="far fa-edit"></i></a></td>
+                <td><a href="/users/profile/<%=user.user_id%>"><i class="far fa-eye"></i></a></td>
+                <td><a href="/users/userEdit/<%=user.user_id%>"><i class="far fa-edit"></i></a></td>
                 <td> <button type= "submit"><i class="far fa-trash-alt"></i></button></td>
             </form>
             </tr>

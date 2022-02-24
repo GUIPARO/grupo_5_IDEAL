@@ -32,9 +32,13 @@
             <tr>
               <form
                 method="POST"
-                action="/products/delete/<%=product.id%>?_method=DELETE">
+                action="/products/delete/<%=product.product_id%>?_method=DELETE">
                 <td><%=product.product_id%></td>
-                <td class="actividad"><%=product.activity_id_activities[0].activity%></td>
+                <%product.activity_id_activities.forEach(activity=>{%>
+                <td class="actividad"><%=activity.activity %></td>
+                  <%})%>
+                
+                
                 <td><%=product.fullname%></td>
                 <td>
                   <img
@@ -43,12 +47,12 @@
                   />
                 </td>
                 <td>
-                  <a href="/products/product/<%=product.id%>"
+                  <a href="/products/product/<%=product.product_id%>"
                     ><i class="far fa-eye"></i
                   ></a>
                 </td>
                 <td>
-                  <a href="/products/adminEdit/<%=product.id%>"
+                  <a href="/products/adminEdit/<%=product.product_id%>"
                     ><i class="far fa-edit"></i
                   ></a>
                 </td>
@@ -59,7 +63,8 @@
                 </td>
               </form>
             </tr>
-            <% } %> <% }) %>
+            <% } %> 
+            <% }) %>
           </tbody>
         </table>
       </article>

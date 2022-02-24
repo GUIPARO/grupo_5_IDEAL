@@ -38,20 +38,20 @@ const controller = {
     },
 
     adminEdit: async (req, res) => {
-        const product = await modelProducts.adminEdit(req.params)
-        const productEdit = await product
+        const productEdit = await modelProducts.adminEdit(req.params)
+    
         
         res.render('./products/adminEdit', { productEdit })
 
     },
 
-    adminModified: (req, res) => {
-        modelProducts.adminModified(req.params, req.body, req.file);
+    adminModified: async (req, res) => {
+        await modelProducts.adminModified(req.params, req.body, req.file);
         res.redirect('/products/admin');
     },
 
-    adminDelete:(req,res) => {
-        modelProducts.adminDelete(req.params)
+    adminDelete: async (req,res) => {
+       await  modelProducts.adminDelete(req.params)
         res.redirect('/products/admin');
     }
 }

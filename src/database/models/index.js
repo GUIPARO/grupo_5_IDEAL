@@ -7,8 +7,7 @@ const basename = path.basename(__filename);
 const env =  process.env.NODE_ENV.trim() || 'development';
 const config = require(__dirname + '/../config/config.js')[env];
 const initModel = require("./init-models.js")
-
-
+// 
 // const data = {
 //   production:{
 //   username : `${process.env.DBUSER}`,

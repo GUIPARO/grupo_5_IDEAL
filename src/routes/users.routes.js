@@ -31,11 +31,13 @@ const uploadUserFile = multer({ storage});
 //*---------RUTAS--------------*//
 
 //loguear usuarios
-router.get('/login', guestMiddleware, usersController.login);
+// guestMiddleware
+router.get('/login', usersController.login);
 router.post('/login', validationsLogin,usersController.processLogin);
 
 // CREAR USUARIOS
-router.get('/register',guestMiddleware, usersController.register);
+// guestMiddleware
+router.get('/register', usersController.register);
 router.post('/register', uploadUserFile.single('avatar'),validationsRegister,usersController.processRegister);
 
 // PERFIL DE USUARIOS
@@ -50,10 +52,10 @@ router.get('/logout/', usersController.logout)
 router.get('/admin',adminMiddleware,usersController.admin);
 
 //Editar usuario
-router.get('/userEdit/:id',adminMiddleware,usersController.userEdit);
-router.put('/userEdit/:id', adminMiddleware, uploadUserFile.single("avatar"), usersController.userModified);
+router.get('/userEdit/:id',usersController.adminEdit);
+router.put('/userEdit/:id',adminMiddleware, uploadUserFile.single("avatar"), validationsRegister,usersController.userModified);
 
 //Eliminar usuario
-router.delete ('/delete/:id', adminMiddleware, usersController.userDelete)
+router.delete ('/delete/:id', usersController.userDelete)
 
 module.exports = router;

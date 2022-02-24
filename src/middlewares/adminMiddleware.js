@@ -3,7 +3,7 @@
  */
 
  module.exports = function(req, res, next){
-    if(req.session.userLogged != undefined && req.session.userLogged.role == 5 ){
+    if(req.session.userLogged != undefined && req.session.userLogged.role.role == 5 ){
         next();
     }else{
         res.redirect("/");

@@ -22,10 +22,10 @@
                                                 </div>
                                             </td>
                                             
-                                            <td class="user_name" data-title="Nombre"><span class="info"><a href="#"><%= user[0].name%> </a></span></td>
-                                            <td class="user_LastName" data-title="Apellidos"><span class="info"><%= user[0].lastName%></span></td>
+                                            <td class="user_name" data-title="Nombre"><span class="info"><%= user[0].name%></span></td>
+                                            <td class="user_LastName" data-title="Apellidos"><span class="info"><%= user[0].lastname%></span></td>
                                             <td class="user_email" data-title="Correo electrónico"><span class="info"><%=user[0].email%></span></td>
-                                            <td class="edit" data-title="Editar"><span class="info"><a href="/users/userEdit/<%=user[0].id%>"><i class="far fa-edit"></i></a></span></td>
+                                            <td class="edit" data-title="Editar"><span class="info"><a href="/users/userEdit/<%=user[0].user_id%>"><i class="far fa-edit"></i></a></span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -48,9 +48,9 @@
                                             </td>
                                             
                                             <td class="user_name" data-title="Nombre"><span class="info"><a href="#"><%= user.name%> </a></span></td>
-                                            <td class="user_LastName" data-title="Apellidos"><span class="info"><%= user.lastName%></span></td>
+                                            <td class="user_LastName" data-title="Apellidos"><span class="info"><%= user.lastname%></span></td>
                                             <td class="user_email" data-title="Correo electrónico"><span class="info"><%=user.email%></span></td>
-                                            <td class="edit" data-title="Editar"><span class="info"><a href="/users/userEdit/<%=user.id%>"><i class="far fa-edit"></i></a></span></td>
+                                            <td class="edit" data-title="Editar"><span class="info"><a href="/users/userEdit/<%=user.user_id%>"><i class="far fa-edit"></i></a></span></td>
                                         </tr>
                                     </tbody>
                                 </table>

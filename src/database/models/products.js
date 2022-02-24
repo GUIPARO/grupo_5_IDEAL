@@ -22,7 +22,7 @@ module.exports = function(sequelize, DataTypes) {
     line_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
+      // primaryKey: true,
       references: {
         model: 'lines',
         key: 'line_id'
