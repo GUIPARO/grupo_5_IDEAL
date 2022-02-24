@@ -8,11 +8,12 @@ const controller = {
 
     product: (req, res) => {
         const product = modelProducts.product(req.params);
-        res.render("./products/product", { product });
+        res.send(product)
     },
     
-    productsList: (req, res) => {
-        const datos = modelProducts.bdProducts();
+    productsList: async (req, res) => {
+        const datos = await modelProducts.bdProducts();
+        console.log(datos)
         res.render('./products/productsList', { bdProducts : datos });
     },
 
@@ -36,8 +37,8 @@ const controller = {
 
     adminEdit: (req, res) => {
         const productEdit = modelProducts.adminEdit(req.params)
-        res.render('./products/adminEdit', { productEdit })
-
+        // res.render('./products/adminEdit', { productEdit })
+    
     },
 
     adminModified: (req, res) => {
