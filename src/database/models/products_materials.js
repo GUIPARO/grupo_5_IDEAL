@@ -1,7 +1,13 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('products_has_lines', {
-    products_product_id: {
+  return sequelize.define('products_materials', {
+    id: {
+      autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true
+    },
+    product_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -10,18 +16,18 @@ module.exports = function(sequelize, DataTypes) {
         key: 'product_id'
       }
     },
-    lines_lines_id: {
+    material_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       references: {
-        model: 'lines',
-        key: 'lines_id'
+        model: 'materials',
+        key: 'material_id'
       }
     }
   }, {
     sequelize,
-    tableName: 'products_has_lines',
+    tableName: 'products_materials',
     timestamps: false,
     indexes: [
       {
@@ -29,22 +35,23 @@ module.exports = function(sequelize, DataTypes) {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "products_product_id" },
-          { name: "lines_lines_id" },
+          { name: "id" },
+          { name: "product_id" },
+          { name: "material_id" },
         ]
       },
       {
-        name: "fk_products_has_lines_lines1_idx",
+        name: "fk_products_has_materials_materials1_idx",
         using: "BTREE",
         fields: [
-          { name: "lines_lines_id" },
+          { name: "material_id" },
         ]
       },
       {
-        name: "fk_products_has_lines_products1_idx",
+        name: "fk_products_has_materials_products1_idx",
         using: "BTREE",
         fields: [
-          { name: "products_product_id" },
+          { name: "product_id" },
         ]
       },
     ]

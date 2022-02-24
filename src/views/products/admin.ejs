@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head") %>
-<body>
+  <%- include("../partials/head") %>
+  <body>
     <%- include("../partials/header") %>
-    <main class = "admin-main">
-        <h2 class="title-admin">Creación y edicion de productos</h2>
-        <section class= "add">
-        <a href= "/products/adminCreate"><i class="fas fa-plus-circle"></i></a>
-        <a href= "/products/adminCreate"><h3>Agregar</h3></a>
-    </section>
-        <article class = "admin-table">
-        <table class= "product-admin-table">
-            <!--ENCABEZADO DE LA TABLA-->
-            
-            <thead >
-                
-            <tr>
-                <th>ID</th>
-                <th class="actividad">Actividad</th>
-                <th>Descripción</th>
-                <th>Fotografia</th>
-                <th>Ver</th>
-                <th>Editar</th>
-                <th>Borrar</th>
-            
-            </tr>
-                </thead> 
-            
+    <main class="admin-main">
+      <h2 class="title-admin">Creación y edicion de productos</h2>
+      <section class="add">
+        <a href="/products/adminCreate"><i class="fas fa-plus-circle"></i></a>
+        <a href="/products/adminCreate"><h3>Agregar</h3></a>
+      </section>
+      <article class="admin-table">
+        <table class="product-admin-table">
+          <!--ENCABEZADO DE LA TABLA-->
 
-        <!--CONTENIDO DE LA TABLA-->
-        <tbody>
-            
-                <% products.forEach(product => { %>
-                    <% if(product){%>
-                <tr>
-                <form method="POST" action= "/products/delete/<%=product.id%>?_method=DELETE">
-                <td><%=product.id%></td>
-                <td class="actividad"><%=product.activity%></td>
-                <td><%=product.fullName%></td>
-                <td><img src="/img/products_image/<%=product.image%>" alt="fotografia del producto"></td>
-                <td><a href="/products/product/<%=product.id%>"><i class="far fa-eye"></i></a></td>
-                <td><a href="/products/adminEdit/<%=product.id%>"><i class="far fa-edit"></i></a></td>
-                <td> <button type= "submit"><i class="far fa-trash-alt"></i></button></td>
-            </form>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th class="actividad">Actividad</th>
+              <th>Descripción</th>
+              <th>Fotografia</th>
+              <th>Ver</th>
+              <th>Editar</th>
+              <th>Borrar</th>
+            </tr>
+          </thead>
+
+          <!--CONTENIDO DE LA TABLA-->
+          <tbody>
+            <% products.forEach(product => { %>
+                 <% if(product){%>
+            <tr>
+              <form
+                method="POST"
+                action="/products/delete/<%=product.product_id%>?_method=DELETE">
+                <td><%=product.product_id%></td>
+                <%product.activity_id_activities.forEach(activity=>{%>
+                <td class="actividad"><%=activity.activity %></td>
+                  <%})%>
+                
+                
+                <td><%=product.fullname%></td>
+                <td>
+                  <img
+                    src="/img/products_image/<%=product.image%>"
+                    alt="fotografia del producto"
+                  />
+                </td>
+                <td>
+                  <a href="/products/product/<%=product.product_id%>"
+                    ><i class="far fa-eye"></i
+                  ></a>
+                </td>
+                <td>
+                  <a href="/products/adminEdit/<%=product.product_id%>"
+                    ><i class="far fa-edit"></i
+                  ></a>
+                </td>
+                <td>
+                  <button type="submit">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </td>
+              </form>
             </tr>
             <% } %> 
-            <% }) %> 
-           
-            
-        </tbody>
-        
-            </table>
-        </article>
-            
-        
-                    
+            <% }) %>
+          </tbody>
+        </table>
+      </article>
     </main>
     <%- include("../partials/footer") %>
-</body>
+  </body>
+</html>

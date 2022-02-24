@@ -6,45 +6,45 @@
     <main>
         <section class="container_details_product">
             <figure class="container_product">
-                <img class="product_image" src="/img/products_image/<%=product[0].image%>" alt="camiseta_fashion">
+                <img class="product_image" src="/img/products_image/<%=product.image%>" alt="camiseta_fashion">
             </figure>
             <section class="container_info_product">
-                <h3 class="product_name"><%=product[0].fullName%></h3>
+                <h3 class="product_name"><%=product.fullname%></h3>
                 <div class="detail_product">
                     <div class="contanier_cost">
-                        <div class="product_cost"><%=`$ ${product[0].price}`%></div>
+                        <div class="product_cost"><%=`$ ${product.price}`%></div>
                     </div>
                     </div>
                     <div class="container_technic">
                         <span class="title_technic">Técnica</span>
                         <ul>
-                            <% if (typeof(product[0].technique) == "object") { %> 
-                                <% for(let i = 0; i < product[0].technique.length; i++) { %> 
-                                <li class="type_technic"><%= product[0].technique[i] %></li>
+                            <% if (typeof(product.technique_id_techniques) == "object") { %> 
+                                <% for(let i = 0; i < product.dataValues.technique_id_techniques.length; i++) { %> 
+                                <li class="type_technic"><%= product.technique_id_techniques[i].dataValues.technique%></li>
                                 <% } %> 
                             <% } else { %> 
-                                <li class="type_technic"><%= product[0].technique %></li>
+                                <li class="type_technic"><%= product.dataValues.technique_id_techniques %></li>
                             <% } %> 
                         </ul>
                     </div>
                     <div class="container_line">
-                        <span class="title_line"><%= product[0].productLine %></span>
+                        <span class="title_line"><%= product.line.dataValues.line%></span>
                         <div class="list">
                             <ul>
-                                <% if (typeof(product[0].subactivity) == "object") { %> 
-                                    <% for(let i = 0; i < product[0].subactivity.length; i++) { %> 
-                                        <li> <%= product[0].subactivity[i] %></li>
-                                    <% } %> 
+                                <% if (typeof(product.subactivity_id_subactivities) == "object") { %> 
+                                    <% for(let i = 0; i < product.dataValues.subactivity_id_subactivities.length; i++) { %> 
+                                        <li> <%= product.subactivity_id_subactivities[i].dataValues.subactivity %></li>
+                                    <% } %>
                                 <% } else { %> 
-                                    <li><%= product[0].subactivity%></li>
+                                    <li><%= product.dataValues.subactivity_id_subactivities%></li>
                                 <% } %>
                             </ul>
                         </div>
                     </div>
                     <div class="detail_activity">
                         <div class="contanier_activity">
-                            <div class="activity"><%=product[0].activity%></div>
-                        </div>
+                            <div class="activity"><%=product.activity_id_activities[0].dataValues.activity %></div>
+                        </div>  
                     </div>
                     <div class="buying_guide">
                         <i class="fas fa-book-open"></i><a href="#">Guía de compra</a>
@@ -58,14 +58,14 @@
                                 <ul class="topic_material">
                                     <li class="select_material">
                                         <span class="material">
-                                            <% if (typeof(product[0].material) == "object") { %> 
-                                                <% for(let i = 0; i < product[0].material.length; i++) { %> 
-                                                    <input type="radio" name="material" id="tela_01" value="<%=product[0].material[i]%>">
-                                                    <label for="tela_01" name="tela"><%=product[0].material[i]%></label>
+                                            <% if (typeof(product.dataValues.material_id_materials) == "object") { %> 
+                                                <% for(let i = 0; i < product.dataValues.material_id_materials.length; i++) { %> 
+                                                    <input type="radio" name="material" id="tela_01" value="<%=product.material_id_materials[i].dataValues.material%>">
+                                                    <label for="tela_01" name="tela"><%=product.material_id_materials[i].dataValues.material%></label>
                                                 <% } %> 
                                             <% } else { %> 
-                                                <input type="radio" name="material" id="tela_01" value="<%=product[0].material%>">
-                                                <label for="tela_01" name="tela"><%=product[0].material%></label>
+                                                <input type="radio" name="material" id="tela_01" value="<%=product.dataValues.material_id_materials%>">
+                                                <label for="tela_01" name="tela"><%=product.dataValues.material_id_materials%></label>
                                             <% } %> 
                                         </span>
                                     </li>

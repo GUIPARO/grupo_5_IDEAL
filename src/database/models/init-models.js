@@ -3,11 +3,10 @@ var _activities = require("./activities");
 var _lines = require("./lines");
 var _materials = require("./materials");
 var _products = require("./products");
-var _products_has_activities = require("./products_has_activities");
-var _products_has_lines = require("./products_has_lines");
-var _products_has_materials = require("./products_has_materials");
-var _products_has_subactivities = require("./products_has_subactivities");
-var _products_has_techniques = require("./products_has_techniques");
+var _products_activities = require("./products_activities");
+var _products_materials = require("./products_materials");
+var _products_subactivities = require("./products_subactivities");
+var _products_techniques = require("./products_techniques");
 var _roles = require("./roles");
 var _subactivities = require("./subactivities");
 var _techniques = require("./techniques");
@@ -18,59 +17,53 @@ function initModels(sequelize) {
   var lines = _lines(sequelize, DataTypes);
   var materials = _materials(sequelize, DataTypes);
   var products = _products(sequelize, DataTypes);
-  var products_has_activities = _products_has_activities(sequelize, DataTypes);
-  var products_has_lines = _products_has_lines(sequelize, DataTypes);
-  var products_has_materials = _products_has_materials(sequelize, DataTypes);
-  var products_has_subactivities = _products_has_subactivities(sequelize, DataTypes);
-  var products_has_techniques = _products_has_techniques(sequelize, DataTypes);
+  var products_activities = _products_activities(sequelize, DataTypes);
+  var products_materials = _products_materials(sequelize, DataTypes);
+  var products_subactivities = _products_subactivities(sequelize, DataTypes);
+  var products_techniques = _products_techniques(sequelize, DataTypes);
   var roles = _roles(sequelize, DataTypes);
   var subactivities = _subactivities(sequelize, DataTypes);
   var techniques = _techniques(sequelize, DataTypes);
   var users = _users(sequelize, DataTypes);
 
-  activities.belongsToMany(products, { as: 'products_product_id_products', through: products_has_activities, foreignKey: "activities_activity_id", otherKey: "products_product_id" });
-  lines.belongsToMany(products, { as: 'products_product_id_products_products_has_lines', through: products_has_lines, foreignKey: "lines_lines_id", otherKey: "products_product_id" });
-  materials.belongsToMany(products, { as: 'products_product_id_products_products_has_materials', through: products_has_materials, foreignKey: "materials_material_id", otherKey: "products_product_id" });
-  products.belongsToMany(activities, { as: 'activities_activity_id_activities', through: products_has_activities, foreignKey: "products_product_id", otherKey: "activities_activity_id" });
-  products.belongsToMany(lines, { as: 'lines_lines_id_lines', through: products_has_lines, foreignKey: "products_product_id", otherKey: "lines_lines_id" });
-  products.belongsToMany(materials, { as: 'materials_material_id_materials', through: products_has_materials, foreignKey: "products_product_id", otherKey: "materials_material_id" });
-  products.belongsToMany(subactivities, { as: 'subactivities_subactivity_id_subactivities', through: products_has_subactivities, foreignKey: "products_product_id", otherKey: "subactivities_subactivity_id" });
-  products.belongsToMany(techniques, { as: 'techniques_technique_id_techniques', through: products_has_techniques, foreignKey: "products_product_id", otherKey: "techniques_technique_id" });
-  subactivities.belongsToMany(products, { as: 'products_product_id_products_products_has_subactivities', through: products_has_subactivities, foreignKey: "subactivities_subactivity_id", otherKey: "products_product_id" });
-  techniques.belongsToMany(products, { as: 'products_product_id_products_products_has_techniques', through: products_has_techniques, foreignKey: "techniques_technique_id", otherKey: "products_product_id" });
-  products_has_activities.belongsTo(activities, { as: "activities_activity", foreignKey: "activities_activity_id"});
-  activities.hasMany(products_has_activities, { as: "products_has_activities", foreignKey: "activities_activity_id"});
-  products_has_lines.belongsTo(lines, { as: "lines_line", foreignKey: "lines_lines_id"});
-  lines.hasMany(products_has_lines, { as: "products_has_lines", foreignKey: "lines_lines_id"});
-  products_has_materials.belongsTo(materials, { as: "materials_material", foreignKey: "materials_material_id"});
-  materials.hasMany(products_has_materials, { as: "products_has_materials", foreignKey: "materials_material_id"});
-  products_has_activities.belongsTo(products, { as: "products_product", foreignKey: "products_product_id"});
-  products.hasMany(products_has_activities, { as: "products_has_activities", foreignKey: "products_product_id"});
-  products_has_lines.belongsTo(products, { as: "products_product", foreignKey: "products_product_id"});
-  products.hasMany(products_has_lines, { as: "products_has_lines", foreignKey: "products_product_id"});
-  products_has_materials.belongsTo(products, { as: "products_product", foreignKey: "products_product_id"});
-  products.hasMany(products_has_materials, { as: "products_has_materials", foreignKey: "products_product_id"});
-  products_has_subactivities.belongsTo(products, { as: "products_product", foreignKey: "products_product_id"});
-  products.hasMany(products_has_subactivities, { as: "products_has_subactivities", foreignKey: "products_product_id"});
-  products_has_techniques.belongsTo(products, { as: "products_product", foreignKey: "products_product_id"});
-  products.hasMany(products_has_techniques, { as: "products_has_techniques", foreignKey: "products_product_id"});
-  users.belongsTo(roles, { as: "roles_role", foreignKey: "roles_role_id"});
-  roles.hasMany(users, { as: "users", foreignKey: "roles_role_id"});
-  products_has_subactivities.belongsTo(subactivities, { as: "subactivities_subactivity", foreignKey: "subactivities_subactivity_id"});
-  subactivities.hasMany(products_has_subactivities, { as: "products_has_subactivities", foreignKey: "subactivities_subactivity_id"});
-  products_has_techniques.belongsTo(techniques, { as: "techniques_technique", foreignKey: "techniques_technique_id"});
-  techniques.hasMany(products_has_techniques, { as: "products_has_techniques", foreignKey: "techniques_technique_id"});
+  activities.belongsToMany(products, { as: 'product_id_products', through: products_activities, foreignKey: "activity_id", otherKey: "product_id" });
+  materials.belongsToMany(products, { as: 'product_id_products_products_materials', through: products_materials, foreignKey: "material_id", otherKey: "product_id" });
+  products.belongsToMany(activities, { as: 'activity_id_activities', through: products_activities, foreignKey: "product_id", otherKey: "activity_id" });
+  products.belongsToMany(materials, { as: 'material_id_materials', through: products_materials, foreignKey: "product_id", otherKey: "material_id" });
+  products.belongsToMany(subactivities, { as: 'subactivity_id_subactivities', through: products_subactivities, foreignKey: "product_id", otherKey: "subactivity_id" });
+  products.belongsToMany(techniques, { as: 'technique_id_techniques', through: products_techniques, foreignKey: "product_id", otherKey: "technique_id" });
+  subactivities.belongsToMany(products, { as: 'product_id_products_products_subactivities', through: products_subactivities, foreignKey: "subactivity_id", otherKey: "product_id" });
+  techniques.belongsToMany(products, { as: 'product_id_products_products_techniques', through: products_techniques, foreignKey: "technique_id", otherKey: "product_id" });
+  products_activities.belongsTo(activities, { as: "activity", foreignKey: "activity_id"});
+  activities.hasMany(products_activities, { as: "products_activities", foreignKey: "activity_id"});
+  products.belongsTo(lines, { as: "line", foreignKey: "line_id"});
+  lines.hasMany(products, { as: "products", foreignKey: "line_id"});
+  products_materials.belongsTo(materials, { as: "material", foreignKey: "material_id"});
+  materials.hasMany(products_materials, { as: "products_materials", foreignKey: "material_id"});
+  products_activities.belongsTo(products, { as: "product", foreignKey: "product_id"});
+  products.hasMany(products_activities, { as: "products_activities", foreignKey: "product_id"});
+  products_materials.belongsTo(products, { as: "product", foreignKey: "product_id"});
+  products.hasMany(products_materials, { as: "products_materials", foreignKey: "product_id"});
+  products_subactivities.belongsTo(products, { as: "product", foreignKey: "product_id"});
+  products.hasMany(products_subactivities, { as: "products_subactivities", foreignKey: "product_id"});
+  products_techniques.belongsTo(products, { as: "product", foreignKey: "product_id"});
+  products.hasMany(products_techniques, { as: "products_techniques", foreignKey: "product_id"});
+  users.belongsTo(roles, { as: "role", foreignKey: "role_id"});
+  roles.hasMany(users, { as: "users", foreignKey: "role_id"});
+  products_subactivities.belongsTo(subactivities, { as: "subactivity", foreignKey: "subactivity_id"});
+  subactivities.hasMany(products_subactivities, { as: "products_subactivities", foreignKey: "subactivity_id"});
+  products_techniques.belongsTo(techniques, { as: "technique", foreignKey: "technique_id"});
+  techniques.hasMany(products_techniques, { as: "products_techniques", foreignKey: "technique_id"});
 
   return {
     activities,
     lines,
     materials,
     products,
-    products_has_activities,
-    products_has_lines,
-    products_has_materials,
-    products_has_subactivities,
-    products_has_techniques,
+    products_activities,
+    products_materials,
+    products_subactivities,
+    products_techniques,
     roles,
     subactivities,
     techniques,

@@ -25,8 +25,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "SET NODE_ENV=production & node src/index.js",
-    "dev": "SET NODE_ENV=development & nodemon src/index"
+    "start": "node src/index.js",
+    "dev": "SET NODE_ENV=development & nodemon src/index",
+    "build": "sequelize-auto -h 127.0.0.1 -d db_ideal -u root -x 1234 -p 4550  --dialect mysql"
   },
   "repository": {
     "type": "git",

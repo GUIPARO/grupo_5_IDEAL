@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true
     },
     fullname: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(45),
       allowNull: false
     },
     price: {
@@ -16,8 +16,17 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     image: {
-      type: DataTypes.STRING(200),
+      type: DataTypes.STRING(45),
       allowNull: false
+    },
+    line_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      // primaryKey: true,
+      references: {
+        model: 'lines',
+        key: 'line_id'
+      }
     }
   }, {
     sequelize,
@@ -30,6 +39,14 @@ module.exports = function(sequelize, DataTypes) {
         using: "BTREE",
         fields: [
           { name: "product_id" },
+          { name: "line_id" },
+        ]
+      },
+      {
+        name: "fk_products_lines1_idx",
+        using: "BTREE",
+        fields: [
+          { name: "line_id" },
         ]
       },
     ]

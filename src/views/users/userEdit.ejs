@@ -5,13 +5,13 @@
     <%- include("../partials/header") %>
     <main class="register-main">
         
-            <form class = "register-form" action="/users/userEdit/<%=userEdit[0].id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form class = "register-form" action="/users/userEdit/<%=userEdit[0].user_id%>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <h2 class="title-register">Editar datos</h2>
                 
                 <input class= "form" type="text" name="name" placeholder="Ingresa tus nombres" value="<%= userEdit[0].name%>">
                 <%= locals.errors && errors.name ? errors.name.msg : ''%> 
             
-                <input class= "form" type="text" name="lastName"  placeholder="Ingresa tus apellidos"  value="<%= userEdit[0].lastName%>" >
+                <input class= "form" type="text" name="lastName"  placeholder="Ingresa tus apellidos"  value="<%= userEdit[0].lastname%>" >
                 <% if(locals.errors && errors.lastName) { %>
                     <div> <%= errors.lastName.msg %> </div>
                     <% } %> 
@@ -38,9 +38,9 @@
                     <div> <%= errors.avatar.msg %></div>
                 <% } %>
                 
-                <% if (locals.userLogged.role == 5){ %>
+                <% if (locals.userLogged.role.role == 5){ %>
                 <label for ="role"  name = "role"> Editar rol del usuario</label>
-                <input class= "form" type="number" name="role" value="<%=userEdit[0].role%>" >
+                <input class= "form" type="number" name="role" value="<%=userEdit[0].role_id%>" >
                 <% } %> 
 
                 <button class = "buttons" type="submit" class="submit"><span>Enviar</span></button>

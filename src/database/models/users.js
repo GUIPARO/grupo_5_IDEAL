@@ -28,10 +28,10 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       unique: "email_UNIQUE"
     },
-    roles_role_id: {
+    role_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
+      // primaryKey: true,
       references: {
         model: 'roles',
         key: 'role_id'

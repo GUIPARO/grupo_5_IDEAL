@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head") %>
-<body>
+  <%- include("../partials/head") %>
+  <body>
     <%- include("../partials/header") %>
     <main class="main_login">
-        <h4 class="login_title">Ingresa</h4>
-        <form class="login_form" method="post" action="/users/login" >
-            <input class="input_login" type="email" placeholder="Ingresa tu correo" name="email" placeholder="Correo electrónico" value="<%= typeof old != 'undefined' ? old.email : '' %>" >
-            <% if(typeof(errors) != 'undefined' && errors.email){%>
-              <div class="danger_text">
-                <%= errors.email.msg %>
-              </div>
-           <%}%>
-            <input class="input_login" type="password" placeholder="Ingresa tu contraseña" name="password" >
-            <% if(typeof(errors) != 'undefined' && errors.password){%>
-                <div class="danger_text">
-                  <%= errors.password.msg %>
-                </div>
-             <%}%>
-             <div class="container_remember">
-                <input type="checkbox" name="remember" class="remember" >
-                <label for="remember">Recordarme</label>
-            </div>
-            <input class="input_login" type="submit" value="Ingresar">
-        </form>
-        <section class="new_section">
-            <h4>¿Nuevo en Ideal?</h4>
-            <a href="/users/register"><p>Registrate</p></a>
-        </section>
+      <h4 class="login_title">Ingresa</h4>
+      <form class="login_form" method="post" action="/users/login">
+        <input
+          class="input_login"
+          type="email"
+          placeholder="Ingresa tu correo"
+          name="email"
+          placeholder="Correo electrónico"
+          value="<%= typeof old != 'undefined' ? old.email : '' %>"
+        />
+        <% if(typeof(errors) != 'undefined' && errors.email){%>
+        <div class="danger_text"><%= errors.email.msg %></div>
+        <%}%>
+        <input
+          class="input_login"
+          type="password"
+          placeholder="Ingresa tu contraseña"
+          name="password"
+        />
+        <% if(typeof(errors) != 'undefined' && errors.password){%>
+        <div class="danger_text"><%= errors.password.msg %></div>
+        <%}%> <% if(typeof(errors) != 'undefined'){%>
+        <div class="danger_text"><%= errors.msg %></div>
+        <%}%>
+        <div class="container_remember">
+          <input type="checkbox" name="remember" class="remember" />
+          <label for="remember">Recordarme</label>
+        </div>
+        <input class="input_login" type="submit" value="Ingresar" />
+      </form>
+      <section class="new_section">
+        <h4>¿Nuevo en Ideal?</h4>
+        <a href="/users/register"><p>Registrate</p></a>
+      </section>
     </main>
     <%- include("../partials/footer") %>
-</body>
+  </body>
 </html>
-

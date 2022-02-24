@@ -79,12 +79,12 @@
 
 ### 08/01/2022 - 25/01/2021
 
-|  Weekly | Ana Díaz| Guisella Patron| Julian Castillo|
-| :---------------:|:---------------: |:---------------: |:---------------:|
-|¿Qué he hecho esta semana?| | | |
-|¿Se encontró con algún impedimento||||
-|Solución|  |  | |
-| ¿Qué haré la próxima semana?| | | |
+|  Weekly | Grupal |
+| :---------------:|:---------------: |
+|¿Qué he hecho esta semana?|Elaboración del CRUD |
+|¿Se encontró con algún impedimento|Manejo de las relaciones n:m para el CRUD de productos|
+|Solución|Consultas en la documentación y profesores|
+| ¿Qué haré la próxima semana?| review del proyecto y realización de puntos adicionales del sprint|
 
 
 
