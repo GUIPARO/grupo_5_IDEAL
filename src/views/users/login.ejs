@@ -5,20 +5,21 @@
     <%- include("../partials/header") %>
     <main class="main_login">
       <h4 class="login_title">Ingresa</h4>
-      <form class="login_form" method="post" action="/users/login">
+      <form class="login_form" id ="login_form" method="post" action="/users/login">
         <input
           class="input_login"
+          id = "input_login"
           type="email"
           placeholder="Ingresa tu correo"
           name="email"
           placeholder="Correo electrónico"
-          value="<%= typeof old != 'undefined' ? old.email : '' %>"
-        />
+          value="<%= typeof old != 'undefined' ? old.email : '' %>"/>
         <% if(typeof(errors) != 'undefined' && errors.email){%>
         <div class="danger_text"><%= errors.email.msg %></div>
         <%}%>
         <input
           class="input_login"
+          id="input_password"
           type="password"
           placeholder="Ingresa tu contraseña"
           name="password"
@@ -39,6 +40,7 @@
         <a href="/users/register"><p>Registrate</p></a>
       </section>
     </main>
+    <script src="../../public/js/validateLogin.js"></script>
     <%- include("../partials/footer") %>
   </body>
 </html>

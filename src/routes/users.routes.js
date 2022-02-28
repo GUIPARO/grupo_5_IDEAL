@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer')
 const path = require('path')
-const { body } = require('express-validator');//Requiero el paquete expres-validator
+
 
 //*---------CONTROLADOR--------------*//
 const usersController = require('../controllers/users.controllers.js')//Requerir el modulo de los controladores
@@ -10,6 +10,7 @@ const usersController = require('../controllers/users.controllers.js')//Requerir
 //*---------VALIDACIONES--------------*//
 const validationsRegister = require('../middlewares/validateRegisterMiddleware'); //Requerir el modulo de las validaciones del register
 const validationsLogin = require('../middlewares/validateLoginMiddleware'); //Requerir el modulo de las validaciones del Login
+const validationsUserToEdit = require('../middlewares/validateUserEditMiddleware')
 
 const guestMiddleware = require('../middlewares/guestMiddleware')
 const authMiddleware = require('../middlewares/authMiddleware')
@@ -53,7 +54,7 @@ router.get('/admin',adminMiddleware,usersController.admin);
 
 //Editar usuario
 router.get('/userEdit/:id',usersController.adminEdit);
-router.put('/userEdit/:id',adminMiddleware, uploadUserFile.single("avatar"), validationsRegister,usersController.userModified);
+router.put('/userEdit/:id', uploadUserFile.single("avatar"), validationsUserToEdit,usersController.userModified);
 
 //Eliminar usuario
 router.delete ('/delete/:id', usersController.userDelete)

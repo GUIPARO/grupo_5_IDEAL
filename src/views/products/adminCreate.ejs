@@ -5,101 +5,273 @@
     <%- include("../partials/header") %>
     <main class = "admin-main">
         
+
+    <% if(locals.errors == undefined && models !== undefined){ %> 
         <section class= "create-form">
             <h2 class="title-admin">Crea un nuevo producto</h2>
             <form class= "create" method="post" action="/products/adminCreate" enctype="multipart/form-data">
-                <input type="text" name="fullName" id="fullName" minlength="2" placeholder="Nombre del producto" required>
-                <input type="number" name="price" id="price" minlength="2" placeholder="Precio del producto" required>
+                <input 
+                    type="text" 
+                    name="fullName" 
+                    id="fullName" 
+                    minlength="5" 
+                    placeholder="Nombre del producto">
+                <%if(locals.errors && errors.fullName){%>
+                    <div class="danger_text"><%= errors.fullName.msg %> </div>
+                <%}%> 
+
+                <input 
+                    type="number" 
+                    name="price" 
+                    id="price" 
+                    minlength="2" 
+                    placeholder="Precio del producto" >
+                <% if(locals.errors && errors.price) { %>
+                    <div class="danger_text"> <%= errors.price.msg %> </div>
+                <%}%> 
+
             <section class="container-lineform">
                 <h3>Seleciona la linea del producto</h3>
-                <select class="select_service" name="productLine" id="select-service" type="select" >
-                    <option value="1">Linea fashion </option>
-                    <option value="2">Linea deportiva</option>
-                    <option value="3">Linea industrial</option>
-                    <option value="4">Linea medica</option>
-                </select>
+                    <select 
+                        class="select_service" 
+                        name="productLine" 
+                        id="select-service" 
+                        type="select" >
+                        <%models[0].forEach(line =>{ %>
+                            <option value="<%=line.line_id%>"><%=line.line%></option>
+                            <%})%>
+                    </select>
+                <%if(locals.errors && errors.productLine){%>
+                    <div class="danger_text"> <%= errors.productLine.msg %>/div>
+                <%}%> 
+
                 <h3>Seleciona la actividad</h3>
-                <select class="select_service" name="activity" id="select-service" type="select" >
-                    <option value="1">Eventos </option>
-                    <option value="2">Emprendimientos</option>
-                    <option value="3">Celebraciones</option>
-                    <option value="4">Tendencias</option>
-                    <option value="5">Empresariales</option>
-                    <option value="6">Fashion</option>
-                    <option value="7">Presentación</option>
-                    <option value="8">Basketball</option>
-                    <option value="9">Voleyball</option>
-                    <option value="10">Futbol</option>
-                    <option value="11">Salud</option>
-                </select>
+                    <select 
+                        class="select_service" 
+                        name="activity" 
+                        id="select-service" 
+                        type="select" >
+                        <%models[1].forEach(activity =>{ %>
+                            <option value="<%=activity.activity_id%>"><%=activity.activity%></option>
+                            <%})%>
+                    </select>
+                <%if(locals.errors && errors.activity){%>
+                    <div class="danger_text"> <%= errors.activity.msg %> </div>
+                <%}%> 
 
                 <h3>Selecciona la subactividad</h3>
-                <select class="subactivity" name="subactivity" type="select" multiple>
-                    <option value="1">Campañas publicitarias</option>
-                    <option value="2">Camapañas politicas </option>
-                    <option value="3">Eventos corpotativos</option>
-                    <option value="4">Comidas rádipas</option>
-                    <option value="5">Restaurantes</option>
-                    <option value="6">Almacenes</option>
-                    <option value="7">Negocios</option>
-                    <option value="8">Cumpleaños</option>
-                    <option value="9">Baby showers</option>
-                    <option value="10">Días especiales</option>
-                    <option value="11">Diseños de temporada</option>
-                    <option value="12">Diseños exclusivos</option>
-                    <option value="13">Empresas</option>
-                    <option value="14">negocios</option>
-                    <option value="15">Emprendimientos</option>
-                    <option value="16">Última moda</option>
-                    <option value="17">Re ventas</option>
-                    <option value="18">Almacenes de ropa</option>
-                    <option value="19">Consorcios</option>
-                    <option value="20">Empresas sector:industrial,educativo, administrativo</option>
-                    <option value="21">Escuelas de futbol</option>
-                    <option value="22">Torneos de colegio</option>
-                    <option value="23">Torneos de barrio</option>
-                    <option value="24">Torneos de empresas</option>
-                    <option value="25">Hospitales</option>
-                    <option value="26">Bomberos</option>
-                    <option value="27">Consultorios</option>
-                    <option value="28"> Estéticas</option>
-                </select>
+                    <div class="select_service">
+                        <%models[2].forEach(subactivity =>{ %>
+                            <label for="<%=subactivity.subactivity%>">
+                                <input 
+                                    type="checkbox" 
+                                    name="subactivity" 
+                                    id="subactivity" 
+                                    value="<%=subactivity.subactivity_id%>"><%=subactivity.subactivity%></label>                               
+                        <%})%>
+                    </div>
+                <% if(locals.errors && errors.subactivity) { %>
+                    <div class="danger_text"> <%= errors.subactivity.msg %> </div>
+                <%}%> 
+
             <h3>Seleciona la Técnica</h3>
+
             <div class= "tipo-tecnica">
-                <label for="Full color sublimacion"></label><input type="checkbox" name="technique" value="1">Full color sublimación</label>
-                <label for="Serigrafia 1 tinta"><input type="checkbox" name="technique"  value="2">Serigrafía 1 tinta</label>
-                <label for="Serigrafia 2 tintas"><input type="checkbox" name="technique"  value="3">Serigrafia 2 tintas</label>
-                <label for="Vinilo textil 1 color"><input type="checkbox" name="technique"  value="4">Vinilo textil 1 color</label>
-                <label for="Vinilo textil 2 colores"><input type="checkbox" name="technique" value="5">Vinilo textil 2 colores</label>
-                <label for="Estampado"></label><input type="checkbox" name="technique" value="6">Estampado</label>
-                <label for="Bordado"></label><input type="checkbox" name="technique" value="7">Bordado</label>
+                <%models[3].forEach(technique =>{ %>
+                    <label for ="<%=technique.technique%>">
+                    <input 
+                        type="checkbox" 
+                        name="technique" 
+                        id="technique" 
+                        value="<%=technique.technique_id%>"><%=technique.technique%></label>                                  
+                <%})%>
             </div>
+            <% if(locals.errors && errors.technique) { %>
+                <div class="danger_text"> <%= errors.technique.msg %> </div>
+                <% } %> 
+                
                 <h3>Seleciona el tipo de tela</h3>
                 <div class="tipo-tela">
-                    <label for="Algodon"><input type="checkbox" name="material" id="algodon" value="1">Algodón</label>
-                    <label for="Poliester"><input type="checkbox" name="material" id="poliester" value="2">Poliester</label>
-                    <label for="Algodon-peinado"><input type="checkbox" name="material" id="algodon peinado" value="3">Algodón peinado</label>
-                    <label for="Piel de durazno"><input type="checkbox" name="material" id="piel de durazno" value="4" >Piel de durazno</label>
-                    <label for="Antifluido"><input type="checkbox" name="material" id="Antifluido" value="5">Antifluido</label>
-                    <label for="Perchado"><input type="checkbox" name="material" id="Perchado" value="6">Perchado</label>
-                    <label for="Dry fit"><input type="checkbox" name="material" id="Dry fit" value="7">Dry fit</label>
-                    <label for="Poli licra"><input type="checkbox" name="material" id="Poli licra" value="8">Poli licra</label>
-                    <label for="Fornax térmico"><input type="checkbox" name="material" id="Fornax térmico" value="9">Fornax térmico</label>
-                    <label for="Drill nacional"><input type="checkbox" name="material" id="Drill nacional" value="10">Drill nacional</label>
-                    <label for="Politex"><input type="checkbox" name="material" id="Politex" value="11">Politex</label>
-                </div>                
+                    <%models[4].forEach(material =>{ %>
+                        <label for ="<%=material.material%>">
+                        <input 
+                            type="checkbox" 
+                            name="material" 
+                            id="material" 
+                            value="<%=material.material_id%>"
+                                        ><%=material.material%></label>     
+                    <%})%>
+                </div>      
+                <% if(locals.errors && errors.material) { %>
+                    <div class="danger_text"> <%= errors.material.msg %> </div>
+                    <% } %>           
             </section>
               <div class= "container-lineform">
             <h3>Selecciona un archivo</h3>
-                <input type="file" name="image" accept=".jpg, .png">
+                <input 
+                    type="file" 
+                    name="image" 
+                    accept=".jpg, .png">
             </div>
+            <% if(locals.errors && errors.image) { %>
+                <div class="danger_text"> <%= errors.image.msg %> </div>
+                <% } %>   
                 <div class="container_description">
                     <div class = "save">
                         <button class = "buttons" type="submit" class="submit" value="Guardar">Guardar</button>
-                        </div>
-                        </form>
-                </section>
+                    </div>
+                </form>
+            </section>
 
-            </main>
-            <%- include("../partials/footer") %>
+            <%}%> 
+
+
+
+        <!------------------------------- VISTA ERRORES  --------------------------->
+        <% if(locals.errors !== undefined && products !== undefined){ %> 
+        <section class= "create-form">
+            <h2 class="title-admin">Crea un nuevo producto</h2>
+            <form class= "create" method="post" action="/products/adminCreate" enctype="multipart/form-data">
+                <input 
+                    type="text" 
+                    name="fullName" 
+                    id="fullName" 
+                    minlength="5" 
+                    placeholder="Nombre del producto" 
+                    value ="<%= locals.products ? products.fullName : null %>">
+                <%if(locals.errors && errors.fullName){%>
+                    <div class="danger_text"><%= errors.fullName.msg %> </div>
+                <%}%> 
+                <input 
+                    type="number" 
+                    name="price" 
+                    id="price" 
+                    minlength="2" 
+                    placeholder="Precio del producto" 
+                    value ="<%= locals.products ? products.fullName : null %>">
+                <% if(locals.errors && errors.price) { %>
+                    <div class="danger_text"> <%= errors.price.msg %> </div>
+                <%}%> 
+
+            <section class="container-lineform">
+                <h3>Seleciona la linea del producto</h3>
+                    <select 
+                        class="select_service" 
+                        name="productLine" 
+                        id="select-service" 
+                        type="select" >
+                        <%models[0].forEach(line =>{ %>
+                            <option value="<%=line.line_id%>"<%= locals.products && products.productLine == line.line_id ? "selected" : ""%>><%=line.line%></option>
+                            <%})%>
+                    </select>
+                <%if(locals.errors && errors.productLine){%>
+                    <div class="danger_text"> <%= errors.productLine.msg %>/div>
+                <%}%> 
+
+                <h3>Seleciona la actividad</h3>
+                    <select 
+                        class="select_service" 
+                        name="activity" 
+                        id="select-service" 
+                        type ="select" >
+                        <%models[1].forEach(activity =>{ %>
+                            <option value="<%=activity.activity_id%>"<%= locals.products && products.activity == activity.activity_id ? "selected" : ""%>><%=activity.activity%></option>
+                            <%})%>
+                    </select>
+                <%if(locals.errors && errors.activity){%>
+                    <div class="danger_text"> <%= errors.activity.msg %> </div>
+                <%}%> 
+
+                <h3>Selecciona la subactividad</h3>
+                    <div class="select_service">
+                        <%models[2].forEach(subactivity =>{ %>
+                            <label for="<%=subactivity.subactivity%>">
+                                <input 
+                                    type="checkbox" 
+                                    name="subactivity" 
+                                    id="subactivity" 
+                                    value="<%=subactivity.subactivity_id%>"
+
+                                    <% if(Array.isArray(products.subactivity)){%> 
+                                        <%const findsubactivity = products.subactivity.map(i=>Number(i))%>
+                                        <%=findsubactivity.includes(subactivity.subactivity_id) ? "checked" : ""%>  
+                                        ><%=subactivity.subactivity%></label>
+                                    <%}else{%>
+                                        <%= locals.products && products.subactivity &&  products.subactivity == subactivity.subactivity_id ? "checked" : ""%>  
+                                        ><%=subactivity.subactivity%></label>
+                                        <%}%>                        
+                        <%})%>
+                    </div>
+                <% if(locals.errors && errors.subactivity) { %>
+                    <div class="danger_text"> <%= errors.subactivity.msg %> </div>
+                <%}%> 
+
+            <h3>Seleciona la Técnica</h3>
+
+            <div class= "tipo-tecnica">
+                <%models[3].forEach(technique =>{ %>
+                    <label for ="<%=technique.technique%>">
+                    <input 
+                        type="checkbox" 
+                        name="technique" 
+                        id="technique" 
+                        value="<%=technique.technique_id%>"
+
+                        <% if(Array.isArray(products.technique)){%> 
+                            <%const findtechnique = products.technique.map(i=>Number(i))%>
+                            <%=findtechnique.includes(technique.technique_id) ? "checked" : ""%>  
+                            ><%=technique.technique%></label>
+                        <%}else{%>
+                            <%= locals.products && products.technique &&  products.technique == technique.technique_id ? "checked" : ""%>  
+                            ><%=technique.technique%></label>
+                            <%}%>                                  
+                <%})%>
+            </div>
+            <% if(locals.errors && errors.technique) { %>
+                <div class="danger_text"> <%= errors.technique.msg %> </div>
+                <% } %> 
+                
+                <h3>Seleciona el tipo de tela</h3>
+                <div class="tipo-tela">
+                    <%models[4].forEach(material =>{ %>
+                        <label for ="<%=material.material%>">
+                        <input 
+                            type="checkbox" 
+                            name="material" 
+                            id="material" 
+                            value="<%=material.material_id%>"
+                            <% if(Array.isArray(products.material)){%> 
+                                <%const findmaterial = products.material.map(i=>Number(i))%>
+                                <%=findmaterial.includes(material.material_id) ? "checked" : ""%>  
+                                ><%=material.material%></label>
+                            <%}else{%>
+                                <%= locals.products && products.material &&  products.material == material.material_id ? "checked" : ""%>  
+                                ><%=material.material%></label>
+                                <%}%>       
+                    <%})%>
+                </div>      
+                <% if(locals.errors && errors.material) { %>
+                    <div class="danger_text"> <%= errors.material.msg %> </div>
+                <%}%> 
+
+            </section>
+              <div class= "container-lineform">
+            <h3>Selecciona un archivo</h3>
+                <input 
+                    type="file" 
+                    name="image" 
+                    accept=".jpg, .png">
+            </div>
+            <% if(locals.errors && errors.image) { %>
+                <div class="danger_text"> <%= errors.image.msg %> </div>
+                <% } %>   
+                <div class="container_description">
+                    <div class = "save">
+                        <button class = "buttons" type="submit" class="submit" value="Guardar">Guardar</button>
+                    </div>
+                </form>
+            </section>
+            <% } %>  
+        </main>
+        <%- include("../partials/footer") %>
     </body>

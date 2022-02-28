@@ -81,13 +81,13 @@ const User = {
       
       let foundUser = await this.findUserById(parametros);
      
-      const avatarFile =
-      image == undefined ? foundUser.avatar : image.filename;
+      const avatarFile = image == undefined ? foundUser.avatar : image.filename;
+      const password = body.password == ""? foundUser.password : bcrypt.hashSync(body.password, 10);
 
       const userEdit = {
         name: body.name,
         lastname:body.lastName,
-        password: bcrypt.hashSync(body.password, 10),
+        password: password,
         email:body.email,
         avatar: avatarFile,
         role_id: body.role
@@ -96,12 +96,14 @@ const User = {
       console.log(userEdit)
 
 
-      if (image != undefined) {
+      if (image != undefined){
         let routeImage = path.resolve(
           __dirname,
-          "../public/img/users_avatars/" + userEdit.avatar
+          "../public/img/users_avatars/" + foundUser.avatar
         );
         fs.unlinkSync(routeImage);
+
+        console.log(routeImage)
       }
 
       const user = await foundUser.update(userEdit, {
@@ -110,6 +112,7 @@ const User = {
         }
       });
 
+      
       
     } catch (error) {
       console.log(`ocurrio un error ${error.message}`);

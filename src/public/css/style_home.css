@@ -37,7 +37,7 @@
   overflow: hidden;
   text-align: center;
   border-radius: 5px 5px 5px 5px;
-  box-shadow: 0 5px 12px grey;
+  box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
 }
 
 .product-admin-table th {
@@ -218,25 +218,50 @@ header nav ul {
   list-style: none;
 }
 
-header nav ul li a:hover {
-  color: #172335;
-  transition: all 0.1s;
-}
+
 
 header nav .header_list > li {
   position: relative;
 }
 
+.dropdown-menu li a {
+  display: block;
+  padding: 8px;
+  font-size: 19px;
+  color: grey;
+  text-decoration: none;
+}
+
+.dropdown-menu li {
+  margin-right: 0;
+  text-align: center;
+}
+
+.header_list li:hover .dropdown-menu {
+  display: block;
+}
+
 .dropdown-menu {
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.26);
+  border-radius: 8px;
+  padding: 0;
+  background-color: white;
+  overflow: hidden;
+  margin: 0;
   position: absolute;
-  background: #7f818d;
-  opacity: 0.7;
-  width: 100%;
+  min-width: 180px;
+  top: 32px;
   display: none;
 }
 
+
 .header_list menu:hover .dropdown-menu {
   display: block;
+}
+
+header nav ul li a:hover {
+  color: #172335;
+  transition: all 0.1s;
 }
 
 .nav-link_img {
@@ -254,22 +279,7 @@ header nav .header_list > li {
   height: 23px;
 }
 
-.dropdown-menu li a {
-  display: block;
-  padding: 8px;
-  font-size: 20px;
-  color: #fff;
-  text-decoration: none;
-}
 
-.dropdown-menu li {
-  margin-right: 0;
-  text-align: center;
-}
-
-.header_list li:hover .dropdown-menu {
-  display: block;
-}
 
 /* HASTA ACA VA EL HEADER  */
 
