@@ -103,13 +103,8 @@ const controller = {
     req.session.destroy();
     return res.redirect("/");
   },
-  showUser: (req, res) => {
-    const id = req.params.id;
-    let usersDB = modelUser.findAll();
-    const user = usersDB.filter((user) => {
-      return user.id == id;
-    });
-
+  showUser: async(req, res) => {
+    let user = await modelUser.findUserById(req.params)
     res.render("./users/profile", { user });
   },
   admin: async (req, res) => {
@@ -117,8 +112,11 @@ const controller = {
     res.render("./users/admin", { users: usersDB });
   },
   adminEdit: async(req, res) => {
+    
     const userEdit = await modelUser.adminEdit(req.params)
     console.log(userEdit)
+
+    
 
     if (userEdit) {
       res.render("./users/userEdit", { userEdit });
@@ -163,9 +161,37 @@ const controller = {
     res.redirect("/");
   },
   userModified: async(req, res) => {
-    await modelUser.adminModified(req.params, req.body, req.file);
-    res.redirect("/");
+    
+    let foundUser = await modelUser.findUserById(req.params)
+    let id = foundUser.user_id
+    // let role = foundUser.role.role
+    // console.log("resultado", role)
+    req.body.avatar = req.file == undefined ? foundUser.avatar : req.file.filename;
+    
+  
+    let errors = validationResult(req)
+    if(errors.isEmpty() == false){
+      console.log(req.body)
+      return res.render("../views/users/userEdit", {
+        errors: errors.mapped(),
+        userEdit: req.body,
+        id
+        
+      });
+    }else{
 
+    await modelUser.adminModified(req.params, req.body, req.file);
+
+    let usersDB = await modelUser.findAll();
+    let userLog = await usersDB.find((usuario) => usuario.email == req.body.email
+    );
+
+    delete userLog.password;
+    delete userLog.confirm_password;
+    req.session.userLogged = userLog;
+
+    res.redirect("/");
+  }
   },
   userDelete1: async(req, res) => {
     const id = req.params.id;

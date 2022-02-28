@@ -6,8 +6,10 @@
         <%- include("../partials/header") %>
             <main class="admin-main">
 
+                <% if(locals.errors == undefined && productEdit !== undefined){ %> 
                 <section class="create-form">
                     <h2 class="title-admin">Edita este producto</h2>
+
                     <form class="create" action='/products/adminEdit/<%=productEdit[0].product_id%>?_method=PUT' method="POST" enctype="multipart/form-data"> 
                         <input type="text" name="fullName" id="fullName" minlength="2" placeholder="Nombre del producto" value ="<%=productEdit[0].fullname%>">
                         <input type="number" name="price" id="price" minlength="2" placeholder="Precio del producto"  value ="<%=productEdit[0].price%>">
@@ -47,15 +49,7 @@
                                         <%=findTechnique.includes(technique.dataValues.technique) ? "checked" : ""%>                                 
                                         ><%=technique.dataValues.technique%></label>                             
                                 <%})%>
-                            <!-- <select class="select_service" name="technique" id="select-service" type="select">
-                                <option value=""></option>
-                                <option value="Full color sublimación">Full color sublimación</option>
-                                <option value="Serigrafia 1 tintas">Serigrafia 1 tinta</option>
-                                <option value="Serigrafia 2 tintas">Serigrafia 2 tintas</option>
-                                <option value="Vinilo textil 1 color">Vinilo textil 1 color</option>
-                                <option value="Vinilo textil 2 colores">Vinilo textil 2 colores</option>
-                            </select> -->
-                        </div>
+                                          </div>
                             <h3>Seleciona el tipo de tela</h3>
                             <div class="tipo-tela">
                                 <%productEdit[5].forEach(material =>{ %>
@@ -66,17 +60,7 @@
                                         ><%=material.dataValues.material%></label>                             
                                 <%})%>
                             </div>
-                                <!-- <label for="Algodon"><input type="checkbox" name="material" id="algodon" value="Algodon">Algodón</label>
-                                <label for="Poliester"><input type="checkbox" name="material" id="poliester" value="Poliester">Poliester</label>
-                                <label for="Algodon-peinado"><input type="checkbox" name="material" id="algodon peinado" value="Algodon">Algodón peinado</label>
-                                <label for="Piel de durazno"><input type="checkbox" name="material" id="piel-de-durazno" value="Piel de durazno" >Piel de durazno</label>
-                                <label for="Antifluido"><input type="checkbox" name="material" id="Antifluido" value="Antifluido">Antifluido</label>
-                                <label for="Perchado"><input type="checkbox" name="material" id="Perchado" value="Perchado">Perchado</label>
-                                <label for="Dry fit"><input type="checkbox" name="material" id="Dry fit" value="Dry fit">Dry fit</label>
-                                <label for="Poli licra"><input type="checkbox" name="material" id="Poli licra" value="Poli licra">Poli licra</label>
-                                <label for="Fornax térmico"><input type="checkbox" name="material" id="Fornax térmico" value="Fornax térmico">Fornax térmico</label>
-                                <label for="Drill nacional"><input type="checkbox" name="material" id="Drill nacional" value="Drill nacional">Drill nacional</label>
-                                <label for="Politex"><input type="checkbox" name="material" id="Politex" value="Politex">Politex</label> -->
+                                
                             
                             <figure class="container_product">
                                 <img class="product_edit" src="/img/products_image/<%=productEdit[0].image%>" alt="camiseta_fashion">
@@ -90,6 +74,158 @@
                             </div>
                     </form>
                 </section>
+                <% } %> 
+<!--------------------------------------------------- VISTA CON ERRORES -------------------------------------------------------------->
+                <% if(locals.errors !== undefined && product !== undefined){ %> 
+                    <section class="create-form">
+                        <h2 class="title-admin">Edita este producto</h2>
+    
+                        <form class="create" action='/products/adminEdit/<%=id%>?_method=PUT' method="POST" enctype="multipart/form-data"> 
+                            <input 
+                                type="text" 
+                                name="fullName" 
+                                id="fullName" 
+                                minlength="2" 
+                                placeholder="Nombre del producto" 
+                                value ="<%= locals.product ? product.fullName : null %>">
+                            <% if(locals.errors && errors.fullName) { %>
+                                <div class="danger_text"> <%= errors.fullName.msg %> </div>
+                                <% } %> 
+
+                            <input 
+                                type="number" 
+                                name="price" 
+                                id="price" 
+                                minlength="2" 
+                                placeholder="Precio del producto"  
+                                value ="<%= locals.product ? product.price : null %>">
+                            <% if(locals.errors && errors.price) { %>
+                                <div class="danger_text"> <%= errors.price.msg %> </div>
+                                <% } %>
+
+                            <section class="container-lineform">
+                                <h3>Seleciona la linea del producto</h3>
+                                <select 
+                                    class="select_service" 
+                                    name="productLine" 
+                                    id="product_line" >
+                                    <%productEdit[1].forEach(line =>{ %>
+                                    <option 
+                                        value="<%=line.line_id%>"<%= locals.product && product.productLine && product.productLine == line.line_id ? "selected" : ""%>><%=line.dataValues.line%></option>
+                                    <%})%>
+                                </select>
+                                <% if(locals.errors && errors.productLine) { %>
+                                    <div class="danger_text"> <%= errors.productLine.msg %> </div>
+                                    <% } %> 
+                                
+                                <h3>Seleciona la actividad</h3>
+                                <select 
+                                    class="select_service" 
+                                    name="activity" 
+                                    id="activity" >
+                                    <%productEdit[2].forEach(activity =>{ %>
+                                    <option 
+                                        value="<%=activity.activity_id%>"<%= locals.product && product.activity && product.activity == activity.activity_id ? "selected" : ""%>><%=activity.dataValues.activity%></option>
+                                    <%})%>
+                                </select>
+                                <% if(locals.errors && errors.activity) { %>
+                                    <div class="danger_text"> <%= errors.activity.msg %> </div>
+                                    <% } %> 
+    
+                                <h3>Selecciona la subactividad</h3>
+                                    <div class="tipo-tela">
+                                        <%productEdit[3].forEach(subactivity =>{ %>
+                                            <label 
+                                                for="<%=subactivity.dataValues.subactivity%>">
+                                            <input 
+                                                type="checkbox" 
+                                                name="subactivity" 
+                                                id="subactivity" 
+                                                value="<%=subactivity.subactivity_id%>"
+                                            <% if(Array.isArray(product.subactivity)){%> 
+                                                <%const findsubactivity = product.subactivity.map(i=>Number(i))%>
+                                                <%=findsubactivity.includes(subactivity.subactivity_id) ? "checked" : ""%>  
+                                                ><%=subactivity.dataValues.subactivity%></label>
+                                            <%}else{%>
+                                                <%= locals.product && product.subactivity &&  product.subactivity == subactivity.subactivity_id ? "checked" : ""%>  
+                                                ><%=subactivity.dataValues.subactivity%></label>
+                                                <%}%>
+                                        <%})%>
+                                    </div>
+                                <% if(locals.errors && errors.subactivity) { %>
+                                    <div class="danger_text"> <%= errors.subactivity.msg %> </div>
+                                    <% } %> 
+
+    
+                                <h3>Seleciona la Técnica</h3>
+                                    <div class="tipo-tela">
+                                        <%productEdit[4].forEach(technique =>{ %>
+                                            <label 
+                                                for ="<%=technique.dataValues.technique%>">
+                                            <input 
+                                                type="checkbox" 
+                                                name="technique" 
+                                                id="technique" 
+                                                value="<%=technique.technique_id%>"
+                                                <% if(Array.isArray(product.technique)){%> 
+                                                    <%const findTechnique = product.technique.map(i=>Number(i))%>
+                                                    <%=findTechnique.includes(technique.technique_id) ? "checked" : ""%>  
+                                                    ><%=technique.dataValues.technique%></label>
+                                                <%}else{%>
+                                                    <%= locals.product && product.technique &&  product.technique == technique.technique_id ? "checked" : ""%>  
+                                                    ><%=technique.dataValues.technique%></label>
+                                                    <%}%>                          
+                                        <%})%>
+                                    </div>
+                                <% if(locals.errors && errors.technique) { %>
+                                    <div class="danger_text"> <%= errors.technique.msg %> </div>
+                                <%}%> 
+
+                                <h3>Seleciona el tipo de tela</h3>
+                                <div class="tipo-tela">
+                                    <%productEdit[5].forEach(material =>{ %>
+                                        <label 
+                                            for="<%=material.dataValues.material%>">
+                                        <input 
+                                            type="checkbox" 
+                                            name="material" 
+                                            id="material" 
+                                            value="<%=material.material_id%>"
+                                            <% if(Array.isArray(product.material)){%> 
+                                                <%const findMaterial = product.material.map(i=>Number(i))%>
+                                                <%=findMaterial.includes(material.material_id) ? "checked" : ""%>  
+                                                ><%=material.dataValues.material%></label>
+                                            <%}else{%>
+                                                <%= locals.product && product.material &&  product.material == technique.material_id? "checked" : ""%>  
+                                                ><%=material.dataValues.material%></label>
+                                                <%}%>                          
+                                    <%})%>
+                                </div>
+                                <% if(locals.errors && errors.material) { %>
+                                    <div class="danger_text"> <%= errors.material.msg %> </div>
+                                    <% } %> 
+                                
+                                <figure class="container_product">
+                                    <img class="product_edit" src="/img/products_image/<%=productEdit[0].image%>" alt="camiseta_fashion">
+                                </figure>
+                                <h3 class="create-select">Selecciona un archivo</h3>
+                                    <input 
+                                        type="file" 
+                                        name="image" 
+                                        accept=".jpg , .png, .gif">
+                                <%if(locals.errors && errors.image){%>
+                                    <div class="danger_text"> <%= errors.image.msg %> </div>
+                                <%}%> 
+                                <div class="container_description">
+                                    <div class="save">
+                                        <button class="buttons" type="submit" class="submit" value="Enviar">Guardar</button>
+                                    </div>
+                                </div>
+                            </section>
+                        </form>
+                    </section>
+                    <% } %> 
+
             </main>
             <%- include("../partials/footer") %>
     </body>

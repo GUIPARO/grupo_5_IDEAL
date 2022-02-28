@@ -24,11 +24,20 @@ const controller = {
         ],
       });
 
-      Allproducts.forEach((element) => {});
+      
       return Allproducts;
     } catch (error){
       console.log(`ocurrio un error ${error.message}`);
     }
+  },
+  bdLines: async function(){
+    try{
+    const AllLines = await lines.findAll();
+    return AllLines 
+  }catch (error){
+    console.log(`ocurrio un error ${error.message}`);
+  }
+
   },
   findProductById: async function (parametros) {
     try {
@@ -99,6 +108,24 @@ const controller = {
       console.log(`ocurrio un error ${error.message}`);
     }
   },
+  AllRelations: async function(){
+    const findLine = lines.findAll();
+      const findActivity = activities.findAll();
+      const findSubactivity = subactivities.findAll();
+      const findTechnique = techniques.findAll();
+      const findMaterial = materials.findAll();
+
+      const AllPromise = [
+        findLine,
+        findActivity,
+        findSubactivity,
+        findTechnique,
+        findMaterial,
+      ];
+
+      const result = await Promise.all(AllPromise);
+      return result;
+  },
   adminEdit: async function (parametros) {
     try {
       const productEdit = this.findProductById(parametros);
@@ -138,8 +165,6 @@ const controller = {
 
       let foundProduct = await this.findProductById(parametros);
 
-
-      console.log(foundProduct.material_id_materials[0]._options)
 
       const imageFile = image == undefined ? foundProduct.image : image.filename;
 
