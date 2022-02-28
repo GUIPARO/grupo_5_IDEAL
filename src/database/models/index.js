@@ -4,17 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
-<<<<<<< HEAD
-// const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.json')['development'];
-const initModel = require("./init-models")
-
-=======
 const env =  process.env.NODE_ENV.trim() || 'development';
 const config = require(__dirname + '/../config/config.js')[env];
 const initModel = require("./init-models.js")
-// 
->>>>>>> ccd876aeb9570d03778c7c8aa2174fcb4f73db23
+// .trim()
 // const data = {
 //   production:{
 //   username : `${process.env.DBUSER}`,
