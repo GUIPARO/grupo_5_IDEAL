@@ -5,37 +5,45 @@
     <%- include("../partials/header") %>
     <main class="register-main">
         
-            <form method="post" action="/users/register" class="register-form" enctype="multipart/form-data">
+            <form id="form" method="post" action="/users/register" class="register-form" enctype="multipart/form-data">
                 <h2 class="title-register">Registrate</h2>
-                
-                <input class= "form" type="text" name="name" placeholder="Ingresa tus nombres" value="<%= locals.old ? old.name : null %>">
+    
+                <input id="name" class= "form" type="text" name="name" placeholder="Ingresa tus nombres" value="<%= locals.old ? old.name : null %>">
                 <% if(locals.errors && errors.name) { %>
                     <div class="danger_text"> <%= errors.name.msg %> </div>
                     <% } %> 
+                <div id="error_name"></div>
             
-                <input class= "form" type="text" name="lastName"  placeholder="Ingresa tus apellidos"  value="<%= locals.old ? old.lastName : null %>" >
+                <input id="lastName" class= "form" type="text" name="lastName"  placeholder="Ingresa tus apellidos"  value="<%= locals.old ? old.lastName : null %>" >
                 <% if(locals.errors && errors.lastName) { %>
                     <div class="danger_text"> <%= errors.lastName.msg %> </div>
-                    <% } %> 
-                <input class= "form" type="email" name="email" placeholder="Ingresa tu correo"  value="<%= locals.old ? old.email : null %>">
+                    <% } %>
+                <div id="error_lastName"></div> 
+
+                <input id="email" class= "form" type="email" name="email" placeholder="Ingresa tu correo"  value="<%= locals.old ? old.email : null %>">
                 <% if(locals.errors && errors.email) { %>
                     <div class="danger_text"> <%= errors.email.msg %> </div>
                     <% } %> 
+                <div id="error_email"></div>
 
-                <input class= "form" type="password" name="password"  placeholder="Ingresa una contraseña">
+                <input id="password" class= "form" type="password" name="password"  placeholder="Ingresa una contraseña">
                 <% if(locals.errors && errors.password) { %>
                     <div class="danger_text"> <%= errors.password.msg %> </div>
                     <% } %> 
-                <input class= "form" type="password" name="confirm_password" placeholder="Confirma tu contraseña">
+                <div id="error_password"></div>
+                
+                <input id="confirm_password" class= "form" type="password" name="confirm_password" placeholder="Confirma tu contraseña">
                 <% if(locals.errors && errors.confirm_password) { %>
                     <div class="danger_text"> <%= errors.confirm_password.msg %> </div>
-                    <% } %> 
+                    <% } %>
+                <div id="error_passwordConfirm"></div> 
 
                 <label class= "uploadUserAvatar" for= "avatar">Sube tu imagen de perfil</label>
-                <input class= "form" type="file" name="avatar"  placeholder="Debes eligir tu avatar...">
+                <input id="image" class= "form" type="file" name="avatar"  placeholder="Debes eligir tu avatar...">
                 <% if (locals.errors && errors.avatar) { %>
                     <div class="danger_text"> <%= errors.avatar.msg %></div>
                 <% } %>
+                <div id="error_image"></div>
             
                 <button class = "buttons" type="submit" class="submit"><span>Registrarse</span></button>
            
@@ -46,6 +54,7 @@
             </form>
     </main>
     <%- include("../partials/footer") %>
+    <script src="/js/validateRegisterLogin.js"></script>
 </body>
 </html>
 

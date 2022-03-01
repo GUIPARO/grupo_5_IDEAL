@@ -29,6 +29,7 @@
         <%}%> <% if(typeof(errors) != 'undefined'){%>
         <div class="danger_text"><%= errors.msg %></div>
         <%}%>
+        <div id="credentials_front"></div>
         <div class="container_remember">
           <input type="checkbox" name="remember" class="remember" />
           <label for="remember">Recordarme</label>
@@ -40,7 +41,7 @@
         <a href="/users/register"><p>Registrate</p></a>
       </section>
     </main>
-    <script src="../../public/js/validateLogin.js"></script>
     <%- include("../partials/footer") %>
+    <script src="/js/validateLogin.js"></script>
   </body>
 </html>

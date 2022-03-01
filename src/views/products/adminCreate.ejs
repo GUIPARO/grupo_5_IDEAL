@@ -37,9 +37,10 @@
                         name="productLine" 
                         id="select-service" 
                         type="select" >
+                        <option value=""></option>
                         <%models[0].forEach(line =>{ %>
                             <option value="<%=line.line_id%>"><%=line.line%></option>
-                            <%})%>
+                        <%})%>
                     </select>
                 <%if(locals.errors && errors.productLine){%>
                     <div class="danger_text"> <%= errors.productLine.msg %>/div>
@@ -51,6 +52,7 @@
                         name="activity" 
                         id="select-service" 
                         type="select" >
+                        <option value=""></option>
                         <%models[1].forEach(activity =>{ %>
                             <option value="<%=activity.activity_id%>"><%=activity.activity%></option>
                             <%})%>
