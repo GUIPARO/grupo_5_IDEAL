@@ -668,7 +668,7 @@ footer .mapa_ubicacion {
   margin-left: 5px;
 }
 
-.main_login .danger_text {
+.danger_text {
   color: red;
   width: 70%;
   margin: 10px auto;
@@ -748,12 +748,6 @@ footer .mapa_ubicacion {
 
 .container_editAvatar .ditAvatar {
   width: 100%;
-}
-
-.register-form .danger_text {
-  color: red;
-  width: 70%;
-  margin: 10px auto;
 }
 
 /* FINAl REGISTER REGISTER REGISTER REGISTER MAIN */
