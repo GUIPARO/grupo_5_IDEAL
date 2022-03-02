@@ -14,9 +14,27 @@ const controller = {
             "../public/img/users_avatars/" + user.avatar
           );
         user.avatar = avatarRoute;
-        console.log(user)
         
         return res.json(user);
+    },
+    
+    products: async (req, res) => {
+        let listProducts = await modelApi.allProducts();
+        
+
+
+        return res.json(listProducts);
+    },
+
+    oneProduct: async (req, res) => {
+        let product = await modelApi.oneProduct(req.params);
+        let avatarRoute = path.join(
+            __dirname,
+            "../public/img/products_image/" + product.image
+        );
+        product.image = avatarRoute;
+
+        return res.json(product);
     }
 }  
 
