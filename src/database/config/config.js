@@ -3,11 +3,11 @@ require("dotenv").config();
 module.exports = {
   development: {
     username: "root",
-    password: "1234",
+    password: "",
     database: "datos_ideal",
     host: "127.0.0.1",
     dialect: "mysql",
-    port:"4550",
+    port:"3307",
     },
   test: {
     username: "root",

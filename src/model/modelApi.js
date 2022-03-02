@@ -20,7 +20,7 @@ const controller = {
             attributes : [[sequelize.fn("COUNT", sequelize.col("user_id")), "totalUsers"]]
         })
 
-        return {totalCount : totalCount[0], users: user};
+        return {totalCount : totalCount[0].dataValues.totalUsers, users: user};
     },  
 
     oneUser: async (parametros) => {
@@ -37,6 +37,8 @@ const controller = {
             const totalCount = await products.findAll({
                 attributes : [[sequelize.fn("COUNT", sequelize.col("product_id")), "totalProducts"]]
             })
+
+            console.log(totalCount)
     
             const totalCategories = await products.findAll({
                 include : ["line"],
@@ -49,7 +51,14 @@ const controller = {
                 attributes : ["product_id", "fullname"]
             })
 
-            return {totalcount : totalCount[0], totalCategories, listProducts}
+            let lines = totalCategories.map(line => {
+                return {
+                    line : line.line.line,
+                    totalLine : line.dataValues.countByCategory
+                }
+            })
+
+            return {totalcount : totalCount[0].dataValues.totalProducts, lines, listProducts}
 
         } catch (error) {
             console.log(error);

@@ -5,6 +5,7 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 const cookieParser = require('cookie-parser');
 const session = require('express-session')
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')// requerir middleware de aplicación
+const cors = require("cors");
 
 
 
@@ -19,6 +20,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname,'./public')))// Indica a express donde se encuentran los recursos estáticos
 app.use(userLoggedMiddleware)
+app.use(cors());
 
 
 // ************ Template Engine ************//
@@ -38,6 +40,7 @@ app.use("/", indexRoutes)
 app.use("/products", productsRoutes)
 app.use("/users", usersRoutes)
 app.use("/api", apiRoutes)
+
 
 module.exports = app;
 
