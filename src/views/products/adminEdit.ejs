@@ -10,10 +10,11 @@
                 <section class="create-form">
                     <h2 class="title-admin">Edita este producto</h2>
 
-                    <form class="create" action='/products/adminEdit/<%=productEdit[0].product_id%>?_method=PUT' method="POST" enctype="multipart/form-data"> 
+                    <form id="form" class="create" action='/products/adminEdit/<%=productEdit[0].product_id%>?_method=PUT' method="POST" enctype="multipart/form-data"> 
                         <input type="text" name="fullName" id="fullName" minlength="2" placeholder="Nombre del producto" value ="<%=productEdit[0].fullname%>">
+                        <div id="fullName_error"></div>
                         <input type="number" name="price" id="price" minlength="2" placeholder="Precio del producto"  value ="<%=productEdit[0].price%>">
-
+                        
                         <section class="container-lineform">
                             <h3>Seleciona la linea del producto</h3>
                             <select class="select_service" name="productLine" id="product_line" >
@@ -66,7 +67,8 @@
                                 <img class="product_edit" src="/img/products_image/<%=productEdit[0].image%>" alt="camiseta_fashion">
                             </figure>
                             <h3 class="create-select">Selecciona un archivo</h3>
-                            <input type="file" name="image" accept=".jpg , .png">
+                            <input id="image" type="file" name="image" accept=".jpg , .png">
+                            <div id="image_error"></div>
                             <div class="container_description">
                                 <div class="save">
                                     <button class="buttons" type="submit" class="submit" value="Enviar">Guardar</button>
@@ -80,7 +82,7 @@
                     <section class="create-form">
                         <h2 class="title-admin">Edita este producto</h2>
     
-                        <form class="create" action='/products/adminEdit/<%=id%>?_method=PUT' method="POST" enctype="multipart/form-data"> 
+                        <form id="form" class="create" action='/products/adminEdit/<%=id%>?_method=PUT' method="POST" enctype="multipart/form-data"> 
                             <input 
                                 type="text" 
                                 name="fullName" 
@@ -91,6 +93,7 @@
                             <% if(locals.errors && errors.fullName) { %>
                                 <div class="danger_text"> <%= errors.fullName.msg %> </div>
                                 <% } %> 
+                                <div id="fullName_error"></div>
 
                             <input 
                                 type="number" 
@@ -212,10 +215,12 @@
                                     <input 
                                         type="file" 
                                         name="image" 
+                                        id="image"
                                         accept=".jpg , .png, .gif">
                                 <%if(locals.errors && errors.image){%>
                                     <div class="danger_text"> <%= errors.image.msg %> </div>
                                 <%}%> 
+                                <div id="image_error"></div>
                                 <div class="container_description">
                                     <div class="save">
                                         <button class="buttons" type="submit" class="submit" value="Enviar">Guardar</button>
@@ -229,4 +234,6 @@
             </main>
             <script src="/js/eventNavBar.js"></script>
             <%- include("../partials/footer") %>
+            <script src="/js/validateAdmin.js"></script>
     </body>
+</html>

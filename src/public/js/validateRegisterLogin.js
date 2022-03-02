@@ -1,3 +1,4 @@
+// const validator = require("validator")
 
 window.addEventListener("load", function () {
 
@@ -42,7 +43,7 @@ window.addEventListener("load", function () {
 
         if(email.value == "") {
             errors.email = "Agregar un email válido";
-        }
+        } 
 
         if(confirm_password.value.length == 0) {
             errors.passwordConfirm = "Debe confirmar la contraseña";
@@ -52,12 +53,8 @@ window.addEventListener("load", function () {
 
         let extensionValidate = image.value.includes(".jpg") || image.value.includes(".jpeg") || image.value.includes(".png") || image.value.includes(".gif");
 
-        switch (extensionValidate) {
-            case true:
-                break;      
-            default:
-                errors.image = "Las extensiones de archivo permitidas son JPG, JPEG, PNG, GIF."
-                break;
+        if (!extensionValidate) {
+            errors.image = "Las extensiones de archivo permitidas son JPG, JPEG, PNG, GIF."
         }
 
         if(Object.keys(errors).length >= 1) {

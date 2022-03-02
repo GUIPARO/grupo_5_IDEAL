@@ -139,5 +139,36 @@
 ### Less of ### 
 - Desviarnos del tema prioritario
 
+## Sprint 7 ##
+
+### Keep doing ###
+- Seguir realizando reuniones
+- Entregar trabajos a tiempo
+- Tablero en Jira
+- Mantener ambiente del grupo
+- Delegar tareas
+- Buena comunicación
+- Notificar problemas al realizar tareas asignadas
+- Implementar reunion weekly
+
+### More of ### 
+- Concretar ideas
+- Compartir ideas para la mejora del diseño de las vistas
+- Despejar dudas con los profesores
+- Review del proyecto
+- Notificar cambios en el repositorio 
+
+###  Start doing ### 
+- Review del proyecto 
+
+### Stop doing ### 
+- Pereza
+- Procastinar
+- Postergar reuniones
+- Realizar adecuaciones a última hora
+
+### Less of ### 
+- Desviarnos del tema prioritario
+
 
 

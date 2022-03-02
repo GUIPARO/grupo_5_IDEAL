@@ -9,7 +9,7 @@
     <% if(locals.errors == undefined && models !== undefined){ %> 
         <section class= "create-form">
             <h2 class="title-admin">Crea un nuevo producto</h2>
-            <form class= "create" method="post" action="/products/adminCreate" enctype="multipart/form-data">
+            <form id="form" class= "create" method="post" action="/products/adminCreate" enctype="multipart/form-data">
                 <input 
                     type="text" 
                     name="fullName" 
@@ -19,7 +19,7 @@
                 <%if(locals.errors && errors.fullName){%>
                     <div class="danger_text"><%= errors.fullName.msg %> </div>
                 <%}%> 
-
+                <div id="fullName_error"></div>
                 <input 
                     type="number" 
                     name="price" 
@@ -112,12 +112,14 @@
             <h3>Selecciona un archivo</h3>
                 <input 
                     type="file" 
-                    name="image" 
+                    name="image"
+                    id="image" 
                     accept=".jpg, .png">
             </div>
             <% if(locals.errors && errors.image) { %>
                 <div class="danger_text"> <%= errors.image.msg %> </div>
-                <% } %>   
+            <% } %>   
+            <div id="image_error"></div>
                 <div class="container_description">
                     <div class = "save">
                         <button class = "buttons" type="submit" class="submit" value="Guardar">Guardar</button>
@@ -133,7 +135,7 @@
         <% if(locals.errors !== undefined && products !== undefined){ %> 
         <section class= "create-form">
             <h2 class="title-admin">Crea un nuevo producto</h2>
-            <form class= "create" method="post" action="/products/adminCreate" enctype="multipart/form-data">
+            <form id="form" class= "create" method="post" action="/products/adminCreate" enctype="multipart/form-data">
                 <input 
                     type="text" 
                     name="fullName" 
@@ -162,12 +164,13 @@
                         name="productLine" 
                         id="select-service" 
                         type="select" >
+                        <option value=""></option>
                         <%models[0].forEach(line =>{ %>
                             <option value="<%=line.line_id%>"<%= locals.products && products.productLine == line.line_id ? "selected" : ""%>><%=line.line%></option>
                             <%})%>
                     </select>
                 <%if(locals.errors && errors.productLine){%>
-                    <div class="danger_text"> <%= errors.productLine.msg %>/div>
+                    <div class="danger_text"> <%= errors.productLine.msg %></div>
                 <%}%> 
 
                 <h3>Seleciona la actividad</h3>
@@ -176,6 +179,7 @@
                         name="activity" 
                         id="select-service" 
                         type ="select" >
+                        <option value=""></option>
                         <%models[1].forEach(activity =>{ %>
                             <option value="<%=activity.activity_id%>"<%= locals.products && products.activity == activity.activity_id ? "selected" : ""%>><%=activity.activity%></option>
                             <%})%>
@@ -281,4 +285,6 @@
         </main>
         <script src="/js/eventNavBar.js"></script>
         <%- include("../partials/footer") %>
+        <script src="/js/validateAdmin.js"></script>
     </body>
+</html>

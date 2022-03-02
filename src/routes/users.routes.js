@@ -40,7 +40,7 @@ router.post('/login', validationsLogin,usersController.processLogin);
 // CREAR USUARIOS
 // guestMiddleware
 router.get('/register', usersController.register);
-router.post('/register', uploadUserFile.single('avatar'),validationsRegister,usersController.processRegister);
+router.post('/register',  uploadUserFile.single('avatar'), validationsRegister, usersController.processRegister);
 
 // PERFIL DE USUARIOS
 router.get('/profile/:id', usersController.showUser);
@@ -55,7 +55,7 @@ router.get('/admin',adminMiddleware,usersController.admin);
 
 //Editar usuario
 router.get('/userEdit/:id',usersController.adminEdit);
-router.put('/userEdit/:id', uploadUserFile.single("avatar"), validationsUserToEdit,usersController.userModified);
+router.put('/userEdit/:id', uploadUserFile.single("avatar"), validationsUserToEdit, usersController.userModified);
 
 //Eliminar usuario
 router.delete ('/delete/:id', usersController.userDelete)

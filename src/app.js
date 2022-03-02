@@ -32,11 +32,12 @@ app.set('views', path.resolve(__dirname,"views"));// Indica a express donde est√
 const indexRoutes = require('./routes/index.routes');
 const productsRoutes = require('./routes/products.routes');
 const usersRoutes = require("./routes/users.routes.js");
-
+const apiRoutes = require("./routes/api.routes.js");
 
 app.use("/", indexRoutes)
 app.use("/products", productsRoutes)
 app.use("/users", usersRoutes)
+app.use("/api", apiRoutes)
 
 module.exports = app;
 
