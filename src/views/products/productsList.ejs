@@ -13,12 +13,12 @@
               <figure class="image-container">
                 <img
                   src="/img/products_image/<%=product.image%>"
-                  alt="imagen de producto"
-                />
+                  alt="imagen de producto"/>
               </figure>
-              <p><%=product.fullname %></p>
             </div>
-            <div>
+
+            <div class ="content">
+              <ul><p><%=product.fullname %></p></ul>
               <ul>
                 <%product.activity_id_activities.forEach(activity=>{%>
                 <li><%=activity.activity %></li>
@@ -31,7 +31,7 @@
         <% }); %>
       </section>
     </main>
-
+    <script src="/js/eventNavBar.js"></script>
     <%- include("../partials/footer") %>
   </body>
 </html>

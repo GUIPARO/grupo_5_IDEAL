@@ -30,17 +30,22 @@ const controller = {
   adminCreate: async(req, res) => {
     
     let models = await modelProducts.AllRelations()
+
     res.render("./products/adminCreate",{models});
   },
 
   //PROCESAMIENTO PARA LA CREACIÓN DE PRODUCTOS
   adminStore: async(req, res) => {
+    try{
     const errors = validationResult(req);
     let models = await modelProducts.AllRelations()
+    req.body.image =
+    req.file == undefined ? " " : req.file.filename;
     
    
     if (errors.isEmpty()) {
-      const create = modelProducts.addProduct(req.body, req.file);
+      const create = await modelProducts.addProduct(req.body, req.file);
+            
       res.redirect("/products/admin");
     } else {
       console.log(req.body)
@@ -51,6 +56,9 @@ const controller = {
     
       });
     }
+  } catch (error){
+    console.log(`En el controlador de productos ocurrio un error ${error.message}`);
+  }
   },
 
   adminEdit: async (req, res) => {
@@ -60,6 +68,7 @@ const controller = {
   },
 
   adminModified: async (req, res) => {
+    try{
     let productEdit = await modelProducts.adminEdit(req.params);
     let foundProduct = await modelProducts.findProductById(req.params);
     let id = foundProduct.product_id;
@@ -73,8 +82,8 @@ const controller = {
       await modelProducts.adminModified(req.params, req.body, req.file);
       res.redirect("/products/admin");
     } else {
-      // console.log(productEdit);
-      // console.log(errors.mapped());
+      console.log(productEdit);
+      console.log(errors.mapped());
       console.log(req.body);
       // console.log(req.body.productLine);
       // console.log(req.body.activity);
@@ -90,6 +99,9 @@ const controller = {
         productEdit,
       });
     }
+  } catch (error){
+    console.log(`En el controlador de productos ocurrio un error ${error.message}`);
+  }
   },
 
   adminDelete: async (req, res) => {

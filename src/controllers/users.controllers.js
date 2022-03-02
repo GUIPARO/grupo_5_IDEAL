@@ -6,6 +6,9 @@ const modelUser = require("../model/modelUsers");
 const { validationResult } = require("express-validator"); //Aquí requiero a la función que trae los errores desde la ruta, de llegar a existir
 
 const controller = {
+  target: (req,res)=>{
+    res.render("./users/target")
+  },
   login: (req, res) => {
     res.render("./users/login");
   },
@@ -90,7 +93,7 @@ const controller = {
         }
       }
     } catch (error) {
-      console.log(`En el controlador ocurrio un error ${error.message}`);
+      console.log(`En el controlador de usuarios ocurrio un error ${error.message}`);
     }
   },
   profile: (req, res) => {
@@ -114,7 +117,7 @@ const controller = {
   adminEdit: async(req, res) => {
     
     const userEdit = await modelUser.adminEdit(req.params)
-    console.log(userEdit)
+    // console.log(userEdit)
 
     
 
@@ -171,7 +174,7 @@ const controller = {
   
     let errors = validationResult(req)
     if(errors.isEmpty() == false){
-      console.log(req.body)
+      // console.log(req.body)
       return res.render("../views/users/userEdit", {
         errors: errors.mapped(),
         userEdit: req.body,

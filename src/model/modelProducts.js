@@ -24,20 +24,18 @@ const controller = {
         ],
       });
 
-      
       return Allproducts;
-    } catch (error){
+    } catch (error) {
       console.log(`ocurrio un error ${error.message}`);
     }
   },
-  bdLines: async function(){
-    try{
-    const AllLines = await lines.findAll();
-    return AllLines 
-  }catch (error){
-    console.log(`ocurrio un error ${error.message}`);
-  }
-
+  bdLines: async function () {
+    try {
+      const AllLines = await lines.findAll();
+      return AllLines;
+    } catch (error) {
+      console.log(`ocurrio un error ${error.message}`);
+    }
   },
   findProductById: async function (parametros) {
     try {
@@ -103,28 +101,27 @@ const controller = {
       await product.addActivity_id_activities(activity);
       await product.addSubactivity_id_subactivities(subactivity);
       await product.addTechnique_id_techniques(technique);
-      
     } catch (error) {
       console.log(`ocurrio un error ${error.message}`);
     }
   },
-  AllRelations: async function(){
+  AllRelations: async function () {
     const findLine = lines.findAll();
-      const findActivity = activities.findAll();
-      const findSubactivity = subactivities.findAll();
-      const findTechnique = techniques.findAll();
-      const findMaterial = materials.findAll();
+    const findActivity = activities.findAll();
+    const findSubactivity = subactivities.findAll();
+    const findTechnique = techniques.findAll();
+    const findMaterial = materials.findAll();
 
-      const AllPromise = [
-        findLine,
-        findActivity,
-        findSubactivity,
-        findTechnique,
-        findMaterial,
-      ];
+    const AllPromise = [
+      findLine,
+      findActivity,
+      findSubactivity,
+      findTechnique,
+      findMaterial,
+    ];
 
-      const result = await Promise.all(AllPromise);
-      return result;
+    const result = await Promise.all(AllPromise);
+    return result;
   },
   adminEdit: async function (parametros) {
     try {
@@ -165,18 +162,16 @@ const controller = {
 
       let foundProduct = await this.findProductById(parametros);
 
+      const imageFile =
+        image == undefined ? foundProduct.image : image.filename;
 
-      const imageFile = image == undefined ? foundProduct.image : image.filename;
-
-    
       const productEdit = {
         ...all,
         fullname: fullName,
         price: Number(price),
         image: imageFile,
-        line_id: Number(productLine)
+        line_id: Number(productLine),
       };
-
 
       if (image != undefined) {
         let rutaImage = path.resolve(
@@ -188,28 +183,28 @@ const controller = {
 
       const product = await foundProduct.update(productEdit, {
         where: {
-          product_id: parametros.id
-        }
+          product_id: parametros.id,
+        },
       });
 
-      await product.setMaterial_id_materials(material);
       await product.setActivity_id_activities(activity);
       await product.setSubactivity_id_subactivities(subactivity);
       await product.setTechnique_id_techniques(technique);
-
+      await product.setMaterial_id_materials(material);
 
     } catch (error) {
       console.log(`ocurrio un error ${error.message}`);
     }
-    },  
+  },
   adminDelete: async function (parametros) {
     try {
       const foundProduct = await this.findProductById(parametros);
 
-      await foundProduct.setMaterial_id_materials([]);
+      
       await foundProduct.setActivity_id_activities([]);
       await foundProduct.setSubactivity_id_subactivities([]);
       await foundProduct.setTechnique_id_techniques([]);
+      await foundProduct.setMaterial_id_materials([]);
 
       let rutaImage = path.resolve(
         __dirname,
@@ -223,6 +218,5 @@ const controller = {
     }
   },
 };
-
 
 module.exports = controller;

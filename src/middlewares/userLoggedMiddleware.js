@@ -7,8 +7,8 @@ async function userLoggedMiddleware(req,res,next){
 
     let userCookie = await modelUser.findbyField('email', emailInCookie)
     
-    console.log(emailInCookie)
-    console.log(userCookie)
+    // console.log(emailInCookie)
+    // console.log(userCookie)
     if(userCookie){
        req.session.userLogged = userCookie
     }

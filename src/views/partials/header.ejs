@@ -9,10 +9,11 @@
             <ul class="header_list">
                 <% if (locals.islogged){ %>
                     <% if (locals.userLogged.role.role == 5){ %>
-                <li class="menu"><a class="nav-link_img" href="#" > 
-                    <span> Administrar</span><span>                          
-                    </a>
-                    <ul class="dropdown-menu">
+                <li class="menu">
+                    <div class="nav-link_img-admin" onclick = "menuToggleAdmin()"> 
+                    <span class="admin"> Administrar</span>                         
+                    </div>
+                    <ul class="dropdown-menu-admin">
                         <li> <a class="dropdown-item" href="/products/admin">Productos</a></li>                    
                         <li> <a class="dropdown-item" href="/users/admin/">Usuarios</a></li>
                     </ul>
@@ -24,17 +25,19 @@
                 <li><a href="/products/productsList">Productos</a></li>
 
                 <% if (locals.islogged){ %>
-                    <li class="menu"><a class="nav-link_img" href="#" >
-                        <span class="link_img">
-                            <img src="/img/users_avatars/<%= locals.userLogged.avatar %> "> 
-                        </span>  
-                        <span><%= locals.userLogged.name %> </span>                        
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li> <a class="dropdown-item" href="/users/profile">Perfil</a></li>                    
-                            <li> <a class="dropdown-item" href="/users/logout/">Cerrar sesión</a></li>
-                        </ul>
-                        </li>
+                    <li class="menu">
+                        <div class="nav-link_img">
+                            <span class="link_img" onclick = "menuToggle()"> 
+                                <img src="/img/users_avatars/<%= locals.userLogged.avatar %> "> 
+                            </span>  
+                                                    
+                        </div>
+                            <ul class="dropdown-menu" >
+                                <h3><%= locals.userLogged.name %><br><span>User Ideal</span> </h3>
+                                <li> <a class="dropdown-item" href="/users/profile"> Mi Perfil</a></li>                    
+                                <li> <a class="dropdown-item" href="/users/logout/"></i>Logout</a></li>
+                            </ul>
+                    </li>
                 
                 <% } else{ %> 
                     <li><a href="/users/login">Mi cuenta</a></li>
@@ -48,5 +51,6 @@
                     <a href="#"><i class="fas fa-bars"></i></a>
         </section>
         </nav>
+        
     </header>
 </div>

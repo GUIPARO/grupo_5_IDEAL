@@ -32,6 +32,7 @@ const uploadUserFile = multer({ storage});
 //*---------RUTAS--------------*//
 
 //loguear usuarios
+router.get('/target', usersController.target)
 // guestMiddleware
 router.get('/login', usersController.login);
 router.post('/login', validationsLogin,usersController.processLogin);
