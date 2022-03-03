@@ -34,12 +34,12 @@ const uploadUserFile = multer({ storage});
 //loguear usuarios
 router.get('/target', usersController.target)
 // guestMiddleware
-router.get('/login', usersController.login);
+router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', validationsLogin,usersController.processLogin);
 
 // CREAR USUARIOS
 // guestMiddleware
-router.get('/register', usersController.register);
+router.get('/register',guestMiddleware, usersController.register);
 router.post('/register',  uploadUserFile.single('avatar'), validationsRegister, usersController.processRegister);
 
 // PERFIL DE USUARIOS

@@ -10,7 +10,9 @@ window.addEventListener("load", function () {
     
     form.addEventListener("submit", function (e) {
         e.preventDefault();
+
         let errors = {};
+        
         let extensionValidate = image.value.includes(".jpg") || image.value.includes(".jpeg") || image.value.includes(".png") || image.value.includes(".gif");
     
 
