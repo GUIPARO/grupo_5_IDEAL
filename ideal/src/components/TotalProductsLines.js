@@ -25,7 +25,7 @@ function TotalsProductsLines() {
       <div>
         <span>Productos por</span>
       </div>
-      <div>
+      {/* <div>
         <div>
           <span>{total.lines[0].line}</span>
           <span>{total.lines[0].totalLine}</span>
@@ -42,7 +42,7 @@ function TotalsProductsLines() {
           <span>{total.lines[3].line}</span>
           <span>{total.lines[3].totalLine}</span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
