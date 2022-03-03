@@ -58,7 +58,7 @@ const controller = {
                 }
             })
 
-            return {totalcount : totalCount[0].dataValues.totalProducts, lines, listProducts}
+            return {totalcount : totalCount[0].dataValues.totalProducts, lines, listProducts, totalLines : lines.length}
 
         } catch (error) {
             console.log(error);
