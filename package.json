@@ -30,6 +30,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
     "dev": "cross-env NODE_ENV=development nodemon src/index",
+    "prod": "cross-env NODE_ENV=production  nodemon src/index.js",
     "build": "sequelize-auto -h 127.0.0.1 -d db_ideal -u root -x 1234 -p 4550  --dialect mysql"
   },
   "repository": {

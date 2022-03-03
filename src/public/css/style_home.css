@@ -354,6 +354,8 @@ header nav .header_list > li {
 
 /* INICIO CARROUSEL  */
 
+
+
 main {
   width: 100%;
   margin: 0 auto;
@@ -365,10 +367,80 @@ main .carrousel_container {
   overflow: hidden;
 }
 
+.carrousel_section,
+.carrousel_section div{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
 main .carrousel_image {
   width: 100%;
   height: 200px;
 }
+
+.container{
+  position:relative;
+  background: #fafafa;
+}
+
+.container .box{
+  position:relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #2da2ff 25%,
+  #fafafa 25%, #fafafa 50%, #2da2ff 50%, #2da2ff 75%, 
+  #fafafa 75%, #fafafa 100%);
+  background-size: 40px 40px;
+  filter: grayscale(1);
+  animation: animateBg 0.5s linear infinite;
+  animation-play-state: paused;
+  transition: filter 1s;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.container .box:nth-child(2){
+  background: linear-gradient(135deg, #af0ec4  25%, #fafafa 25%, #fafafa 50%, #af0ec4  50%,  #af0ec4  75%,
+   #fafafa 75%, #fafafa 100%);
+   background-size: 40px 40px ;
+}
+
+.container .box:nth-child(3){
+  background: linear-gradient(135deg, #ff4826 25%, #fafafa 25%, #fafafa 50%, #ff4826 50%,  #ff4826 75%,
+   #fafafa 75%, #fafafa 100%);
+   background-size: 40px 40px ;
+}
+
+.container .box:hover{
+  animation-play-state: running;
+  filter:grayscale(0)
+}
+
+.box img{
+  position: absolute;
+  bottom: -25px;
+  height: 90%;
+  transition: height 0.5s;
+}
+
+.container .box:hover img{
+  height: 350px;
+}
+
+
+@keyframes animateBg {
+  0%{
+      background-position:0; 
+  }
+  100%{
+      background-position: 40px;
+  }
+    
+}
+
 
 /* FIN CARROUSEL  */
 
@@ -378,9 +450,10 @@ main .carrousel_image {
   width: 80%;
   max-width: 1000px;
   border-bottom: 2px solid #1e2d44e0;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .description_section .description-image_container {
@@ -1784,6 +1857,14 @@ td .info,
 /* MEDIA QUERIS HOME  */
 
 @media (min-width: 481px) {
+
+
+  .container .box{
+    height: 400px;
+    width: 300px;
+   }
+  
+
   .description_section {
     font-size: 18px;
     width: 90%;
@@ -1864,6 +1945,26 @@ td .info,
 @media (min-width: 769px) {
   /* HEADER  */
 
+  .container{
+    position:relative;
+    display: flex;
+    background: #fafafa;
+  }
+
+  .carrousel_section
+  {
+    width: 100%;
+  }
+  .container .box {
+    height: 390px;
+    width: 30%;
+    max-width: 300px;
+  }
+
+  .container .box:hover img{
+    height: 450px;
+  }
+
   header {
     max-width: 1200px;
   }
@@ -1913,7 +2014,9 @@ td .info,
 
   .carrousel_section {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 30px auto;
+    border-bottom: 2px solid #1e2d44e0;
+    padding-bottom: 51px;
   }
 
   .description_section {
@@ -1921,6 +2024,7 @@ td .info,
     align-items: center;
     justify-content: center;
     width: 750px;
+    margin-top: 40px;
   }
 
   .description_section p {
@@ -2012,6 +2116,12 @@ td .info,
 }
 
 @media (min-width: 1000px) {
+
+  .carrousel_section,
+  .carrousel_section div {
+    width: 100%;
+  }
+
   main .services_section {
     width: 1000px;
   }
@@ -2126,60 +2236,3 @@ td .info,
   /*FIN MEDIA QUERIS CARRITO DE COMPRA*/
 }
 
-.container{
-  position:relative;
-  display:flex;
-  background: #444;
-}
-
-.container .box{
-  position:relative;
-  width: 320px;
-  height: 400px;
- 
-  margin: 0 20px;
-  border-radius: 20px;
-  background: linear-gradient(45deg, #2da2ff 25%,
-  #444 25%, #444 50%, #2da2ff 50%, #2da2ff 75%, 
-  #444 75%, #4444 100%);
-  background-size: 40px 40px;
-  filter: grayscale(1);
-  animation: animateBg 0.5s linear infinite;
-  animation-play-state: paused;
-  transition: filter 1s;
-  display: flex;
-  justify-content: center;
-}
-
-.container .box:nth-child(2){
-  background: linear-gradient(135deg, #ff61ae 25%, #444 25%, #444 50%, #ff61ae 50%,  #ff61ae 75%,
-   #444 75%, #444 100%);
-   background-size: 40px 40px ;
-}
-
-.container .box:hover{
-  animation-play-state: running;
-  filter:grayscale(0)
-}
-
-.box img{
-  position: absolute;
-  bottom: -25px;
-  height: 90%;
-  transition: height 0.5s;
-}
-
-.container .box:hover img{
-  height: 480px;
-}
-
-
-@keyframes animateBg {
-  0%{
-      background-position:0; 
-  }
-  100%{
-      background-position: 40px;
-  }
-    
-}
