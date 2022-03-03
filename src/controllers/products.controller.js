@@ -1,4 +1,7 @@
 const modelProducts = require("../model/modelProducts");
+const fs = require("fs");
+const path = require("path");
+
 const { validationResult } = require("express-validator"); //Aquí requiero a la función que trae los errores desde la ruta, de llegar a existir
 
 const controller = {
@@ -39,8 +42,7 @@ const controller = {
     try{
     const errors = validationResult(req);
     let models = await modelProducts.AllRelations()
-    req.body.image =
-    req.file == undefined ? " " : req.file.filename;
+    req.body.image = req.file == undefined ? " " : req.file.filename;
     
    
     if (errors.isEmpty()) {
@@ -48,7 +50,13 @@ const controller = {
             
       res.redirect("/products/admin");
     } else {
-      console.log(req.body)
+
+      let rutaImage = path.resolve(
+        __dirname,
+        "../public/img/products_image/" + req.file.filename
+      );
+      fs.unlinkSync(rutaImage);
+
       return res.render("./products/adminCreate", {
         errors: errors.mapped(),
         products: req.body,
@@ -73,8 +81,7 @@ const controller = {
     let foundProduct = await modelProducts.findProductById(req.params);
     let id = foundProduct.product_id;
 
-    req.body.image =
-      req.file == undefined ? foundProduct.avatar : req.file.filename;
+    req.body.image = req.file == undefined ? foundProduct.avatar : req.file.filename;
 
     const errors = validationResult(req);
 
@@ -82,16 +89,13 @@ const controller = {
       await modelProducts.adminModified(req.params, req.body, req.file);
       res.redirect("/products/admin");
     } else {
-      console.log(productEdit);
-      console.log(errors.mapped());
-      console.log(req.body);
-      // console.log(req.body.productLine);
-      // console.log(req.body.activity);
-      // console.log(req.body.subactivity.map(i=>Number(i)))
-      // let sub = productEdit[0].subactivity_id_subactivities.map(
-      //   (subactivity) => subactivity.subactivity_id
-      // );
-      // console.log(sub);
+
+      let rutaImage = path.resolve(
+        __dirname,
+        "../public/img/products_image/" + req.file.filename
+      );
+      fs.unlinkSync(rutaImage);
+
       return res.render("./products/adminEdit", {
         errors: errors.mapped(),
         product: req.body,

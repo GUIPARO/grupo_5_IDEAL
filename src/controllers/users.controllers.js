@@ -40,6 +40,13 @@ const controller = {
     if (errors.isEmpty()) {
       res.redirect("/users/login");
     } else {
+
+      let rutaImage = path.resolve(
+        __dirname,
+        "../public/img/users_avatars/" + req.file.filename
+      );
+      fs.unlinkSync(rutaImage);
+
       res.render("./users/register", {
         errors: errors.mapped(),
         old: req.body,
@@ -52,6 +59,9 @@ const controller = {
       const errors = validationResult(req);
 
       if (errors.isEmpty() == false) {
+
+        
+
         return res.render("../views/users/login", {
           errors: errors.mapped(),
           oldData: req.body,

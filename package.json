@@ -23,12 +23,13 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.15"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "dev": "SET NODE_ENV=development & nodemon src/index",
+    "dev": "cross-env NODE_ENV=development nodemon src/index",
     "build": "sequelize-auto -h 127.0.0.1 -d db_ideal -u root -x 1234 -p 4550  --dialect mysql"
   },
   "repository": {
@@ -42,4 +43,5 @@
     "url": "https://github.com/GUIPARO/grupo_5_IDEAL/issues"
   },
   "homepage": "https://github.com/GUIPARO/grupo_5_IDEAL#readme"
+ 
 }
