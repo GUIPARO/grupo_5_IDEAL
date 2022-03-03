@@ -30,7 +30,7 @@ const controller = {
         let product = await modelApi.oneProduct(req.params);
         let avatarRoute = path.join(
             __dirname,
-            "../public/img/products_image/" + product.image
+            "../public/img/products_image/" + product.camps.image
         );
         product.image = avatarRoute;
 
