@@ -5,7 +5,7 @@ import TotalsProductsLines from './TotalProductsLines';
 
 function Main() {
     return (
-      <div>
+      <div className = "contentMain">
         <ContentTop />
         <TotalsProductsLines/>
       </div>

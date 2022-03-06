@@ -1,16 +1,14 @@
-import React from 'react';
-import Logo from "../assets/img/logo_blanco_negro.png";
+// import React from 'react';
 
-function Header() {
-    return (
-      <div>
-          <figure>
-              <img src={Logo}></img>
-          </figure>
-      </div>
-    );
-  }
+
+// function Header() {
+//     return (
+//       <div>
+          
+//       </div>
+//     );
+//   }
 
 
 
-export default Header;
+// export default Header;
