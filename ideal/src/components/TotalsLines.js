@@ -23,8 +23,8 @@ function  TotalsLines() {
 
     return (
       <div>
-          <div>
-              <span>Total Lineas</span>
+          <div className = " itemList">
+              <span>Total Lineas</span> <br></br>
               <span>{total.totalLines}</span>
           </div>
       </div>

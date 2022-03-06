@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    background-color: #FAFAFA;
+  }
+
+  .App {
+    display: flex;
+  }
+
+  .sideBar{
+    width: 30%;
+    height: 100vh;
+    padding: 10px;
+    border-right: 3px solid #e3e038;
+  }
+
+  .contentMain {
+    width: 70%;
+  }
+
+  .sidebar .containerLogo{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+  }
+
+  .sideBar ul li {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid red;
+    padding: 5px;
+    list-style: none;
+    
+    
+  }
+ 
+  .containerLogo img {
+    width: 100%;
+
+  }
+
+  /* INICIO DEL MAIN MAIN MAIN MAIN */
+  
+  .listTop {
+    width: 80%;
+    margin: 50px auto;
+    
+  }
+
+  .listTop .contentTotals{
+    width: 180px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
+    background-color: #FFF;
+  }
+  .itemList{
+    background-color: #FFF;
+  }
+  @media (min-width: 481px){
+    
+  .listTop {
+    display: flex;
+    margin: 80px auto;
+    justify-content: space-around;
+  }
+  .listTop .contentTotals{
+    margin-right: 10px;
+
+  }
+  }
+
+  @media (min-width: 769px) {
+    .listTop .contentTotals{
+      width: 280px;
+      height: 100px;
+      margin-right: 15px;
+    }
+    .itemList{
+      margin: 20px;
+    }
+  }
+ 
