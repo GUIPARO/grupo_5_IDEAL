@@ -16,11 +16,11 @@ module.exports = {
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
-    // "production": {
-    //   "username": process.env.DB_USER_PROD,
-    //   "password": process.env.DB_PASSWORD_PROD,
-    //   "database": process.env.DB_DATABASE_PROD,
-    //   "host": process.env.DB_HOST_PROD,
-    //   "dialect": process.env.DB_DIALECT
-    // }
+    "production": {
+      "username": process.env.DB_USER_PROD,
+      "password": process.env.DB_PASSWORD_PROD,
+      "database": process.env.DB_DATABASE_PROD,
+      "host": process.env.DB_HOST_PROD,
+      "dialect": process.env.DB_DIALECT
+    }
   }
