@@ -5,7 +5,7 @@ import Logo from "../assets/img/logo_blanco_negro.png";
 function Sidebar() {
     return (
       <div className = "sideBar">
-         <figure className = " containerLogo">
+         <figure className = "containerLogo">
               <img src={Logo}></img>
           </figure>
         <ul>

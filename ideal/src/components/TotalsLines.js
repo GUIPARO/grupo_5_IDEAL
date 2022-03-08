@@ -22,12 +22,12 @@ function  TotalsLines() {
     }, [])
 
     return (
-      <div>
-          <div className = " itemList">
-              <span>Total Lineas</span> <br></br>
+      <div className = "itemList">
+         
+              <span>Total Líneas</span> 
               <span>{total.totalLines}</span>
           </div>
-      </div>
+
     );
 }
 

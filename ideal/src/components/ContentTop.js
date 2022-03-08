@@ -6,9 +6,9 @@ import TotalsLines from './TotalsLines';
 function ContentTop() {
     return (
       <div className = "listTop">
-          <div className = " contentTotals "><TotalsProducts /></div>
-          <div className = " contentTotals "><TotalsUsers /></div>
-          <div className = " contentTotals "><TotalsLines /></div>
+          <div className = "contentTotals "><TotalsProducts /></div>
+          <div className = "contentTotals "><TotalsUsers /></div>
+          <div className = "contentTotals "><TotalsLines /></div>
       </div>
     );
   }

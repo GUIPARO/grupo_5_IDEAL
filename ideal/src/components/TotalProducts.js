@@ -22,13 +22,10 @@ function  TotalsProducts() {
     }, [])
 
     return (
-      <div>
-          <div className = " itemList">
-              <span>Total Productos</span> <br></br>
+      <div className = "itemList">
+              <span>Total Productos</span>
               <span>{total.totalcount}</span>
-
           </div>
-      </div>
     );
 }
 

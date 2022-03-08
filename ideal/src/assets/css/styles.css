@@ -21,69 +21,94 @@
     width: 70%;
   }
 
-  .sidebar .containerLogo{
+  .sideBar .containerLogo{
     width: 80%;
     margin: 0 auto;
     margin-bottom: 50px;
-
   }
 
   .sideBar ul li {
     margin: 0 auto;
     margin-bottom: 30px;
     text-align: center;
-    border: 1px solid red;
     padding: 5px;
     list-style: none;
     
-    
   }
+
+  .sideBar ul li a{
+    text-decoration: none;
+  }
+
  
   .containerLogo img {
     width: 100%;
-
   }
 
   /* INICIO DEL MAIN MAIN MAIN MAIN */
   
-  .listTop {
-    width: 80%;
+  .listTop,.list-productLine {
+    width: 90%;
     margin: 50px auto;
     
   }
 
   .listTop .contentTotals{
-    width: 180px;
+    max-width: 90%;
     padding: 10px;
     margin: 0 auto;
     margin-bottom: 10px;
     box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
     background-color: #FFF;
   }
+
   .itemList{
     background-color: #FFF;
   }
-  @media (min-width: 481px){
-    
-  .listTop {
-    display: flex;
-    margin: 80px auto;
-    justify-content: space-around;
-  }
-  .listTop .contentTotals{
-    margin-right: 10px;
 
+  .itemList span{
+    display: block;
+    background-color: #FFF;
   }
+
+  .contentTotals-line{
+    max-width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
+    background-color: #FFF;
   }
+  /* @media (min-width: 481px){
+    
+    .listTop {
+      display: flex;
+      margin: 80px auto;
+      justify-content: space-around;
+    }
+  } */
 
   @media (min-width: 769px) {
-    .listTop .contentTotals{
-      width: 280px;
-      height: 100px;
-      margin-right: 15px;
+
+    .listTop {
+      display: flex;
+      margin: 80px auto;
+      justify-content: space-around;
     }
+    .listTop .contentTotals{
+      height: 100px;
+      width: 95%;
+      margin-right: 10px;
+    }
+
     .itemList{
       margin: 20px;
+    }
+
+    .contentTotals-line{
+      height: 100px;
+      width: 95%;
+      margin-right: 10px;
     }
   }
  
