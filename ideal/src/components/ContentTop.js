@@ -9,6 +9,7 @@ function ContentTop() {
           <div className = "contentTotals "><TotalsProducts /></div>
           <div className = "contentTotals "><TotalsUsers /></div>
           <div className = "contentTotals "><TotalsLines /></div>
+          
       </div>
     );
   }

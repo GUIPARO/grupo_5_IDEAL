@@ -18,23 +18,36 @@ function TotalsProductsLines() {
     }
   }
 
-  useEffect(()=>{
-    async function fetchData(){
-       const total = await lines()
-       setLines(total)
+  useEffect(() => {
+    async function fetchData() {
+      const total = await lines()
+      setLines(total)
     }
     fetchData();
-}, [])
-console.log(listLines)
+  }, [])
+  
   // console.log(total.lines.map(line=>{
   //   return line.line
   // }))
-  
+
   return (
-    <div className = ".list-productLine">
-            <div>Total Productos por línea</div>
-            <h3>{listLines.length}</h3>
-        </div>
+    <div className = "contentProductsLine">
+
+      <h3>Total Productos Por Linea</h3>
+      <div className="itemLine">
+
+        {listLines.map((line, i) => {
+          return <span className = "contentLines" key={i + line}> {line.line} <span> {line.totalLine} </span> </span>
+
+        })}
+
+
+      </div>
+
+    </div>
+
+
+
   );
 }
 

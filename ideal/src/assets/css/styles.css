@@ -79,6 +79,33 @@
     box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
     background-color: #FFF;
   }
+  .contentProductsLine h3{
+    margin-bottom: 10px;
+    text-align: center;
+
+  }
+
+  .itemLine{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .itemLine .contentLines{
+    max-width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #FFF;
+    box-shadow: 0 6px 10px 0 rgb(106 105 110 / 16%);
+    margin-bottom: 10px;
+
+  }
+  .itemLine .contentLines span{
+    background-color: #FFF;
+  }
+  .itemLine span{
+    display:block;
+
+  }
   /* @media (min-width: 481px){
     
     .listTop {
@@ -110,5 +137,20 @@
       width: 95%;
       margin-right: 10px;
     }
+    .itemLine{
+      display: flex;
+      justify-content: space-around;
+    }
+    
+  .itemLine .contentLines{
+       width: 95%;
+       height: 100px;
+       padding: 20px;
+       padding-top: 30px;
+       margin-right: 10px;
+
+
+  }
+  
   }
  

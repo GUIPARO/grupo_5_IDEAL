@@ -45,12 +45,15 @@ const controller = {
                 attributes : [[sequelize.fn("COUNT", sequelize.col("line")), "countByCategory"]],
                 group : "line" 
             })
-
+            
             const listProducts = await products.findAll({
                 include: ["line"],
-                attributes : ["product_id", "fullname"]
+                attributes : ["product_id", "fullname", "price"]
             })
-
+            
+            const ultimo = listProducts[ totalCount[0].dataValues.totalProducts-1];
+            const lastProduct = await products.findByPk(ultimo.dataValues.product_id)
+            console.log(ultimo)
             let lines = totalCategories.map(line => {
                 return {
                     line : line.line.line,
@@ -58,7 +61,7 @@ const controller = {
                 }
             })
 
-            return {totalcount : totalCount[0].dataValues.totalProducts, lines, listProducts, totalLines : lines.length}
+            return {totalcount : totalCount[0].dataValues.totalProducts, lines, listProducts, totalLines : lines.length, lastProduct}
 
         } catch (error) {
             console.log(error);

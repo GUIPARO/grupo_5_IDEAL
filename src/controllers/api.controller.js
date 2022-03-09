@@ -20,17 +20,22 @@ const controller = {
     
     products: async (req, res) => {
         let listProducts = await modelApi.allProducts();
-        
+        let ultimo = listProducts.listProducts[listProducts.listProducts.length-1];
+        let api1 = await modelApi.oneProduct(ultimo.dataValues.product_id);
+        // console.log(ultimo.dataValues.product_id);
+        // console.log(listProducts.listProducts)
 
 
         return res.json(listProducts);
     },
 
+  
+
     oneProduct: async (req, res) => {
         let product = await modelApi.oneProduct(req.params);
         let avatarRoute = path.join(
             __dirname,
-            "../public/img/products_image/" + product.image
+            "../public/img/products_image/" + product.camps.image
         );
         product.image = avatarRoute;
 
