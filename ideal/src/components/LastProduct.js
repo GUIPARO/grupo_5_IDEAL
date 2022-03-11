@@ -8,13 +8,13 @@ function LastProduct() {
   const products = async () => {
     try {
       // let api = await fetch("https://grupo5ideal.herokuapp.com/api/products");
-      let api = await fetch("http://localhost:3001/api/products");
+      let api = await fetch("http://localhost:3001/api/products/lastProduct");
       let data2 = await api.json();
       console.log(data2)
       
     
-    //  console.log(data);
-      return data2.lastProduct;
+  
+      return data2;
 
     } catch (error) {
       console.log(error)
@@ -28,25 +28,21 @@ function LastProduct() {
       setProduct(total)
       
     }
-    // console.log(fetchData());
+  
     
     fetchData();
   }, [])
 
 
-  
-  // console.log(total.lines.map(line=>{
-  //   return line.line
-  // }))
-
   return (
     <div className = "contentLastProduct">
 
       <h3>Último Producto</h3>
-      <div>
-          <span>{Product.product_id}</span>
-          <span>{Product.fullname}</span>
-          <span>{Product.price}</span>
+      <div className = "info">
+          <figure className = "containerImage"><img src= {Product.url} alt = 'product'></img></figure>
+          <div>{Product.fullname}</div>
+          <div>{Product.price}</div>
+
       </div>
       
 
