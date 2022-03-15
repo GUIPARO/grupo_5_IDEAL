@@ -79,7 +79,10 @@ const controller = {
                 include: ["line"],
                 attributes : {
                     exclude: [ "product_id"],
-                    include: [[fn('concat', `${protocol}://${req.get('host')}/api/products/`, col('product_id')), 'detail']]
+                    include: [
+                        [fn('concat', `${protocol}://${req.get('host')}/api/products/`, col('product_id')), 'detail'],
+                        [fn('concat', `${protocol}://${req.get('host')}/img/products_image/`, col('image')), 'url']
+                    ]
                 }    
             })
             

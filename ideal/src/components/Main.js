@@ -9,7 +9,7 @@ function Main() {
     return (
       <div className = "contentMain">
         <ContentTop />
-        <TotalsProductsLines/>
+        <TotalsProductsLines />
         <div className = "contentLast"><LastProduct/> <LastUser/></div>
       </div>
     );

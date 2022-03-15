@@ -5,19 +5,19 @@ import Logo from "../assets/img/logo_blanco_negro.png";
 function Sidebar() {
     return (
       <div className = "sideBar">
-         <figure className = "containerLogo">
-              <img src={Logo}></img>
+         <Link to="/">
+          <figure className = "containerLogo">
+            <img src={Logo}></img>
           </figure>
+         </Link>
         <ul>
             <li>
-                <Link to="products">Listado de productos</Link>
+              <Link className='sidebarLink' to="products">Listado de productos</Link>
             </li>
             <li>
-            <Link to="users">Listado de usuarios</Link>
+              <Link className='sidebarLink' to="users">Listado de usuarios</Link>
             </li>
         </ul>
-
-       
       </div>
     );
   }
