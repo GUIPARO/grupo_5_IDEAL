@@ -40,9 +40,12 @@ function LastProduct() {
       <h3>Último Producto</h3>
       <div className = "info">
           <figure className = "containerImage"><img src= {Product.url} alt = 'product'></img></figure>
-          <div>{Product.fullname}</div>
-          <div>{Product.price}</div>
+          <div className = "containerInfo">
+            <div>{Product.fullname}</div>
+            <div>{Product.price}</div>
 
+          </div>
+         
       </div>
       
 

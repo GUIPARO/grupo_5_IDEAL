@@ -40,9 +40,12 @@ function LastUser() {
       <h3>Último Usuario</h3>
       <div className = "info">
           <figure className = "containerImage"><img src= {User.url} alt = 'user'></img></figure>
+          <div className = "containerInfo">
           <div>{User.name}</div>
           <div>{User.lastname}</div>
           <div>{User.email}</div>
+          </div>
+          
 
       </div>
       
