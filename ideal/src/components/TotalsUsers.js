@@ -22,11 +22,11 @@ function  TotalsUsers() {
     }, [])
 
     return (
-      <div>
-          <div>
-              <span>Total Usuarios</span>
+      <div className = "itemList">
+         
+              <span>Total Usuarios</span> 
               <span>{total.totalCount}</span>
-          </div>
+
       </div>
     );
 }
